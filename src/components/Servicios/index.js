@@ -1,8 +1,9 @@
 import React from 'react';
 import './style.css';
-import fondo from '../../assets/img/svs/foto3.png';
+import clinica from '../../assets/img/svs/veter.jpg';
 import estetica from '../../assets/img/svs/foto1.jpg';
 import hotel from '../../assets/img/svs/foto2.jpg';
+
 
 
 const Servicios = () => {
@@ -10,8 +11,8 @@ const Servicios = () => {
             
         <div className= "section">
             <div className="servicios">
-                <div className="title"> <h1>Nuestros Servicios</h1></div>
-                <div className="lorem"><p>Porque nos importa tanto como a vos, queremos acompañarte en los cuidados de tu mascota.</p></div>
+                <div className="title"><h2><strong> Nuestros Servicios</strong></h2></div>
+                <div className="lorem"><p>Porque nos importa tanto como a vos, queremos acompañarte en los cuidados de tu mascota.<br/>Contamos con un equipo de profesionales en cada categoría para atender a sus necesidades.</p></div>
         <button id="boton">Ver todos</button>
          </div>       
         <div>
@@ -21,7 +22,7 @@ const Servicios = () => {
 
              <div className="images">
                 <figure>
-                <img src={fondo}></img>
+                <img src={clinica}></img>
                 <figcaption>Clínica</figcaption>
                 </figure>
                 <figure>
