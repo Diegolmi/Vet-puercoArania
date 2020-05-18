@@ -1,0 +1,11 @@
+a>div>.carousel-control-next-icon {
+    background-color: rgb(92, 92, 92);
+    border: thin;
+    border-radius: 75%;
+}
+
+a>div>.carousel-control-prev-icon {
+    background-color: rgb(92, 92, 92);
+    border: thin;
+    border-radius: 75%;
+}
