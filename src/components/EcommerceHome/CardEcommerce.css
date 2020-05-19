@@ -1,0 +1,115 @@
+/* CONTAINER CARD */
+
+.card-homePage {
+  width: 100%;
+  background: #f0f0f0;
+  /* display: flex; */
+  /* justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap; */
+}
+
+.card-homePage h1 {
+  border-bottom: 1px solid #fc5185;
+}
+
+.contenedor-boton-tienda {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+.contenedor-boton-tienda .btn {
+  background: #364f6b;
+  color: #f0f0f0;
+}
+.contenedor-boton-tienda .btn:hover {
+  color: #fc5185;
+}
+
+/* FIN CONTAINER CARD */
+
+/* CARD */
+
+.card {
+  /* width: 18rem; */
+  background-color: #f0f0f0;
+  border: 1px solid #fc5185;
+  margin: 30px;
+}
+
+.card-body {
+  text-align: center;
+  width: 100%;
+}
+
+.button-card {
+  background-color: #364f6b;
+  color: #f0f0f0;
+}
+
+.rating-container {
+  display: flex;
+  justify-content: center;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-evenly;
+  border-top: 1px solid #fc5185;
+}
+.card-footer .button-card {
+  background: #364f6b !important;
+}
+.card-footer .button-card:hover {
+  color: #fc5185;
+}
+
+.icon-card {
+  font-size: 20px;
+}
+
+/* FIN CARD */
+
+/*INICIO OVERLAY*/
+
+.contenedor-overlay {
+  margin-top: 30px;
+  width: 100vw;
+  height: 500px;
+}
+
+.contenedor-overlay img {
+  height: 500px;
+}
+
+.contenedor-overlay .white-text {
+  font-size: 25px;
+  font-weight: 600;
+  -webkit-text-fill-color: #f0f0f0; /* Will override color (regardless of order) */
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #364f6b;
+}
+
+/*FIN OVERLAY*/
+
+@media only screen and (min-width: 600px) {
+  .card-homePage {
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-homePage {
+    justify-content: center !important;
+    align-items: center !important;
+    display: block;
+  }
+  .contenedor-overlay img {
+    width: 600px !important;
+    height: 500px;
+  }
+}
