@@ -6,6 +6,16 @@
     min-height: 100vh;
   } */
   
+.logo{
+    height: 80px;
+    width: 80px;
+}
+.letras {
+  color: rgb(39, 34, 34)!important;
+}
+.colorNav{
+  background-color:  #364f6b!important;
+}
   #apppage h6 {
     line-height: 1.7;
   }
