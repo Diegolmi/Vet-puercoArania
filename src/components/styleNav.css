@@ -1,0 +1,60 @@
+  /* #apppage .view {
+    background-image: url("../assents/img/h4.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+  } */
+  
+.logo{
+    height: 80px;
+    width: 80px;
+}
+.letras {
+  color: rgb(39, 34, 34)!important;
+}
+.colorNav{
+  background-color:  #364f6b!important;
+}
+  #apppage h6 {
+    line-height: 1.7;
+  }
+  
+  @media only screen and (max-width: 400px) {
+    #apppage .animated img {
+      max-height: 50vh;
+      transform: translateX(-50%);
+      left: 50%;
+      position: absolute;
+    }
+  }
+  @media only screen and (max-width: 767px) {
+    #apppage .animated img {
+      max-height: 35vh;
+      transform: translateX(-50%);
+      left: 50%;
+    }
+  }
+  
+  @media (max-width: 767px) and (orientation: landscape) {
+    #apppage .animated img {
+      max-height: 50vh;
+      transform: translateX(-50%);
+      left: 50%;
+      position: relative;
+    }
+  }
+  @media (max-width: 1000px) and (orientation: landscape) {
+    #apppage .view {
+      min-height: 150vh;
+    }
+  }
+.footer {
+    background: linear-gradient(to bottom, #5fd1e5,#001a29);
+}
+.text-servicios{
+  color: black;
+}
+p{
+  color: white;
+}
