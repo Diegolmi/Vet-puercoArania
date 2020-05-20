@@ -1,10 +1,4 @@
-*{
-    box-sizing: border-box;
-    padding:0px;
-    margin: 0;
-    font-family: Roboto, sans-serif;
 
-}
 .section{
     background-color: #f0f0f0;
     }
@@ -19,6 +13,10 @@
         text-align: justify;
         width: 480px;
         line-height: 1.5;
+        
+   }
+   .lorem p {
+    color: black !important;
    }
     #boton{
         background-color: transparent;
@@ -45,7 +43,7 @@
     display: flex;
     justify-content: center;
 }        
-    img{
+    .imge{
         height: 200px;
         width: 150px;
         border-radius: 16px;
@@ -57,7 +55,7 @@
 
                 }
             
-            img:hover{
+            .imge:hover{
                 box-shadow: 5px 5px 7px rgba(248,121,160, 0.7)
             }
 
@@ -190,7 +188,7 @@
             flex-direction: row;
             margin-left: 7%;
         }        
-            img{
+            .imge{
                 height: 200px;
                 width: 150px;
                 border-radius: 16px;

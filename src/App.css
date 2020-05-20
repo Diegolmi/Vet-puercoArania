@@ -6,11 +6,10 @@
   height: 90vh;
   
 } */
-.rowEcommerce {
-  height: 100vh;
-}
+
+
 .rowFooter {
   position: relative;
-  top: 100%;
+  bottom: 0;
 }
 

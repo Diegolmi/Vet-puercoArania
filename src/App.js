@@ -15,7 +15,7 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 // import Registro from './components/registro'
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
-import Servicios from '../src/components/Servicios';
+import Servicios from './components/Servicios/Servicios';
 
 
 
@@ -34,11 +34,11 @@ function App() {
           <CarouselPage />
         </Col>
       </Row>
-      <Row className="rowEcommerce">
-        <Col>
+      <div className="rowEcommerce">
+        
           <EcommerceHome />
-        </Col>
-        </Row>
+        
+        </div>
         <Row className="rowServicios">
         <Col>
           <Servicios />

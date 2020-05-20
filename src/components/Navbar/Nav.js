@@ -37,7 +37,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                                 <img
                                     className="logo"
                                     src={logo} alt=""
-                                />
+                                />  
                             </MDBNavbarBrand>
                             {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                             <MDBCollapse isOpen={this.state.collapse} navbar>

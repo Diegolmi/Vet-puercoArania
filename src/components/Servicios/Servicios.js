@@ -1,5 +1,5 @@
 import React from 'react';
-import './style.css';
+import './styleServicios.css';
 import clinica from '../../assets/img/svs/veter.jpg';
 import estetica from '../../assets/img/svs/foto1.jpg';
 import hotel from '../../assets/img/svs/foto2.jpg';
@@ -22,15 +22,15 @@ const Servicios = () => {
 
              <div className="images">
                 <figure>
-                <img src={clinica}></img>
+                <img className="imge" alt="" src={clinica}></img>
                 <figcaption>Clínica</figcaption>
                 </figure>
                 <figure>
-                <img src={estetica}></img>
+                <img className="imge"  alt="" src={estetica}></img>
                 <figcaption>Estética y spa</figcaption>
                 </figure>
                 <figure>
-                <img src={hotel}></img>
+                <img className="imge" alt="" src={hotel}></img>
                 <figcaption>Hotel</figcaption>
                 </figure>
                 

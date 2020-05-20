@@ -1,7 +1,7 @@
 import React from 'react'
 import CardEcommerce from './CardEcommerce';
 import CardEcommerce1 from './CardEcommerce1'
-import Container from 'react-bootstrap/Container';
+// import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Overlay from './Overlay';
@@ -32,7 +32,7 @@ const EcommerceHome = () => {
 
         // </div>
 
-        <Container className="card-homePage">
+        <div className="card-homePage">
             <h1>Conoce Nuestros Productos</h1>
             <Row>
                 <Col lg={4} xs={12}><Overlay /></Col>
@@ -45,7 +45,7 @@ const EcommerceHome = () => {
             <div className="contenedor-boton-tienda">
              <button className="btn">Ingresa a Nuestra Tienda</button>
             </div>
-        </Container>
+        </div>
     );
 }
 
