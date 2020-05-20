@@ -1,9 +1,9 @@
 import React from 'react'
 import CardEcommerce from './CardEcommerce';
 import CardEcommerce1 from './CardEcommerce1'
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
+// import Container from 'react-bootstrap/Container';
+// import Row from 'react-bootstrap/Row';
+// import Col from 'react-bootstrap/Col';
 import Overlay from './Overlay';
 import './CardEcommerce.css';
 
@@ -32,8 +32,10 @@ const EcommerceHome = () => {
 
         // </div>
 
-        <Container className="card-homePage">
-            <h1>Conoce Nuestros Productos</h1>
+        <Container fluid className="card-homePage">
+            <div className="title-container">
+                <h1>Conoce Nuestros Productos</h1>
+            </div>
             <Row>
                 <Col lg={4} xs={12}><Overlay /></Col>
                 <Col lg={8} xs={12}><CardEcommerce /></Col> 
