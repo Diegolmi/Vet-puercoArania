@@ -1,4 +1,4 @@
-a>div>.carousel-control-next-icon {
+/* a>div>.carousel-control-next-icon {
     background-color: rgb(92, 92, 92);
     border: thin;
     border-radius: 75%;
@@ -8,4 +8,10 @@ a>div>.carousel-control-prev-icon {
     background-color: rgb(92, 92, 92);
     border: thin;
     border-radius: 75%;
+} */
+.contenedorCarousel {
+    padding: 0!important;
+    width: 100vw;
+    
+    
 }

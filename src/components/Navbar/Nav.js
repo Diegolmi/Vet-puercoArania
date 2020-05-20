@@ -1,10 +1,10 @@
 import React from 'react';
 import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle,
-    MDBIcon, MDBDropdownMenu, MDBDropdownItem
+     MDBDropdownMenu, MDBDropdownItem
 } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from '../assets/img/logo.png'
+import logo from '../../assets/img/logo.png'
 
 import './styleNav.css';
 
@@ -60,6 +60,9 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                                                 <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
+                                    </MDBNavItem>
+                                    <MDBNavItem active>
+                                        <MDBNavLink className="letras" to="#">Quienes somos</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBDropdown>

@@ -4,7 +4,7 @@ import medico1 from "../../assets/img/medico1.jpg";
 import medico2 from "../../assets/img/medico2.jpg";
 import medico3 from "../../assets/img/medico3.jpg";
 import medico4 from "../../assets/img/medico4.jpg";
-import alimento1 from "../../assets/img/alimento1.jpg";
+// import alimento1 from "../../assets/img/alimento1.jpg";
 import Image from "react-bootstrap/Image";
 
 const Contenido = () => {

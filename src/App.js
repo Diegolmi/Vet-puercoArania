@@ -1,73 +1,54 @@
 import React from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
+import 'bootstrap-css-only/css/bootstrap.min.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import 'mdbreact/dist/css/mdb.css';
 import CarouselPage from './components/Carousel/index';
-
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
-import './App.css';
-import EcommerceHome from './components/EcommerceHome/EcommerceHome';
-
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import logo from '../src/assets/img/logo.png'
-import Registro from './components/registro'
-import Nav from '../src/components/Nav'
-
-
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Nav from './components/Navbar/Nav'
 import Footer from './components/Footer/Footer';
-import 'bootstrap/dist/css/bootstrap.min.css';
-
-
-import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About/about';
+import EcommerceHome from './components/EcommerceHome/EcommerceHome';
+// import logo from '../src/assets/img/logo.png'
+// import Registro from './components/registro'
+import './App.css';
 
-
-
-
-
-//Styles mdBootstrap
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
 
 
 function App() {
   return (
 
-   
-
-    <div className="App">
-      <CarouselPage />
-
-      <header className="App-header">
-
-        <Nav />
-        <img
-              className="img-fluid"
-              src={logo} alt=""
-            />
-        
-      </header>
-      <section>
-      <EcommerceHome />
-     <Registro />
-      </section>
-
-    
-      
-      <Footer/>
-
-      <>
-          <About/>
-      </>
+    <Container fluid>
+      <Row className="rowNav">
+        <Col>
+          <Nav />
+        </Col>
+      </Row>
+      <Row className="rowCarousel">
+        <Col>
+          <CarouselPage />
+        </Col>
+      </Row>
+      <Row className="rowEcommerce">
+        <Col>
+          <EcommerceHome />
+        </Col>
+      </Row>
+      <Row className="rowFooter">
+        <Col>
+          <Footer />
+        </Col>
+      </Row>
+    </Container>
 
 
-    </div>
-    
-    
+
+
+
 
   );
 }
- 
+
 export default App;

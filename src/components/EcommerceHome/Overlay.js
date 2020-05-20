@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBMask, MDBView, MDBContainer, MDBRow, MDBCol } from "mdbreact";
+import { MDBMask, MDBView, MDBContainer, MDBCol } from "mdbreact";
 import './CardEcommerce.css';
 // import img3 from '../../assets/img/overlay-tienda.png';
 

@@ -16,7 +16,7 @@ import {
 
 const CarouselPage = () => {
   return (
-    <MDBContainer>
+    <div className="container-fluid contenedorCarousel">
       <MDBCarousel
         activeItem={4}
         length={4}
@@ -63,7 +63,7 @@ const CarouselPage = () => {
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>
-    </MDBContainer>
+    </div>
   );
 }
 
