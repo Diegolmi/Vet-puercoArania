@@ -14,6 +14,9 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 // import logo from '../src/assets/img/logo.png'
 // import Registro from './components/registro'
 import './App.css';
+import 'mdbreact/dist/css/mdb.css';
+import Servicios from '../src/components/Servicios';
+
 
 
 
@@ -35,6 +38,12 @@ function App() {
         <Col>
           <EcommerceHome />
         </Col>
+        </Row>
+        <Row className="rowServicios">
+        <Col>
+          <Servicios />
+        </Col>
+      
       </Row>
       <Row className="rowFooter">
         <Col>
