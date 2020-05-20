@@ -3,7 +3,6 @@ import img1 from '../../assets/img/paraTienda.jpg'
 import './CardEcommerce.css';
 import { MDBIcon } from 'mdbreact';
 import Rating from './Rating'
-import CardDeck from 'react-bootstrap/CardDeck';
 import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';

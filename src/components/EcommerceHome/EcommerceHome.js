@@ -1,9 +1,9 @@
 import React from 'react'
 import CardEcommerce from './CardEcommerce';
 import CardEcommerce1 from './CardEcommerce1'
-// import Container from 'react-bootstrap/Container';
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 import Overlay from './Overlay';
 import './CardEcommerce.css';
 
