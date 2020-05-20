@@ -17,7 +17,7 @@ const Contenido = () => {
               <div className="institucional">
                 <h1>Acerca de Veterinaria Puerco Araña</h1>
                 <div
-                  className="medicos d-md-flex flex-column flex-md-row justify-content-center 
+                  className="medicos d-md-block d-md-flex flex-column flex-md-row justify-content-center 
                 justify-content-md-between"
                 >
                   <Image src={medico1} className="image" roundedCircle alt="" />
