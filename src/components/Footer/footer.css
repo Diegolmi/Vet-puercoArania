@@ -1,21 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
 
-.puerco{
+.img{
+height: 400px;
 width: 400px;
-height: 250px;
-display: flex;
 }
-#fondo{
-    background-image: url("./puercoaraña.png");
-    background-repeat: no-repeat;
-    background-position: 30%;
+.forma{
+    height: 100px;
 }
+
 
 
 .iconos{
     height: 35px;
-    width: -35px;
+    width: 35px;
 
 }
 
@@ -32,4 +30,7 @@ display: flex;
     width: 200px;
 }
 
-
+.redessociales{
+    display: flex;
+    justify-content: space-around;
+}
