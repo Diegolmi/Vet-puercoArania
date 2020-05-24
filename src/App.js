@@ -9,7 +9,7 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Nav from './components/Navbar/Nav'
 import Footer from './components/Footer/Footer';
-import About from './components/About/about';
+// import About from './components/About/about';
 import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 // import logo from '../src/assets/img/logo.png'
 // import Registro from './components/registro'
