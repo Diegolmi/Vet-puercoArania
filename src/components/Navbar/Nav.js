@@ -43,7 +43,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                             <MDBCollapse isOpen={this.state.collapse} navbar>
                                 <MDBNavbarNav center>
                                     <MDBNavItem active>
-                                        <MDBNavLink className="letras" to="#">Turnos</MDBNavLink>
+                                        <MDBNavLink className="letras" to="#">Turno</MDBNavLink>
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBNavLink className="letras" to="#">Consultas</MDBNavLink>
