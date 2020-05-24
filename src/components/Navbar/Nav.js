@@ -153,7 +153,7 @@ render() {
                   Login
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Registro</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">Registros</MDBDropdownItem>
                   <MDBDropdownItem className="letras" href="#!">Login</MDBDropdownItem>
                   
                 </MDBDropdownMenu>
