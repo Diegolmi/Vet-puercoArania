@@ -56,8 +56,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                                             <MDBDropdownMenu className="dropdown-default">
                                                 <MDBDropdownItem href="#!">Alimento</MDBDropdownItem>
                                                 <MDBDropdownItem href="#!">Acessorios</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                                                <MDBDropdownItem href="#!">Medicamentos</MDBDropdownItem>
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
                                     </MDBNavItem>
