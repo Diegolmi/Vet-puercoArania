@@ -1,62 +1,37 @@
-import React, { Component } from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import { MDBSideNavCat, MDBSideNavNav, MDBSideNav, MDBSideNavLink, MDBContainer, MDBIcon, MDBBtn } from "mdbreact";
+import React from 'react';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormControl from '@material-ui/core/FormControl';
+import FormLabel from '@material-ui/core/FormLabel';
 
-class SideNavPage extends Component {
-  state = {
-    sideNavLeft: false,
-  }
+//styles
+import './style.css'
 
-sidenavToggle = sidenavId => () => {
-  const sidenavNr = `sideNav${sidenavId}`
-  this.setState({
-    [sidenavNr]: !this.state[sidenavNr]
-  });
-};
+export default function RadioButtonsGroup() {
+  const [value, setValue] = React.useState('');
 
-render() {
-    return (
-      <Router>
-        <MDBContainer>
-          <MDBBtn onClick={this.sidenavToggle("Left")}>
-            <MDBIcon size="lg" icon="bars" />
-          </MDBBtn>
-          <MDBSideNav slim fixed mask="rgba-blue-strong" triggerOpening={this.state.sideNavLeft} breakWidth={1300}
-            className="sn-bg-1">
-            <li>
-              <div className="logo-wrapper sn-ad-avatar-wrapper">
-                <a href="#!">
-                  <img alt="" src="https://mdbootstrap.com/img/Photos/Avatars/img%20(10).jpg" className="rounded-circle" />
-                  <span>Anna Deynah</span>
-                </a>
-              </div>
-            </li>
+  const handleChange = (event) => {
+    setValue(event.target.value);
+  };
 
-            <MDBSideNavNav>
-              <MDBSideNavLink to="/other-page" topLevel>
-                <MDBIcon icon="pencil-alt" className="mr-2" />Submit listing</MDBSideNavLink>
-              <MDBSideNavCat name="Submit blog" id="submit-blog" icon="chevron-right">
-                <MDBSideNavLink>Submit listing</MDBSideNavLink>
-                <MDBSideNavLink>Registration form</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="Instruction" id="instruction" icon="hand-pointer" href="#">
-                <MDBSideNavLink>For bloggers</MDBSideNavLink>
-                <MDBSideNavLink>For authors</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="About" id="about" icon="eye">
-                <MDBSideNavLink>Instruction</MDBSideNavLink>
-                <MDBSideNavLink>Monthly meetings</MDBSideNavLink>
-              </MDBSideNavCat>
-              <MDBSideNavCat name="Contact me" id="contact-me" icon="envelope">
-                <MDBSideNavLink>FAQ</MDBSideNavLink>
-                <MDBSideNavLink>Write a message</MDBSideNavLink>
-              </MDBSideNavCat>
-            </MDBSideNavNav>
-          </MDBSideNav>
-        </MDBContainer>
-      </Router>
-    );
-  }
+  return (
+    <div className="sidenav-filters">
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Tipo de animal: </FormLabel>
+        <RadioGroup aria-label="type" name="type" value={value} onChange={handleChange}>
+          <FormControlLabel value="dogs" control={<Radio />} label="Perros" />
+          <FormControlLabel value="cats" control={<Radio />} label="Gatos" />
+        </RadioGroup>
+      </FormControl>
+      <FormControl component="fieldset">
+        <FormLabel component="legend">Tamaño: </FormLabel>
+        <RadioGroup aria-label="size" name="size" value={value} onChange={handleChange}>
+          <FormControlLabel value="small" control={<Radio />} label="Chico" />
+          <FormControlLabel value="medium" control={<Radio />} label="Mediano" />
+          <FormControlLabel value="big" control={<Radio />} label="Grande" />
+        </RadioGroup>
+      </FormControl>
+    </div>
+  );
 }
-
-export default SideNavPage;
