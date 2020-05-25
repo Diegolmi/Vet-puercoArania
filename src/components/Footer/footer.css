@@ -2,19 +2,29 @@
 
 
 .img{
-height: 400px;
-width: 400px;
+height: 305px;
+width: 300px;
 }
 .forma{
     height: 100px;
 }
+#texto{
+    text-align: center;
+}
 
-
+.padre{
+   display: flex;
+   justify-content: space-between;
+}
 
 .iconos{
     height: 35px;
     width: 35px;
 
+}
+#map-container{
+    display: flex;
+    justify-content: center;
 }
 
 
@@ -26,11 +36,14 @@ width: 400px;
 
 }
 #map-container{
-    height: 200px;
+    height: 150px;
     width: 200px;
 }
 
 .redessociales{
     display: flex;
     justify-content: space-around;
+}
+.links{
+    display: flex;
 }
