@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import {
     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle,
      MDBDropdownMenu, MDBDropdownItem
 } from 'mdbreact';
-import { BrowserRouter as Router } from 'react-router-dom';
 import logo from '../../assets/img/logo.png'
 
 import './styleNav.css';
+
 
 
 class FullPageIntroWithFixedTransparentNavbar extends React.Component {
@@ -30,57 +31,62 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
             <div>
                 <header>
                     {/* Comienzo del Navbar */}
-                    <Router>
-                        <MDBNavbar color="bg-primary" fixed="top" white expand="md" scrolling transparent>
+                    
+                        <MDBNavbar className="navbar-landing" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
                             <MDBNavbarBrand href="/">
 
                                 <img
                                     className="logo"
                                     src={logo} alt=""
-                                />
+                                />  
                             </MDBNavbarBrand>
                             {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                             <MDBCollapse isOpen={this.state.collapse} navbar>
                                 <MDBNavbarNav center>
                                     <MDBNavItem active>
-                                        <MDBNavLink className="letras" to="#">Turnos</MDBNavLink>
+                                        <Link to="/">Turnos</Link>
                                     </MDBNavItem>
                                     <MDBNavItem active>
-                                        <MDBNavLink className="letras" to="#">Consultas</MDBNavLink>
+                                    <Link to="/">Consultas</Link>
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBDropdown>
                                             <MDBDropdownToggle nav caret active>
-                                                <div className="letras d-none d-md-inline">Tienda</div>
+                                            <Link to="#">Tienda</Link>
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu className="dropdown-default">
-                                                <MDBDropdownItem href="#!">Alimento</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Acessorios</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
+                                                {/* <MDBDropdownItem href="#!"></MDBDropdownItem>
+                                                <MDBDropdownItem href="#!"></MDBDropdownItem>
+                                                <MDBDropdownItem href="#!"></MDBDropdownItem> */}
+                                                <Link to="#">Alimentos</Link>
+                                                <Link to="#">Accesorios</Link>
+                                                <Link to="#">Farmacia</Link>
+
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
                                     </MDBNavItem>
                                     <MDBNavItem active>
-                                        <MDBNavLink className="letras" to="#">Quienes somos</MDBNavLink>
+                                        
+                                        <Link to="/about">Quienes Somos</Link>
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBDropdown>
                                             <MDBDropdownToggle nav caret active>
-                                                <div className="letras d-none d-md-inline">Login</div>
+                                                <Link to="#">Login</Link>
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu className="dropdown-default">
-                                                <MDBDropdownItem href="#!">Ingresar</MDBDropdownItem>
-                                                <MDBDropdownItem href="#!">Registro</MDBDropdownItem>
+                                                {/* <MDBDropdownItem href="#!"></MDBDropdownItem> */}
+                                                {/* <MDBDropdownItem href="#!"></MDBDropdownItem> */}
+                                                <Link to="#">Ingresar</Link>
+                                                <Link to="#">Registro</Link>
                                                 
                                             </MDBDropdownMenu>
                                         </MDBDropdown>
                                     </MDBNavItem>
-
                                 </MDBNavbarNav>
                             </MDBCollapse>
                         </MDBNavbar>
-                    </Router>
+                    
 
 
                 </header>

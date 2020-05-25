@@ -1,5 +1,5 @@
 body {
-  background: #f0f0f0 !important;
+  background-color: black;
   margin: 0;
   padding:0;
   box-sizing: border-box;
@@ -10,10 +10,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  font-family: Roboto, sans-serif;
+  
 }
-
+body {
+  overflow-x: hidden ;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

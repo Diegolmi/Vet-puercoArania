@@ -8,11 +8,11 @@ div.container {
     background-color:#f0f0f0;
   }
 
-h1{
+.first-title{
     color:#fc5185;
 }
 
-default h2, .institucional h2 {
+default .second-title, .institucional .second-title {
     font-size: 20px;
     font-weight: bold;
     padding: 20px 0px;
@@ -24,7 +24,7 @@ default h2, .institucional h2 {
     color:#fc5185;
 }
 
-h3 {
+.third-title {
     color:#364f6b;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -34,12 +34,12 @@ h3 {
 
 
 
- h2, h3 {
+ .second-title, .third-title {
     margin-top: 20px 20px;
     margin-bottom: 10px;
 }
 
-p {
+.paragraph {
     text-align: justify;
     line-height: 1.5;
 }
@@ -66,9 +66,11 @@ p {
 	align-items: stretch;
 	align-content: stretch;
 } */
-.medicos{
-    /* justify-content: space-between; */
+/* .medicos{
+    justify-content: space-between;
+} */
+
+
+.static-contain .paragraph {
+    color: black;
 }
-
-
-

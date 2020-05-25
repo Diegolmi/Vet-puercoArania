@@ -1,4 +1,6 @@
-
+.contenedor-principal-landing {
+  background: #f0f0f0;
+}
 /* .rowNav {
   height: 200px;
 } */
@@ -6,11 +8,10 @@
   height: 90vh;
   
 } */
-.rowEcommerce {
-  height: 100vh;
-}
+
+
 .rowFooter {
   position: relative;
-  top: 100%;
+  bottom: 0;
 }
 
