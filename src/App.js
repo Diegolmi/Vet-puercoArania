@@ -9,7 +9,8 @@ import './App.css';
 import About from './components/About/about';
 import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import Servicios from './components/Servicios/Servicios';
-import Carousel from './components/Carousel'
+import Carousel from './components/Carousel';
+import Register from './components/Register/Register';
 
 
 
@@ -37,6 +38,8 @@ function App() {
 
       <>
           <About/>
+          <Register />
+
       </>
 
 

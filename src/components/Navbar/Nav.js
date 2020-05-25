@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-// import Image from 'react-bootstrap/Image'
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -58,7 +56,7 @@ render() {
                   Login
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Registros</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" to="/Register">Registros</MDBDropdownItem>
                   <MDBDropdownItem className="letras" href="#!">Login</MDBDropdownItem>
                   
                 </MDBDropdownMenu>
