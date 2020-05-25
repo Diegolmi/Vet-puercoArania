@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {
-    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle,
-     MDBDropdownMenu, MDBDropdownItem
+    MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBDropdown, MDBDropdownToggle,
+     MDBDropdownMenu
 } from 'mdbreact';
 import logo from '../../assets/img/logo.png'
 
@@ -32,7 +32,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                 <header>
                     {/* Comienzo del Navbar */}
                     
-                        <MDBNavbar className="navbar-landing" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
+                        <MDBNavbar className="navbar-landing" color="bg-primary" fixed="top" expand="md" scrolling transparent>
                             <MDBNavbarBrand href="/">
 
                                 <img
@@ -42,7 +42,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                             </MDBNavbarBrand>
                             {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
                             <MDBCollapse isOpen={this.state.collapse} navbar>
-                                <MDBNavbarNav center>
+                                <MDBNavbarNav>
                                     <MDBNavItem active>
                                         <Link to="/">Turnos</Link>
                                     </MDBNavItem>
@@ -51,7 +51,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBDropdown>
-                                            <MDBDropdownToggle nav caret active>
+                                            <MDBDropdownToggle nav caret>
                                             <Link to="#">Tienda</Link>
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu className="dropdown-default">
@@ -71,7 +71,7 @@ class FullPageIntroWithFixedTransparentNavbar extends React.Component {
                                     </MDBNavItem>
                                     <MDBNavItem active>
                                         <MDBDropdown>
-                                            <MDBDropdownToggle nav caret active>
+                                            <MDBDropdownToggle nav caret>
                                                 <Link to="#">Login</Link>
                                             </MDBDropdownToggle>
                                             <MDBDropdownMenu className="dropdown-default">

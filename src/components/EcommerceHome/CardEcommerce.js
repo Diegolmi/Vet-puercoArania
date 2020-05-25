@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState } from 'react';
 import img1 from '../../assets/img/paraTienda.jpg'
 import './CardEcommerce.css';
 import { MDBIcon } from 'mdbreact';
@@ -9,9 +9,9 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import moment from 'moment';
-import axios from 'axios';
+// import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
-import db from '../../db.json';
+// import db from '../../db.json';
 
 
 const CardEcommerce = () => {
@@ -32,7 +32,7 @@ const CardEcommerce = () => {
         <Row>
 
           {array.map(arr => (
-            <Col lg={3} md={6}>
+            <Col lg={3} md={6} key={arr}>
               <Card>
                 <Card.Img variant="top" src={img1} className="img-fluid" />
                 <Card.Body>
