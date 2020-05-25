@@ -1,23 +1,19 @@
-import React from 'react';
-import Typography from '@material-ui/core/Typography';
-import Breadcrumbs from '@material-ui/core/Breadcrumbs';
-import Link from '@material-ui/core/Link';
+import React from "react";
+import { MDBBreadcrumb, MDBBreadcrumbItem, MDBContainer } from "mdbreact";
 
-function handleClick(event) {
-  event.preventDefault();
-  console.info('You clicked a breadcrumb.');
-}
+//styles
+import './style.css'
 
-export default function SimpleBreadcrumbs() {
+const BreadcrumbPage = props => {
   return (
-    <Breadcrumbs aria-label="breadcrumb">
-      <Link color="inherit" href="/" onClick={handleClick}>
-        Material-UI
-      </Link>
-      <Link color="inherit" href="/getting-started/installation/" onClick={handleClick}>
-        Core
-      </Link>
-      <Typography color="textPrimary">Breadcrumb</Typography>
-    </Breadcrumbs>
+    <MDBContainer>
+      <MDBBreadcrumb className="breadcrumb-ecommerce" color="indigo darken-4">
+        <MDBBreadcrumbItem appendIcon icon="angle-right">Home</MDBBreadcrumbItem>
+        <MDBBreadcrumbItem appendIcon icon="angle-right">Library</MDBBreadcrumbItem>
+        <MDBBreadcrumbItem appendIcon>Data</MDBBreadcrumbItem>
+      </MDBBreadcrumb>
+    </MDBContainer>
   );
-}
+};
+
+export default BreadcrumbPage;
