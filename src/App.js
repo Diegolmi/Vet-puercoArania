@@ -5,12 +5,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
 import EcommerceHome from './components/EcommerceHome/EcommerceHome';
-
-
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../src/assets/img/logo.png'
-import Registro from './components/registro'
-import Nav from '../src/components/Nav'
+// import Registro from './components/registro'
+import Nav from '../src/components/Navbar/Nav'
 
 
 import Footer from './components/Footer/Footer';
@@ -23,7 +21,6 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import Nav from './components/Navbar/Nav'
 import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
