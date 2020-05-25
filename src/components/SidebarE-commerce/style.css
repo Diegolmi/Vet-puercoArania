@@ -2,4 +2,6 @@
     margin: 1rem;
     display: flex;
     flex-direction: column;
+    width: 10%;
+    border: thick black solid;
 }
