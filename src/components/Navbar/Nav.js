@@ -1,5 +1,5 @@
-import React, { Component } from "react";
 
+import React, { Component } from "react";
 
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
@@ -18,8 +18,8 @@ toggleCollapse = () => {
 
 render() {
   return (
-    <Router className="container-fluid">
-      <MDBNavbar className="font-weight-bold " color="bg-primary" fixed="top" white expand="md" scrolling transparent>
+    <Router>
+      <MDBNavbar className="font-weight-bold" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
         <MDBNavbarBrand>
              <img src={logo} className="logo" alt="" />
 
@@ -54,11 +54,11 @@ render() {
  
             <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle>
+                <MDBDropdownToggle caret>
                   Login
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" to="/Register">Registros</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">Registros</MDBDropdownItem>
                   <MDBDropdownItem className="letras" href="#!">Login</MDBDropdownItem>
                   
                 </MDBDropdownMenu>

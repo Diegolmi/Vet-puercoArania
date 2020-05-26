@@ -14,7 +14,5 @@ a>div>.carousel-control-prev-icon {
     width: 90vw;
 height: 800px;    
     padding: 0!important;
-    
-    
-    
+    width: 100%; 
 }
