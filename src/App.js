@@ -50,6 +50,12 @@ function App() {
           <Footer />
         </Col>
       </Row>
+      <Row className="rowAbout">
+        <Col>
+          <About />
+        </Col>
+      </Row>
+      
     </Container>
 
 
