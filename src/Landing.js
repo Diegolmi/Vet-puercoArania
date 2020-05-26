@@ -20,7 +20,7 @@ import Servicios from './components/Servicios/Servicios';
 const Landing = () => {
     return ( 
         <Container fluid className="contenedor-principal-landing">
-          <Nav />
+          {/* <Nav /> */}
       {/* <Row className="rowNav">
         <Col>
           <Routes />
