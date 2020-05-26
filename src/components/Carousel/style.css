@@ -10,6 +10,9 @@ a>div>.carousel-control-prev-icon {
     border-radius: 75%;
 } */
 .contenedorCarousel {
+    padding: 0 !important;
+    width: 90vw;
+    height: 800px;    
     padding: 0!important;
     width: 100%; 
 }

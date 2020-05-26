@@ -1,6 +1,5 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from
-  "mdbreact";
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from "mdbreact";
 
 //styles
 import './style.css'
@@ -13,10 +12,9 @@ import {
   banner2
 } from "../../assets/img/index";
 
-
 const CarouselPage = () => {
   return (
-    <div className="container-fluid contenedorCarousel">
+    <div>
       <MDBCarousel
         activeItem={4}
         length={4}
@@ -66,5 +64,6 @@ const CarouselPage = () => {
     </div>
   );
 }
+
 
 export default CarouselPage;
