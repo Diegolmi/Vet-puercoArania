@@ -17,7 +17,7 @@ import Register from './components/Register/Register';
 
 function App() {
   return (
-    <div className="App">
+    <div className="container-fluid">
 
       <header className="App-header">
 

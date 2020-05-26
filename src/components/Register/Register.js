@@ -159,7 +159,7 @@ class FormsPage extends React.Component {
                                         className="form-control"
                                         name="Codigo Postal"
                                         placeholder="Zip"
-                                        required
+                                        
                                     />
                                     <div className="invalid-feedback">
                                         Ingrese un codigo postal valido
@@ -178,15 +178,16 @@ class FormsPage extends React.Component {
                                     />
                                     <label className="custom-control-label" htmlFor="invalidCheck">
                                         Acepte los terminos y condiciones
-                                </label>
+                                    </label>
                                     <div className="invalid-feedback">
                                         Debe aceptar antes de enviar
                                 </div>
                                 </div>
                             </MDBCol>
                             <MDBBtn color="primary" type="submit">
-                                Registrarse 
-                         </MDBBtn>
+                                 Registrarse
+                               
+                            </MDBBtn>
                         </form>
                     </div>
 
