@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter,} from "mdbreact";
+import useMediaQuery from '@material-ui/core/useMediaQuery';
 import 'mdbreact/dist/css/mdb.css';
 import puercoaraña from './puercoaraña.png';
 import'./footer.css';
