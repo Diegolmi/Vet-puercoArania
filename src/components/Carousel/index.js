@@ -8,6 +8,7 @@ import './style.css'
 import {
   img1,
   img2,
+  img3,
   banner,
   banner2
 } from "../../assets/img/index";
@@ -45,7 +46,7 @@ const CarouselPage = () => {
             <MDBView>
               <img
                 className="d-block w-100"
-                src={banner2}
+                src={img3}
                 alt="Third slide"
               />
             </MDBView>

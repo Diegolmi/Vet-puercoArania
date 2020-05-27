@@ -44,7 +44,7 @@ render() {
                 <MDBDropdownMenu className="dropdown-default">
                   <MDBDropdownItem className="letras" href="#!">Accesorios</MDBDropdownItem>
                   <MDBDropdownItem className="letras" href="#!">Alimentos</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Medicamentos</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">Farmacia</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
