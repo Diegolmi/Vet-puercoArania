@@ -16,7 +16,7 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
-
+import Accesorios from './components/AccesoriosEC/Accesorios'
 
 
 
@@ -28,7 +28,9 @@ function App() {
         <Col>
           <Nav />
         </Col>
-      </Row>
+         </Row>
+   
+      {/* </Row>
       <Row className="rowCarousel">
         <Col>
           <CarouselPage />
@@ -45,12 +47,14 @@ function App() {
         </Col>
       
       </Row>
-      <Row className="rowFooter">
-        <Col>
-          <Footer />
+       */}
+         <Col>
+          <Accesorios />
         </Col>
-      </Row>
-    </Container>
+        
+          {/*<Footer />*/}
+        
+      </Container>
 
 
 
