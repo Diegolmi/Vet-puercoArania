@@ -5,14 +5,14 @@
 height: 305px;
 width: 300px;
 }
-.forma{
+.imagenhomero{
     height: 100px;
 }
 #texto{
     text-align: center;
 }
 
-.padre{
+.contacto{
    display: flex;
    justify-content: space-between;
 }

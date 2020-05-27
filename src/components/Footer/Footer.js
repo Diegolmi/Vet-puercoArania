@@ -10,12 +10,13 @@ const Footer = () => {
     <div className="footer">
     <MDBFooter id="fondo" color="mdb-color" className=" font-small mt-2 pt-4 ">
       <MDBContainer fluid className=" text-center text-md-left">
-        <MDBRow color="mdb-color ">
-          <MDBCol md="3 "  className="forma"> 
+        <MDBRow >
+          <MDBCol md="3 "  className="imagenhomero"> 
             <img src={puercoaraña} className="img" alt="logo" />
           </MDBCol>
           <hr className="clearfix w-100 d-md-none"/>
           <MDBCol md="2" lg="3"   >
+            <div className="informacion">
             <h5 className="text-uppercase mb-4 font-weight-bold">Información</h5>
             <div className=" d-flex flex-column ">
             <div  className="d-flex ">
@@ -43,10 +44,11 @@ const Footer = () => {
             </p>
             </div>
             </div>
+            </div>
           </MDBCol>
           <hr className="clearfix w-100 d-md-none"/>
           <MDBCol md="5" lg="20" className="text-center">
-            <div className="padre">
+            <div className="contacto">
               <div className="redes">
           <h5 className="text-uppercase mb-2 font-weight-bold">  Redes Sociales  </h5>
             <div className="redessociales">
