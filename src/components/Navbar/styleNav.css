@@ -2,12 +2,23 @@
   .letras {
     color: black !important;
   }
+  .letras:hover {
+    background-color: #68829c;
+
+  }
 
   .bg-primary {
     background-color:#68829c !important;
   }
   .btn-secondary{
     background-color: #fc5185 !important;
+  }
+  .navbar:hover {
+    background-color: #68829c;
+  }
+  .dropdown-default {
+    background-color: #68829c;
+
   }
 
  
