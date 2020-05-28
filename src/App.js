@@ -1,63 +1,42 @@
 import React from 'react';
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-import CarouselPage from './components/Carousel/index';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Nav from './components/Navbar/Nav'
-import Footer from './components/Footer/Footer';
-// import About from './components/About/about';
-import EcommerceHome from './components/EcommerceHome/EcommerceHome';
-// import logo from '../src/assets/img/logo.png'
-// import Registro from './components/registro'
 import './App.css';
-import 'mdbreact/dist/css/mdb.css';
-import Servicios from './components/Servicios/Servicios';
 
-
+//importar react router 
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
+import About from './components/About/about';
+import Error404 from './components/Errors/Error404';
+import Landing from './Landing';
 
 
 function App() {
   return (
 
-    <Container fluid>
-      <Row className="rowNav">
-        <Col>
-          <Nav />
-        </Col>
-      </Row>
-      <Row className="rowCarousel">
-        <Col>
-          <CarouselPage />
-        </Col>
-      </Row>
-      <div className="rowEcommerce">
-        
-          <EcommerceHome />
-        
-        </div>
-        <Row className="rowServicios">
-        <Col>
-          <Servicios />
-        </Col>
-      
-      </Row>
-      <Row className="rowFooter">
-        <Col>
-          <Footer />
-        </Col>
-      </Row>
-    </Container>
-
-
-
-
-
-
+    <Router>
+      {/* <Nav /> */}
+      <Switch>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/about" component={About} />
+        <Route path="*" component={Error404} />
+      </Switch>
+    </Router>
+    
+    
+    
   );
+
+    // <SideNavPage />
+    // <SimpleBreadcrumbs />
+    
+
 }
 
 export default App;
