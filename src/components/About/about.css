@@ -1,147 +1,73 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 
-div.container {
+.institucional {
+  margin-top: 30px;
   padding-top: 30px;
   padding-bottom: 80px;
-  padding-right: 50px;
-  padding-left: 40px;
-  background-color: #f0f0f0;
+  padding-right: 10px;
+  padding-left: 10px;
+  background-color: #f0f0f0; 
   color: black !important;
 
+
 }
+
+
 
 .first-title {
-  color: #fc5185;
+  color: #fc5185 !important;
+}
+.second-title, .five-title,.first-title,.third-title,.fourd-title{
+  margin-bottom: 1rem !important;
 }
 
-default .second-title,
-.institucional .second-title {
-  font-size: 28px;
+.second-title {
+  margin-top: 30px;
   font-weight: bold;
   padding: 20px 0px;
   position: relative;
   display: block;
-  font-family: "Roboto", sans-serif;
   text-align: left;
   letter-spacing: 0.5px;
-  color: #fc5185;
+  color: #fc5185 !important;
 }
 
-.third-title {
-  color: #364f6b;
-  font-family: "Roboto", sans-serif;
-  text-decoration: none;
-  font-weight: 700;
+.third-title, .fourd-title {
+  color: #364f6b !important;
 }
 
-.second-title,
-.third-title {
-  margin-top: 20px 20px;
-  margin-bottom: 10px;
+.five-title{
+  color: #fc5185 !important;
 }
+
 
 .paragraph {
   text-align: justify;
   line-height: 1.5;
   color: black;
-  font-size: 25px;
+  font-size: 1em;
+  margin-bottom: 10px!important;
+ 
 }
 
 .circular--square {
   border-radius: 50%;
 }
 
-.medicos {
-  margin-bottom: 2em;
-  margin-top: 2em;
-  color: black;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.imedicos {
-    width: 80px;
-    height: 80px;
-  }
 
 .datosmedicos {
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-size: 1,5em;
-    margin-bottom: 0px;
-    font-weight: bold;
-    
-  }
-  .datosmedicos1{
-    text-align: center;
-    justify-content: center;
-    color: black;
-    font-size: 1,5em;
-  }
-
+   font-weight: bold;
+}
+.datosmedicos1 {
+  margin-bottom: 20px!important;
+}
 
 .static-contain .paragraph {
   color: black;
 }
 
+.imedicos{
+  max-width: 100px;
+   max-height: 100px;
+}
 
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  .bmedicos {
-    display: flex;
-    flex-direction: column;
-    align-items: center !important;
-  }
-  .medicos {
-    margin-top: 30px;
-    display: block;
-  }
-}
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .medicos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-       
-      }
-      
-      .imedicos {
-        width: 100px;
-        height: 100px;
-      }
-} 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .medicos {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        
-      }
-}
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .medicos {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-      }
-      .imedicos {
-        width: 100px;
-        height: 100px;
-      }
-} 
-/*Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .imedicos {
-        width: 200px;
-        height: 200px;
-    }
-}
