@@ -1,21 +1,40 @@
-.todo{
+#titulo_acce{
     margin-top: 150px;
+}
+.contenedor_cards{
+    margin-top: 15px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+}
+.img_acc{
+   object-fit: contain;
 }
 
-@media (max-width: 426px){
+
+@media(max-width: 599px){
     #card_acc{
-        margin: auto auto !important;
-        margin-bottom: 45px !important;
-     
+        width: 70% !important;
+        height: 30% !important;
+        
     }
     .img_acc{
-        width: auto !important;
-        height: auto !important;
+        width: 100% !important;
+        height: 30% !important;
     }
 }
-@media (min-width: 766px){
-        
+@media(min-width: 600px) and (max-width: 859px){
+    #card_acc{
+        width: 30% !important;
+        height: 30% !important;
+    }
+}
 
+@media (min-width: 860px){
+    #card_acc{
+        width: 20%;
+        height: 20%;
+    }
+    
+    
 }
