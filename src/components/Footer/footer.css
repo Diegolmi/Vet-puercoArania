@@ -1,49 +1,184 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 
-
-.img{
-height: 305px;
-width: 300px;
+.img {
+  height: 320px;
+  width: 300px;
 }
-.imagenhomero{
-    height: 100px;
+.imagenhomero {
+  height: 100px;
 }
-#texto{
-    text-align: center;
-}
-
-.contacto{
-   display: flex;
-   justify-content: space-between;
+#texto {
+  text-align: center;
 }
 
-.iconos{
-    height: 35px;
-    width: 35px;
-
-}
-#map-container{
-    display: flex;
-    justify-content: center;
+.contacto {
+  display: flex;
+  justify-content: space-between;
 }
 
-
-#hola{
-    background-color:#364f6b;
+.iconos {
+  height: 35px;
+  width: 35px;
 }
-.buttons{
-    display: inline;
-
+#map-container {
+  display: flex;
+  justify-content: center;
+  height: 150px;
+  width: 200px;
 }
-#map-container{
-    height: 150px;
+
+#hola {
+  background-color: #364f6b;
+}
+.buttons {
+  display: inline;
+}
+
+
+.redessociales {
+  display: flex;
+  justify-content: space-around;
+}
+.links {
+  display: flex;
+}
+.ubicacion{
+    margin-bottom: 10px;
+}
+.redes{
+    margin-right: 100px;
+}
+
+@media (min-width: 300px) and (max-width: 549px) {
+  #hola {
+    background-color: #364f6b;
+  }
+
+  .imagenhomero {
+    margin-bottom: 100px;
+  }
+  .img {
+    height: 200px !important;
+    width: 200px !important;
+  }
+  .iconos {
+    height: 30px !important;
+    width: 30px !important;
+  }
+  .informacion {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+  .contacto {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  #map-container {
+    height: 200px;
     width: 200px;
-}
+    margin-bottom: 150px;   
+    margin-left: 20px;
+    
+  }
+  .ubicacion{
+      display: flex;
+      justify-content: center;
+  }
 
-.redessociales{
-    display: flex;
-    justify-content: space-around;
+  .secciones {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  .redes {
+    margin: 10px;
+    padding: 20px;
+  }
 }
-.links{
-    display: flex;
-}
+@media (min-width:550px) and (max-width:700px){
+    #hola {
+        background-color: #364f6b;
+      }
+    
+      .imagenhomero {
+        margin-bottom: 40px;
+      }
+      .img {
+        height: 150px !important;
+        width: 150px !important;
+      }
+      .iconos {
+        height: 40px !important;
+        width: 40px !important;
+      }
+      .informacion {
+        margin-top: 30px;
+        margin-left: 50px;
+      }
+      .contacto {
+        flex-direction: column;
+        margin-top: 10px;
+      }
+      #map-container {
+        height: 200px;
+        width: 300px;
+        margin-bottom: 150px;
+       margin-top: 20px;
+      }
+    
+      .secciones {
+        margin-top: 30px;
+        margin-bottom: 10px;
+      }
+      .redes {
+        margin: 10px;
+        padding: 20px;
+      }
+    }
+    @media (min-width:701px) and (max-width:1199px) {
+        #hola {
+            background-color: #364f6b;
+          }
+        
+          .imagenhomero {
+              margin-left: 200px;
+            margin-bottom: 50px;
+          }
+          .img {
+            height: 300px !important;
+            width: 300px !important;
+          }
+          .iconos {
+            height: 40px !important;
+            width: 40px !important;
+          }
+          .informacion {
+            margin-top: 150px;
+            margin-left: 200px;
+          }
+          .contacto {
+            flex-direction: column;
+            margin-top: 10px;
+          }
+          #map-container {
+              margin-left: 200px;
+            height: 200px;
+            width: 300px;
+            margin-bottom: 150px;
+           margin-top: 20px;
+          }
+        
+          .secciones {
+              margin-left: 10px;
+            margin-top: 30px;
+            margin-bottom: 10px;
+          }
+          .redes {
+            margin: 10px;
+            padding: 20px;
+            margin-left: 200px;
+          }
+          #texto{
+              margin-left: 250px;
+          }
+
+    }
