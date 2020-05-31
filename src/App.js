@@ -15,7 +15,7 @@ import {
 import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
-
+import SecServicios from './components/SecServicios/index'
 
 function App() {
   return (
@@ -25,6 +25,8 @@ function App() {
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/servicios" component={SecServicios} />
+
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
