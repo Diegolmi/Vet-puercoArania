@@ -19,35 +19,30 @@ import Servicios from './components/Servicios/Servicios';
 
 const Landing = () => {
     return ( 
-        <Container fluid className="contenedor-principal-landing">
+        <>
+        {/* <Container fluid className="contenedor-principal-landing"> */}
           <Nav />
-      {/* <Row className="rowNav">
-        <Col>
-          <Routes />
-        </Col>
-      </Row> */}
-      <Row className="rowCarousel">
-        <Col>
+    
+      
           <CarouselPage />
-        </Col>
-      </Row>
+       
       <div className="rowEcommerce">
         
           <EcommerceHome />
         
         </div>
-        <Row className="rowServicios">
-        <Col>
+        {/* <Row className="rowServicios">
+        <Col> */}
           <Servicios />
-        </Col>
+        {/* </Col>
       
-      </Row>
-      <Row className="rowFooter">
-        <Col>
-          <Footer />
-        </Col>
-      </Row>
-    </Container>
+      </Row> */}
+      
+          
+        
+    {/* </Container> */}
+    <Footer />
+        </>
      );
 }
  
