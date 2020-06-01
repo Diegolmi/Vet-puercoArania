@@ -26,31 +26,32 @@ import {
   Switch,
   Route,
 } from "react-router-dom";
-import About from './components/About/about';
+// import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
 import SecServicios from './components/SecServicios/index'
 
 function App() {
   return (
-
+   <div className="App">
     // <SideNavPage />
-    <SimpleBreadcrumbs />
-    );
-}
+    
+    
+
 
 
     <div>
+      <SimpleBreadcrumbs />
       <FormPage />
     </div>
-  );
 
 
-    <div className="App">
-      <>
+
+    
+      
           <About/>
-      </>
-    </div>
+      
+    
 
 
     <Router>
@@ -67,12 +68,13 @@ function App() {
     
     
 
-  );
-
+  
 
     // <SideNavPage />
     // <SimpleBreadcrumbs />
+    </div>
     
+    );
 
 }
  

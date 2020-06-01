@@ -9,7 +9,6 @@ import alimento1 from "../../assets/img/alimento1.jpg";
 import Image from "react-bootstrap/Image";
 
 // import alimento1 from "../../assets/img/alimento1.jpg";
-import Image from "react-bootstrap/Image";
 import Nav from '../Navbar/Nav';
 
 
@@ -29,7 +28,7 @@ const Contenido = () => {
                 <div
                   className="medicos d-md-block d-md-flex flex-column flex-md-row justify-content-center 
 
-                <h1 className="first-title">Acerca de Veterinaria Puerco Araña</h1>
+                <h1 className="first-title" > Acerca de Veterinaria Puerco Araña</h1>
                 <div
                   className="medicos d-md-flex flex-column flex-md-row justify-content-center 
 
