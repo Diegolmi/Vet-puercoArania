@@ -1,0 +1,91 @@
+#container-not-found {
+    position: absolute;
+    /* top: 10%;
+    left: 10%;
+    right: 10%;
+    bottom: 10%; */
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('../../assets/img/p404.png'), #151729;
+    box-shadow: 0 15px 30px rgba(0,0,0,.5);
+}
+
+
+#container-not-found .content-error {
+    max-width: 600px;
+    text-align: center;
+}
+
+#container-not-found .content-error .h2-content {
+    font-size: 18vw;
+    color: #ffffff;
+    line-height: 1em;
+    text-align: center;
+}
+
+#container-not-found .content-error .h4-content {
+    position: relative;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #364f6b;
+    background:#fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    display: inline-block;
+    border-right: 2px solid #364f6b;
+    white-space: nowrap;
+    width: 16em;
+    text-align: center;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+#container-not-found .content-error .para-content {
+    color: #fff;
+    font-size: 1.2em;
+}
+
+#container-not-found .content-error .back-to-home {
+    position: relative;
+    display: inline-block;
+    padding: 10px 25px;
+    background: #fc5185;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 25px;
+    border-radius: 25px;
+    border-bottom: 4px solid #d00d56;
+    font-weight: 400;
+}
+
+#container-not-found .content-error .back-to-home:hover {
+    color:#364f6b;
+    /* background: #43dde6; */
+}
+
+.anim-typewriter {
+    animation: typewriter 4s steps(40) 1s 1 normal both,
+    blinkTextCursor 500ms steps(40) infinite normal;
+}
+
+@keyframes typewriter {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from{
+        border-right-color: #364f6b;
+    }
+    to{
+        border-right-color: transparent;
+    }
+}

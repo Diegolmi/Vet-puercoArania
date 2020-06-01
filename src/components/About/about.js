@@ -6,11 +6,16 @@ import medico3 from "../../assets/img/medico3.jpg";
 import medico4 from "../../assets/img/medico4.jpg";
 import Image from "react-bootstrap/Image";
 import { Grid, Typography } from "@material-ui/core";
+import RadioButtonsGroup from "../SidebarE-commerce"
+import BreadcrumbPage from "../Breadcrumbs"
+
+
 
 const Contenido = () => {
   return (
+    <>
     <div className="institucional container-fluid">
-      <Typography variant="h1" className="first-title" align="center">
+      <Typography variant="h2" className="first-title" align="center">
         Acerca de Veterinaria Puerco Araña
       </Typography>
       <Typography variant="h3" className="third-title">
@@ -132,6 +137,11 @@ const Contenido = () => {
         </Typography>
       </div>
     </div>
+       <BreadcrumbPage/> 
+       <RadioButtonsGroup/> 
+    
+      </>
+    
   );
 };
 

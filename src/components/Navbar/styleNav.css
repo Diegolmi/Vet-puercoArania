@@ -1,62 +1,104 @@
-  /* #apppage .view {
-    background-image: url("../assents/img/h4.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    min-height: 100vh;
-  } */
-  
-.logo{
-    height: 125px;
-    width: 200px;
-    margin: 0;
-}
 
-.letras {
-  color: rgb(39, 34, 34)!important;
-}
-.colorNav{
-  background-color:  #364f6b!important;
-}
-  #apppage h6 {
-    line-height: 1.7;
+  .letras {
+    color: black !important;
+  }
+  .letras:hover {
+    background-color: #68829c;
+
+  }
+
+  .bg-primary {
+    background-color:#68829c !important;
+  }
+  .btn-secondary{
+    background-color: #fc5185 !important;
+  }
+  .navbar:hover {
+    background-color: #68829c;
+  }
+  .dropdown-default {
+    background-color: #68829c;
+
+  }
+
+ 
+
+  @media (min-width:300px) and (max-width:549px) {
+    .navbar  scrolling {
+      background-color: #68829c !important;
+      
+    }
+  }
+  @media (min-width:550px) and (max-width:700px) {
+    .navbar scrolling {
+      background-color: #68829c !important;
+      
+    }
+  }
+  @media (min-width:701px) and (max-width:1199px) {
+    .navbar scrolling {
+      background-color: #68829c !important;
+      
+    }
+  }
+
+  @media (min-width:550px) and (max-width:700px) {
+    .navbar-toggler-icon  {
+      background-image: url('https://mdbootstrap.com/img/svg/hamburger1.svg?color=6a1b9a');
+
+      
+      
+    }
+  }
+
+  @media (min-width:300px) and (max-width:549px) {
+    .navbar-toggler-icon  {
+      background-image: url('https://mdbootstrap.com/img/svg/hamburger1.svg?color=6a1b9a');
+      
+      
+    }
+  }
+    
+
+  @media (min-width:300px) and (max-width:549px) {
+    .navbar-collapse  {
+      background-color: #68829c !important;
+      
+      
+    }
+  }
+  @media (min-width:550px) and (max-width:700px) {
+    .navbar-collapse  {
+      background-color: #68829c !important;
+      
+      
+    }
   }
   
-  @media only screen and (max-width: 400px) {
-    #apppage .animated img {
-      max-height: 50vh;
-      transform: translateX(-50%);
-      left: 50%;
-      position: absolute;
+  @media (min-width:300px) and (max-width:549px) {
+    .logo  {
+      height: 50px !important;
+      width: 80px !important;
     }
   }
-  @media only screen and (max-width: 767px) {
-    #apppage .animated img {
-      max-height: 35vh;
-      transform: translateX(-50%);
-      left: 50%;
+  @media(min-width: 550px) and (max-width:700px) {
+    .logo {
+      height: 60px;
+    width: 90px;
+
     }
+  }
+  @media(min-width: 701px) and (max-width:1199px) {
+    .logo {
+      height: 80px !important;
+      width: 130px !important;
+      margin: 0;
+    }
+  }
+  .logo {
+    height: 80px ;
+    width: 130px ;
+    
   }
   
-  @media (max-width: 767px) and (orientation: landscape) {
-    #apppage .animated img {
-      max-height: 50vh;
-      transform: translateX(-50%);
-      left: 50%;
-      position: relative;
-    }
-  }
-  @media (max-width: 1000px) and (orientation: landscape) {
-    #apppage .view {
-      min-height: 150vh;
-    }
-  }
-.footer {
-    background: linear-gradient(to bottom, #5fd1e5,#001a29);
-}
-.text-servicios{
-  color: black;
-}
-p{
-  color: white;
-}
+ 

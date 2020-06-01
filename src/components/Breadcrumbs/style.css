@@ -1,0 +1,21 @@
+.breadcrumb-ecommerce {
+    margin-bottom: 0px;margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #68829c!important;
+    justify-content: center;
+ }
+ .navBread{
+     background-color: #68829c!important;
+ }
+ /* .botonBread{
+     color:#43dde6!important;
+     background-color: transparent!important;
+     box-shadow:none!important;
+ } */
+.iconButton, .botonBread{
+    color:#f0f0f0!important;
+}
+.classes.shadow{
+    color:#f0f0f0!important;
+}
