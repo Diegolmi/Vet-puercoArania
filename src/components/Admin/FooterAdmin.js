@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 const FooterAdmin = () => {
     return ( 
-        <div id="hola" className="footer-copyright text-center py-4 mt-5 ">
+        <div id="hola" className="footer-copyright text-center">
         <MDBContainer fluid>
           &copy; {new Date().getFullYear()} Copyright  <Link to="/"> PuercoAraña.com </Link>
         </MDBContainer>

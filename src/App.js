@@ -17,6 +17,8 @@ import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
+import BreadCrumbs from './components/Breadcrumbs/index';
+
 
 
 function App() {
@@ -26,10 +28,14 @@ function App() {
       {/* <Nav /> */}
       <Switch>
         <Route exact path="/" component={Landing} />
+        <Route exact path="/bread" component={BreadCrumbs} />
         <Route exact path="/about" component={About} />
         <Route exact path="/registro" component={Register} />
-        <Route exact path="/about" component={About} />
-        <Route exact path="/privado/admin" component={Admin} />
+        <Route path="/privado/admin" component={Admin} />
+        {/* <Route exact path="/privado/usuario" component={usuario} />
+        <Route exact path="/consultas" component={Consultas} /> */}
+        {/* <Route exact path="/servicios" component={Servicios} /> */}
+        {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
         {/* <Route exact path="/tienda" component={Tienda} />
         <Route exact path="/tienda/alimentos" component={Alimentos} />
         <Route exact path="/tienda/accesorios" component={Accesorios} />
