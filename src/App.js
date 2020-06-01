@@ -7,6 +7,11 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
 import './App.css';
+import 'mdbreact/dist/css/mdb.css';
+import FormPage from './components/FormServicios';
+
+
+import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import About from './components/About/about';
 
@@ -25,6 +30,12 @@ import SecServicios from './components/SecServicios/index'
 
 function App() {
   return (
+
+    <div>
+      <FormPage />
+    </div>
+  );
+
 
     <div className="App">
       <>
