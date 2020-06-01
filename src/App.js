@@ -1,10 +1,16 @@
 import React from 'react';
 
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import About from './components/About/about';
+
+
 
 //importar react router 
 import {
@@ -20,6 +26,13 @@ import SecServicios from './components/SecServicios/index'
 function App() {
   return (
 
+    <div className="App">
+      <>
+          <About/>
+      </>
+    </div>
+
+
     <Router>
       {/* <Nav /> */}
       <Switch>
@@ -33,6 +46,7 @@ function App() {
     
     
     
+
   );
 
     // <SideNavPage />
@@ -40,5 +54,5 @@ function App() {
     
 
 }
-
+ 
 export default App;
