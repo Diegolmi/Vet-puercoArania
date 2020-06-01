@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+
+
+.puerco{
+width: 400px;
+height: 250px;
+display: flex;
+}
+#fondo{
+    background-image: url("./puercoaraña.png");
+    background-repeat: no-repeat;
+    background-position: 30%;
+}
+
+
+.iconos{
+    height: 35px;
+    width: -35px;
+
+}
+
+
+#hola{
+    background-color:#364f6b;
+}
+.buttons{
+    display: inline;
+
+}
+#map-container{
+    height: 200px;
+    width: 200px;
+}
+
+
