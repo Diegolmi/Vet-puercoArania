@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
 
+
 div.container {
     padding-top: 30px;
     padding-bottom: 80px;
     padding-right: 50px;
     padding-left: 40px;
     background-color:#f0f0f0;
-  }
+
+}
+
+
+
+h1{
+    color:#fc5185;
+}
+
 
 .first-title{
     color:#fc5185;
 }
 
 default .second-title, .institucional .second-title {
+
     font-size: 20px;
     font-weight: bold;
     padding: 20px 0px;
@@ -24,7 +34,9 @@ default .second-title, .institucional .second-title {
     color:#fc5185;
 }
 
+
 .third-title {
+
     color:#364f6b;
     font-family: "Roboto", sans-serif;
     font-size: 14px;
@@ -33,13 +45,15 @@ default .second-title, .institucional .second-title {
 }
 
 
-
  .second-title, .third-title {
+
     margin-top: 20px 20px;
     margin-bottom: 10px;
 }
 
+
 .paragraph {
+
     text-align: justify;
     line-height: 1.5;
 }
@@ -54,6 +68,7 @@ default .second-title, .institucional .second-title {
     margin: 40px 3em 10px 10px auto;
 }
 
+
 .imageAside{
     width: 250px;
     height: 350px;
@@ -66,6 +81,20 @@ default .second-title, .institucional .second-title {
 	align-items: stretch;
 	align-content: stretch;
 } */
+
+.medicos{
+    /* justify-content: space-between; */
+    margin-bottom: 2em;
+    margin-top: 2em;
+}
+
+/* @media only screen and (max-width: 1000px) {
+    .medicos {
+        flex-direction: column;
+    }
+  } */
+
+
 /* .medicos{
     justify-content: space-between;
 } */

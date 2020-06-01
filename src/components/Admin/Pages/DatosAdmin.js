@@ -2,7 +2,14 @@ import React from 'react'
 
 const DatosAdmin = () => {
     return ( 
-        <h1>Datos Admin</h1>
+        <div className="container-datos-admin">
+        <div className="row">
+            <div className="col-12">
+                
+            </div>
+        </div>
+
+    </div>
      );
 }
  

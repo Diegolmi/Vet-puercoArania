@@ -1,10 +1,10 @@
 import React from 'react';
-
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
+
 
 //importar react router 
 import {
@@ -17,19 +17,16 @@ import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
-import BreadCrumbs from './components/Breadcrumbs/index';
-
-
+import SecServicios from './components/SecServicios/index';
 
 function App() {
   return (
-
     <Router>
       {/* <Nav /> */}
       <Switch>
         <Route exact path="/" component={Landing} />
-        <Route exact path="/bread" component={BreadCrumbs} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
         <Route path="/privado/admin" component={Admin} />
         {/* <Route exact path="/privado/usuario" component={usuario} />
@@ -43,15 +40,9 @@ function App() {
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
-    
-    
-    
   );
-
-    // <SideNavPage />
-    // <SimpleBreadcrumbs />
     
 
 }
-
+ 
 export default App;
