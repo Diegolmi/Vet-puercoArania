@@ -12,33 +12,24 @@ const Servicios = () => {
         <div className= "section">
             <div className="servicios">
                 <div className="title"><h2><strong> Nuestros Servicios</strong></h2></div>
-                <div className="lorem"><p>Porque nos importa tanto como a vos, queremos acompañarte en los cuidados de tu mascota.<br/>Contamos con un equipo de profesionales en cada categoría para atender a sus necesidades.</p></div>
-        <button id="boton">Ver todos</button>
-         </div>       
-        <div>
-
-
-</div>
-
+                    <div className="lorem"><p>Porque nos importa tanto como a vos, queremos acompañarte en los cuidados de tu mascota.<br/>Contamos con un equipo de profesionales en cada categoría para atender a sus necesidades.</p></div>
+                        <button id="boton">Ver todos</button>
+                </div>       
+         <div>
+    </div>
              <div className="images">
                 <figure>
-                <img className="imge" alt="" src={clinica}></img>
-                <figcaption>Clínica</figcaption>
+                    <img className="imge" alt="" src={clinica}></img>
+                        <figcaption>Clínica</figcaption>
                 </figure>
                 <figure>
-                <img className="imge"  alt="" src={estetica}></img>
-                <figcaption>Estética y spa</figcaption>
+                    <img className="imge"  alt="" src={estetica}></img>
+                        <figcaption>Estética y spa</figcaption>
                 </figure>
                 <figure>
-                <img className="imge" alt="" src={hotel}></img>
-                <figcaption>Hotel</figcaption>
-                </figure>
-                
-
-
-
-
-                
+                    <img className="imge" alt="" src={hotel}></img>
+                        <figcaption>Hotel</figcaption>
+                </figure>  
             </div> 
 
         </div>
