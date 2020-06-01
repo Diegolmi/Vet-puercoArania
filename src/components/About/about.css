@@ -16,9 +16,6 @@ h1{
     color:#fc5185;
 }
 
-default h2, .institucional h2{
-
-  }
 
 .first-title{
     color:#fc5185;
@@ -37,7 +34,6 @@ default .second-title, .institucional .second-title {
     color:#fc5185;
 }
 
-h3 {
 
 .third-title {
 
@@ -49,18 +45,12 @@ h3 {
 }
 
 
-
-
- h2, h3 {
-
  .second-title, .third-title {
 
     margin-top: 20px 20px;
     margin-bottom: 10px;
 }
 
-
-p {
 
 .paragraph {
 
@@ -75,9 +65,6 @@ p {
 .image{
     width: 100px;
     height: 100px;
-
-   }
-
     margin: 40px 3em 10px 10px auto;
 }
 

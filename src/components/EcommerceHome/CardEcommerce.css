@@ -4,22 +4,31 @@
   width: 100%;
   background: #f0f0f0;
   margin-top: 30px;
+  padding-bottom: 50px;
   /* display: flex; */
   /* justify-content: center;
     align-items: center;
     flex-wrap: nowrap; */
+    
 }
 
-.title-container {
+.line {
+  border: 1px solid #fc5185;
+  width: 80%;
+  margin: 35px auto;
+}
+/* .title-container {
   display: flex;
   flex-wrap: wrap;
-}
+} */
 
 .card-homePage .store-title {
   width: 500px;
-  margin-top: 20px;
+  padding-top: 50px;
+  margin-left: 20px;
   border-bottom: 3px solid #fc5185;
   margin-bottom: 15px;
+  padding-bottom: 15px;
 }
 
 .contenedor-boton-tienda {
@@ -41,12 +50,12 @@
 
 /* CARD */
 
-.card {
-  width: 15rem;
+.card-container {
+  /* width: 15rem; */
   background-color: #f0f0f0;
   border: 1px solid #fc5185;
   margin: 25px;
-  height: 460px;
+  /* height: 460px; */
 }
 
 .card-body {
@@ -55,12 +64,12 @@
   justify-content: center;
   align-items: center;
   flex-direction: column; */
-  width: 100%;
+  /* width: 100%; */
 }
 
 .button-card {
-  background-color: #364f6b;
-  color: #f0f0f0;
+  color: #364f6b;
+  border: none;
 }
 
 .rating-container {
@@ -74,7 +83,7 @@
   border-top: 1px solid #fc5185;
 }
 .card-footer .button-card {
-  background: #364f6b !important;
+  background: transparent !important;
 }
 .card-footer .button-card:hover {
   color: #fc5185;
@@ -99,11 +108,31 @@
 }
 
 @media only screen and (max-width: 600px) {
+  .store-title{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+  }
   .card-homePage {
     justify-content: center !important;
     align-items: center !important;
     display: block;
   }
+  .button-group {
+    max-width:300px ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+  }
+  .botones-productos {
+    font-size: 1.3rem !important;
+  }
+  .card.cascading-admin-card {
+    margin-top: 2.5rem;
+  } 
 
 }
 
@@ -126,4 +155,11 @@
 .botones-productos:hover {
   color: #fc5185;
   transition: .3s;
+}
+
+
+.rating-container{
+  height: 0;
+  padding: 0;
+  margin: 0;
 }

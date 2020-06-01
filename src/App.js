@@ -1,24 +1,10 @@
 import React from 'react';
-import SideNavPage from './components/SidebarE-commerce';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
-
-import CarouselPage from './components/Carousel/index';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Nav from './components/Navbar/Nav'
-import Footer from './components/Footer/Footer';
-// import About from './components/About/about';
-import EcommerceHome from './components/EcommerceHome/EcommerceHome';
-// import logo from '../src/assets/img/logo.png'
-// import Registro from './components/registro'
 import './App.css';
-import FormPage from './components/FormServicios';
-import About from './components/About/about';
-import SimpleBreadcrumbs from './components/Breadcrumbs';
+
 
 //importar react router 
 import {
@@ -29,49 +15,32 @@ import {
 import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
-import SecServicios from './components/SecServicios/index'
+import Register from './components/Register/Register';
+import Admin from './components/Admin/Admin';
+import SecServicios from './components/SecServicios/index';
 
 function App() {
   return (
-
-    // <SideNavPage />
-    <SimpleBreadcrumbs />
-    );
-}
-
-
-    <div>
-      <FormPage />
-    </div>
-  );
-
-
-    <div className="App">
-      <>
-          <About/>
-      </>
-    </div>
-
-
     <Router>
       {/* <Nav /> */}
       <Switch>
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
         <Route exact path="/servicios" component={SecServicios} />
-
+        <Route exact path="/registro" component={Register} />
+        <Route path="/privado/admin" component={Admin} />
+        {/* <Route exact path="/privado/usuario" component={usuario} />
+        <Route exact path="/consultas" component={Consultas} /> */}
+        {/* <Route exact path="/servicios" component={Servicios} /> */}
+        {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
+        {/* <Route exact path="/tienda" component={Tienda} />
+        <Route exact path="/tienda/alimentos" component={Alimentos} />
+        <Route exact path="/tienda/accesorios" component={Accesorios} />
+        <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
-    
-    
-    
-
   );
-
-
-    // <SideNavPage />
-    // <SimpleBreadcrumbs />
     
 
 }
