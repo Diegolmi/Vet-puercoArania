@@ -72,6 +72,8 @@ const EcommerceHome = () => {
                     </div>
                 </Col>
             </Row> : null}
+            
+            <div className="line"></div>
         </div>
     );
 }

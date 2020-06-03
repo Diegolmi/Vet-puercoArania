@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -28,13 +28,16 @@ render() {
         <MDBCollapse  id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav left>
             <MDBNavItem  active>
-              <MDBNavLink className="letras " to="#!">Inicio</MDBNavLink>
+              <MDBNavLink className="letras " to="/">Inicio</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="#!">Consultorio</MDBNavLink>
+              <MDBNavLink className="letras" to="/consultas">Consultas</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="#!">Quienes Somos</MDBNavLink>
+              <MDBNavLink className="letras" to="servicios">Servicios</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem>
+              <MDBNavLink className="letras" to="/about">Quienes Somos</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
