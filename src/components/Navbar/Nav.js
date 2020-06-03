@@ -34,7 +34,7 @@ render() {
               <MDBNavLink className="letras" to="/consultas">Consultas</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="servicios">Servicios</MDBNavLink>
+              <MDBNavLink className="letras"  to="/servicios">Servicios</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink className="letras" to="/about">Quienes Somos</MDBNavLink>

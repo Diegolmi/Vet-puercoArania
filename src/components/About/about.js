@@ -5,8 +5,8 @@ import medico2 from "../../assets/img/medico2.jpg";
 import medico3 from "../../assets/img/medico3.jpg";
 import medico4 from "../../assets/img/medico4.jpg";
 
-import alimento1 from "../../assets/img/alimento1.jpg";
-// import Image from "react-bootstrap/Image";
+//import alimento1 from "../../assets/img/alimento1.jpg";
+import Image from "react-bootstrap/Image";
 
 // import alimento1 from "../../assets/img/alimento1.jpg";
 import Nav from '../Navbar/Nav';
@@ -150,14 +150,8 @@ const Contenido = () => {
                       <h3>Productos exclusivos</h3>
 
 
-<<<<<<< HEAD
-                <h1 className="first-title" > Acerca de Veterinaria Puerco Araña</h1>
-                <div
-                  className="medicos d-md-flex flex-column flex-md-row justify-content-center 
-=======
                       <h3 className="third-title">Productos exclusivos</h3>
                       <p className="paragraph">
->>>>>>> e2780adb7518e917bd952a2e2cb62a3afb0ff1b3
 
                         Mediante la importación exclusiva de productos para nuestros
                         asociados nos aseguramos mantener la diferenciación frente a
