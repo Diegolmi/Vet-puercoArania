@@ -6,7 +6,8 @@ palette:{
     primary:{
         main:lightBlue[900],
         light:'#3f50b5',
-    }
+    },
+
 }
 
 

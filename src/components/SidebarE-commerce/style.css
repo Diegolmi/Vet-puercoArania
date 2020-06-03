@@ -15,4 +15,8 @@ legend{
 .grupo{
     margin-left:1em;
     color:  #364f6b;
+   
+}
+.MuiDrawer-paper{
+    background-color: #f0f0f0!important; 
 }

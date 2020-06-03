@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import moment from 'moment';
-import FarmaciaNav from './farmaciaNav';
+
 
 
 
@@ -20,18 +20,18 @@ const Farmacia = () => {
 
     return (
         <>
-            <FarmaciaNav/>
+
             <Container fluid>
-                <div className="title-container">
-                    {/* <h1>Farmacia</h1> */}
-                </div>
+                
+                    <h1 className="tituloFarm">Farmacia</h1>
+                
 
                 <Row>
 
                     {array.map(arr => (
                         <Col lg={3} md={6}>
                             <Card>
-                                <Card.Img variant="top" src={img1} className="img-fluid" />
+                                <Card.Img variant="top" src={img1} className="imgFarm" />
                                 <Card.Body>
                                     <Card.Title>Total FLC</Card.Title>
                                     <Card.Text>$950.00</Card.Text>
@@ -48,10 +48,6 @@ const Farmacia = () => {
                     ))}
                 </Row>
             </Container>
-
-
-
-
 
 
         </>
