@@ -12,6 +12,14 @@ import AdminConsultas from './Pages/consultas/AdminConsultas';
 import DatosAdmin from './Pages/datos admin/DatosAdmin';
 import InicioAdmin from './Pages/inicio/InicioAdmin';
 import {
+import EditUser from './Pages/EditUser';
+import AddProduct from './Pages/AddProduct';
+import EditarTurnos from './Pages/EditarTurnos';
+import AdminConsultas from './Pages/AdminConsultas';
+import DatosAdmin from './Pages/DatosAdmin';
+import InicioAdmin from './Pages/InicioAdmin';
+import {
+    BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";

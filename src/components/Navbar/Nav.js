@@ -1,4 +1,6 @@
 import React, { Component } from "react";
+
+import { Link } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
@@ -34,6 +36,7 @@ render() {
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink className="letras" to="/servicios">Servicios</MDBNavLink>
+              <MDBNavLink className="letras" to="servicios">Servicios</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink className="letras" to="/about">Quienes Somos</MDBNavLink>

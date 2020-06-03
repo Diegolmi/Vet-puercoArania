@@ -3,10 +3,16 @@ import React from 'react';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { MDBBadge } from "mdbreact";
+import React, { useState } from 'react';
+
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import { MDBBadge, MDBContainer, MDBBtn } from "mdbreact";
 import './Admin.css';
 
 import { Link } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaRegBell } from 'react-icons/fa';
+import { AiOutlineMail } from 'react-icons/ai';
 
 
 const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {

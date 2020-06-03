@@ -1,4 +1,17 @@
 import React from 'react';
+
+import SeccionPrincipal from './components/SeccionTiendEC';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
+  return (
+  <div>
+    <SeccionPrincipal />
+  </div>
+  )
+}
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -20,6 +33,14 @@ import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 
+
+import SecServicios from './components/SecServicios/index';
+import Alimentos from './components/Alimentos/alimentos';
+
+import Admin from './components/Admin/Admin';
+import SecServicios from './components/SecServicios/index';
+
+
 function App() {
   return (
     <Router>
@@ -31,13 +52,19 @@ function App() {
         <Route exact path="/registro" component={Register} />
         <Route path="/privado/admin" component={Admin} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
+
+        <Route exact path="/Alimentos" component={Alimentos} />
+
+        <Route path="/privado/admin" component={Admin} />
+
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}
         {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
         {/* <Route exact path="/tienda" component={Tienda} />
         <Route exact path="/tienda/alimentos" component={Alimentos} />
-         
+ 
+        <Route exact path="/tienda/accesorios" component={Accesorios} />
         <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
         <Route path="*" component={Error404} />
       </Switch>
@@ -47,4 +74,5 @@ function App() {
 
 }
  
+
 export default App;
