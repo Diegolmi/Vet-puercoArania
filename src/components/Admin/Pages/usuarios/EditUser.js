@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { MDBDataTable, MDBBtn } from 'mdbreact';
-import FormUser from '../Components/FormUser';
+import FormUser from '../../Components/FormUser';
 
 
 const EditUser = () => {

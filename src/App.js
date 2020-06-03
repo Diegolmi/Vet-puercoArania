@@ -18,6 +18,7 @@ import Landing from './Landing';
 import Register from './components/Register/Register';
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
+import Accesorios from './components/AccesoriosEC/Accesorios';
 
 function App() {
   return (
@@ -29,13 +30,14 @@ function App() {
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
         <Route path="/privado/admin" component={Admin} />
+        <Route exact path="/tienda/accesorios" component={Accesorios}/>
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}
         {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
         {/* <Route exact path="/tienda" component={Tienda} />
         <Route exact path="/tienda/alimentos" component={Alimentos} />
-        <Route exact path="/tienda/accesorios" component={Accesorios} />
+         
         <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
         <Route path="*" component={Error404} />
       </Switch>

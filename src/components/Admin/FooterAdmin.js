@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBCol, MDBContainer, MDBRow, MDBFooter , MDBBtn,MDBAnimation} from "mdbreact";
+import { MDBContainer} from "mdbreact";
 import { Link } from 'react-router-dom';
 
 const FooterAdmin = () => {
