@@ -16,8 +16,13 @@ import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
 import Register from './components/Register/Register';
+
+import SecServicios from './components/SecServicios/index';
+import Alimentos from './components/Alimentos/alimentos';
+
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
+
 
 function App() {
   return (
@@ -28,7 +33,11 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
+
+        <Route exact path="/Alimentos" component={Alimentos} />
+
         <Route path="/privado/admin" component={Admin} />
+
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}

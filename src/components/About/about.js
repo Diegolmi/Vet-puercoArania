@@ -1,3 +1,4 @@
+  
 import React from "react";
 import "./about.css";
 import medico1 from "../../assets/img/medico1.jpg";
