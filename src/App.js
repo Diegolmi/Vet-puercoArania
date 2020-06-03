@@ -1,4 +1,17 @@
 import React from 'react';
+
+import SeccionPrincipal from './components/SeccionTiendEC';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+function App() {
+  return (
+  <div>
+    <SeccionPrincipal />
+  </div>
+  )
+}
+
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -54,4 +67,5 @@ function App() {
 
 }
  
+
 export default App;
