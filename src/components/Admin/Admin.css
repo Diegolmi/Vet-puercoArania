@@ -1,5 +1,7 @@
 .contenedor-admin {
     overflow-x: hidden;
+    height: 100%;
+
     height: 100vh;
     margin: 0 !important;
     padding: 0 !important;
@@ -121,6 +123,8 @@
     margin: 0;
     padding: 0;
     height: 100%; 
+
+    height: 100vh; 
 }
 
 .table-user {
@@ -204,10 +208,18 @@
     color: #fc5185;
 }
 
+
 /*SECCION CONSULTAS*/
 .container-consultas-admin {
     width: 100%;
     margin: 0;
     padding: 0;
     height: 100vh;
+}
+
+.mensaje-consultas-btn {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+
 }
