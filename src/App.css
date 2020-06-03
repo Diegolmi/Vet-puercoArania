@@ -1,10 +1,11 @@
+/* .contenedor-principal-landing {
+  background: #f0f0f0 !important;
+} */
 
 /* .App {
   text-align: center;
-
 .contenedor-principal-landing {
   background: #f0f0f0;
-
 }
 /* .rowNav {
   height: 200px;
@@ -32,5 +33,4 @@
   to {
     transform: rotate(360deg);
   }
-} */
-
+} 
