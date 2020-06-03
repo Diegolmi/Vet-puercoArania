@@ -1,0 +1,95 @@
+#titulo_acce{
+    margin-top: 10px;
+    border: 3px outset #6d6d80;
+    margin: 10px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.945);
+    opacity: 0.3;
+    color: rgb(75, 3, 18);
+}
+
+.contenedor_cards{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.img_acc{
+   object-fit: contain;
+   height: 150px;
+}
+
+
+@media(max-width: 599px){
+    #card_acc{
+        width: 70% !important;
+        height: 30% !important;
+        
+    }
+    .img_acc{
+        width: 100% !important;
+        height: 30% !important;
+    }
+}
+@media(min-width: 600px) and (max-width: 859px){
+    #card_acc{
+        width: 30% !important;
+        height: 30% !important;
+    }
+}
+
+@media (min-width: 860px){
+    #card_acc{
+        width: 20%;
+        height: 20%;
+    }
+    
+    
+}
+.sidenav-filters {
+    padding-top: 20px;
+    padding-right:14px;
+    padding-left: 10px;
+    border-right:  #fc5185 solid;
+    background-color: #f0f0f0; 
+    border-width:1px;
+    min-width: 130px;
+}
+
+legend{
+    color:  #fc5185!important;
+}
+.gaby{
+    background: #CC95C0;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, rgb(99, 130, 167), #DBD4B4, #CC95C0);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, rgb(145, 160, 179), rgb(226, 218, 180)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.grupo{
+    margin-left:1em;
+    color:  #364f6b;
+   
+}
+.MuiDrawer-paper{
+    background-color: #f0f0f0!important; 
+}
+body, html {
+height: 100%;
+}
+.bg {
+background-image: url("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/08/perro-gato.jpg?itok=La-ztjdF") ;
+height: 70vh;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.footer-copyright {
+    margin-top: 50px;
+    height: 50px;
+    width: auto;
+    display: flex;
+    
+    text-align: center;
+}
