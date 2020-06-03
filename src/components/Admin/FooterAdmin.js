@@ -1,4 +1,5 @@
 import React from 'react';
+import { MDBContainer} from "mdbreact";
 import { MDBCol, MDBContainer, MDBRow, MDBFooter , MDBBtn,MDBAnimation} from "mdbreact";
 import { Link } from 'react-router-dom';
 
