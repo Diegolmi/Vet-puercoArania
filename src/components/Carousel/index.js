@@ -1,7 +1,5 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from
-"mdbreact";
-
+import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from "mdbreact";
 
 //styles
 import './style.css'
@@ -12,7 +10,6 @@ import {
   img2,
   img3,
   banner,
-  banner2
 } from "../../assets/img/index";
 
 const CarouselPage = () => {

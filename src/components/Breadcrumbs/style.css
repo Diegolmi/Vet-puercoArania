@@ -1,4 +1,73 @@
 .breadcrumb-ecommerce {
-    margin: 10px;
-    color: #f0f0f0;
+    margin-bottom: 0px;margin-top: 10px;
+    margin-right: 0px;
+    margin-left: 0px;
+    background-color: #43dde6!important;
+    justify-content: center;
+ }
+ .navBread{
+     background-color: #43dde6!important;
+     margin-top: 115px;
+ }
+ /* .botonBread{
+     color:#43dde6!important;
+     background-color: transparent!important;
+     box-shadow:none!important;
+ } */
+.iconButton, .botonBread{
+    color:#f0f0f0!important;
+}
+.classes.shadow{
+    color:#f0f0f0!important;
+}
+button:active{
+    border: none!important;
+}
+
+.productos{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.navbarSec{
+    position: absolute;
+    margin-top: 200px;
+}
+
+.MuiDrawer-paper{
+    background-color: yellow !important;
+}
+
+.butIcon{
+    background-color: none!important;
+    color:black!important;
+    text-transform: none!important;        
+}
+
+.butNav{
+    background-color: none!important;
+    color:black!important;
+    text-transform: none!important;
+       
+}
+
+.but:hover{
+    color:#fc5185!important;
+    font-weight: bold!important;
+}
+
+@media(min-width: 330px) and (max-width: 600){
+    .butNav{
+        background-color: none!important;
+        color:black!important;
+        text-transform: none!important;
+        
+    }
+    .navBread{
+        background-color: #43dde6!important;
+        margin-top: 0px;
+    }
 }
