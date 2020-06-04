@@ -27,13 +27,10 @@ const Contenedor = () => {
 
     return (
         <>
-            <div className="navbarPri">
-            </div>
+           <Nav/>
             <ThemeProvider theme={theme}>
                 <div className={classes.root}>
-                    <div className="navbarSec">
-                        <NavbarE accionAbrir={accionAbrir} />
-                    </div>
+                   <NavbarE accionAbrir={accionAbrir} />
                     <div className="navBread">
                         <div className={classes.toolbar}></div>
                     </div>
@@ -45,7 +42,7 @@ const Contenedor = () => {
                     </Hidden>
                     <Hidden smUp>
                         <Cajon
-                            variant="temporaly"
+                            variant="temporary"
                             open={abrir}
                             onClose={accionAbrir}
                         />

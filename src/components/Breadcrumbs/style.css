@@ -7,6 +7,7 @@
  }
  .navBread{
      background-color: #43dde6!important;
+     margin-top: 115px;
  }
  /* .botonBread{
      color:#43dde6!important;
@@ -33,13 +34,24 @@ button:active{
 
 .navbarSec{
     position: absolute;
-    top:100px;
+    margin-top: 200px;
 }
 
-.but{
+.MuiDrawer-paper{
+    background-color: yellow !important;
+}
+
+.butIcon{
+    background-color: none!important;
+    color:black!important;
+    text-transform: none!important;        
+}
+
+.butNav{
     background-color: none!important;
     color:black!important;
     text-transform: none!important;
+       
 }
 
 .but:hover{
@@ -48,9 +60,14 @@ button:active{
 }
 
 @media(min-width: 330px) and (max-width: 600){
-    .but{
+    .butNav{
         background-color: none!important;
         color:black!important;
         text-transform: none!important;
+        
+    }
+    .navBread{
+        background-color: #43dde6!important;
+        margin-top: 0px;
     }
 }

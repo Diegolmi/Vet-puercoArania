@@ -1,31 +1,32 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography, makeStyles, IconButton, Button } from '@material-ui/core';
+import { AppBar, Toolbar, makeStyles, IconButton, Button, Typography } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
-import Nav from '../Navbar/Nav';
-// import "./style.css";
+
+import "./style.css";
 
 const useStyles = makeStyles(theme => ({
+    offset: theme.mixins.toolbar,
+
     menuButton: {
         marginRight: theme.spacing(2),
-        color: theme.palette.common.white
+
     },
     title: {
         flexGrow: 1,
+        display:"flex"
     },
     shadow: {
         flexGrow: 1,
         boxShadow: 'none',
         border: '0px',
         borderColor: 'secondary',
-        color: theme.palette.common.white,
         textTransform: 'none'
 
     },
     botones: {
+        
         flexGrow: 1,
-        [theme.breakpoints.up('xs')]: {
-          color:theme.palette.common.black 
-        }
+        textTransform:'none'
     },
 
     appBar: {
@@ -35,7 +36,6 @@ const useStyles = makeStyles(theme => ({
         }
     },
 
-    offset: theme.mixins.toolbar,
 }
 
 ))
@@ -43,28 +43,28 @@ const useStyles = makeStyles(theme => ({
 export const Navbar = (props) => {
     const classes = useStyles()
     return (
-        <div >
-            <AppBar  className={classes.AppBar}>
+        <>
+            <AppBar className={classes.AppBar} >
                 <Toolbar className="navBread">
-                    <IconButton
-                        className={classes.menuButton}
-                        aria-label="menu"
-                        onClick={() => props.accionAbrir()}
-                    >
-                        <MenuIcon className="but"
-                        />
-                    </IconButton>
-                    <Typography variant="h6" className={classes.title}>
+                    <Typography className={classes.title}>
+                        <IconButton
+                            className={classes.menuButton}
+                            aria-label="menu"
+                            onClick={() => props.accionAbrir()}
+                        >
+                            <MenuIcon className="butIcon"
+                            />
+                        </IconButton>
                     </Typography>
-                    <div className={classes.botones}>
-                        <Button href="#text-buttons" className="but" >Alimentos</Button>
-                        <Button href="#text-buttons" className="but">Accesorios</Button>
-                        <Button href="#text-buttons" className="but">Farmacia</Button>
+                    <div className={classes.title}>
+                        <Button href="#text-buttons" className={classes.botones} >Alimentos</Button>
+                        <Button href="#text-buttons" className={classes.botones}>Accesorios</Button>
+                        <Button href="#text-buttons" className={classes.botones}>Farmacia</Button>
                     </div>
                 </Toolbar>
             </AppBar>
             <div className={classes.offset}> </div>
-        </div>
+        </>
     )
 }
 
