@@ -1,14 +1,15 @@
+  
 import React from "react";
 import "./about.css";
 import medico1 from "../../assets/img/medico1.jpg";
 import medico2 from "../../assets/img/medico2.jpg";
 import medico3 from "../../assets/img/medico3.jpg";
 import medico4 from "../../assets/img/medico4.jpg";
-import Image from "react-bootstrap/Image";
 import { Grid, Typography } from "@material-ui/core";
 import NavbarPage from '../Navbar/Nav';
-
-
+import Image from "react-bootstrap/Image";
+import alimento1 from "../../assets/img/alimento1.jpg";
+import Nav from '../Navbar/Nav';
 
 
 const Contenido = () => {
@@ -136,9 +137,7 @@ const Contenido = () => {
           que trabaja, que se frustra cuando las cosas no salen de la manera
           esperada…. gente que HACE.
         </Typography>
-      </div>
-    </div>
-      </>
+          </>
     
   );
 };

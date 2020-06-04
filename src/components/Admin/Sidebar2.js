@@ -12,7 +12,7 @@ sidenavToggle = sidenavId => () => {
   this.setState({
     [sidenavNr]: !this.state[sidenavNr]
   });
-};
+}; 
 
 render() {
     return (

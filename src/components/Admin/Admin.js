@@ -5,6 +5,13 @@ import SidebarAdmin from './SidebarAdmin';
 import SidebarIcons from './SidebarIcons';
 
 // IMPORT PAGES
+import EditUser from './Pages/usuarios/EditUser';
+import AddProduct from './Pages/productos/AddProduct';
+import EditarTurnos from './Pages/turnos/EditarTurnos';
+import AdminConsultas from './Pages/consultas/AdminConsultas';
+import DatosAdmin from './Pages/datos admin/DatosAdmin';
+import InicioAdmin from './Pages/inicio/InicioAdmin';
+import {
 import EditUser from './Pages/EditUser';
 import AddProduct from './Pages/AddProduct';
 import EditarTurnos from './Pages/EditarTurnos';
