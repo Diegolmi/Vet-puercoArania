@@ -2,3 +2,13 @@
     width: 300px;
     height: 180px;
 }
+
+.container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

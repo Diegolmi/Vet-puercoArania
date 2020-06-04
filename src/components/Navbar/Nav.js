@@ -4,6 +4,7 @@ MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
 import logo from '../../assets/img/logo.png'
 import './styleNav.css';
+import { Link } from 'react-router-dom';
 
 class NavbarPage extends Component {
 state = {

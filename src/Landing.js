@@ -15,32 +15,28 @@ import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
 
 const Landing = () => {
-    return ( 
-        <>
-        {/* <Container fluid className="contenedor-principal-landing"> */}
-          <Nav />
-    
-      
-          <CarouselPage />
-       
+  return (
+    <>
+      {/* <Container fluid className="contenedor-principal-landing"> */}
+      <Nav />
+
+
+      <CarouselPage />
+
       <div className="rowEcommerce">
-        
-          <EcommerceHome />
-        
-        </div>
-        {/* <Row className="rowServicios">
+
+        <EcommerceHome />
+
+      </div>
+      {/* <Row className="rowServicios">
         <Col> */}
-          <Servicios />
-        {/* </Col>
-      
+      <Servicios />
+      {/* </Col> 
       </Row> */}
-      
-          
-        
-    {/* </Container> */}
-    <Footer />
-        </>
-     );
+      {/* </Container> */}
+      <Footer />
+    </>
+  );
 }
- 
+
 export default Landing;
