@@ -4,9 +4,6 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import CarouselPage from './components/Carousel/index';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from './components/Navbar/Nav'
 import Footer from './components/Footer/Footer';
 // import About from './components/About/about';
