@@ -2,6 +2,7 @@ import React from "react";
 import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
+import FooterAdmin from '../Admin/FooterAdmin';
 import {Link} from 'react-router-dom';
 
 
@@ -28,8 +29,9 @@ class FormsPage extends React.Component {
 
     render() {
         return (
-            <div className='container'>
-                <h1 center>Registrate</h1>
+           <>
+            <div className='container-fluid container-registro'>
+                <h1 center className="my-5">Registrate</h1>
                 <div className='row'>
                     <div className='col-4'>
                         <MDBRow>
@@ -209,6 +211,8 @@ class FormsPage extends React.Component {
 
                 </div>
             </div>
+            <FooterAdmin />
+           </>
         );
     }
 }

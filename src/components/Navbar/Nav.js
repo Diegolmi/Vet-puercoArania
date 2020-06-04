@@ -1,10 +1,8 @@
 import React, { Component } from "react";
-
-//import { Link } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
 import './styleNav.css';
 
 class NavbarPage extends Component {
@@ -19,7 +17,7 @@ toggleCollapse = () => {
 render() {
   return (
     <Router>
-      <MDBNavbar className="font-weight-bold" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
+      <MDBNavbar className="font-weight-bold navPrincipal"  color="bg-primary" fixed="top" white expand="md" scrolling transparent>
         <MDBNavbarBrand>
              <img src={logo} className="logo" alt="" />
 
@@ -35,9 +33,7 @@ render() {
               <MDBNavLink className="letras" to="/consultas">Consultas</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras"  to="/servicios">Servicios</MDBNavLink>
-
-              
+              <MDBNavLink className="letras" to="/servicios">Servicios</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBNavLink className="letras" to="/about">Quienes Somos</MDBNavLink>
