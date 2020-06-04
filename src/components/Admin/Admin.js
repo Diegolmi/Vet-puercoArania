@@ -5,14 +5,13 @@ import SidebarAdmin from './SidebarAdmin';
 import SidebarIcons from './SidebarIcons';
 
 // IMPORT PAGES
-import EditUser from './Pages/EditUser';
-import AddProduct from './Pages/AddProduct';
-import EditarTurnos from './Pages/EditarTurnos';
-import AdminConsultas from './Pages/AdminConsultas';
-import DatosAdmin from './Pages/DatosAdmin';
-import InicioAdmin from './Pages/InicioAdmin';
+import EditUser from './Pages/usuarios/EditUser';
+import AddProduct from './Pages/productos/AddProduct';
+import EditarTurnos from './Pages/turnos/EditarTurnos';
+import AdminConsultas from './Pages/consultas/AdminConsultas';
+import DatosAdmin from './Pages/datos admin/DatosAdmin';
+import InicioAdmin from './Pages/inicio/InicioAdmin';
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
@@ -58,8 +57,8 @@ const Admin = () => {
             {sidebar ? 
                     <div>
                     <Row>
-                        <Col sm={1} className="columna-sidebar"><SidebarIcons /></Col>
-                        <Col sm={11} className="container-links-sidebar">
+                        <Col xs={6} md={2} className="columna-sidebar"><SidebarIcons /></Col>
+                        <Col xs={6} md={8} className="container-links-sidebar mr-1">
                             <Switch>
                                 <Route exact path="/privado/admin" component={InicioAdmin} />
                                 <Route exact path="/privado/admin/user" component={EditUser} />
@@ -78,8 +77,8 @@ const Admin = () => {
                 :
                 <div>
                     <Row>
-                        <Col md={3} className="columna-sidebar"><SidebarAdmin /></Col>
-                        <Col md={9} className="container-links-sidebar">
+                        <Col sm={3} className="columna-sidebar"><SidebarAdmin /></Col>
+                        <Col sm={9} className="container-links-sidebar">
                             <Switch>
                                 <Route exact path="/privado/admin" component={InicioAdmin} />
                                 <Route exact path="/privado/admin/user" component={EditUser} />

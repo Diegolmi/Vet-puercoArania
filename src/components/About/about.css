@@ -10,12 +10,10 @@
   min-width: 360px;
 
 }
-
-
-
 .first-title {
   color: #fc5185 !important;
 }
+
 .second-title, .five-title,.first-title,.third-title,.fourd-title{
   margin-bottom: 1rem !important;
 }
