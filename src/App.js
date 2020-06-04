@@ -16,9 +16,13 @@ import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
 import Register from './components/Register/Register';
+import Login from './components/Navbar/Login';
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
 import Accesorios from './components/AccesoriosEC/Accesorios';
+import IndexUsser from './components/Usser/IndexUsser';
+import Alimentos from './components/Alimentos/alimentos';
+
 
 
 function App() {
@@ -31,7 +35,14 @@ function App() {
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
         <Route path="/privado/admin" component={Admin} />
+        <Route exact path="/login" component={Login} />
+        <Route path="/privado/admin" component={Admin} />
+        <Route path="/privado/panelUsser" component={IndexUsser} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
+        <Route exact path="/Alimentos" component={Alimentos} />
+        <Route path="/privado/admin" component={Admin} />
+        <Route path="*" component={Error404} />
+
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}
@@ -40,7 +51,7 @@ function App() {
         <Route exact path="/tienda/alimentos" component={Alimentos} />
          
         <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
-        <Route path="*" component={Error404} />
+        
       </Switch>
     </Router>
   );
@@ -48,4 +59,5 @@ function App() {
 
 }
  
+
 export default App;

@@ -3,20 +3,24 @@ import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
 import FooterAdmin from '../Admin/FooterAdmin';
+import {Link} from 'react-router-dom';
+
 
 class FormsPage extends React.Component {
     state = {
-        fname: "Diego",
-        lname: "Olmi",
+        fname: "",
+        lname: "",
         email: "",
         city: "",
         state: "",
-        zip: ""
+        contraseña: "",
+        repContraseña: ""
     };
 
     submitHandler = event => {
         event.preventDefault();
         event.target.className += " was-validated";
+        
     };
 
     changeHandler = event => {
@@ -43,154 +47,165 @@ class FormsPage extends React.Component {
                             noValidate
                         >
                             <MDBRow >
-                                <MDBCol md="3" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterNameEx"
-                                        className="grey-text"
-                                    >
-                                        Nombre
-                                </label>
-                                    <input
-                                        value={this.state.fname}
-                                        name="fname"
-                                        onChange={this.changeHandler}
-                                        type="text"
-                                        id="defaultFormRegisterNameEx"
-                                        className="form-control"
-                                        placeholder="First name"
-                                        required
-                                    />
-                                    <div className="valid-feedback">Correcto</div>
+                            <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterNameEx"
+                                className="grey-text"
+                            >
+                                Nombre
+              </label>
+                            <input
+                                value={this.state.fname}
+                                name="fname"
+                                onChange={this.changeHandler}
+                                type="text"
+                                id="defaultFormRegisterNameEx"
+                                className="form-control"
+                                placeholder="Nombre"
+                                required
+                            />
+                            <div className="valid-feedback">Que buen nombre!!</div>
                                 </MDBCol>
-                                <MDBCol md="3" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterEmailEx2"
-                                        className="grey-text"
-                                    >
-                                        Apellido
-                                </label>
-                                    <input
-                                        value={this.state.lname}
-                                        name="lname"
-                                        onChange={this.changeHandler}
-                                        type="text"
-                                        id="defaultFormRegisterEmailEx2"
-                                        className="form-control"
-                                        placeholder="Last name"
-                                        required
-                                    />
-                                    <div className="valid-feedback">Correcto</div>
-                                </MDBCol>
-                                <MDBCol md="3" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterConfirmEx3"
-                                        className="grey-text"
-                                    >
-                                        Email
-                                </label>
-                                    <input
-                                        value={this.state.email}
-                                        onChange={this.changeHandler}
-                                        type="email"
-                                        id="defaultFormRegisterConfirmEx3"
-                                        className="form-control"
-                                        name="email"
-                                        placeholder="Ingrese su Email"
-                                    />
-                                    <small id="emailHelp" className="form-text text-muted">
-                                        We'll never share your email with anyone else.
-                                 </small>
-                                </MDBCol>
+                                
+                        <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterEmailEx2"
+                                className="grey-text"
+                            >
+                                Apellido
+              </label>
+                            <input
+                                value={this.state.lname}
+                                name="lname"
+                                onChange={this.changeHandler}
+                                type="text"
+                                id="defaultFormRegisterEmailEx2"
+                                className="form-control"
+                                placeholder="Apellido"
+                                required
+                            />
+                            <div className="valid-feedback">ok!</div>
+                        </MDBCol>
+                                <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterConfirmEx3"
+                                className="grey-text"
+                            >
+                                Email
+              </label>
+                            <input
+                                value={this.state.email}
+                                onChange={this.changeHandler}
+                                type="email"
+                                id="defaultFormRegisterConfirmEx3"
+                                className="form-control"
+                                name="email"
+                                placeholder="Tu Email"
+                            />
+                            <small id="emailHelp" className="form-text text-muted">
+                                
+              </small>
+                        </MDBCol>
                             </MDBRow>
                             <MDBRow>
-                                <MDBCol md="3" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterPasswordEx4"
-                                        className="grey-text"
-                                    >
-                                        Ciudad
-                                 </label>
-                                    <input
-                                        value={this.state.city}
-                                        onChange={this.changeHandler}
-                                        type="text"
-                                        id="defaultFormRegisterPasswordEx4"
-                                        className="form-control"
-                                        name="city"
-                                        placeholder="Ciudad"
-                                        required
-                                    />
-                                    <div className="invalid-feedback">
-                                        ingrese una ciudad valida
-                                </div>
-                                    <div className="valid-feedback">Correcto</div>
-                                </MDBCol>
-                                <MDBCol md="3" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterPasswordEx4"
-                                        className="grey-text"
-                                    >
-                                        Provincia
-                                </label>
-                                    <input
-                                        value={this.state.state}
-                                        onChange={this.changeHandler}
-                                        type="text"
-                                        id="defaultFormRegisterPasswordEx4"
-                                        className="form-control"
-                                        name="state"
-                                        placeholder="Provincia"
-                                        required
-                                    />
-                                    <div className="invalid-feedback">
-                                        Ingrese una provincia valida
-                                </div>
-                                    <div className="valid-feedback">Correcto</div>
-                                </MDBCol>
+                            <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterPasswordEx4"
+                                className="grey-text"
+                            >
+                                Ciudad
+              </label>
+                            <input
+                                value={this.state.city}
+                                onChange={this.changeHandler}
+                                type="text"
+                                id="defaultFormRegisterPasswordEx4"
+                                className="form-control"
+                                name="city"
+                                placeholder="Ciudad"
+                                required
+                            />
+                            <div className="invalid-feedback">
+                                Escribe una ciudad valida
+              </div>
+                            <div className="valid-feedback">Bella Ciudad!</div>
+                        </MDBCol>
                                 <MDBCol md="4" className="mb-3">
-                                    <label
-                                        htmlFor="defaultFormRegisterPasswordEx4"
-                                        className="grey-text">
-                                        Codigo Postal
-                                </label>
-                                    <input
-                                        value={this.state.zip}
-                                        onChange={this.changeHandler}
-                                        type="text"
-                                        id="defaultFormRegisterPasswordEx4"
-                                        className="form-control"
-                                        name="Codigo Postal"
-                                        placeholder="Zip"
-                                        
-                                    />
-                                    <div className="invalid-feedback">
-                                        Ingrese un codigo postal valido
-                                </div>
-                                    <div className="valid-feedback"></div>
-                                </MDBCol>
+                            <label
+                                htmlFor="defaultFormRegisterPasswordEx4"
+                                className="grey-text"
+                            >
+                                Provincia
+              </label>
+                            <input
+                                value={this.state.state}
+                                onChange={this.changeHandler}
+                                type="text"
+                                id="defaultFormRegisterPasswordEx4"
+                                className="form-control"
+                                name="state"
+                                placeholder="Provincia"
+                                required
+                            />
+                            <div className="invalid-feedback">
+                                Escribe una provincia valida.
+                             </div>
+                            <div className="valid-feedback">Valida</div>
+                        </MDBCol>
+                                <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterPasswordEx4"
+                                className="grey-text"
+                            >
+                                Contraseña
+                            </label>
+                            <input
+                                value={this.state.contraseña}
+                                onChange={this.changeHandler}
+                                type="password"
+                                id="defaultFormRegisterPasswordEx4"
+                                className="form-control"
+                                name="contraseña"
+                                placeholder="Contraseña"
+                                required
+                            />
+                            <div className="invalid-feedback">
+                                Escribe una contraseña valida
+                             </div>
+                            <div className="valid-feedback">Valido</div>
+                        </MDBCol>
                             </MDBRow>
-                            <MDBCol md="3" className="mb-3">
-                                <div className="custom-control custom-checkbox pl-3">
-                                    <input
-                                        className="custom-control-input"
-                                        type="checkbox"
-                                        value=""
-                                        id="invalidCheck"
-                                        required
-                                    />
-                                    <label className="custom-control-label" htmlFor="invalidCheck">
-                                        Acepte los terminos y condiciones
-                                    </label>
-                                    <div className="invalid-feedback">
-                                        Debe aceptar antes de enviar
-                                </div>
-                                </div>
-                            </MDBCol>
-                            <MDBBtn color="primary" type="submit">
-                                 Registrarse
+                            <MDBCol md="4" className="mb-3">
+                            <label
+                                htmlFor="defaultFormRegisterPasswordEx4"
+                                className="grey-text"
+                            >
+                               Confirme Contraseña
+                            </label>
+                            <input
+                                value={this.state.repContraseña}
+                                onChange={this.changeHandler}
+                                type="password"
+                                id="defaultFormRegisterPasswordEx4"
+                                className="form-control"
+                                name="repContraseña"
+                                placeholder="Confirme Contraseña"
+                                required
+                            />
+                            <div className="invalid-feedback">
+                                Escribe una contraseña valida
+                             </div>
+                            <div className="valid-feedback">Valido</div>
+                        </MDBCol>
+                            <MDBBtn className="ButtonRegistro" type="submit">
+                                 Registrate
                                
                             </MDBBtn>
                         </form>
+                        Ya tenes una cuenta?.
+                        <Link to={'/Login'} className= "enlace-cuenta">
+                Inicia Sesión.
+            </Link>
                     </div>
 
 
