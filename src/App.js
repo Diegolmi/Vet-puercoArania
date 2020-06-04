@@ -22,7 +22,7 @@ import SecServicios from './components/SecServicios/index';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 import IndexUsser from './components/Usser/IndexUsser';
 import Alimentos from './components/Alimentos/alimentos';
-
+import Contenedor from './components/Tienda/Contenedor';
 
 
 function App() {
@@ -37,11 +37,13 @@ function App() {
         <Route path="/privado/admin" component={Admin} />
         <Route exact path="/login" component={Login} />
         <Route path="/privado/admin" component={Admin} />
+        <Route path="/tienda" component={Contenedor} />
         <Route path="/privado/panelUsser" component={IndexUsser} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
-        <Route exact path="/Alimentos" component={Alimentos} />
+        <Route exact path="/tienda/alimentos" component={Alimentos} />
         <Route path="/privado/admin" component={Admin} />
         <Route path="*" component={Error404} />
+
 
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}

@@ -18,10 +18,10 @@ const Contenido = () => {
       <div className="institucional container-fluid">
         <Typography variant="h2" className="first-title" align="center">
           Acerca de Veterinaria Puerco Araña
-        </Typography>
+      </Typography>
         <Typography variant="h3" className="third-title">
           Nuestros Profesionales
-        </Typography>
+      </Typography>
         <Grid container>
           <Grid item xs={12} sm={6} md={3} align="center">
             <Image src={medico1} className="imedicos" roundedCircle alt="" paragraph />
@@ -138,8 +138,8 @@ const Contenido = () => {
         </Typography>
         </div>
       </div>
-      </>
-    
+    </>
+
   );
 };
 
