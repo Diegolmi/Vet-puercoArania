@@ -34,9 +34,7 @@ function App() {
         <Route exact path="/about" component={About} />
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
-        <Route path="/privado/admin" component={Admin} />
         <Route exact path="/login" component={Login} />
-        <Route path="/privado/admin" component={Admin} />
         <Route path="/tienda" component={Contenedor} />
         <Route path="/privado/panelUsser" component={IndexUsser} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
