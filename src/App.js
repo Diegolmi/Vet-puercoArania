@@ -21,7 +21,7 @@ import SecServicios from './components/SecServicios/index';
 import Alimentos from './components/Alimentos/alimentos';
 
 import Admin from './components/Admin/Admin';
-import SecServicios from './components/SecServicios/index';
+
 
 
 function App() {
