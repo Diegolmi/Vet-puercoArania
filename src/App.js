@@ -34,7 +34,7 @@ function App() {
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route path="/tienda" component={Contenedor} />
-        <Route path="/privado/panelUsser" component={IndexUsser} />
+        {/*<Route path="/privado/panelUsser" component={IndexUsser} />*/}
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
         <Route path="/privado/admin" component={Admin} />
