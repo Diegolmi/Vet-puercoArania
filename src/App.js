@@ -34,6 +34,7 @@ function App() {
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route path="/privado/admin" component={Admin} />
+        <Route path="/privado/panelUsser" component={IndexUsser} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/galeria" component={Galeria} />
 
@@ -43,7 +44,8 @@ function App() {
 
         <Route exact path="/privado/Usuario" component={IndexUsser} />
 
-        {/*<Route exact path="/consultas" component={Consultas} /> */}
+        {/* <Route exact path="/privado/usuario" component={usuario} />
+        <Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}
         {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
         {/*<Route exact path="/tienda" component={Tienda} />*/}
