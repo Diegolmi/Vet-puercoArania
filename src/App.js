@@ -20,7 +20,8 @@ import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
 import Alimentos from './components/Alimentos/alimentos';
 import Accesorios from './components/AccesoriosEC/Accesorios';
-//import IndexUsser from './components/Usser/IndexUsser';
+import IndexUsser from './components/Usser/IndexUsser';
+import Galeria from './components/Galeria/Galeria';
 
 function App() {
   return (
@@ -34,13 +35,15 @@ function App() {
         <Route exact path="/login" component={Login} />
         <Route path="/privado/admin" component={Admin} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
+        <Route exact path="/galeria" component={Galeria} />
+
+
 
         <Route exact path="/Alimentos" component={Alimentos} />
 
-        <Route path="/privado/admin" component={Admin} />
+        <Route exact path="/privado/Usuario" component={IndexUsser} />
 
-        {/* <Route exact path="/privado/usuario" component={usuario} />
-        <Route exact path="/consultas" component={Consultas} /> */}
+        {/*<Route exact path="/consultas" component={Consultas} /> */}
         {/* <Route exact path="/servicios" component={Servicios} /> */}
         {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
         {/*<Route exact path="/tienda" component={Tienda} />*/}

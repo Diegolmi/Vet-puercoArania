@@ -1,5 +1,5 @@
 import React from "react";
-import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBView, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
 import {Link} from 'react-router-dom';
@@ -29,16 +29,18 @@ class FormsPage extends React.Component {
     render() {
         return (
             <div className='container'>
-                <h1 center>Registrate</h1>
-                <div className='row'>
+                <MDBRow>
+                
+
                     <div className='col-4'>
                         <MDBRow>
-                            <MDBCol>
+                        <MDBView  hover zoom >
                                 <img src={logo} className="rounded float-left logoRegister" alt="aligment" />
-                            </MDBCol>
+                            </MDBView>
                         </MDBRow>
                     </div>
-                    <div className='col-8'>
+                    <div className='col-8 containerForm'md="8">
+                    <h1 center>Regístrate</h1>
                         <form
                             className="needs-validation"
                             onSubmit={this.submitHandler}
@@ -207,7 +209,8 @@ class FormsPage extends React.Component {
                     </div>
 
 
-                </div>
+                
+                </MDBRow>
             </div>
         );
     }

@@ -3,33 +3,34 @@ import NavbarAdmin from '../Admin/NavbarAdmin';
 import FooterAdmin from '../Admin/FooterAdmin';
 import Bienvenida from './Components/Bienvenida';
 import Mascotas from './Components/Mascotas';
+//import Sidenav from './Components/Sidenav';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
 
 
 
-
-const PanelUsser = () => {
+const IndexUsser = () => {
     return (
-        <>
-        <NavbarAdmin />
-        <Bienvenida />
-
-        <Mascotas /> 
+        <Container-fluid>
+            <NavbarAdmin />
+            {/*<Sidenav />*/}
 
 
-
-
-
+            <Row>
+                <Col sm={11}> <Bienvenida /></Col>
+            </Row>
 
 
 
+            
+                <Mascotas />
+            
 
-
-
-        <FooterAdmin />
-        </>
+            <FooterAdmin />
+        </Container-fluid>
     )
 }
 
-export default PanelUsser
+export default IndexUsser
 
