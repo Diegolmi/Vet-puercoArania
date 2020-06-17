@@ -58,7 +58,7 @@ const TablePage = (props) => {
         'Raza': 'Bond',
         'Control': 'Spain',
         'Años': '25',
-        'editar': <MDBBtn color="green" size="sm">Editar</MDBBtn>,
+        'editar': <MDBBtn color="green" size="sm" onClick="">Editar</MDBBtn>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
       {
