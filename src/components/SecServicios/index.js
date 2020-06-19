@@ -4,7 +4,7 @@ import {  MDBRow, MDBCol, MDBIcon,  MDBContainer } from "mdbreact";
 import catdog from'../../assets/img/svs/catdog.png';
 import { MDBBtn } from "mdbreact";
 import Nav from '../../components/Navbar/Nav';
-
+import FormPage from '../../components/FormServicios';
 
 const SecServicios = () => {
 return ( 
@@ -107,6 +107,7 @@ return (
         </MDBRow>
       </section>
     </div>    
+      <FormPage/>
 
 
 </div>
