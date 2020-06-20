@@ -73,14 +73,7 @@
     flex-direction: column;
     
 }
-.needs-validation {
-    height: 200px;
-    width: 500px;
-}
-.editMascotas {
-    margin: 100px;
 
-}
 .listMascotas {
     margin: 100px;
 }

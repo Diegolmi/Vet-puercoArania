@@ -1,8 +1,18 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from 'mdbreact';
+import {Button} from 'react-bootstrap';
+import ModalEdit from './ModalEdit';
 
 const TablePage = (props) => {
+  const [show, setShow] = useState(false);
+
   
+  
+  const handleShow = () => setShow(true);
+
+  //const ActualizaNombre = () => {  
+  //}
+
   
   const mascotas = {
     columns: [
@@ -39,7 +49,9 @@ const TablePage = (props) => {
         'Raza': 'Moss',
         'country': 'USA',
         'Años': '23',
-        'editar': <MDBBtn color="green" size="sm">Editar</MDBBtn>,
+        'editar': <Button variant="primary" onClick={handleShow}>
+        Editar
+      </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
       {
@@ -49,7 +61,9 @@ const TablePage = (props) => {
         'Control': '15/06/20',
 
         'Años': '36',
-        'editar': <MDBBtn color="green" size="sm">Editar</MDBBtn>,
+        'editar':<Button variant="primary" onClick={handleShow}>
+        Editar
+      </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
       {
@@ -58,7 +72,9 @@ const TablePage = (props) => {
         'Raza': 'Bond',
         'Control': 'Spain',
         'Años': '25',
-        'editar': <MDBBtn color="green" size="sm" onClick="">Editar</MDBBtn>,
+        'editar': <Button variant="primary" onClick={handleShow}>
+        Editar
+      </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
       {
@@ -67,7 +83,9 @@ const TablePage = (props) => {
         'Raza': 'Horwitz',
         'Control': 'Italy',
         'Años': '41',
-        'editar': <MDBBtn color="green" size="sm">Editar</MDBBtn>,
+        'editar': <Button variant="primary" onClick={handleShow}>
+                        Editar
+                  </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
     ]
@@ -82,7 +100,7 @@ const TablePage = (props) => {
         <MDBTableHead columns={mascotas.columns} />
         <MDBTableBody rows={mascotas.rows} />
       </MDBTable>
-      
+      <ModalEdit show={show} setShow={setShow}/>
     </div>
     
 );

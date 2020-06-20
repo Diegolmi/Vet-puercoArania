@@ -1,11 +1,12 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { MDBBtn, MDBInput, MDBRow, MDBCol } from 'mdbreact';
 import './styleMascotas.css';
+const EditMascotas = () => {
 
-const EditMascotas = ({ setShowEdit, onSubmitForm }) => {
+  const [showEdit , setShowEdit] = useState(false)
 
     const modificarMascota = () => {
-        setShowEdit(false)
+        setShowEdit(true)
     }
     return ( 
         <div className='editMascotas'>
@@ -13,7 +14,7 @@ const EditMascotas = ({ setShowEdit, onSubmitForm }) => {
         <form
           className='needs-validation'
           noValidate
-          onSubmit={onSubmitForm}
+          //onSubmit={onSubmitForm}
         >
           <MDBRow>
             <MDBCol md='4'>
@@ -36,7 +37,7 @@ const EditMascotas = ({ setShowEdit, onSubmitForm }) => {
 
           </MDBRow>
          
-          <MDBBtn gradient="blue" onClick={modificarMascota}>Modificar</MDBBtn>
+          
         </form>
       </div>
      );

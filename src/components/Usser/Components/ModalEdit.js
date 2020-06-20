@@ -1,34 +1,61 @@
-import React, { Component } from 'react';
-import { MDBContainer, MDBBtn, MDBModal, MDBModalBody, MDBModalHeader, MDBModalFooter } from 'mdbreact';
+import React from 'react';
+import {Modal, Button} from 'react-bootstrap';
+import {  MDBInput, MDBRow, MDBCol } from 'mdbreact';
+import './styleMascotas.css';
 
-class ModalPage extends Component {
-state = {
-  modal: false
-}
-
-toggle = () => {
-  this.setState({
-    modal: !this.state.modal
-  });
-}
-
-render() {
+const ModalEdit = ({show, setShow}) => {
+  
+  const handleClose = () => setShow(false);
   return (
-    <MDBContainer>
-      <MDBBtn onClick={this.toggle}>Modal</MDBBtn>
-      <MDBModal isOpen={this.state.modal} toggle={this.toggle}>
-        <MDBModalHeader toggle={this.toggle}>MDBModal title</MDBModalHeader>
-        <MDBModalBody>
-          (...)
-        </MDBModalBody>
-        <MDBModalFooter>
-          <MDBBtn color="secondary" onClick={this.toggle}>Close</MDBBtn>
-          <MDBBtn color="primary">Save changes</MDBBtn>
-        </MDBModalFooter>
-      </MDBModal>
-    </MDBContainer>
-    );
-  }
+    
+      <Modal show={show} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title><h1 >Editar Mascota</h1></Modal.Title>
+        </Modal.Header>
+        <Modal.Body>
+        <div className='editMascotas'>
+          
+        <form
+          className='needs-validation'
+          noValidate
+          //onSubmit={onSubmitForm}
+        >
+          <MDBRow>
+            <MDBCol md='4'>
+            <MDBInput label="Nombre" required/>   
+            </MDBCol>
+            
+            <MDBCol md='4'>
+             <MDBInput label="Raza" required/>
+            </MDBCol>
+
+            <MDBCol md='4'>
+              <MDBInput label="Control" required/>   
+            </MDBCol>
+          </MDBRow>
+
+          <MDBRow>
+            <MDBCol md='4'>
+                <MDBInput  label="Años" required/>
+            </MDBCol>
+
+          </MDBRow>
+         
+          
+        </form>
+      </div>
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+          <Button variant="primary" onClick={handleClose}>
+            Guardar Cambios
+          </Button>
+        </Modal.Footer>
+      </Modal>
+    
+  );
 }
 
-export default ModalPage;
+export default ModalEdit
