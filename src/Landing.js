@@ -4,9 +4,6 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import CarouselPage from './components/Carousel/index';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 import Nav from './components/Navbar/Nav'
 import Footer from './components/Footer/Footer';
 // import About from './components/About/about';
@@ -18,32 +15,28 @@ import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
 
 const Landing = () => {
-    return ( 
-        <>
-        {/* <Container fluid className="contenedor-principal-landing"> */}
-          <Nav />
-    
-      
-          <CarouselPage />
-       
+  return (
+    <>
+      {/* <Container fluid className="contenedor-principal-landing"> */}
+      <Nav />
+
+
+      <CarouselPage />
+
       <div className="rowEcommerce">
-        
-          <EcommerceHome />
-        
-        </div>
-        {/* <Row className="rowServicios">
+
+        <EcommerceHome />
+
+      </div>
+      {/* <Row className="rowServicios">
         <Col> */}
-          <Servicios />
-        {/* </Col>
-      
+      <Servicios />
+      {/* </Col> 
       </Row> */}
-      
-          
-        
-    {/* </Container> */}
-    <Footer />
-        </>
-     );
+      {/* </Container> */}
+      <Footer />
+    </>
+  );
 }
- 
+
 export default Landing;

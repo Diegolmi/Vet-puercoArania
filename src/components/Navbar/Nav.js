@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
 import './styleNav.css';
 
 class NavbarPage extends Component {
@@ -18,7 +17,7 @@ toggleCollapse = () => {
 render() {
   return (
     <Router>
-      <MDBNavbar className="font-weight-bold" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
+      <MDBNavbar className="font-weight-bold navPrincipal"  color="bg-primary" fixed="top" white expand="md" scrolling transparent>
         <MDBNavbarBrand>
              <img src={logo} className="logo" alt="" />
 
@@ -28,26 +27,26 @@ render() {
         <MDBCollapse  id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
           <MDBNavbarNav left>
             <MDBNavItem  active>
-              <MDBNavLink className="letras " to="/">Inicio</MDBNavLink>
+              <MDBNavLink className="letras " to="/">INICIO</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="/consultas">Consultas</MDBNavLink>
+              <MDBNavLink className="letras" to="/about">NOSOTROS</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="servicios">Servicios</MDBNavLink>
+              <MDBNavLink className="letras" to="/consultas">CONSULTAS</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
-              <MDBNavLink className="letras" to="/about">Quienes Somos</MDBNavLink>
+              <MDBNavLink className="letras" to="/servicios">SERVICIOS</MDBNavLink>
             </MDBNavItem>
             <MDBNavItem>
               <MDBDropdown>
                 <MDBDropdownToggle nav caret>
-                  <div className="letras  d-md-inline">Tienda</div>
+                  <div className="letras  d-md-inline">TIENDA</div>
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Accesorios</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Alimentos</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Farmacia</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">ACCESORIOS</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">ALIMENTOS</MDBDropdownItem>
+                  <MDBDropdownItem className="letras" href="#!">FARMACIA</MDBDropdownItem>
                 </MDBDropdownMenu>
               </MDBDropdown>
             </MDBNavItem>
@@ -56,12 +55,12 @@ render() {
  
             <MDBNavItem>
               <MDBDropdown>
-                <MDBDropdownToggle caret>
-                  Login
+                <MDBDropdownToggle id="boton_login"caret>
+                  INGRESAR
                 </MDBDropdownToggle>
                 <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Registros</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Login</MDBDropdownItem>
+                  <MDBDropdownItem className="letras_drop" href="#!">REGISTRARME</MDBDropdownItem>
+                  <MDBDropdownItem className="letras_drop" href="#!">INGRESAR</MDBDropdownItem>
                   
                 </MDBDropdownMenu>
               </MDBDropdown>

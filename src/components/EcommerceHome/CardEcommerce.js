@@ -34,7 +34,7 @@ const CardEcommerce = () => {
           {array.map(arr => (
             <Col lg={3} md={6} key={arr}>
               <Card className="card-container">
-                <Card.Img variant="top" src={img1} className="img-fluid" />
+                <Card.Img variant="top" src={img1} className="img-cardE" />
                 <Card.Body>
                   <Card.Title>Nombre de Alimentos</Card.Title>
                   <Card.Text>$249,80</Card.Text>

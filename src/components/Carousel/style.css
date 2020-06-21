@@ -10,8 +10,11 @@ a>div>.carousel-control-prev-icon {
     border-radius: 75%;
 } */
 .contenedorCarousel {
-    
     width: 100vw;
     height: 800px;    
     /* width: 100%;  */
+}
+.d-block{
+    margin-top: 135px;
+    height: 540px;
 }

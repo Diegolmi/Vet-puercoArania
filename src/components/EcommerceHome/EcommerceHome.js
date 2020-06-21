@@ -39,7 +39,8 @@ const EcommerceHome = () => {
 
 
         <div className="card-homePage">
-            <h1 className="store-title">Nuestra Tienda</h1>
+            <h2 className="store-title"> #QUEDATEENCASA</h2>
+            <h6 className="store-subtitle">Recibí todos nuestros productos en tu hogar. <br/> Comprá en nuestra web o realiza tu pedido por nuestras redes o whatsapp.</h6>
             <div className="button-group">
                 <button className="botones-productos" onClick={onClickAlimentos}>Alimentos</button>
                 <button className="botones-productos" onClick={onClickAccesorios}>Accesorios</button>
@@ -49,7 +50,7 @@ const EcommerceHome = () => {
                 <Col md={12} sm={12}><CardEcommerce /></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button className="btn">Ver Mas ...</button>
+                        <button className="btn">IR A LA TIENDA</button>
                     </div>
                 </Col>
 
