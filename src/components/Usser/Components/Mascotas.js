@@ -2,10 +2,12 @@ import React, {useState} from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from 'mdbreact';
 import {Button} from 'react-bootstrap';
 import ModalEdit from './ModalEdit';
+import ModalAgregarMascota from './ModalAgregarMascota';
 
 const TablePage = (props) => {
   const [show, setShow] = useState(false);
-
+  const [showA, setShowA] = useState(false);
+  const handleShowA = () => setShowA(true);
   
   
   const handleShow = () => setShow(true);
@@ -45,10 +47,10 @@ const TablePage = (props) => {
     rows: [
       {
         'id': '1',
-        'nombre': 'Kate',
-        'Raza': 'Moss',
-        'country': 'USA',
-        'Años': '23',
+        'nombre': '',
+        'Raza': '',
+        'country': '',
+        'Años': '',
         'editar': <Button variant="primary" onClick={handleShow}>
         Editar
       </Button>,
@@ -88,6 +90,7 @@ const TablePage = (props) => {
                   </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
+      
     ]
   };
 
@@ -101,6 +104,10 @@ const TablePage = (props) => {
         <MDBTableBody rows={mascotas.rows} />
       </MDBTable>
       <ModalEdit show={show} setShow={setShow}/>
+      <Button variant="primary" onClick={handleShowA}>
+        Agregar una mascota
+      </Button>
+      <ModalAgregarMascota show={showA} setShow={setShowA} />
     </div>
     
 );
