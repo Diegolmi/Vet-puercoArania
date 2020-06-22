@@ -1,5 +1,6 @@
 import React from "react";
-import Cards from "./cards";
+import CardsPerro from "./cardsPerro";
+import CardsGatos from "./CardsGatos";
 /*style*/
 import "../../components/Alimentos/style.css";
 
@@ -37,8 +38,10 @@ const Alimentos = () => {
           </FormControl>
         </Grid>
       </div>
-        <Cards />
+        <CardsPerro />
+     
         </div>
+        
         <FooterImg />
       </div>
      
