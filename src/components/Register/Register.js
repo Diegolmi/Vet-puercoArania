@@ -3,6 +3,7 @@ import { MDBView, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
 import {Link} from 'react-router-dom';
+import Nav from '../Navbar/Nav';
 
 
 class FormsPage extends React.Component {
@@ -28,6 +29,8 @@ class FormsPage extends React.Component {
 
     render() {
         return (
+            <>
+            <Nav />
             <div className='container-fluid'>
                 <MDBRow>
                 
@@ -40,7 +43,7 @@ class FormsPage extends React.Component {
                         </MDBRow>
                     </div>
                     <div className='col-8 containerForm1'md="8">
-                    <h1 center>Regístrate</h1>
+                    <h1 center>Registrate</h1>
                         <form
                             className="needs-validation"
                             onSubmit={this.submitHandler}
@@ -212,6 +215,7 @@ class FormsPage extends React.Component {
                 
                 </MDBRow>
             </div>
+            </>
         );
     }
 }
