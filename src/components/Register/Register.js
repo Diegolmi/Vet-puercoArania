@@ -31,7 +31,7 @@ class FormsPage extends React.Component {
         return (
             <>
             <Nav />
-            <div className='container-fluid'>
+            <div className='container-fluid containerRegistro'>
                 <MDBRow>
                 
 
