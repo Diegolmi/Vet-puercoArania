@@ -22,6 +22,7 @@ const ModalAgregarMascota = ({ show, setShow }) => {
             </Modal.Header>
             <Modal.Body>
                 <form onSubmit={handleSubmit(onSubmit)}>
+                   <label>Nombre</label>
                     <input
                         name="nombre"
                         className="form-control my-2"
@@ -29,15 +30,14 @@ const ModalAgregarMascota = ({ show, setShow }) => {
                             required: true,
                             maxLength: 20,
                             pattern: /^[A-Za-z]+$/i,
-                            message: 'Campo Requerido'
+                            placeholder: 'Ingrese un nombre'
                         })} />
                     <span className="">
 
-                        {errors.nombre && "Ingrese un nombre"}
+                        {errors.nombre && "Ingrese un nombre valido"}
                     </span>
-                    {/*<span className="text-danger text-small d-block mb-2">
-                        {errors?.nombre?.message}
-                    </span>*/}
+                    <br />
+                    <label>Raza</label>
                     <input
                         name="raza"
                         className="form-control my-2"
@@ -51,18 +51,24 @@ const ModalAgregarMascota = ({ show, setShow }) => {
 
                         {errors.raza && "Ingrese una raza"}
                     </span>
+                    <br />
+                    <label>Edad</label>
                     <input
-                        name="años"
+                        name="edad"
                         className="form-control my-2"
                         ref={register({
                             required: true,
-                            maxLength: 20,
+                            maxLength: 3,
                             pattern: /^([0-9])*$/,
-                            message: 'Campo Requerido'
+                            type: "text"
+
                         })} />
                     <span className="">
 
-                        {errors.años && "Ingrese solo numeros"}
+
+                        {errors.edad && "Ingrese solo numeros  "}
+                        {errors.edad && errors.edad.type === "maxLength" && <span>Maximo 3 caracteres</span>}
+
                     </span>
                     <Button variant="secondary" type="submit">
                         Guardar Cambios
@@ -73,13 +79,11 @@ const ModalAgregarMascota = ({ show, setShow }) => {
 
                 </form>
             </Modal.Body>
-            <Modal.Footer>
 
-
-            </Modal.Footer>
         </Modal>
 
     );
 }
 
 export default ModalAgregarMascota
+

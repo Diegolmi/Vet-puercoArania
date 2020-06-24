@@ -4,7 +4,6 @@ import FooterAdmin from '../Admin/FooterAdmin';
 import Bienvenida from './Components/Bienvenida';
 import Mascotas from './Components/Mascotas';
 import Sidenav from './Components/Sidenav';
-import EditarMascotas from './Components/EditarMascotas';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
@@ -30,7 +29,7 @@ const IndexUsser = () => {
             <Mascotas />    
             
             
-                <EditarMascotas />
+                
         
 
             <FooterAdmin />

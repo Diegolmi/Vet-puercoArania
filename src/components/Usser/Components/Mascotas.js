@@ -11,6 +11,10 @@ const TablePage = (props) => {
   
   
   const handleShow = () => setShow(true);
+  
+
+
+
 
   //const ActualizaNombre = () => {  
   //}
@@ -47,10 +51,10 @@ const TablePage = (props) => {
     rows: [
       {
         'id': '1',
-        'nombre': '',
-        'Raza': '',
-        'country': '',
-        'Años': '',
+        'nombre': [],
+        'Raza': [],
+        'country': [],
+        'Años': [],
         'editar': <Button variant="primary" onClick={handleShow}>
         Editar
       </Button>,
