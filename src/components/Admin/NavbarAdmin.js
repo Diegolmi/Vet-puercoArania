@@ -15,10 +15,7 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
         <>
         <Navbar collapseOnSelect expand="lg" className="navbar-admin">
             {cambiarBoton ? <button className="hideSidebar" onClick={showSidebar}><FaArrowRight /></button> 
-            :  <button className="hideSidebar" onClick={hideSidebar}><FaArrowLeft /></button>  }
-            
-            
-            
+            :  <button className="hideSidebar" onClick={hideSidebar}><FaArrowLeft /></button>  } 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggle-admin" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-lg-auto">
@@ -31,8 +28,8 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 <hr />
                 <Nav>
                     {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
-                    <Link className="mr-3 link-admin"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin">Log Out</Link>
+                    <Link className="mr-3 link-admin" to="/"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
+                    <Link className="mr-3 link-admin" to="/">Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

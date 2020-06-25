@@ -21,6 +21,7 @@ import SecServicios from './components/SecServicios/index';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 import Alimentos from './components/Alimentos/alimentos';
 import Contenedor from './components/Tienda/Contenedor';
+import Carrito from './components/stepper/Carrito';
 
 
 function App() {
@@ -37,6 +38,7 @@ function App() {
         {/* <Route path="/privado/panelUsser" component={IndexUsser} /> */}
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
+        <Route exact path="/privado/carrito" component={Carrito} />
         <Route path="/privado/admin" component={Admin} />
         <Route path="*" component={Error404} />
 

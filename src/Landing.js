@@ -19,14 +19,9 @@ const Landing = () => {
     <>
       {/* <Container fluid className="contenedor-principal-landing"> */}
       <Nav />
-
-
       <CarouselPage />
-
       <div className="rowEcommerce">
-
         <EcommerceHome />
-
       </div>
       {/* <Row className="rowServicios">
         <Col> */}
