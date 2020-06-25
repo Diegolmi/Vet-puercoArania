@@ -4,7 +4,8 @@ import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
 const Cards = () => {
-    return (<div className="contenedor_cards">
+    return (
+    <div className="contenedor_cards">
     <Card id="card_acc" className="cards">
       <Card.Img
         className="img_acc"
