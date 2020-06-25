@@ -1,17 +1,20 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from 'mdbreact';
-import {Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 import ModalEdit from './ModalEdit';
 import ModalAgregarMascota from './ModalAgregarMascota';
+import Table from 'react-bootstrap/Table';
+import './styleMascotas.css'
 
-const TablePage = (props) => {
+
+const TablePage = () => {
   const [show, setShow] = useState(false);
   const [showA, setShowA] = useState(false);
   const handleShowA = () => setShowA(true);
-  
-  
+
+
   const handleShow = () => setShow(true);
-  
+
 
 
 
@@ -19,7 +22,7 @@ const TablePage = (props) => {
   //const ActualizaNombre = () => {  
   //}
 
-  
+
   const mascotas = {
     columns: [
       {
@@ -56,7 +59,7 @@ const TablePage = (props) => {
         'country': [],
         'Años': [],
         'editar': <Button variant="primary" onClick={handleShow}>
-        Editar
+          Editar
       </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
@@ -67,8 +70,8 @@ const TablePage = (props) => {
         'Control': '15/06/20',
 
         'Años': '36',
-        'editar':<Button variant="primary" onClick={handleShow}>
-        Editar
+        'editar': <Button variant="primary" onClick={handleShow}>
+          Editar
       </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
@@ -79,7 +82,7 @@ const TablePage = (props) => {
         'Control': 'Spain',
         'Años': '25',
         'editar': <Button variant="primary" onClick={handleShow}>
-        Editar
+          Editar
       </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
@@ -90,31 +93,37 @@ const TablePage = (props) => {
         'Control': 'Italy',
         'Años': '41',
         'editar': <Button variant="primary" onClick={handleShow}>
-                        Editar
+          Editar
                   </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
-      
+
     ]
   };
 
   return (
-    <div className="listMascotas">
-      <h1>Mascotas</h1>
-      <MDBTable autoWidth striped>
-
-
-        <MDBTableHead columns={mascotas.columns} />
-        <MDBTableBody rows={mascotas.rows} />
-      </MDBTable>
-      <ModalEdit show={show} setShow={setShow}/>
-      <Button variant="primary" onClick={handleShowA}>
-        Agregar una mascota
-      </Button>
-      <ModalAgregarMascota show={showA} setShow={setShowA} />
-    </div>
     
-);
+      <div className="listMascotas">
+
+        <h1>Mascotas</h1>
+   
+      
+        <MDBTable autoWidth striped>
+
+
+          <MDBTableHead columns={mascotas.columns} />
+          <MDBTableBody rows={mascotas.rows} />
+          <ModalEdit show={show} setShow={setShow} />
+          <Button variant="primary" onClick={handleShowA}>
+            Agregar una mascota
+      </Button>
+          <ModalAgregarMascota show={showA} setShow={setShowA} />
+        </MDBTable>
+      
+
+    </div>
+
+  );
 };
 
 export default TablePage;

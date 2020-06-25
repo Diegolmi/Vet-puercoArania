@@ -2,7 +2,6 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaUser, FaShippingFast } from 'react-icons/fa';
 import { MdDateRange, MdQueryBuilder, MdDashboard } from 'react-icons/md';
-import { RiAdminLine } from 'react-icons/ri';
 import './styleMascotas.css';
 
 const SidebarIcons = () => {
@@ -16,7 +15,6 @@ const SidebarIcons = () => {
                 <li className="listado-sidebar"><Link to="/privado/admin/producto" className="link-sidebar"><FaShippingFast className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"><Link to="/privado/admin/turnos" className="link-sidebar"><MdDateRange className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"><Link to="/privado/admin/consultas" className="link-sidebar"><MdQueryBuilder className="icon-sidebar-admin"/></Link></li>
-                <li className="listado-sidebar"><Link to="/privado/admin/datosAdmin" className="link-sidebar"><RiAdminLine className="icon-sidebar-admin"/></Link></li>
             </ul>
         </div>
      );
