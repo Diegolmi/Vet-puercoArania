@@ -1,9 +1,10 @@
 import React from "react";
-import { MDBRow, MDBCol, MDBBtn } from "mdbreact";
+import { MDBView, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
 import FooterAdmin from '../Admin/FooterAdmin';
 import {Link} from 'react-router-dom';
+import Nav from '../Navbar/Nav';
 
 
 class FormsPage extends React.Component {
@@ -29,18 +30,21 @@ class FormsPage extends React.Component {
 
     render() {
         return (
-           <>
-            <div className='container-fluid container-registro'>
-                <h1 center className="my-5">Registrate</h1>
-                <div className='row'>
+            <>
+           
+            <div className='container-fluid containerRegistro'>
+                <MDBRow>
+                
+
                     <div className='col-4'>
                         <MDBRow>
-                            <MDBCol>
+                        <MDBView  hover zoom >
                                 <img src={logo} className="rounded float-left logoRegister" alt="aligment" />
-                            </MDBCol>
+                            </MDBView>
                         </MDBRow>
                     </div>
-                    <div className='col-8'>
+                    <div className='col-8 containerForm1'md="8">
+                    <h1 center>Registrate</h1>
                         <form
                             className="needs-validation"
                             onSubmit={this.submitHandler}
@@ -53,7 +57,7 @@ class FormsPage extends React.Component {
                                 className="grey-text"
                             >
                                 Nombre
-              </label>
+                            </label>
                             <input
                                 value={this.state.fname}
                                 name="fname"
@@ -73,7 +77,7 @@ class FormsPage extends React.Component {
                                 className="grey-text"
                             >
                                 Apellido
-              </label>
+                            </label>
                             <input
                                 value={this.state.lname}
                                 name="lname"
@@ -92,7 +96,7 @@ class FormsPage extends React.Component {
                                 className="grey-text"
                             >
                                 Email
-              </label>
+                             </label>
                             <input
                                 value={this.state.email}
                                 onChange={this.changeHandler}
@@ -104,7 +108,7 @@ class FormsPage extends React.Component {
                             />
                             <small id="emailHelp" className="form-text text-muted">
                                 
-              </small>
+                             </small>
                         </MDBCol>
                             </MDBRow>
                             <MDBRow>
@@ -114,7 +118,7 @@ class FormsPage extends React.Component {
                                 className="grey-text"
                             >
                                 Ciudad
-              </label>
+                            </label>
                             <input
                                 value={this.state.city}
                                 onChange={this.changeHandler}
@@ -127,7 +131,7 @@ class FormsPage extends React.Component {
                             />
                             <div className="invalid-feedback">
                                 Escribe una ciudad valida
-              </div>
+                             </div>
                             <div className="valid-feedback">Bella Ciudad!</div>
                         </MDBCol>
                                 <MDBCol md="4" className="mb-3">
@@ -136,7 +140,7 @@ class FormsPage extends React.Component {
                                 className="grey-text"
                             >
                                 Provincia
-              </label>
+                            </label>
                             <input
                                 value={this.state.state}
                                 onChange={this.changeHandler}
@@ -204,15 +208,15 @@ class FormsPage extends React.Component {
                         </form>
                         Ya tenes una cuenta?.
                         <Link to={'/Login'} className= "enlace-cuenta">
-                Inicia Sesión.
-            </Link>
+                            Inicia Sesión.
+                        </Link>
                     </div>
 
 
-                </div>
+                
+                </MDBRow>
             </div>
-            <FooterAdmin />
-           </>
+            </>
         );
     }
 }

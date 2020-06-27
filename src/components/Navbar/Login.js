@@ -1,74 +1,42 @@
-import React, {useState} from 'react';
+import React from "react";
+import './styleLogin.css'
+import { MDBView, MDBCol, MDBInput, MDBBtn, MDBRow } from 'mdbreact';
+import Imglogin from '../../assets/img/gatovet.jpg';
 import {Link} from 'react-router-dom';
 
-const Login = () => {
 
-    // State para iniciar sesion
-    const [usuario, guardarUsuario] = useState({
-        email:"",
-        contraseña: "",
-    })
+const FormPage = () => {
+return (
+<div className="" >
+    <MDBRow>
+<MDBView  hover zoom >
+<img src={Imglogin} className="gato rounded-circle" alt="" />
+</MDBView>
 
-    const {email, contraseña} = usuario;
-
-    const onChange = e => {
-        guardarUsuario({
-            ...usuario,
-            [e.target.name] : e.target.value
-        })
-
-    }
-    const onSubmit = e =>{
-        e.preventDefault();
-
-
-        //validar que no haya campos vacios
-
-        //pasarlo al action
-    }
-
-
-    return (
-
-
-
-        <div className="form-usuario">
-            <div className="contenedor-form sobra-dark">
-                <h1>Iniciar Sesion</h1>
-            </div>
-            <form onSubmit={onSubmit}>
-                <div className="campo-form">
-                    <label htmlFor="email">Email</label>
-                    <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        placeholder="Tu Email"
-                        value={email}
-                        onChange={onChange}
-                        ></input>
-                </div>
-                <div className="campo-form">
-                    <label htmlFor="contraseña">Contraseña</label>
-                    <input
-                        type="password"
-                        id="contraseña"
-                        name="contraseña"
-                        placeholder="Tu Contraseña"
-                        value={contraseña}
-                        onChange={onChange}
-                        ></input>
-                </div>
-                <div className="campo-form">
-                    <input type="submit" className="btn btn-primary btn-block"
-                    value="Iniciar Sesion" />
-                    </div>
-            </form>
-            <Link to={'/Registro'} className= "enlace-cuenta">
-                Obtener cuenta.
-            </Link>
+  <div className="formstyle" md="8"> 
+    <MDBCol >
+      <form >
+        <p className="h3 text-center mb-4">Ingresá</p>
+        <div className="grey-text">
+          <MDBInput label="Email" icon="envelope" group type="email" validate error="wrong"
+            success="right" />
+          <MDBInput label="Password" icon="lock" group type="password" validate />
         </div>
-    )
-}
+        <div className="text-center">
+          <MDBBtn>Entrar</MDBBtn>
+ 
+        </div> <br />
+        Todavia no tenes cuenta?.
+        <Link to={'/registro'} className= "enlace-cuenta">
+                Registrate
+            </Link>
+      </form>
+    </MDBCol>
+  </div>
+  </MDBRow>
+  
+</div>
+);
+};
 
-export default Login;
+export default FormPage;
