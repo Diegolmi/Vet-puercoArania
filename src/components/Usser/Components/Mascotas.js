@@ -40,13 +40,18 @@ const TablePage = () => {
         sort: 'asc'
       },
       {
-        label: 'Control',
-        field: 'Control',
+        label: 'Especie',
+        field: 'Especie',
         sort: 'asc'
       },
       {
-        label: 'Años',
-        field: 'Años',
+        label: 'Talle',
+        field: 'Talle',
+        sort: 'asc'
+      },
+      {
+        label: 'Peso',
+        field: 'Peso',
         sort: 'asc'
       }
     ],
