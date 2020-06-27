@@ -3,6 +3,7 @@
 .img {
   height: 320px;
   width: 300px;
+  margin-left: 50px;
 }
 .imagenhomero {
   height: 100px;
@@ -93,6 +94,7 @@
     margin: 10px;
     padding: 20px;
   }
+  
 }
 @media (min-width:550px) and (max-width:700px){
     #hola {

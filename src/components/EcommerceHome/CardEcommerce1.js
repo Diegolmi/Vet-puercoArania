@@ -41,7 +41,6 @@ const CardEcommerce1 = () => {
                 <Card.Body>
                   <Card.Title>Nombre de Accesorios</Card.Title>
                   <Card.Text>$249,80</Card.Text>
-                  <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
                   <Card.Text className="rating"><Rating /></Card.Text>
                 </Card.Body>
                 <Card.Footer>

@@ -42,9 +42,9 @@ const EcommerceHome = () => {
             <h2 className="store-title"> #QUEDATEENCASA</h2>
             <h6 className="store-subtitle">Recibí todos nuestros productos en tu hogar. <br/> Comprá en nuestra web o realiza tu pedido por nuestras redes o whatsapp.</h6>
             <div className="button-group">
-                <button className="botones-productos" onClick={onClickAlimentos}>Alimentos</button>
-                <button className="botones-productos" onClick={onClickAccesorios}>Accesorios</button>
-                <button className="botones-productos" onClick={onClickFarmacia}>Farmacia</button>
+                <button className="botones-productos" onClick={onClickAccesorios}>ACCESORIOS</button>
+                <button className="botones-productos" onClick={onClickAlimentos}>ALIMENTOS</button>
+                <button className="botones-productos" onClick={onClickFarmacia}>FARMACIA</button>
             </div>
             {alimentos ? <Row>
                 <Col md={12} sm={12}><CardEcommerce /></Col>
@@ -60,7 +60,7 @@ const EcommerceHome = () => {
                 <Col md={12} sm={12}><CardEcommerce1 /></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button className="btn">Ver Mas ...</button>
+                        <button className="btn">IR A LA TIENDA</button>
                     </div>
                 </Col>
             </Row> : null}
@@ -69,7 +69,7 @@ const EcommerceHome = () => {
                 <Col md={12} sm={12}><CardEcommerce2 /></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button className="btn">Ver Mas ...</button>
+                        <button className="btn">IR A LA TIENDA</button>
                     </div>
                 </Col>
             </Row> : null}

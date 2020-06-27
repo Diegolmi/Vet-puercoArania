@@ -21,13 +21,13 @@
   width: 350px;
   padding-top: 30px;
   margin: auto auto;
-  padding-bottom: 25px;
+  padding-bottom: 30px;
   color: #fc5185;
   font-size: 45px;
 }
 .store-subtitle{
   text-align: center;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
   font-size: 20px;
   letter-spacing: 2px;
   line-height: 30px;
@@ -134,7 +134,7 @@
     flex-direction: column;
   }
   .botones-productos {
-    font-size: 1.3rem !important;
+    font-size: 10px !important;
   }
   .card.cascading-admin-card {
     margin-top: 2.5rem;
@@ -143,20 +143,24 @@
 }
 
 .button-group {
-  width: 600px;
+  width: 850px;
   display: flex;
   justify-content: space-between;
   margin: auto auto;
+  margin-bottom: 15px;
+  height: 55px;
+
 }
 
 .botones-productos {
-  border: 1.5px solid #364f6b;
-  border-radius: 10px;
-  color: #364f6b;
-  font-size: 2rem;
-  margin-right: 50px;
-  margin-bottom: 60px;
-  padding: 5px 20px;
+  color: #788797;
+  font-size: 20px;
+  margin-right: 10px;
+  margin-bottom: 80px;
+  padding: 2px 15px;
+  border: none;
+  background-color: #364f6b;
+  
   /* background: #364f6b; */
   /* border-radius: 20px; */
 }
