@@ -20,8 +20,9 @@ import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
 import Alimentos from './components/Alimentos/alimentos';
 import Accesorios from './components/AccesoriosEC/Accesorios';
-import IndexUsser from './components/Usser/IndexUsser';
+import AdminUser from './components/Usser/AdminUser';
 import Galeria from './components/Galeria/Galeria';
+
 
 function App() {
   return (
@@ -34,15 +35,11 @@ function App() {
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route path="/privado/admin" component={Admin} />
-        <Route path="/privado/panelUsser" component={IndexUsser} />
+        <Route path="/privado/usuario" component={AdminUser} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/galeria" component={Galeria} />
-
-
-
         <Route exact path="/Alimentos" component={Alimentos} />
 
-        <Route exact path="/privado/Usuario" component={IndexUsser} />
 
         {/* <Route exact path="/privado/usuario" component={usuario} />
         <Route exact path="/consultas" component={Consultas} /> */}

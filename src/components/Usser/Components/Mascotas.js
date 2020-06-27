@@ -3,8 +3,7 @@ import { MDBTable, MDBTableBody, MDBTableHead, MDBBtn } from 'mdbreact';
 import { Button } from 'react-bootstrap';
 import ModalEdit from './ModalEdit';
 import ModalAgregarMascota from './ModalAgregarMascota';
-import Table from 'react-bootstrap/Table';
-import './styleMascotas.css'
+import './styleMascotas.css';
 
 
 const TablePage = () => {

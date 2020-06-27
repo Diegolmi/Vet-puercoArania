@@ -3,6 +3,17 @@ import { Tabs, Tab, Card, ListGroup } from 'react-bootstrap';
 import ModificarDatos from './ModificarDatos';
 
 const DatosUsuario = () => {
+
+  const datos = {
+    nombre: [],
+    apellido: [],
+    domicilio: [],
+    telefono: [],
+    email: [],
+  }
+
+
+
   return (
     <div>
       <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">

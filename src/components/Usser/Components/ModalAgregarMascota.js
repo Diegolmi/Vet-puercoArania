@@ -52,24 +52,48 @@ const ModalAgregarMascota = ({ show, setShow }) => {
                         {errors.raza && "Ingrese una raza"}
                     </span>
                     <br />
-                    <label>Edad</label>
+                    <label>Especie</label>
                     <input
-                        name="edad"
+                        name="especie"
                         className="form-control my-2"
                         ref={register({
                             required: true,
                             maxLength: 3,
-                            pattern: /^([0-9])*$/,
+                            pattern: /^[A-Za-z]+$/i,
                             type: "text"
 
                         })} />
+                        <br />
+                    <label>Talla</label>
+                    <input
+                        name="talla"
+                        className="form-control my-2"
+                        ref={register({
+                            required: false,
+                            maxLength: 20,
+                            pattern: /^[A-Za-z]+$/i,
+                            message: 'Campo Requerido'
+                        })} />
                     <span className="">
 
-
-                        {errors.edad && "Ingrese solo numeros  "}
-                        {errors.edad && errors.edad.type === "maxLength" && <span>Maximo 3 caracteres</span>}
-
+                        {errors.raza && "Ingrese una talla"}
                     </span>
+                    <br />
+                    <label>Peso</label>
+                    <input
+                        name="raza"
+                        className="form-control my-2"
+                        ref={register({
+                            required: false,
+                            maxLength: 20,
+                            pattern: /^[A-Za-z]+$/i,
+                            message: 'Campo Requerido'
+                        })} />
+                    <span className="">
+
+                        {errors.raza && "Ingrese un peso"}
+                    </span>
+                    
                     <Button variant="secondary" type="submit">
                         Guardar Cambios
                     </Button>

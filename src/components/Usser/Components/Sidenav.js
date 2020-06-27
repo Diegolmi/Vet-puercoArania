@@ -5,7 +5,8 @@ import { MdDateRange, MdQueryBuilder, MdDashboard } from 'react-icons/md';
 import logo from '../../../assets/img/logo.png';
 import './styleMascotas.css';
 import { Col } from 'react-bootstrap';
-import AdminUser from '../AdminUser'; 
+import { RiAdminLine } from 'react-icons/ri';
+
 
 
 const SidebarAdmin = () => {
@@ -24,6 +25,8 @@ const SidebarAdmin = () => {
                 <li className="listado-sidebar"><FaShippingFast className="icon-sidebar-admin"/><Link to="/privado/admin/producto" className="link-sidebar">Productos</Link></li>
                 <li className="listado-sidebar"><MdDateRange className="icon-sidebar-admin"/><Link to="/privado/admin/turnos" className="link-sidebar">Turnos</Link></li>
                 <li className="listado-sidebar"><MdQueryBuilder className="icon-sidebar-admin"/><Link to="/privado/admin/consultas" className="link-sidebar">Consultas</Link></li>
+                <li className="listado-sidebar"><RiAdminLine className="icon-sidebar-admin"/><Link to="/privado/usuario/datos" className="link-sidebar">Admin</Link></li>
+
             </ul>
             
         </div>

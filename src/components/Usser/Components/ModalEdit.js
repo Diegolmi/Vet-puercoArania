@@ -32,16 +32,24 @@ const ModalEdit = ({ show, setShow }) => {
               </MDBCol>
 
               <MDBCol md='4'>
-                <MDBInput label="Control" required />
+                <MDBInput label="Especie" required />
               </MDBCol>
             </MDBRow>
 
             <MDBRow>
               <MDBCol md='4'>
-                <MDBInput label="Años" required />
+                <MDBInput label="Talle" />
               </MDBCol>
 
             </MDBRow>
+            <MDBRow>
+              <MDBCol md='4'>
+                <MDBInput label="Peso"
+                  id="peso"
+                   />
+              </MDBCol>
+              </MDBRow> 
+
 
 
           </form>

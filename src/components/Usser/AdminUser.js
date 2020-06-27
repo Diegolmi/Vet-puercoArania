@@ -1,20 +1,23 @@
 import React, {useState} from 'react'
-import NavbarAdmin from '../Admin/NavbarAdmin';
+import NavbarUser from './Components/NavbarUser';
 import FooterAdmin from '../Footer/Footer';
 import Sidenav from './Components/Sidenav';
 import SideNavicons from './Components/sideNavicons';
 
 import IndexUsser from './IndexUsser';
 import Mascotas from './Components/Mascotas';
+import DatosUsuario from './Components/DatosUsuario';
 import { 
     Switch,
     Route,
+
 } from "react-router-dom";
+
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
-export const AdminUser = () => {
+ const AdminUser = () => {
 
     const [sidebar, setSidebar] = useState(false)
     const [cambiarBoton, setCambiarBoton] = useState(false)
@@ -33,7 +36,7 @@ export const AdminUser = () => {
         <Container>
             <Row>
                 {/* <Col md={2}><div>Side</div></Col> */}
-                <Col md={12}><NavbarAdmin
+                <Col md={12}><NavbarUser
                     hideSidebar={hideSidebar}
                     showSidebar={showSidebar}
                     cambiarBoton={cambiarBoton}
@@ -48,6 +51,8 @@ export const AdminUser = () => {
                             <Switch>
                                 <Route exact path="/privado/usuario" component={IndexUsser} />
                                 <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
+                                <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
+
                             </Switch>
                         </Col>
                     </Row>
@@ -62,8 +67,9 @@ export const AdminUser = () => {
                         <Col md={3} className="columna-sidebar"><Sidenav /></Col>
                         <Col md={9} className="container-links-sidebar">
                             <Switch>
-                            <Route exact path="/privado/usuario" component={IndexUsser} />
+                                <Route exact path="/privado/usuario" component={IndexUsser} />
                                 <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
+                                <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
                             </Switch>
                         </Col>
                     </Row>
@@ -75,3 +81,5 @@ export const AdminUser = () => {
         </Container>
     )
 }
+
+export default AdminUser;

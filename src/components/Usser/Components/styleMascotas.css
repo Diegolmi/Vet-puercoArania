@@ -80,3 +80,10 @@
    padding: 20px;
     
 }
+.navbar-user {
+    background: #68829c;
+    z-index: 1;
+    /* position: fixed; */
+    width: 100%;
+   
+}
