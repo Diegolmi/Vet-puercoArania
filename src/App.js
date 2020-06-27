@@ -22,6 +22,7 @@ import Accesorios from './components/AccesoriosEC/Accesorios';
 import Alimentos from './components/Alimentos/alimentos';
 import Contenedor from './components/Tienda/Contenedor';
 import Carrito from './components/stepper/Carrito';
+import AdminUser from './components/Usser/AdminUser';
 
 
 function App() {
@@ -39,8 +40,9 @@ function App() {
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
         <Route exact path="/privado/carrito" component={Carrito} />
-        <Route path="/privado/admin" component={Admin} />
         <Route path="*" component={Error404} />
+        <Route path="/privado/admin" component={Admin} />
+        <Route path="/privado/usuario" component={AdminUser} />
 
 
         {/* <Route exact path="/privado/usuario" component={usuario} />

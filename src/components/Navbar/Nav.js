@@ -140,7 +140,8 @@ const NavbarPage = () => {
     </div>
     </>
   );
-}
+    
+
 
 
 export default NavbarPage;

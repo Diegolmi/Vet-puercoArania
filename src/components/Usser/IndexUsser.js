@@ -1,35 +1,26 @@
 import React from 'react';
-import NavbarAdmin from '../Admin/NavbarAdmin';
 import FooterAdmin from '../Admin/FooterAdmin';
-import Bienvenida from './Components/Bienvenida';
-import Mascotas from './Components/Mascotas';
+//import Mascotas from './Components/Mascotas';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+//import DatosUsuario from './Components/DatosUsuario';
 
 
 
-
-
-const PanelUsser = () => {
+const IndexUsser = () => {
     return (
-        <>
-        <NavbarAdmin />
-        <Bienvenida />
-
-        <Mascotas /> 
-
-
-
-
-
-
-
-
-
-
-
-        <FooterAdmin />
-        </>
+        <Container-fluid >
+            <Row>
+                
+             
+            <Col md={4}> 
+           
+           </Col>
+           </Row>    
+           <FooterAdmin />
+        </Container-fluid>
     )
 }
 
-export default PanelUsser
+export default IndexUsser
 
