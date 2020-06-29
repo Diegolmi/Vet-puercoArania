@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import NavbarUser from './Components/NavbarUser';
-import FooterAdmin from '../Footer/Footer';
+import FooterAdmin from '../Admin/FooterAdmin';
 import Sidenav from './Components/Sidenav';
 import SideNavicons from './Components/sideNavicons';
 
@@ -33,9 +33,8 @@ import Col from 'react-bootstrap/Col';
     }
 
     return (
-        <Container>
+        <Container className="Contenedor-usuario" fluid>
             <Row>
-                {/* <Col md={2}><div>Side</div></Col> */}
                 <Col md={12}><NavbarUser
                     hideSidebar={hideSidebar}
                     showSidebar={showSidebar}
