@@ -13,34 +13,27 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
+// import GaleriaImagenes from './components/galeria/GaleriaImagenes';
 
 const Landing = () => {
-    return ( 
-        <>
-        {/* <Container fluid className="contenedor-principal-landing"> */}
-          <Nav />
-    
-      
-          <CarouselPage />
-       
+  return (
+    <>
+      {/* <Container fluid className="contenedor-principal-landing"> */}
+      <Nav />
+      <CarouselPage />
       <div className="rowEcommerce">
-        
-          <EcommerceHome />
-        
-        </div>
-        {/* <Row className="rowServicios">
+        <EcommerceHome />
+      </div>
+      {/* <Row className="rowServicios">
         <Col> */}
-          <Servicios />
-        {/* </Col>
-      
+      <Servicios />
+      {/* </Col> 
       </Row> */}
-      
-          
-        
-    {/* </Container> */}
-    <Footer />
-        </>
-     );
+      {/* </Container> */}
+      {/* <GaleriaImagenes /> */}
+      <Footer />
+    </>
+  );
 }
- 
+
 export default Landing;
