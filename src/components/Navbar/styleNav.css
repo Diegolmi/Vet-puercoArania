@@ -1,6 +1,7 @@
 /* .navPrincipal{
   z-index: 10000;
   padding-right: 0px;
+
 }
   .letras {
     color: white !important;
@@ -66,6 +67,18 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+  }
+
+  .navbar-body {
+    background-color: #68829c !important;
+    transition: 500ms ease;
+  }
+
+  .link-admin-boton{
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 30px;
   }
 
  

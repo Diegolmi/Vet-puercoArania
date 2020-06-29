@@ -37,6 +37,8 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                     <Link className="mr-3 link-admin" to="/"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
                     <Link className="mr-3 link-admin" to="" >Perfil</Link>
                     <Link className="mr-3 link-admin" to="" onClick={logout}>Log Out</Link>
+
+
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

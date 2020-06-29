@@ -24,6 +24,7 @@ return (
         <p className="lead grey-text w-responsive text-center mx-auto mb-5">
         Tenemos todo lo que tu mascota necesita. En nuestra veterinaria le ofrecemos una asistencia completa y de calidad. Nuestro principal objetivo es mantener la salud y el bienestar de nuestros animales y ayudarlos a restablecerse cuando están enfermos. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas. <br/>
         <MDBBtn id="btn_turno" onClick={handleShow} outline color="secondary my-4"> solicitar turno</MDBBtn>
+
         </p>
 
         <MDBRow>

@@ -6,6 +6,7 @@ import logo from '../../assets/img/logo.png';
 import { MDBBadge } from "mdbreact";
 import { Link } from 'react-router-dom';
 import { FaCartArrowDown } from 'react-icons/fa';
+
 import CarritoDesplegable from '../carritoDesplegable/CarritoDesplegable';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -14,6 +15,7 @@ import Drawer from '@material-ui/core/Drawer';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { MDBBtn } from "mdbreact";
+
 
 
 
@@ -73,6 +75,7 @@ const NavbarPage = () => {
       onKeyDown={toggleDrawer(anchor, false)}
     >
       <List className="contenedor-carrito-sidebar">
+
       <CarritoDesplegable />
         {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -81,6 +84,7 @@ const NavbarPage = () => {
           </ListItem>
         ))} */}
         <MDBBtn id="btn_turno" outline color="secondary my-4"> ir al Carrito</MDBBtn>
+
       </List>
       <Divider />
       <List>
@@ -106,7 +110,10 @@ const NavbarPage = () => {
             <Link to="/" className="mr-3 link-admin">INICIO</Link>
             <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
             <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
+            <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
+    
             <Link to="/" className="mr-3 link-admin">TIENDA</Link>
+
           </Nav>
           <hr />
           <Nav>
@@ -117,6 +124,7 @@ const NavbarPage = () => {
               onClick={toggleDrawer(anchor, true)}
             >
               <FaCartArrowDown className="carro"/>
+
               <MDBBadge color="danger" className="ml-2">4</MDBBadge>
               </button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
@@ -128,6 +136,7 @@ const NavbarPage = () => {
 
 
             <Link id="log_nb" className="mr-3 link-admin" to="/login">Login</Link>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

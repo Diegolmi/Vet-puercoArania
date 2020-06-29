@@ -55,6 +55,7 @@ const CardEcommerce = ({ productos }) => {
             <Col lg={3} md={6} key={producto._id}>
               <Card className="card-container">
                 <Card.Img src={producto.urlImage} className="img-fluid" />
+
                 <Card.Body>
                   <Card.Title>{producto.name}</Card.Title>
                   <Card.Text>${producto.price}</Card.Text>
