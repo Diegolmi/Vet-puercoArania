@@ -33,9 +33,8 @@ import Col from 'react-bootstrap/Col';
     }
 
     return (
-        <Container>
+        <Container className="Contenedor-usuario" fluid>
             <Row>
-                {/* <Col md={2}><div>Side</div></Col> */}
                 <Col md={12}><NavbarUser
                     hideSidebar={hideSidebar}
                     showSidebar={showSidebar}

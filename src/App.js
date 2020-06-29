@@ -25,6 +25,7 @@ import Alimentos from './components/Alimentos/alimentos';
 import Contenedor from './components/Tienda/Contenedor';
 import Carrito from './components/stepper/Carrito';
 import AdminUser from './components/Usser/AdminUser';
+import Galeria from './components/Galeria/Galeria';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
         <Route exact path="/privado/carrito" component={Carrito} />
         <Route path="/privado/admin" component={Admin} />
         <Route path="/privado/usuario" component={AdminUser} />
+        <Route path="/galeria" component={Galeria} />
         <Route path="*" component={Error404} />
       </Switch>
     </Router>

@@ -1,5 +1,5 @@
 import React from 'react';
-import FooterAdmin from '../Admin/FooterAdmin';
+//import FooterAdmin from '../Admin/FooterAdmin';
 //import Mascotas from './Components/Mascotas';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -17,7 +17,7 @@ const IndexUsser = () => {
            
            </Col>
            </Row>    
-           <FooterAdmin />
+           {/*<FooterAdmin />*/}
         </Container-fluid>
     )
 }

@@ -4,6 +4,14 @@
     height: 200px;
     width: 200px;
 }
+.Contenedor-usuario {
+    
+        overflow-x: hidden;
+        height: 100%;
+        margin: 0 !important;
+        padding: 0 !important;
+    
+}
 /* SIDEBAR */
 
 .sidebar-container{
@@ -86,4 +94,32 @@
     /* position: fixed; */
     width: 100%;
    
+}
+
+
+.link-admin {
+    color: black;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+.link-admin:hover{
+    text-decoration: none;
+    color: #fc5185;
+}
+
+.icon-admin {
+    font-size: 1.3rem;
+}
+
+.footer-admin {
+    bottom: 0;
+    position: relative;
+}
+.footer-copyright {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }

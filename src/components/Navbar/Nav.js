@@ -5,7 +5,7 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/img/logo.png';
 import { MDBBadge } from "mdbreact";
 import { Link } from 'react-router-dom';
-import { FaRegBell, FaCartArrowDown } from 'react-icons/fa';
+import {  FaCartArrowDown } from 'react-icons/fa';
 import CarritoDesplegable from '../carritoDesplegable/CarritoDesplegable';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -109,6 +109,7 @@ const NavbarPage = () => {
             <Link to="/" className="mr-3 link-admin">Inicio</Link>
             <Link to="/about" className="mr-3 link-admin">Quienes Somos</Link>
             <Link to="/servicios" className="mr-3 link-admin">Servicios</Link>
+            <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
             <Link to="/" className="mr-3 link-admin">Tienda</Link>
           </Nav>
           <hr />
