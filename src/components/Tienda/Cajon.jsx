@@ -2,14 +2,15 @@ import React from 'react';
 
 import { makeStyles,Drawer, Divider } from '@material-ui/core';
 import RadioButtonsGroup from '../SidebarE-commerce/index';
+
 const estilos = makeStyles((theme) => ({
    drawer: {
-        width: 200,
+        width: 100,
         flexShrink:0
     },
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
-        width: 200,
+        width: 150,
       },
 }));
 
