@@ -1,0 +1,192 @@
+.formulario-carrito{
+    width: 800px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.button-position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 100px;
+}
+
+.review{
+    width: 800px;
+    margin: 0 auto;
+}
+
+
+.table-productos-carrito{
+    margin: 0 auto;
+    width: 1200px;
+}
+.head-add-productos{
+    background-color: #000;
+    color: white;
+    text-align: center;
+}
+
+.listado-productos{
+    height: 100%;
+    /* border-bottom: 1px solid black; */
+    text-align: center;
+}
+
+
+.button-eliminar-producto{
+    background: none;
+    outline: none !important;
+    border: none;
+    color: red;
+    font-size: 15px;
+}
+
+.img-carrito-producto{
+    width: 100px;
+    height: 100px;
+}
+
+/*shipping*/
+.shipping-address{
+    width: 100%;
+    text-align: center;
+}
+
+
+
+.shipping-cards{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.jumbotron-shipping-free{
+    background-color: white;
+    height: 250px;
+    width: 350px;
+}
+.free-shipping-img{
+    height: 100px;
+    width: 100px;
+}
+
+.charge-shipping-img{
+    height: 150px;
+    width: 150px;
+}
+
+
+.jumbotron-shipping-charge{
+    background-color: white;
+    height: 250px;
+    width: 350px;
+}
+
+.shipping-price{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.prices-shipping{
+    margin: 0;
+    padding: 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .review{
+        width: 300px;
+        margin: 0 auto;
+    }
+    .table-productos-carrito{
+        width: 700px;
+    }
+    .head-add-productos{
+       width: 400px !important;
+    }
+    
+    .listado-productos{
+        width: 400px !important;
+    }
+    .img-carrito-producto{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .shipping-cards{
+        flex-direction: column;
+    }
+    .jumbotron-shipping-free{
+        height: 210px;
+        width: 250px;
+    }
+    .jumbotron-shipping-charge{
+        height: 210px;
+        width: 250px;
+    }
+    .free-shipping-img{
+       display: none;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .review{
+        width: 500px;
+        margin: 0 auto;
+    }
+    .img-carrito-producto{
+        width: 50px !important;
+        height: 50px !important;
+    }
+    .shipping-cards{
+        justify-content: space-evenly;
+    }
+    .jumbotron-shipping-free{
+        height: 220px;
+        width: 250px;
+    }
+    .jumbotron-shipping-charge{
+        height: 220px;
+        width: 250px;
+    }
+    .free-shipping-img{
+        display: none;
+    }
+    
+}
+
+@media only screen and (min-width: 768px) {
+    .review{
+        width: 600px;
+        margin: 0 auto;
+    }
+    .jumbotron-shipping-free{
+        height: 250px;
+        width: 350px;
+    }
+   
+    .jumbotron-shipping-charge{
+        height: 250px;
+    width: 350px;
+    }
+    .free-shipping-img{
+        height: 100px;
+        width: 100px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .review{
+        width: 700px;
+        margin: 0 auto;
+    }
+    .shipping-cards{
+        justify-content: space-evenly;
+    }
+}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { makeStyles, Hidden } from '@material-ui/core';
 import Nav from '../Navbar/Nav';
+
 import "../Breadcrumbs/style.css";
 import { Cajon } from './Cajon';
 import Accesorios from '../AccesoriosEC/Accesorios';
@@ -33,6 +34,7 @@ const Contenedor = () => {
         
             <ThemeProvider theme={theme}>
                 <div className={classes.root}>
+
                     <Hidden xsDown>
                         <Cajon
                             variant="permanent"
@@ -57,6 +59,7 @@ const Contenedor = () => {
                         </div>
                         
                     
+
                 </div>
             </ThemeProvider>
         </>

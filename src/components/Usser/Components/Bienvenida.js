@@ -5,7 +5,7 @@ const BienvenidaAlert = () => {
   return (
     <MDBContainer className="container-saludo">
       <MDBAlert color="primary" >
-        Diego Olmi
+       Bienvenido Diego Olmi
       </MDBAlert>
     </MDBContainer>
   )

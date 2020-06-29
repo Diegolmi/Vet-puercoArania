@@ -6,11 +6,14 @@ import RadioButtonsGroup from '../SidebarE-commerce/index';
 const estilos = makeStyles((theme) => ({
    drawer: {
         width: 100,
+
         flexShrink:0
     },
     toolbar: theme.mixins.toolbar,
     drawerPaper: {
+
         width: 150,
+
       },
 }));
 
