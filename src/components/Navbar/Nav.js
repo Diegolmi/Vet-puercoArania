@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
 MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
 import { BrowserRouter as Router } from 'react-router-dom';
-import logo from '../../assets/img/logo.png'
+import logo from '../../assets/img/logo.png';
 import './styleNav.css';
 
 class NavbarPage extends Component {

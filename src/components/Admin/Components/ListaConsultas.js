@@ -1,5 +1,5 @@
 import React from 'react';
-import { MDBBtn  } from "mdbreact";
+import { MDBBtn } from "mdbreact";
 import '../Admin.css';
 
 
@@ -23,6 +23,7 @@ const ListaConsultas = ( { consulta }) => {
        ))}
        </>
     );
+
 }
 
 export default ListaConsultas;

@@ -4,8 +4,6 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
-
-
 //importar react router 
 import {
   BrowserRouter as Router,
@@ -19,6 +17,7 @@ import Register from './components/Register/Register';
 import Login from './components/Navbar/Login';
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
+//import IndexUsser from './components/Usser/IndexUsser';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 import IndexUsser from './components/Usser/IndexUsser';
 import Alimentos from './components/Alimentos/alimentos';
