@@ -1,10 +1,27 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { MDBDataTable, MDBBtn } from 'mdbreact';
 import FormUser from '../../Components/FormUser';
+import axiosInstance from '../../../util/axiosInstance';
+
 
 
 const EditUser = () => {
   const [showEdit, setShowEdit] = useState(false);
+  const [usuarios, setUsuarios] = useState([]);
+
+  const listarUsuarios = async () => {
+    const response = await axiosInstance.get('/private/user');
+    console.log(response.data)
+    setUsuarios(response.data.users)
+    // console.log(response)
+  }
+// console.log(usuarios)
+
+
+  useEffect(() => {
+    listarUsuarios()
+  }, [])
+  
 
   const editarUsuario = () => {
     setShowEdit(true)
@@ -57,49 +74,14 @@ const EditUser = () => {
         width: 150
       }
     ],
-    rows: [
-      {
-        nombre: 'Tiger',
-        apellido: 'Nixon',
-        usuario: 'System Architect',
-        email: 't.nixon@datatables.net',
+    rows: usuarios.map(usuario => ({
+        nombre: usuario.name,
+        apellido: usuario.lastname,
+        usuario: usuario.username,
+        email: usuario.email,
         editar: <MDBBtn color="blue" size="sm" onClick={editarUsuario}>Editar</MDBBtn>,
         eliminar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        nombre: 'Tiger',
-        apellido: 'Nixon',
-        usuario: 'System Architect',
-        email: 't.nixon@datatables.net',
-        editar: <MDBBtn color="blue" size="sm" onClick={editarUsuario}>Editar</MDBBtn>,
-        eliminar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        nombre: 'Tiger',
-        apellido: 'Nixon',
-        usuario: 'System Architect',
-        email: 't.nixon@datatables.net',
-        editar: <MDBBtn color="blue" size="sm" onClick={editarUsuario}>Editar</MDBBtn>,
-        eliminar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        nombre: 'Tiger',
-        apellido: 'Nixon',
-        usuario: 'System Architect',
-        email: 't.nixon@datatables.net',
-        editar: <MDBBtn color="blue" size="sm" onClick={editarUsuario}>Editar</MDBBtn>,
-        eliminar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        nombre: 'Tiger',
-        apellido: 'Nixon',
-        usuario: 'System Architect',
-        email: 't.nixon@datatables.net',
-        editar: <MDBBtn color="blue" size="sm" onClick={editarUsuario}>Editar</MDBBtn>,
-        eliminar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-
-    ]
+    }))
   };
 
   

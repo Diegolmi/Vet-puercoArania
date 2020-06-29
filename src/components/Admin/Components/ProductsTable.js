@@ -1,7 +1,17 @@
 import React from 'react';
 import { MDBDataTable, MDBBtn } from 'mdbreact';
+import '../Admin.css';
+import axiosInstance from '../../util/axiosInstance';
 
-const ProductsTable = () => {
+
+const ProductsTable = ({ productos, listaProductos }) => {
+
+    const eliminarProductos = id => async () => {
+        const res = await axiosInstance.delete(`/product/${id}`);
+        console.log(res);
+        listaProductos()
+    }
+
     const data = {
         columns: [
             {
@@ -59,178 +69,25 @@ const ProductsTable = () => {
                 width: 150
             }
         ],
-        rows: [
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
-            {
-                producto: 'Eukanuba',
-                imagen: 'url',
-                precio: '$ 500',
-                cantidad: '20',
-                descripcion: 'descripcion del producto',
-                tipo: 'Alimentos',
-                mascota: 'Perro',
-                editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
-                borrar: <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-            },
 
+        rows: 
+            productos.map(producto => ({
+                producto: producto.name,
+                 imagen: <img className="img-table-product" src={producto.urlImage} alt=""/>,
+                 precio: producto.price,
+                 cantidad: producto.stock,
+                 descripcion: producto.details,
+                 tipo: producto.category,
+                 mascota: producto.brand,
+                 editar: <MDBBtn color="blue" size="sm">Editar</MDBBtn>,
+                borrar: <MDBBtn color="red" size="sm" onClick={eliminarProductos(producto._id)}>Eliminar</MDBBtn>
+            }))
             
-
-
-        ]
+            
+        
     };
+    
+
     return (
         <MDBDataTable
             scrollX
