@@ -15,7 +15,7 @@ import Modal from 'react-bootstrap/Modal';
 
 
 const CardEcommerce = () => {
-  const array = [1, 2, 3, 4];
+  const array = [1, 2, 3, 4, 5, 6, 7, 8];
 
   const [show, setShow] = useState(false);
 
@@ -73,7 +73,7 @@ const CardEcommerce = () => {
 
       
     </>
-
+  
 
   );
 }

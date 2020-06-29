@@ -3,23 +3,30 @@
 .img {
   height: 320px;
   width: 300px;
-  margin-left: 50px;
-}
+  padding-bottom: -43px !important;
+   }
+
 .imagenhomero {
   height: 100px;
+ 
 }
 #texto {
   text-align: center;
+  text-transform: uppercase;
 }
 
 .contacto {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  justify-content: center;
+
 }
 
 .iconos {
   height: 35px;
   width: 35px;
+  margin: 7px 15px  15px 0;
+
 }
 #map-container {
   display: flex;
@@ -29,7 +36,8 @@
 }
 
 #hola {
-  background-color: #364f6b;
+    background-color: #364f6b;
+  margin-top: -8px !important;
 }
 .buttons {
   display: inline;
@@ -38,17 +46,20 @@
 
 .redessociales {
   display: flex;
-  justify-content: space-around;
-}
-.links {
+  flex-direction: column;
+  }
+  .links {
   display: flex;
 }
 .ubicacion{
-    margin-bottom: 10px;
+  margin: auto auto;
 }
-.redes{
-    margin-right: 100px;
+.direc{
+  margin-top: 100px;
+  text-align: center;
+  font-size: 18px;
 }
+
 
 @media (min-width: 300px) and (max-width: 549px) {
   #hola {
@@ -84,17 +95,23 @@
   .ubicacion{
       display: flex;
       justify-content: center;
+      margin: auto auto;
+      padding-bottom: 30px;
   }
 
-  .secciones {
-    margin-top: 30px;
-    margin-bottom: 10px;
-  }
+  
   .redes {
     margin: 10px;
     padding: 20px;
+    margin-left: 0px;
+    padding-left: 0px;
   }
-  
+.direc{
+  margin-top: auto;
+}
+.d-flex{
+  margin: auto;
+}
 }
 @media (min-width:550px) and (max-width:700px){
     #hola {
@@ -116,34 +133,34 @@
         margin-top: 30px;
         margin-left: 50px;
       }
-      .contacto {
-        flex-direction: column;
-        margin-top: 10px;
+      .ubicacion{
+        display: flex;
+        justify-content: center;
+        margin: auto auto;
+        padding-bottom: 30px;
       }
       #map-container {
         height: 200px;
         width: 300px;
-        margin-bottom: 150px;
-       margin-top: 20px;
+        margin-top: 20px;
       }
     
-      .secciones {
-        margin-top: 30px;
-        margin-bottom: 10px;
-      }
       .redes {
         margin: 10px;
         padding: 20px;
       }
+      .d-flex{
+        margin: auto;
+      }
     }
-    @media (min-width:701px) and (max-width:1199px) {
+    @media (min-width:701px) and (max-width:991px) {
         #hola {
             background-color: #364f6b;
           }
         
           .imagenhomero {
-              margin-left: 200px;
-            margin-bottom: 50px;
+              padding-bottom: 150px;
+              margin: auto auto !important;
           }
           .img {
             height: 300px !important;
@@ -154,33 +171,56 @@
             width: 40px !important;
           }
           .informacion {
-            margin-top: 150px;
-            margin-left: 200px;
+            padding-top: 200px;
+            margin: auto auto;
+            padding-left: 10%;
+          }
+          .ubicacion{
+            display: flex;
+            justify-content: center;
+            margin: auto auto;
+            padding-bottom: 30px;
+          }
+          .col-md-5{
+            display: flex;
+            margin-top: 10px;
+            margin: auto auto;
           }
           .contacto {
-            flex-direction: column;
-            margin-top: 10px;
-          }
+          margin: auto auto;
+        }
+          
           #map-container {
-              margin-left: 200px;
             height: 200px;
             width: 300px;
-            margin-bottom: 150px;
+            margin-bottom: 15px;
            margin-top: 20px;
-          }
-        
-          .secciones {
-              margin-left: 10px;
-            margin-top: 30px;
-            margin-bottom: 10px;
-          }
-          .redes {
-            margin: 10px;
-            padding: 20px;
-            margin-left: 200px;
+           margin: auto auto;
+
           }
           #texto{
-              margin-left: 250px;
+            margin: auto auto;
           }
-
+          .redes {
+            margin: auto;
+            padding: 20px;
+          }
+          
+          .d-flex{
+            margin: auto;
+          } 
+         
     }
+    @media (min-width: 992px)and(max-widht:1199px){
+      .ubicacion{
+        margin-left: 160px;
+      }
+    }
+
+   @media (min-width: 1200px){
+  
+  .imagenhomero {
+
+    margin-left: 60px;
+  }
+  }

@@ -22,7 +22,7 @@ import moment from 'moment';
 
 const CardEcommerce1 = () => {
 
-  const array = [1, 2, 3, 4];
+  const array = [1, 2, 3, 4, , 6, 7, 8];
 
   return (
     <>

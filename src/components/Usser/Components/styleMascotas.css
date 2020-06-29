@@ -4,3 +4,86 @@
     height: 200px;
     width: 200px;
 }
+/* SIDEBAR */
+
+.sidebar-container{
+    height: 100%;
+    width: 250px;
+    background: #68829c;
+    text-align: center;
+    /* position: fixed; */
+    top: 50px;
+}
+
+.sidebaricons-container {
+    height: 100%;
+    width: 70px;
+    background: #68829c;
+    text-align: center; 
+    /* position: fixed; */
+    
+}
+.datos-sidebar-icons {
+    height: 100px;
+}
+
+.columna-sidebar{
+    height: auto;
+}
+.datos-sidebar {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-bottom: 1px solid black;
+}
+
+
+
+.secciones-sidebar {
+    margin-top: 30px; 
+    padding-left: 0;
+}
+
+.listado-sidebar {
+    margin-top: 25px;
+    list-style: none;
+    margin-bottom: 50px;
+}
+.link-sidebar {
+    color: black;
+    font-weight: 600;
+    padding: 10px;
+    border-bottom: 1px solid black;   
+}
+.link-sidebar:hover{
+    text-decoration: none;
+    color: #fc5185;
+    border-bottom: 2px solid #fc5185;
+    transition: .3s;  
+}
+
+.icon-sidebar-admin {
+    margin-right: 15px;
+    font-size: 20px;
+    width: 50px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+.listMascotas {
+   margin: 20px;
+   padding: 20px;
+    
+}
+.navbar-user {
+    background: #68829c;
+    z-index: 1;
+    /* position: fixed; */
+    width: 100%;
+   
+}

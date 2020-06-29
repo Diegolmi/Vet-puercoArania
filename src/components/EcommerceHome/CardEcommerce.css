@@ -2,8 +2,8 @@
 
 .card-homePage {
   width: 100%;
-  margin-top: 30px;
   padding-bottom: 50px;
+  background-color: white;
   /* display: flex; */
   /* justify-content: center;
     align-items: center;
@@ -18,20 +18,32 @@
 } */
 
 .card-homePage .store-title {
-  width: 350px;
-  padding-top: 30px;
+  text-align: center;
+  padding-top: 40px;
   margin: auto auto;
-  padding-bottom: 30px;
+  padding-bottom: 45px;
   color: #fc5185;
-  font-size: 45px;
+  animation-iteration-count: infinite;
+  animation-name: slidein;
+  animation-duration: 4s;
+  animation-direction: alternate;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
 }
 .store-subtitle{
   text-align: center;
-  padding-bottom: 60px;
-  font-size: 20px;
-  letter-spacing: 2px;
-  line-height: 30px;
-
+  padding-bottom: 50px;
 }
 
 .contenedor-boton-tienda {
@@ -44,10 +56,14 @@
 .contenedor-boton-tienda .btn {
   background: #364f6b;
   color: white;
-  padding: 5px 20px;
+  padding: 15px 40px;
+  font-size: 20px;
+  font-weight: bolder;
 }
 .contenedor-boton-tienda .btn:hover {
-  color: #fc5185;
+  background-color: white;
+  color: #364f6b;
+  
 }
 
 /* FIN CONTAINER CARD */
@@ -56,8 +72,7 @@
 
 .card-container {
   /* width: 15rem; */
-  border: 1px solid #fc5185;
-  margin: 25px;
+  margin: 30px;
   /* height: 460px; */
 }
 
@@ -83,7 +98,6 @@
 .card-footer {
   display: flex;
   justify-content: space-evenly;
-  border-top: 1px solid #fc5185;
 }
 .card-footer .button-card {
   background: transparent !important;
@@ -102,17 +116,72 @@
 
 
 @media only screen and (min-width: 600px) {
+  .card-homePage .store-title{
+    font-size: 50px;
+  }
+  .store-subtitle{
+    font-size: 22px;
+    line-height: 30px;
+  }
   .card-homePage {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
   }
-  /* .card {
-    width: 15rem;
-  } */
+
+  .button-group {
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: space-around;
+    margin: auto auto;
+    margin-bottom: 50px;
+    background-color: #f0f0f0;
+  
+  }
+  
+  .botones-productos {
+    color: black;
+    font-size: 25px;
+    border-radius: 30px;
+    border: none;
+    width: 290px;
+    /* background: #364f6b; */
+    /* border-radius: 20px; */
+  }
+  
+  .botones-productos:hover {
+    color: #fc5185;
+    transition: .3s;
+  }
+  
+  
+  .rating-container{
+    height: 0;
+    padding: 0;
+    margin: 0;
+  }
+  #img_prod{
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+  }
+
+} 
+/* 
+.botones-productos:hover {
+  color: #fc5185;
+  transition: .3s;
 }
 
-@media only screen and (max-width: 600px) {
+.img_prod{
+  width: 10%;
+  height: 10%;
+  margin-right: 15px;
+} */
+
+
+@media only screen and (min-widht: 300px)and(max-width: 600px) {
   .store-title{
     max-width: 300px;
     display: flex;
@@ -120,6 +189,12 @@
     font-size: 2rem;
     text-align: center;
   }
+  .store-subtitle{  
+    font-size: 18px;
+    line-height: 20px;
+
+  }
+  
   .card-homePage {
     justify-content: center !important;
     align-items: center !important;
@@ -132,6 +207,7 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
+
   }
   .botones-productos {
     font-size: 10px !important;
@@ -139,28 +215,29 @@
   .card.cascading-admin-card {
     margin-top: 2.5rem;
   } 
-
+  #img_prod{
+    width: 60px;
+    height: 60px;
+  }
 }
 
-.button-group {
-  width: 850px;
+/* .button-group {
+  width: 100vw;
+  height: 150px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: auto auto;
-  margin-bottom: 15px;
-  height: 55px;
+  margin-bottom: 50px;
+  background-color: #f0f0f0;
 
-}
+} */
 
 .botones-productos {
-  color: #788797;
-  font-size: 20px;
-  margin-right: 10px;
-  margin-bottom: 80px;
-  padding: 2px 15px;
+  color: black;
+  font-size: 25px;
   border: none;
-  background-color: #364f6b;
-  
+  width: 100%;
+  margin-bottom: 2px;
   /* background: #364f6b; */
   /* border-radius: 20px; */
 }
@@ -176,3 +253,9 @@
   padding: 0;
   margin: 0;
 }
+#img_prod{
+  width: 80px;
+  height: 80px;
+  margin-right: 15px;
+}
+

@@ -17,10 +17,10 @@ import Register from './components/Register/Register';
 import Login from './components/Navbar/Login';
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
-//import IndexUsser from './components/Usser/IndexUsser';
-import Accesorios from './components/AccesoriosEC/Accesorios';
 import Alimentos from './components/Alimentos/alimentos';
-import Contenedor from './components/Tienda/Contenedor';
+import Accesorios from './components/AccesoriosEC/Accesorios';
+import AdminUser from './components/Usser/AdminUser';
+import Galeria from './components/Galeria/Galeria';
 
 
 function App() {
@@ -33,12 +33,11 @@ function App() {
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route path="/tienda" component={Contenedor} />
-        {/*<Route path="/privado/panelUsser" component={IndexUsser} />*/}
-        <Route exact path="/tienda/accesorios" component={Accesorios}/>
-        <Route exact path="/tienda/alimentos" component={Alimentos} />
         <Route path="/privado/admin" component={Admin} />
-        <Route path="*" component={Error404} />
+        <Route path="/privado/usuario" component={AdminUser} />
+        <Route exact path="/tienda/accesorios" component={Accesorios}/>
+        <Route exact path="/galeria" component={Galeria} />
+        <Route exact path="/Alimentos" component={Alimentos} />
 
 
         {/* <Route exact path="/privado/usuario" component={usuario} />

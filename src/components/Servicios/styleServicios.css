@@ -1,16 +1,18 @@
 .section{
     background-color: #f0f0f0;
     padding-top: 23px;
-    margin-bottom: 0;
+
     }
 
 
     .title{
-        color: black;
+        color: #fc5185;
         font-size: 26px;
+        text-transform: uppercase;
+        margin-bottom: 25px;
+
     }
     .lorem{
-        margin-top: 20px;
         text-align: justify;
         width: 480px;
         line-height: 1.5;
@@ -49,13 +51,10 @@
         height: 200px;
         width: 150px;
         border-radius: 16px;
-        box-shadow: 3px 3px 3px rgba(248,121,160, 0.7);
         object-fit: cover;
         padding: 0;
 
                 }
-
-
 
         figure{
             margin: 25px 20px;
@@ -111,9 +110,9 @@
             flex-direction: column;
             align-items: center !important;
         }
-            figure, img{
-                width: 300px !important;
-                height: 350px !important;
+            figure, .imge{
+                width: 300px ;
+                height: 350px ;
         }
     }
 
@@ -193,7 +192,6 @@
                 height: 200px;
                 width: 150px;
                 border-radius: 16px;
-                box-shadow: 3px 3px 3px rgba(248,121,160, 0.7) ;
                 object-fit: cover;
                 padding: 0;
                 position: absolute;
