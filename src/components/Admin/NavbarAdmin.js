@@ -4,21 +4,24 @@ import Nav from 'react-bootstrap/Nav';
 import { MDBBadge } from "mdbreact";
 import './Admin.css';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaRegBell } from 'react-icons/fa';
 
 
 const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
-    
+   const history = useHistory();
+
+    const logout = () => {
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('role');
+        history.push('/')
+    }
     
     return (
         <>
         <Navbar collapseOnSelect expand="lg" className="navbar-admin">
             {cambiarBoton ? <button className="hideSidebar" onClick={showSidebar}><FaArrowRight /></button> 
-            :  <button className="hideSidebar" onClick={hideSidebar}><FaArrowLeft /></button>  }
-            
-            
-            
+            :  <button className="hideSidebar" onClick={hideSidebar}><FaArrowLeft /></button>  } 
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggle-admin" />
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-lg-auto">
@@ -31,8 +34,9 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 <hr />
                 <Nav>
                     {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
-                    <Link className="mr-3 link-admin"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin">Log Out</Link>
+                    <Link className="mr-3 link-admin" to="/"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
+                    <Link className="mr-3 link-admin" to="" >Perfil</Link>
+                    <Link className="mr-3 link-admin" to="" onClick={logout}>Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

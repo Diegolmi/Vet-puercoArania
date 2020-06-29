@@ -4,13 +4,13 @@ import ModificarDatos from './ModificarDatos';
 
 const DatosUsuario = () => {
 
-  const datos = {
-    nombre: [],
-    apellido: [],
-    domicilio: [],
-    telefono: [],
-    email: [],
-  }
+  // const datos = {
+  //   nombre: [],
+  //   apellido: [],
+  //   domicilio: [],
+  //   telefono: [],
+  //   email: [],
+  // }
 
 
 

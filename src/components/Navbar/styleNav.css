@@ -1,4 +1,4 @@
-.navPrincipal{
+/* .navPrincipal{
   z-index: 10000;
   padding-right: 0px;
 }
@@ -24,7 +24,7 @@
   }
   .btn-secondary{
     background-color: #fc5185 !important;
-  }
+  } */
   .navbar:hover {
     background-color: #68829c;
   }
@@ -32,12 +32,43 @@
     background-color: #68829c;
 
   }
+  .navbar-body {
+    background-color: #68829c !important;
+    transition: 500ms ease;
+  }
+  a.link-admin {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: auto auto;
+    padding-right: 40px;
+    font-weight: bold;
+}
 
- #boton_login{
-   background-color: #fc5185 !important;
-   border: solid 1.5px #68829c ;
-   margin-right: 70px;
- }
+  .link-admin-boton{
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 30px;
+    font-size: 20px;
+  }
+  .carro{
+    color: white;
+    height: 40px;
+    width: 40px;
+  }
+  #log_nb{
+    background-color: #fc5185;
+    padding: 3px 20px;
+  }
+  .contenedor-carrito-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+ 
 
   @media (min-width:300px) and (max-width:549px) {
     .navbar  scrolling {
