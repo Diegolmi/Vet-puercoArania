@@ -25,6 +25,7 @@
   } */
   .navbar:hover {
     background-color: #68829c;
+    transition: .3s;
   }
   .dropdown-default {
     background-color: #68829c;
