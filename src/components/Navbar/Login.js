@@ -45,7 +45,7 @@ return (
 <img src={Imglogin} className="gato rounded-circle" alt="" />
 </MDBView>
 
-  <div className="formstyle" md="8"> 
+  <div className="formstyle1" md="8"> 
     <MDBCol >
       <form onSubmit={loginUser}>
         <p className="h3 text-center mb-4">Ingresá</p>

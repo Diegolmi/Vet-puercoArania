@@ -1,8 +1,8 @@
 body {
     background-color: whitesmoke;
 }
-.formstyle{
-    box-shadow: 10px 10px 5px 0px #fc5185;
+.formstyle1{
+    box-shadow: 5px 5px 5px 0px #fc5185;
     width: 500px;
     margin: 150px;
     background-color: white;
@@ -11,8 +11,8 @@ body {
     
   }
   .gato {
-    height: 300px;
-    width: 250px;
+    height: 250px;
+    width: 200px;
     margin: 150px;
    
   }
