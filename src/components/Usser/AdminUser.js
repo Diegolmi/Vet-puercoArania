@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import NavbarUser from './Components/NavbarUser';
-import FooterAdmin from '../Footer/Footer';
+import FooterAdmin from '../Admin/FooterAdmin';
 import Sidenav from './Components/Sidenav';
 import SideNavicons from './Components/sideNavicons';
 
