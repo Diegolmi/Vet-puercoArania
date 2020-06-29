@@ -11,14 +11,16 @@ const EditUser = () => {
 
   const listarUsuarios = async () => {
     const response = await axiosInstance.get('/private/user');
-    setUsuarios(response)
+    console.log(response.data)
+    setUsuarios(response.data.users)
     // console.log(response)
   }
-console.log(usuarios)
+// console.log(usuarios)
 
-  // useEffect(() => {
-  //   listarUsuarios()
-  // }, [])
+
+  useEffect(() => {
+    listarUsuarios()
+  }, [])
   
 
   const editarUsuario = () => {

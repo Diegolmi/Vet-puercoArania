@@ -38,7 +38,7 @@ function Routes() {
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
         <PrivateRoute exact path="/privado/carrito" component={Carrito} />
-        <PrivateRoute path="/privado/admin" component={Admin} />
+        <PrivateRoute  path="/privado/admin" component={Admin} />
         <PrivateRoute path="/privado/usuario" component={AdminUser} />
         <Route path="*" component={Error404} />
       </Switch>

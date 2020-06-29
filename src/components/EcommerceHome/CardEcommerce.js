@@ -18,6 +18,7 @@ import axiosInstance from '../util/axiosInstance';
 const CardEcommerce = ({ productos }) => {
   
   const [carrito, setCarrito] = useState([])
+  const {crearCarrito, setCrearCarrito} = useState(false)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -34,14 +35,29 @@ const CardEcommerce = ({ productos }) => {
     
   })
 
-  //agregar al carrito
+  //crear  carrito
 
-  const addToCart = async () => {
+  const createCart = async () => {
     const response = await axiosInstance.post('/shoppingCart', carrito)
-    setCarrito(response)
-    console.log(response)
+    setCarrito(response.data)
+    console.log(response.data)
+    
+    
   }
+
+ console.log(carrito._id)
+
   
+  
+  // agregar al carrito
+  const addToCart =  async () => {
+    const id = carrito._id;
+    const res = await axiosInstance.post(`/shoppingCart/${id}/items`, carrito)
+      setCarrito(res)
+      console.log(res)
+  }
+
+
   return (
     <>
       <Container fluid>
@@ -63,7 +79,14 @@ const CardEcommerce = ({ productos }) => {
                 </Card.Body>
                 <Card.Footer>
                   <Button size="sm" className="btn button-card" onClick={handleShow}><MDBIcon className="icon-card" icon="info" /></Button>
-                  <Button size="sm" className="btn button-card" onClick={addToCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                  
+                  {crearCarrito ? <Button size="sm" className="btn button-card" onClick={addToCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                  
+                :
+<Button size="sm" className="btn button-card" onClick={createCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                }
+                  
+                  
                 </Card.Footer>
               </Card>
             </Col>
