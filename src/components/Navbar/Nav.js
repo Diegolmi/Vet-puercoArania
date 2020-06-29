@@ -112,7 +112,7 @@ const NavbarPage = () => {
             <Link to="/" className="mr-3 link-admin">INICIO</Link>
             <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
             <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
-            <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
+            <Link to="/galeria" className="mr-3 link-admin">GALERIA</Link>
             <Link to="/" className="mr-3 link-admin">TIENDA</Link>
 
           </Nav>
