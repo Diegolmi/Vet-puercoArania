@@ -1,3 +1,4 @@
+
 import './styleNav.css';
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
@@ -5,7 +6,8 @@ import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/img/logo.png';
 import { MDBBadge } from "mdbreact";
 import { Link } from 'react-router-dom';
-import {  FaCartArrowDown } from 'react-icons/fa';
+import { FaCartArrowDown } from 'react-icons/fa';
+
 import CarritoDesplegable from '../carritoDesplegable/CarritoDesplegable';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
@@ -13,11 +15,8 @@ import Drawer from '@material-ui/core/Drawer';
 // import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
-// import ListItem from '@material-ui/core/ListItem';
-// import ListItemIcon from '@material-ui/core/ListItemIcon';
-// import ListItemText from '@material-ui/core/ListItemText';
-// import InboxIcon from '@material-ui/icons/MoveToInbox';
-// import MailIcon from '@material-ui/icons/Mail';
+import { MDBBtn } from "mdbreact";
+
 
 
 
@@ -76,7 +75,8 @@ const NavbarPage = () => {
       onClick={toggleDrawer(anchor, false)}
       onKeyDown={toggleDrawer(anchor, false)}
     >
-      <List>
+      <List className="contenedor-carrito-sidebar">
+
       <CarritoDesplegable />
         {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
           <ListItem button key={text}>
@@ -84,6 +84,8 @@ const NavbarPage = () => {
             <ListItemText primary={text} />
           </ListItem>
         ))} */}
+        <MDBBtn id="btn_turno" outline color="secondary my-4"> ir al Carrito</MDBBtn>
+
       </List>
       <Divider />
       <List>
@@ -100,17 +102,19 @@ const NavbarPage = () => {
   //------------------------------------------------------------------
 
   return (
+
     <>
       <Navbar collapseOnSelect expand="lg" className={navBackground ? "navbar-body" : ''} fixed="top">
         <Navbar.Brand href="#home"><img src={logo} className="logo" alt="" /></Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggle-admin" />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ml-lg-auto">
-            <Link to="/" className="mr-3 link-admin">Inicio</Link>
-            <Link to="/about" className="mr-3 link-admin">Quienes Somos</Link>
-            <Link to="/servicios" className="mr-3 link-admin">Servicios</Link>
+            <Link to="/" className="mr-3 link-admin">INICIO</Link>
+            <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
+            <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
             <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
-            <Link to="/" className="mr-3 link-admin">Tienda</Link>
+            <Link to="/" className="mr-3 link-admin">TIENDA</Link>
+
           </Nav>
           <hr />
           <Nav>
@@ -120,7 +124,8 @@ const NavbarPage = () => {
           <button className="link-admin link-admin-boton"
               onClick={toggleDrawer(anchor, true)}
             >
-              <FaCartArrowDown />
+              <FaCartArrowDown className="carro"/>
+
               <MDBBadge color="danger" className="ml-2">4</MDBBadge>
               </button>
           <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
@@ -131,7 +136,8 @@ const NavbarPage = () => {
             
 
 
-            <Link className="mr-3 link-admin" to="/login">Login</Link>
+            <Link id="log_nb" className="mr-3 link-admin" to="/login">Login</Link>
+
           </Nav>
         </Navbar.Collapse>
       </Navbar>

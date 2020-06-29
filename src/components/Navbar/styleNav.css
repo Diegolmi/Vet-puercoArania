@@ -1,14 +1,23 @@
-/* .navPrincipal{
+.navPrincipal{
+
   z-index: 10000;
+  padding-right: 0px;
 }
   .letras {
-    color: black !important;
+    color: white !important;
+    padding-right: 20px !important;
+    letter-spacing: 1px;
   }
   .letras:hover {
     background-color: #68829c;
-
   }
-
+  .letras_drop{
+    color: black !important;
+    letter-spacing: 1px;
+  }
+  .dropdown-toggle::after{
+    color: white !important;
+  }
   .bg-primary {
     background-color:#68829c !important;
   }
@@ -17,10 +26,46 @@
   } */
   .navbar:hover {
     background-color: #68829c;
+    transition: .3s;
   }
   .dropdown-default {
     background-color: #68829c;
 
+  }
+  .navbar-body {
+    background-color: #68829c !important;
+    transition: 500ms ease;
+  }
+  a.link-admin {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: auto auto;
+    padding-right: 40px;
+    font-weight: bold;
+}
+
+  .link-admin-boton{
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 30px;
+    font-size: 20px;
+  }
+  .carro{
+    color: white;
+    height: 40px;
+    width: 40px;
+  }
+  #log_nb{
+    background-color: #fc5185;
+    padding: 3px 20px;
+  }
+  .contenedor-carrito-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
   .navbar-body {
@@ -110,8 +155,7 @@
     }
   }
   .logo {
-    height: 80px ;
-    width: 130px ;
+    height: 100px ;
+    width: 200px ;
     
   }
-  

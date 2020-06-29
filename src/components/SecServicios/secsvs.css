@@ -30,6 +30,17 @@ i.fa{
     color: #fc5185 !important;
 }
 
+#btn_turno_modal{
+    margin: 0;
+    color: #fc5185 !important;
+    border: 1px solid #fc5185 !important;
+}
+#btn_turno_modal:hover{
+    background-color: #fc5185 !important;
+    color: whitesmoke !important;
+    border-color: #fc5185 !important;
+}
+
 @media (min-width:766px){
     .img-sec-servicios{
         margin:90px auto !important;

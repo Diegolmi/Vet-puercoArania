@@ -3,7 +3,7 @@ import { MDBIcon } from "mdbreact";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 
-const Cards = () => {
+const CardsAlimento = () => {
     return (<div className="contenedor_cards">
     <Card id="card_acc">
       <Card.Img
@@ -160,4 +160,4 @@ const Cards = () => {
     </div>
       );
     };
- export default  Cards;
+ export default  CardsAlimento;
