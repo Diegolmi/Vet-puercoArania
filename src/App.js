@@ -20,6 +20,7 @@ import Register from './components/Register/Register';
 import Login from './components/Navbar/Login';
 import Admin from './components/Admin/Admin';
 import SecServicios from './components/SecServicios/index';
+//import IndexUsser from './components/Usser/IndexUsser';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 import Alimentos from './components/Alimentos/alimentos';
 import Contenedor from './components/Tienda/Contenedor';
@@ -38,10 +39,23 @@ function App() {
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route path="/tienda" component={Contenedor} />
+        {/*<Route path="/privado/panelUsser" component={IndexUsser} />*/}
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
-        <Route exact path="/privado/carrito" component={Carrito} />
         <Route path="/privado/admin" component={Admin} />
+        <Route path="*" component={Error404} />
+
+
+        {/* <Route exact path="/privado/usuario" component={usuario} />
+        <Route exact path="/consultas" component={Consultas} /> */}
+        {/* <Route exact path="/servicios" component={Servicios} /> */}
+        {/* <Route exact path="/privado/carrito" component={Carrito} /> */}
+        {/* <Route exact path="/tienda" component={Tienda} />
+        <Route exact path="/tienda/alimentos" component={Alimentos} />
+         
+        <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
+        
+        <Route exact path="/privado/carrito" component={Carrito} />
         <Route path="/privado/usuario" component={AdminUser} />
         <Route path="/galeria" component={Galeria} />
         <Route path="*" component={Error404} />

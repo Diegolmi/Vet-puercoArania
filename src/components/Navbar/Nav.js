@@ -1,3 +1,4 @@
+
 import './styleNav.css';
 import React, { useState, useEffect, useRef } from 'react';
 import Navbar from 'react-bootstrap/Navbar';
@@ -100,6 +101,7 @@ const NavbarPage = () => {
   //------------------------------------------------------------------
 
   return (
+
     <>
       <Navbar collapseOnSelect expand="lg" className={navBackground ? "navbar-body" : ''} fixed="top">
         <Navbar.Brand href="#home"><img src={logo} className="logo" alt="" /></Navbar.Brand>

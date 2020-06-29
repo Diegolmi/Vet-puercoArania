@@ -2,7 +2,8 @@ import React from "react";
 import { MDBView, MDBRow, MDBCol, MDBBtn } from "mdbreact";
 import logo from '../../assets/img/logo.png';
 import './styleRegister.css';
-//import FooterAdmin from '../Admin/FooterAdmin';
+import FooterAdmin from '../Admin/FooterAdmin';
+
 import {Link} from 'react-router-dom';
 //import Nav from '../Navbar/Nav';
 
@@ -30,6 +31,7 @@ class FormsPage extends React.Component {
 
     render() {
         return (
+
             <>
            
             <div className='container-fluid containerRegistro'>
@@ -216,6 +218,7 @@ class FormsPage extends React.Component {
                 
                 </MDBRow>
             </div>
+
             </>
         );
     }
