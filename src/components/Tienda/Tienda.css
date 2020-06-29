@@ -1,0 +1,39 @@
+.productos{
+    background-image: url("https://www.publicdomainpictures.net/pictures/120000/velka/animal-footsteps-silhouette.jpg");
+  background-repeat: no-repeat;
+  background-size:1250px 1500px;
+  margin-top: 70px;
+
+}
+.carrouseltienda{
+    width:  800px;
+    margin-top: 70px;
+}
+.card{
+    width: 300px;
+    margin-top: 30px;
+    height: 350px;
+}
+.imgperro{
+    background-image: url('https://lh3.googleusercontent.com/proxy/BFGjsIReLqTaTCnd2QyTFeCgqg2649e-4c_j_FPLxDbsXh8S0ApXz24wbs8g0FYjtCdklXXFne3bifYDneVEvlWeGKaxdxxWEuFrOPFQmVJETNUCeRkRORhXOjFjzS2Em-21mR_GgWz7CHjEEfWf');
+    background-size: 350px;
+    background-repeat: no-repeat;
+    margin-top: 70px;
+}
+.boton{
+    margin-top: 270px;
+}
+.img1{
+    height: 350px;
+}
+.propaganda{
+    width: 1000px;
+    height: 250px;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-top: 50px;
+    margin-bottom: 0px;
+}
+#hola{
+    width: 1250px;
+}
