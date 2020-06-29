@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from '../../assets/img/paraTienda.jpg'
 import './CardEcommerce.css';
 import { MDBIcon } from 'mdbreact';
 import Rating from './Rating'
@@ -20,9 +19,20 @@ import moment from 'moment';
 
 
 
-const CardEcommerce2 = () => {
+const CardEcommerce2 = ({ productos }) => {
+    
 
-    const array = [1, 2, 3, 4];
+    let contador = 0
+  const farmaciaArray = productos.filter(producto => {
+
+    const isFarmacia = producto.category === 'Farmacia'
+    if( contador < 4 && isFarmacia ){
+      contador++
+      console.log(contador);
+      return  isFarmacia
+    }
+    
+  })
 
     return (
         <>
@@ -34,13 +44,13 @@ const CardEcommerce2 = () => {
 
                 <Row>
 
-                    {array.map(arr => (
+                    {farmaciaArray.map(producto => (
                         <Col lg={3} md={6}>
                             <Card className="card-container">
-                                <Card.Img variant="top" src={img1} className="img-fluid" />
+                                <Card.Img variant="top" src={producto.urlImage} className="img-fluid" />
                                 <Card.Body>
-                                    <Card.Title>Nombre de Farmacia</Card.Title>
-                                    <Card.Text>$249,80</Card.Text>
+                                    <Card.Title>{producto.name}</Card.Title>
+                                    <Card.Text>${producto.price}</Card.Text>
                                     <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
                                     <Card.Text className="rating"><Rating /></Card.Text>
                                 </Card.Body>

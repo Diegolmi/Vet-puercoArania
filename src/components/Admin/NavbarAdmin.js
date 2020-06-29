@@ -4,12 +4,18 @@ import Nav from 'react-bootstrap/Nav';
 import { MDBBadge } from "mdbreact";
 import './Admin.css';
 
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaRegBell } from 'react-icons/fa';
 
 
 const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
-    
+   const history = useHistory();
+
+    const logout = () => {
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('role');
+        history.push('/')
+    }
     
     return (
         <>
@@ -29,7 +35,8 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 <Nav>
                     {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
                     <Link className="mr-3 link-admin" to="/"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin" to="/">Log Out</Link>
+                    <Link className="mr-3 link-admin" to="" >Perfil</Link>
+                    <Link className="mr-3 link-admin" to="" onClick={logout}>Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

@@ -33,6 +33,14 @@
     outline: none;
     border: none;
     margin-right: 30px;
+    font-size: 20px;
+  }
+
+  .contenedor-carrito-sidebar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
 
  

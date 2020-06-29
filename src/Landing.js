@@ -13,7 +13,6 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
-// import GaleriaImagenes from './components/galeria/GaleriaImagenes';
 
 const Landing = () => {
   return (

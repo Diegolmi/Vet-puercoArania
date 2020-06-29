@@ -226,3 +226,12 @@
     width: 100%;
     height: 100vh;
 }
+
+
+
+/*IMAGENES TABLA DE PRODUCTOS*/
+
+.img-table-product{
+    height: 100px;
+    width: 100px;
+}

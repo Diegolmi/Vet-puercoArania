@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ProductsTable from '../../Components/ProductsTable';
 
 
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import FormProducto from '../../Components/FormProducto';
+import axiosInstance from '../../../util/axiosInstance';
+
 
 
 const AddProduct = () => {
+    const [productos, setProductos] = useState([]);
+
+    const listaProductos = async () => {
+        const response = await axiosInstance.get('/product')
+        
+        setProductos(response.data)
+        
+    }
+    
+    useEffect(() => {
+        listaProductos();
+    }, [setProductos])
+    
 
     return (
         <div className="container-productos-admin my-3">
@@ -18,7 +33,7 @@ const AddProduct = () => {
                             <FormProducto />
                         </Tab>
                         <Tab eventKey="profile" title="Lista Productos">
-                            <ProductsTable />
+                            <ProductsTable productos={productos} listaProductos={listaProductos} />
                         </Tab>
                     </Tabs>
                 </div>

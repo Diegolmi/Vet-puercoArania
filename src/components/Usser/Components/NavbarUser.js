@@ -3,13 +3,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import { MDBBadge } from "mdbreact";
 import './styleMascotas.css';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight, FaRegBell } from 'react-icons/fa';
 //import { AiOutlineMail } from 'react-icons/ai';
 
 
 const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
-    
+    const history = useHistory();
+
+    const logout = () => {
+        localStorage.removeItem('jwt');
+        localStorage.removeItem('role');
+        history.push('/')
+    }
     
     return (
         <>
@@ -31,7 +37,8 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 <Nav>
                     {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
                     <Link className="mr-3 link-admin"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin">Log Out</Link>
+                    <Link className="mr-3 link-admin">Perfil</Link>
+                    <Link className="mr-3 link-admin" onClick={logout}>Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
