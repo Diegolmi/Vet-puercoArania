@@ -23,7 +23,7 @@ const SidebarAdmin = () => {
                 <li className="listado-sidebar"><MdDashboard className="icon-sidebar-admin"/> <Link to="/privado/usuario"  className="link-sidebar">Inicio</Link></li>
                 <li className="listado-sidebar"><FaUser className="icon-sidebar-admin"/> <Link to="/privado/usuario/mascotas"  className="link-sidebar">Mascotas</Link></li>
                 <li className="listado-sidebar"><FaShippingFast className="icon-sidebar-admin"/><Link to="/privado/admin/producto" className="link-sidebar">Productos</Link></li>
-                <li className="listado-sidebar"><MdDateRange className="icon-sidebar-admin"/><Link to="/privado/admin/turnos" className="link-sidebar">Turnos</Link></li>
+                <li className="listado-sidebar"><MdDateRange className="icon-sidebar-admin"/><Link to="/privado/usuario/turnos" className="link-sidebar">Turnos</Link></li>
                 <li className="listado-sidebar"><MdQueryBuilder className="icon-sidebar-admin"/><Link to="/privado/admin/consultas" className="link-sidebar">Consultas</Link></li>
                 <li className="listado-sidebar"><RiAdminLine className="icon-sidebar-admin"/><Link to="/privado/usuario/datos" className="link-sidebar">Admin</Link></li>
 

@@ -7,6 +7,7 @@ import SideNavicons from './Components/sideNavicons';
 import IndexUsser from './IndexUsser';
 import Mascotas from './Components/Mascotas';
 import DatosUsuario from './Components/DatosUsuario';
+import Turnos from './Components/Turnos/Turnos';
 import { 
     Switch,
     Route,
@@ -51,6 +52,8 @@ import Col from 'react-bootstrap/Col';
                                 <Route exact path="/privado/usuario" component={IndexUsser} />
                                 <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
                                 <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
+                                <Route exact path="/privado/usuario/turnos" component={Turnos} />
+
 
                             </Switch>
                         </Col>
@@ -69,6 +72,8 @@ import Col from 'react-bootstrap/Col';
                                 <Route exact path="/privado/usuario" component={IndexUsser} />
                                 <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
                                 <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
+                                <Route exact path="/privado/usuario/turnos" component={Turnos} />
+
                             </Switch>
                         </Col>
                     </Row>
