@@ -30,7 +30,7 @@ const FormTurnos = ({ crearTurno }) => {
 
 
   const handleSubmit = async (id , e) => {
-    e.preventDefault();
+    //e.preventDefault();
     const result = await axiosInstance.put(`/turnos/${id}`, turno)
 
     if (pet.trim() === '' || user.trim() === '' || date.trim() === '' || time.trim() === '' ||
