@@ -3,59 +3,33 @@ import { MDBInput, MDBCol, MDBDatePickerV5, MDBTimePicker } from 'mdbreact';
 import Button from 'react-bootstrap/Button';
 import axiosInstance from '../../../util/axiosInstance';
 
-const FormTurnos = ({ crearTurno }) => {
-  const [turno, setEditarTurno] = useState({
-    pet: '',
+const FormTurnos = () => {
+
+  const [solicitarTurno, setSolicitarTurno] = useState({
     user: '',
+    pet: '',
+    service: '',
     date: '',
     time: '',
-    description: '',
-    service: ''
+    description: ''
   })
 
-  const [error, actualizarError] = useState(false)
+  const { pet, user, date, time, description, service } = solicitarTurno;
 
   const handleChange = e => {
-    setEditarTurno({
-
-      ...turno,
+    setSolicitarTurno({
+      ...solicitarTurno,
       [e.target.name]: e.target.value
-
     })
-
-
   }
 
-  const { pet, user, date, time, description, service } = turno;
-
-
-  const handleSubmit = async (id , e) => {
-    //e.preventDefault();
-    const result = await axiosInstance.put(`/turnos/${id}`, turno)
-
-    if (pet.trim() === '' || user.trim() === '' || date.trim() === '' || time.trim() === '' ||
-      description.trim() === '' || service.trim() === '') {
-      actualizarError(true)
-      return;
-    }
-
-    turno.id = result
-
-    actualizarError(false);
-    crearTurno(turno);
-
-    setEditarTurno({
-      pet: '',
-      user: '',
-      date: '',
-      time: '',
-      description: '',
-      service: ''
-    })
-
-
-
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const result = await axiosInstance.post('/private/turnos', solicitarTurno)
+    setSolicitarTurno(result)
+    console.log(result)
   }
+
 
 
 
@@ -120,8 +94,6 @@ const FormTurnos = ({ crearTurno }) => {
             <option value="3">Hotel</option>
           </select>
         </MDBCol>
-        {error ? <p className="red">Todos los campos son obligatorios</p> : null}
-
 
         <Button variant="primary" onClick={handleSubmit}>
           Solicitar

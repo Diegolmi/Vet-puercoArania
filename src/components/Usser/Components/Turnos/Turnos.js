@@ -8,12 +8,7 @@ const Turnos = () => {
 
     const [turnos, guardarTurnos] = useState([]);
 
-    const crearTurno = turno => {
-        guardarTurnos([
-            ...turnos,
-            turno
-        ]);
-    }
+
     const eliminarTurno = id => {
 
         const nuevosTurnos = turnos.filter(turno => turno.id !== id);
@@ -41,7 +36,7 @@ const Turnos = () => {
                 </Tab>
                 <Tab eventKey="modificar" title="Solicitar Turno">
                     <FormTurnos
-                        crearTurno={crearTurno} />
+                    />
                 </Tab>
 
             </Tabs>

@@ -61,7 +61,7 @@ const crearUsuario = async (e) =>{
                                         <MDBInput onChange={inputChange} name="username" label="Nombre de Usuario" icon="user" group type="text" validate error="wrong"
                                             success="right" className="form-control" required />
 
-                                        <MDBInput onChange={inputChange} name="firstname" label="Nombre" icon="user" group type="text" validate error="wrong"
+                                        <MDBInput onChange={inputChange} name="name" label="Nombre" icon="user" group type="text" validate error="wrong"
                                             success="right" className="form-control" required />
                                         <MDBInput onChange={inputChange} name="lastname" label="Apellido" icon="user" group type="text" validate error="wrong"
                                             success="right" className="form-control" required />
