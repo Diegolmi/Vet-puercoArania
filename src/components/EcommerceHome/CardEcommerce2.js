@@ -8,6 +8,7 @@ import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import moment from 'moment';
+import SelectInput from '../SelectInput';
 
 
 
@@ -19,7 +20,7 @@ import moment from 'moment';
 
 
 
-const CardEcommerce2 = ({ productos }) => {
+const CardEcommerce2 = ({ productos, addToCart, agregarCantidad }) => {
     
 
     let contador = 0
@@ -28,7 +29,6 @@ const CardEcommerce2 = ({ productos }) => {
     const isFarmacia = producto.category === 'Farmacia'
     if( contador < 4 && isFarmacia ){
       contador++
-      console.log(contador);
       return  isFarmacia
     }
     
@@ -45,18 +45,19 @@ const CardEcommerce2 = ({ productos }) => {
                 <Row>
 
                     {farmaciaArray.map(producto => (
-                        <Col lg={3} md={6}>
+                        <Col lg={3} md={6} className="contenedor-card-landing"  key={producto._id}d>
                             <Card className="card-container">
-                                <Card.Img variant="top" src={producto.urlImage} className="img-fluid" />
+                                <Card.Img variant="top" src={producto.urlImage} className="img-food-cards" />
                                 <Card.Body>
                                     <Card.Title>{producto.name}</Card.Title>
                                     <Card.Text>${producto.price}</Card.Text>
                                     <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
+                                    <Card.Text><SelectInput agregarCantidad={agregarCantidad} /></Card.Text>
                                     <Card.Text className="rating"><Rating /></Card.Text>
                                 </Card.Body>
                                 <Card.Footer>
                                     <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="info" /></Button>
-                                    <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                                    <Button size="sm" onClick={(e)=>addToCart(e, producto._id)} className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
                                 </Card.Footer>
                             </Card>
                         </Col>

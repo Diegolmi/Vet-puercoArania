@@ -1,4 +1,5 @@
 /* .navPrincipal{
+
   z-index: 10000;
   padding-right: 0px;
 }
@@ -22,7 +23,7 @@
   }
   .btn-secondary{
     background-color: #fc5185 !important;
-  } */
+  }  */
   .navbar:hover {
     background-color: #68829c;
     transition: .3s;
@@ -59,12 +60,15 @@
   #log_nb{
     background-color: #fc5185;
     padding: 3px 20px;
+    color: white;
   }
   .contenedor-carrito-sidebar{
+    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    overflow-y: auto;
   }
 
   .navbar-body {
@@ -79,6 +83,7 @@
     margin-right: 30px;
   }
 
+  
  
 
   @media (min-width:300px) and (max-width:549px) {

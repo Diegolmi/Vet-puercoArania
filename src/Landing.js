@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -13,16 +13,45 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
+import axiosInstance from './components/util/axiosInstance';
 // import GaleriaImagenes from './components/galeria/GaleriaImagenes';
 
+
 const Landing = () => {
+  const [userCarrito, setUserCarrito] = useState([]);
+
+
+  const mostrarCarrito = async () => {
+    const response = await axiosInstance.get('/shoppingCart')
+    setUserCarrito(response.data.items || [])
+    
+  }
+   
+
+  useEffect(() => {
+    mostrarCarrito()
+  }, [])
+
   return (
     <>
       {/* <Container fluid className="contenedor-principal-landing"> */}
-      <Nav />
+      <Nav 
+        userCarrito={userCarrito}
+        mostrarCarrito={mostrarCarrito}
+
+      />
+
+
       <CarouselPage />
+
       <div className="rowEcommerce">
-        <EcommerceHome />
+
+        <EcommerceHome 
+          userCarrito={userCarrito}
+          mostrarCarrito={mostrarCarrito}
+        />
+
+      
       </div>
       {/* <Row className="rowServicios">
         <Col> */}
@@ -30,7 +59,7 @@ const Landing = () => {
       {/* </Col> 
       </Row> */}
       {/* </Container> */}
-      {/* <GaleriaImagenes /> */}
+
       <Footer />
     </>
   );

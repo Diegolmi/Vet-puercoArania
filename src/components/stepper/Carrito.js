@@ -1,14 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
-import FormCarrito from './FormCarrito';
+// import FormCarrito from './FormCarrito';
 import NavbarAdmin from '../Admin/NavbarAdmin';
 import Review from './Review';
 import AddProduct from './AddProduct';
+import axiosInstance from '../util/axiosInstance';
+
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,25 +31,44 @@ const useStyles = makeStyles((theme) => ({
 export default function Carrito() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-  const [isDisabled, setIsDisabled] = useState(true)
+  // const [isDisabled, setIsDisabled] = useState(true)
+  const [userCarrito, setUserCarrito] = useState([]);
   const steps = getSteps();
+
+//--------------------------------------------------------------------------
+  //traer los datos del carrito
+
+const mostrarCarrito = async () => {
+    const response = await axiosInstance.get('/shoppingCart')
+    setUserCarrito(response.data.items || [])
+    
+  }
+  
+   
+
+  useEffect(() => {
+    mostrarCarrito()
+  }, [])
+
+
 
 
   //---------------------------------------------------------------------------
   function getSteps() {
-    return ['Datos de Usuario', 'Productos', 'Finalizar Compra'];
+    return [  'Productos', 'Finalizar Compra'];
   }
   
   function getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
-        return  <FormCarrito onFormChange={(isValid) =>{setIsDisabled(!isValid)}} />;
-      case 1:
-        return <AddProduct />;
-      case 2:
-        return <Review />;
+        // return  <FormCarrito onFormChange={(isValid) =>{setIsDisabled(!isValid)}} />;
+        //agregar esto al boton para deshabilitar disabled={isDisabled}
+        return <AddProduct items={userCarrito} mostrarCarrito={mostrarCarrito} />;
+        case 1:
+          return <Review />;
+          case 2:
+            return ;
       default:
-        return ;
     }
   }
   //---------------------------------------------------------------------------
@@ -90,9 +111,10 @@ export default function Carrito() {
               >
                 Back
               </Button>
-              <Button variant="contained" className="my-5"  color="primary" onClick={handleNext} disabled={isDisabled}>
-                {activeStep === steps.length - 1 ? 'Finish' : 'Next'}
+              <Button variant="contained" className="my-5 mx-3"  color="primary" onClick={handleNext}  > 
+                {activeStep === steps.length - 1 ? 'Finalizar Compra' : 'Next'}
               </Button>
+              
             </div>
           </div>
         )}

@@ -1,13 +1,30 @@
 import React from 'react';
 import './carrito.css';
 import Table from 'react-bootstrap/Table';
-import img10 from '../../assets/img/remedio1.jpg'
-// import img11 from '../../assets/img/accesorioperro.jpg'
 import { FaTrashAlt } from 'react-icons/fa';
-import Envios from './Envios';
+import axiosInstance from '../util/axiosInstance';
+import Swal from 'sweetalert2';
 
-const AddProduct = () => {
-    const array = [1,1,1,1,1]
+const AddProduct = (props, {setUserCarrito}) => {
+    const items = props.items || [];
+    const {mostrarCarrito} = props
+const total =+ items.reduce((acc, item) => {
+    return acc + item.product.price * item.quantity
+}, 0)
+
+    const borrarProducto = id => async () => {
+        const result = await axiosInstance.delete(`/shoppingCart/${id}`)
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Producto fue borrado con exito',
+            showConfirmButton: false,
+            timer: 1000
+          })
+          mostrarCarrito()
+    }
+   
+
     return (
         <>
         <Table className="table-productos-carrito" responsive>
@@ -15,7 +32,6 @@ const AddProduct = () => {
                 <tr>
                     <th>Imagen</th>
                     <th>Producto</th>
-                    <th>Descripción</th>
                     <th>Tipo de Producto</th>
                     <th>Cantidad</th>
                     <th>Precio Unitario</th>
@@ -24,32 +40,27 @@ const AddProduct = () => {
                 </tr>
             </thead>
             <tbody className="listado-productos">
-                {array.map(arr => (
-                    <tr>
-                        <td><img className="img-carrito-producto" src={img10} alt="" /></td>
-                        <td>medicamento 1</td>
-                        <td>bla bla bla bla</td>
-                        <td>Medicamento</td>
-                        <td>
-                            <select name="" id="">
-                                <option value=""></option>
-                                <option value="">1</option>
-                                <option value="">2</option>
-                                <option value="">3</option>
-                                <option value="">4</option>
-                                <option value="">5</option>
-                            </select>
-                        </td>
-                        <td>$250</td>
-                        <td>$250</td>
-                        <td><button className="button-eliminar-producto"><FaTrashAlt /></button></td>
+                {items.map(carrito => (
+                    <>
+                    <tr key={carrito.product._id}>
+                        <td><img className="img-carrito-producto" src={carrito.product.urlImage} alt="" /></td>
+                        <td>{carrito.product.name}</td>
+                        <td>{carrito.product.category}</td>
+                        <td>{carrito.quantity}</td>
+                        <td>{carrito.product.price}</td>
+                        <td>{carrito.product.price * carrito.quantity}</td>
+                        <td><button onClick={borrarProducto(carrito.product._id)} className="button-eliminar-producto"><FaTrashAlt /></button></td>
                     </tr>
-
+                        
+                    </>
                 ))}
 
             </tbody>
         </Table>
-        <Envios />
+        <div className="total-carrito">
+            <p>TOTAL: ${total} </p>
+        </div>
+        
         </>
     );
 }

@@ -34,7 +34,7 @@ function Routes() {
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
-        <Route path="/tienda" component={Contenedor} />
+        <Route exact path="/tienda" component={Contenedor} />
         <Route exact path="/tienda/accesorios" component={Accesorios}/>
         <Route exact path="/tienda/alimentos" component={Alimentos} />
         <PrivateRoute exact path="/privado/carrito" component={Carrito} />

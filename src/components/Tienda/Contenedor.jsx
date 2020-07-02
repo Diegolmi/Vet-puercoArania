@@ -1,65 +1,89 @@
-import React from 'react';
-import { makeStyles, Hidden } from '@material-ui/core';
-import Nav from '../Navbar/Nav';
-import NavbarE from '../Breadcrumbs/NavbarE';
+import React, { useState, useEffect } from "react";
+import { makeStyles, Hidden } from "@material-ui/core";
+import Nav from "../Navbar/Nav";
+import Swal from "sweetalert2";
 import "../Breadcrumbs/style.css";
-import { Cajon } from './Cajon';
-import Accesorios from '../AccesoriosEC/Accesorios';
-import { ThemeProvider } from '@material-ui/core/styles';
-import theme from '../Breadcrumbs/temaConfig';
-import Farmacia from '../Farmacia/farmacia';
+import { Cajon } from "./Cajon";
+import Accesorios from "../AccesoriosEC/Accesorios";
+import { ThemeProvider } from "@material-ui/core/styles";
+import theme from "../Breadcrumbs/temaConfig";
+import Carousel from "./CarouselTienda";
+import "./Tienda.css";
+import Card from "./Card";
+import axiosInstance from "../util/axiosInstance";
 
 const estilos = makeStyles((theme) => ({
-    root: {
-        display: 'flex',
-
-    },
-    toolbar: theme.mixins.toolbar
+  root: {
+    display: "flex",
+  },
+  toolbar: theme.mixins.toolbar,
 }));
 
 const Contenedor = () => {
+  const [productos, setProductos] = useState([]);
+  const [userCarrito, setUserCarrito] = useState([]);
+  const [cantidad, setCantidad] = useState("");
 
-    const classes = estilos()
-    const [abrir, setAbrir] = React.useState(false)
-    const accionAbrir = () => {
-        setAbrir(!abrir)
+  const classes = estilos();
+  const [abrir, setAbrir] = useState(false);
+  const accionAbrir = () => {
+    setAbrir(!abrir);
+  };
+
+  // listar productos
+  const listarProductos = async () => {
+      const response = await axiosInstance.get('/product')
+
+      setProductos(response.data)
+  }
+
+  useEffect(() => {
+      listarProductos()
+  }, [])
+
+  const mostrarCarrito = async () => {
+      const response = await axiosInstance.get('/shoppingCart')
+      setUserCarrito(response.data.items || [])
+
     }
 
-    return (
-        <>
-           <Nav/>
-            <ThemeProvider theme={theme}>
-                <div className={classes.root}>
-                   <NavbarE accionAbrir={accionAbrir} />
-                    <div className="navBread">
-                        <div className={classes.toolbar}></div>
-                    </div>
-                    <Hidden xsDown>
-                        <Cajon
-                            variant="permanent"
-                            open={true}
-                        />
-                    </Hidden>
-                    <Hidden smUp>
-                        <Cajon
-                            variant="temporary"
-                            open={abrir}
-                            onClose={accionAbrir}
-                        />
-                    </Hidden>
-                    <div className={classes.content}>
-                        <div className={classes.toolbar}>
-                        </div>
-                    </div>
-                    <div className="productos">
-                        <Accesorios />
-                        <Farmacia />
-                    </div>
-                </div>
-            </ThemeProvider>
-        </>
-    )
+    useEffect(() => {
+      mostrarCarrito()
+    }, [])
+
+  //-----------------------------------------------------
+  //crear y agregar al carrito
+
+  const addToCart = async ( id) => {
+      const response = await axiosInstance.post('/shoppingCart', {product: id, quantity: cantidad})
+      setUserCarrito(response.data.items)
+      Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Tu Producto fue agregado Exitosamente al Carrito',
+          showConfirmButton: false,
+          timer: 1500
+        })
+        mostrarCarrito()
+    }
+
+  const agregarCantidad = (e) => {
+    setCantidad(...cantidad, e.target.value);
+  };
+
+  return (
+    <>
+      <Nav userCarrito={userCarrito} mostrarCarrito={mostrarCarrito} />
+      <div className="productos">
+        <Carousel />
+        <Accesorios
+          agregarCantidad={agregarCantidad}
+          productos={productos}
+          addToCart={addToCart}
+        />
+        <Card />
+      </div>
+    </>
+  );
 };
 export default Contenedor;
-
-

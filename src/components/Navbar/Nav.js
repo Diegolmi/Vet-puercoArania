@@ -1,5 +1,5 @@
-import './styleNav.css';
 import React, { useState, useEffect, useRef } from 'react';
+import './styleNav.css';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 import logo from '../../assets/img/logo.png';
@@ -11,7 +11,6 @@ import CarritoDesplegable from '../carritoDesplegable/CarritoDesplegable';
 import clsx from 'clsx';
 import { makeStyles } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
-// import Button from '@material-ui/core/Button';
 import List from '@material-ui/core/List';
 import Divider from '@material-ui/core/Divider';
 import { MDBBtn } from "mdbreact";
@@ -22,18 +21,22 @@ import { MDBBtn } from "mdbreact";
 
 
 
+
 const useStyles = makeStyles({
   list: {
-    width: 250,
+    width: 400,
+    height: 'auto',
   },
   fullList: {
     width: 'auto',
+    height: 'auto',
   },
 });
 
-const NavbarPage = () => {
+const NavbarPage = ({mostrarCarrito, userCarrito}) => {
 
-    //STATE PARA EL NAVBAR ASI CAMBIA DE COLOR CUANDO SE HACE SCROLL
+  console.log(userCarrito);
+  //STATE PARA EL NAVBAR ASI CAMBIA DE COLOR CUANDO SE HACE SCROLL
   const [navBackground, setNavBackground] = useState(false)
   const navRef = useRef()
   navRef.current = navBackground
@@ -52,7 +55,7 @@ const NavbarPage = () => {
 
 
   //-------------------------------------------------------------
-          //SIDEBAR PARA CARRITO DESDE EL NAVBAR
+  //SIDEBAR PARA CARRITO DESDE EL NAVBAR
 
   const classes = useStyles();
   const [state, setState] = useState(false);
@@ -65,6 +68,14 @@ const NavbarPage = () => {
     setState({ ...state, [anchor]: open });
   };
 
+
+  //----------------------------------------------------------------------------------------
+  // traer los items del carrito
+
+
+
+  //------------------------------------------------------------------------------------------
+
   const list = (anchor) => (
     <div
       className={clsx(classes.list, {
@@ -76,31 +87,19 @@ const NavbarPage = () => {
     >
       <List className="contenedor-carrito-sidebar">
 
-      <CarritoDesplegable />
-        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
-        <MDBBtn id="btn_turno" outline color="secondary my-4"> ir al Carrito</MDBBtn>
+        <CarritoDesplegable items={userCarrito} mostrarCarrito={mostrarCarrito} />
+
+        {/* <MDBBtn id="btn_turno" outline color="secondary my-4"> ir al Carrito</MDBBtn> */}
 
       </List>
-      <Divider />
-      <List>
-        {/* {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
-      </List>
+
     </div>
   );
 
   //------------------------------------------------------------------
 
   return (
+
     <>
       <Navbar collapseOnSelect expand="lg" className={navBackground ? "navbar-body" : ''} fixed="top">
         <Navbar.Brand href="#home"><img src={logo} className="logo" alt="" /></Navbar.Brand>
@@ -111,29 +110,24 @@ const NavbarPage = () => {
             <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
             <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
             <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
-            <Link to="/" className="mr-3 link-admin">TIENDA</Link>
-
+            <Link to="/tienda" className="mr-3 link-admin">TIENDA</Link>
           </Nav>
           <hr />
           <Nav>
-
             {['right'].map((anchor) => (
-        <React.Fragment key={anchor}>
-          <button className="link-admin link-admin-boton"
-              onClick={toggleDrawer(anchor, true)}
-            >
-              <FaCartArrowDown className="carro"/>
-
-              <MDBBadge color="danger" className="ml-2">4</MDBBadge>
-              </button>
-          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
-            {list(anchor)}
-          </Drawer>
-        </React.Fragment>
-      ))}
-            
-
-
+              <>
+                <button className="link-admin link-admin-boton"
+                  onClick={toggleDrawer(anchor, true)}
+                  key={anchor}
+                >
+                  <FaCartArrowDown className="carro" />
+                  <MDBBadge color="danger" className="ml-2">{userCarrito.length}</MDBBadge>
+                </button>
+                <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+                  {list(anchor)}
+                </Drawer>
+              </>
+            ))}
             <Link id="log_nb" className="mr-3 link-admin" to="/login">Login</Link>
 
           </Nav>
@@ -141,8 +135,8 @@ const NavbarPage = () => {
       </Navbar>
 
       <div>
-     
-    </div>
+
+      </div>
     </>
   );
 }

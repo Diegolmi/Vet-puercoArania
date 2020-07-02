@@ -11,18 +11,22 @@ import moment from 'moment';
 // import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
 import axiosInstance from '../util/axiosInstance';
-// import db from '../../db.json';
+import SelectInput from '../SelectInput';
 
 
 
-const CardEcommerce = ({ productos }) => {
+
+const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
   
-  const [carrito, setCarrito] = useState([])
-  const {crearCarrito, setCrearCarrito} = useState(false)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+
+  
+
+  
 
   let contador = 0
   const alimentosArray = productos.filter(producto => {
@@ -35,63 +39,34 @@ const CardEcommerce = ({ productos }) => {
     
   })
 
-  //crear  carrito
-
-  const createCart = async () => {
-    const response = await axiosInstance.post('/shoppingCart', carrito)
-    setCarrito(response.data)
-    console.log(response.data)
-    
-    
-  }
-
- console.log(carrito._id)
+  
+ 
 
   
   
-  // agregar al carrito
-  const addToCart =  async () => {
-    const id = carrito._id;
-    const res = await axiosInstance.post(`/shoppingCart/${id}/items`, carrito)
-      setCarrito(res)
-      console.log(res)
-  }
-
 
   return (
     <>
       <Container fluid>
-
-        <div className="title-container">
-          {/* <h1>Accesorios</h1> */}
-        </div>
         <Row>
-
+        <Col lg={12} md={6} className="contenedor-card-landing">
           {alimentosArray.map((producto) => (
-            <Col lg={3} md={6} key={producto._id}>
-              <Card className="card-container">
-                <Card.Img src={producto.urlImage} className="img-fluid" />
+              <Card className="card-container" key={producto._id}>
+                <Card.Img src={producto.urlImage} className="img-fluid img-food-cards" />
                 <Card.Body>
                   <Card.Title>{producto.name}</Card.Title>
                   <Card.Text>${producto.price}</Card.Text>
                   <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
-                  <Card.Text className="rating"><Rating /></Card.Text>
+                  <Card.Text><SelectInput agregarCantidad={agregarCantidad} /></Card.Text>
+                  {/* <Card.Text className="rating"><Rating /></Card.Text> */}
                 </Card.Body>
                 <Card.Footer>
                   <Button size="sm" className="btn button-card" onClick={handleShow}><MDBIcon className="icon-card" icon="info" /></Button>
-                  
-                  {crearCarrito ? <Button size="sm" className="btn button-card" onClick={addToCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
-                  
-                :
-<Button size="sm" className="btn button-card" onClick={createCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
-                }
-                  
-                  
+                  <Button size="sm" className="btn button-card" onClick={(e)=>addToCart(e, producto._id)}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>  
                 </Card.Footer>
               </Card>
-            </Col>
-
           ))}
+          </Col>
         </Row>
       </Container>
 

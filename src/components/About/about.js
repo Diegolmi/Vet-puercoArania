@@ -7,8 +7,7 @@ import medico4 from "../../assets/img/medico4.jpg";
 import { Grid, Typography } from "@material-ui/core";
 import NavbarPage from '../Navbar/Nav';
 import Image from "react-bootstrap/Image";
-// import alimento1 from "../../assets/img/alimento1.jpg";
-// import Nav from '../Navbar/Nav';
+
 
 
 const Contenido = () => {
@@ -78,6 +77,8 @@ const Contenido = () => {
             propios que hoy cuentan con 9 locales distribuidos en la Provincia de
             Tucumán.
         </Typography>
+        <br/>
+        <hr/>
           <Typography variant="h3" className="five-title">
             <strong>Nuestra clave del éxito</strong> se apoya en 5 pilares
           fundamentales

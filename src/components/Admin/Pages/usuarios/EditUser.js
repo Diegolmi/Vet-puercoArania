@@ -13,9 +13,7 @@ const EditUser = () => {
     const response = await axiosInstance.get('/private/user');
     console.log(response.data)
     setUsuarios(response.data.users)
-    // console.log(response)
   }
-// console.log(usuarios)
 
 
   useEffect(() => {

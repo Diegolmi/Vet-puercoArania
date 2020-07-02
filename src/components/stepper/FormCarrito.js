@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import './carrito.css';
 // import { MDBBtn, MDBInput, MDBRow, MDBCol } from 'mdbreact';
 import Grid from '@material-ui/core/Grid';
@@ -7,27 +7,43 @@ import TextField from '@material-ui/core/TextField';
 // import FormControlLabel from '@material-ui/core/FormControlLabel';
 // import Checkbox from '@material-ui/core/Checkbox';
 import { useForm } from 'react-hook-form';
+import axiosInstance from '../util/axiosInstance';
+
 
 
 const FormCarrito = ({ onFormChange }) => {
 
   const { register, errors, formState:{isValid} } = useForm({mode: 'onChange'});
+  const [cartUser, setCartUser] = useState({})
+  const [name, setName] = React.useState('Cat in the Hat');
+  const handleChange = (event) => {
+    setName(event.target.value);
+  };
+  
+
+  const userForm = async () => {
+    const response = await axiosInstance.get('/shoppingCart')
+    setCartUser(response.data.customer || [])
+  }
+  console.log(cartUser)
 
   useEffect(() => {
-    onFormChange(isValid)
-}, [isValid, onFormChange])
+    userForm();
+    onFormChange(isValid);
+}, [isValid, onFormChange, ])
 
   return (
     <>
+    
     <div className="shipping-address">
-    <h1>Datos de Envio</h1>
-
+      <h1>Datos de Envio</h1>
     </div>
     <form className="formulario-carrito">
       
       <Grid container spacing={3}>
         <Grid item xs={12} sm={6}>
           <TextField
+            value={cartUser.username}
             id="firstName"
             name="firstName"
             label="Nombre"

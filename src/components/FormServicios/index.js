@@ -26,7 +26,14 @@ const handleChange = e => {
 const handleSubmit = async e =>{
   e.preventDefault();
   const result = await axiosInstance.post('/turnos', solicitarTurno)
-  setSolicitarTurno(result)
+  setSolicitarTurno(
+    {user: '',
+    pet: '',
+    service: '',
+    date: '',
+    time: '',
+    description: ''}
+  )
   console.log(result)
 }
 

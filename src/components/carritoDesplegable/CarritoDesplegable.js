@@ -1,42 +1,39 @@
-import React, { useState } from 'react';
+import React, { useEffect} from 'react';
 import './CarritoDesplegable.css';
-import axiosInstance from '../util/axiosInstance';
-import { useEffect } from 'react';
 import { FaTrashAlt } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import axiosInstance from '../util/axiosInstance';
 
 
 
-const CarritoDesplegable = () => {
-  // const [listarCarrito, setListarCarrito] = useState([]);
+const CarritoDesplegable = (props) => {
 
 
-  // const imprimirCarrito = async () => {
-  //   const response = await axiosInstance.get('/shoppingCart')
-  //   setListarCarrito(response)
-  //   console.log(response);
-  // }
-
-  // useEffect(() => {
-  //   imprimirCarrito()
-  // }, [])
-  const array = [1, 2, 3, 4, 5]
-
+  const items = props.items || [];
+  const {mostrarCarrito} = props
+  const borrarProducto = id => async () => {
+    const result = await axiosInstance.delete(`/shoppingCart/${id}`)
+    mostrarCarrito()
+}
 
 
   return (
-    // <>
-    // {listarCarrito.map(carrito => (
-
-
-    // ))}
-    // </>
     <>
-      {array.map(arr => (
-        <div className="card card-carrito">
+      {items.map(carrito => (
+        <div className="card card-carrito" key={carrito._id}>
           <div className="contenedor-producto-sidebar">
-            <p>nombre del producto</p>
-            <p>precio del poducto</p>
-            <button><FaTrashAlt /></button>
+            <div className="card-body body-sidebar-cart">
+              <img className="carrito-sidebar-img" src={carrito.product.urlImage} alt="" />
+              
+              <p className="border-rigth-left">{carrito.product.name}</p>
+              <p className="border-rigth-left">Cantidad: {carrito.quantity}</p>
+              
+              <p className="border-rigth">$ {carrito.product.price}</p>
+            </div>
+            <div class="botones-footer-sidebar">
+              <button onClick={borrarProducto(carrito.product._id)} className="button-delete-itemcart"><FaTrashAlt className="icon-delete-itemcart" /></button>
+              <Link to="/privado/carrito">ir Carrito</Link>
+            </div>
           </div>
         </div>
       ))}

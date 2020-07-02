@@ -4,7 +4,7 @@ import logo from "../../assets/img/logo.png";
 import "./styleRegister.css";
 import { Link } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
-
+import Swal from 'sweetalert2';
 
 const FormsPage = () => {
 
@@ -29,7 +29,13 @@ const crearUsuario = async (e) =>{
     e.preventDefault();
     try {
         const response = await axiosInstance.post('/register', createUser)
-        console.log(response);
+        Swal.fire({
+            position: 'center',
+            icon: 'success',
+            title: 'Registro Exitoso',
+            showConfirmButton: false,
+            timer: 1500
+          })
     } catch (error) {
         console.log(error);
     }

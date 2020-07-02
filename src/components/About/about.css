@@ -31,15 +31,19 @@
 
 .third-title, .fourd-title {
   color: #364f6b !important;
+  display: flex;
+  justify-content: center;
 }
 
 .five-title{
   color: #fc5185 !important;
+  margin-top: 80px !important;
+  margin-bottom: 50px !important;
 }
 
  .second-title, .third-title {
-    margin-top: 20px 20px;
-    margin-bottom: 10px;
+    margin-top: 35px !important;
+    margin-bottom: 40px !important;
 }
 
 
@@ -48,7 +52,10 @@
   line-height: 1.5;
   color: black;
   font-size: 1em;
-  margin-bottom: 10px!important; 
+  margin-bottom: 25px!important;
+  display: flex;
+  justify-content: center;
+ 
 }
 
 .circular--square {
