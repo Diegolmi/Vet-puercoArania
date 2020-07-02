@@ -1,20 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Tabs, Tab, Card, ListGroup, Button } from 'react-bootstrap';
 import FormTurnos from './FormTurnos';
-import Turno from './Turno'
+import Turno from './Turno';
+import axiosInstance from '../../../util/axiosInstance';
+
 
 
 const Turnos = () => {
 
-    const [turnos, guardarTurnos] = useState([]);
+    const [turnos, setTurnos] = useState([]);
 
-
-    const eliminarTurno = id => {
-
-        const nuevosTurnos = turnos.filter(turno => turno.id !== id);
-        guardarTurnos(nuevosTurnos);
-
+    const listarTurnos = async () => {
+        const result = await axiosInstance.get('/turnos/user');
+        console.log(result);
+        setTurnos(result.data);
     }
+    console.log(turnos);
+
+    useEffect(() => {
+
+        listarTurnos()
+    }, [])
+
+
 
     const titulo = turnos.length === 0 ? 'Todavia no sacaste turno' : "Administra los turnos";
 
@@ -22,20 +30,22 @@ const Turnos = () => {
         <div>
             <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
                 <Tab eventKey="datos" title="Administrador de turnos">
-                    <Card style={{ width: '18rem' }}>
-                        <p><span>{titulo}</span></p>
-                        {turnos.map(turno => (
-                            <Turno
-                                key={turno.id}
-                                turno={turno}
-                                eliminarTurno={eliminarTurno}
-                            />
-                        ))}
-                    </Card>
+                    <p><span>{titulo}</span></p>
+                    {turnos.map(turno => (
+
+
+                        <Turno
+                            listarTurnos={listarTurnos}
+                            key={turno.id}
+                            turno={turno}
+                        />
+
+                    ))}
 
                 </Tab>
                 <Tab eventKey="modificar" title="Solicitar Turno">
                     <FormTurnos
+                        listarTurnos={listarTurnos}
                     />
                 </Tab>
 

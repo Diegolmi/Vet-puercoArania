@@ -3,45 +3,44 @@ import { MDBInput, MDBCol, MDBDatePickerV5, MDBTimePicker } from 'mdbreact';
 import Button from 'react-bootstrap/Button';
 import axiosInstance from '../../../util/axiosInstance';
 
-const FormTurnos = () => {
+const FormTurnos = ({listarTurnos}) => {
 
   const [solicitarTurno, setSolicitarTurno] = useState({
     user: '',
     pet: '',
     service: '',
-    date: '',
-    time: '',
+    date: {},
+    time: '12:00',
     description: ''
   })
 
   const { pet, user, date, time, description, service } = solicitarTurno;
 
   const handleChange = e => {
+    console.log(e);
     setSolicitarTurno({
+
       ...solicitarTurno,
       [e.target.name]: e.target.value
+    })
+  }
+  const handleDate = e => {
+    setSolicitarTurno({
+      ...solicitarTurno,
+      date: e
     })
   }
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const result = await axiosInstance.post('/private/turnos', solicitarTurno)
-    setSolicitarTurno(result)
+    const result = await axiosInstance.post('/turnos', solicitarTurno)
     console.log(result)
+    listarTurnos()
   }
-
-
-
-
-
-
-
 
   return (
 
     <>
-
-
       <form onSubmit={handleSubmit}>
         <MDBCol md='8'>
           <MDBInput onChange={handleChange}
@@ -60,18 +59,18 @@ const FormTurnos = () => {
         </MDBCol>
         <MDBCol md='8'>
           <MDBDatePickerV5
-            onChange={handleChange}
+            getValue={handleDate}
             name="date"
-            value={date}
+
             disablePast />
         </MDBCol>
         <MDBCol md='8'>
           <MDBTimePicker
-            onChange={handleChange}
+            getValue={handleDate}
             name="time"
             id="timePicker"
             label="Hora"
-            value={time} />
+          />
         </MDBCol>
         <MDBCol md='8'>
           <MDBInput
@@ -89,9 +88,9 @@ const FormTurnos = () => {
             className="browser-default custom-select mb-4"
             value={service}>
             <option>Servicios</option>
-            <option value="1">Veterinaria</option>
-            <option value="2">Spa</option>
-            <option value="3">Hotel</option>
+            <option >Veterinaria</option>
+            <option >Spa</option>
+            <option >Hotel</option>
           </select>
         </MDBCol>
 
