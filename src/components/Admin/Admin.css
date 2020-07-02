@@ -252,14 +252,8 @@
     }
 }
 
-@media (min-width: 550px) and (max-width: 700px) {
-
-}
-
-@media (min-width: 701px) and (max-width: 1199px){
-
-}
-
-@media (min-width: 1200px) {
-
+@media (min-width: 550px) and (max-width: 766px){
+    .container-usuario-admin, .container-links-sidebar{
+        margin-left: 60px;
+    }
 }
