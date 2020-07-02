@@ -235,3 +235,31 @@
     height: 100px;
     width: 100px;
 }
+
+/*MEDIA QUERYS*/
+
+@media (max-width: 549px){
+  
+    .sidebaricons-container{
+        width: 46px !important;
+    }    
+    .container-links-sidebar{
+        margin: auto auto !important;
+    }
+    .container-consultas-admin{
+        margin: auto auto !important;
+
+    }
+}
+
+@media (min-width: 550px) and (max-width: 700px) {
+
+}
+
+@media (min-width: 701px) and (max-width: 1199px){
+
+}
+
+@media (min-width: 1200px) {
+
+}

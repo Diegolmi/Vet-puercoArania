@@ -78,7 +78,7 @@ figcaption {
 
 /*MEDIA QUERYS*/
 
-@media (min-width: 300px) and (max-width: 549px) {
+@media (max-width: 549px) {
   .servicios {
     padding-top: 15px;
   }

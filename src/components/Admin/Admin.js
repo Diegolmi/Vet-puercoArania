@@ -57,8 +57,8 @@ const Admin = () => {
             {sidebar ? 
                     <div>
                     <Row>
-                        <Col xs={6} md={2} className="columna-sidebar"><SidebarIcons /></Col>
-                        <Col xs={6} md={8} className="container-links-sidebar mr-1">
+                        <Col xs={1} md={2} className="columna-sidebar"><SidebarIcons /></Col>
+                        <Col xs={8} md={8} className="container-links-sidebar mr-1">
                             <Switch>
                                 <Route exact path="/privado/admin" component={InicioAdmin} />
                                 <Route exact path="/privado/admin/user" component={EditUser} />
