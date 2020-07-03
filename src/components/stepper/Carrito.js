@@ -1,21 +1,19 @@
-import React, {useState, useEffect} from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Stepper from '@material-ui/core/Stepper';
-import Step from '@material-ui/core/Step';
-import StepLabel from '@material-ui/core/StepLabel';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Stepper from "@material-ui/core/Stepper";
+import Step from "@material-ui/core/Step";
+import StepLabel from "@material-ui/core/StepLabel";
+import Button from "@material-ui/core/Button";
+import Typography from "@material-ui/core/Typography";
 // import FormCarrito from './FormCarrito';
-import NavbarAdmin from '../Admin/NavbarAdmin';
-import Review from './Review';
-import AddProduct from './AddProduct';
-import axiosInstance from '../util/axiosInstance';
-
-
+import NavbarAdmin from "../Admin/NavbarAdmin";
+import Review from "./Review";
+import AddProduct from "./AddProduct";
+import axiosInstance from "../util/axiosInstance";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    width: '100%',
+    width: "100%",
   },
   backButton: {
     marginRight: theme.spacing(1),
@@ -26,8 +24,6 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-
-
 export default function Carrito() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
@@ -35,39 +31,41 @@ export default function Carrito() {
   const [userCarrito, setUserCarrito] = useState([]);
   const steps = getSteps();
 
-//--------------------------------------------------------------------------
+  //--------------------------------------------------------------------------
   //traer los datos del carrito
 
-const mostrarCarrito = async () => {
-    const response = await axiosInstance.get('/shoppingCart')
-    setUserCarrito(response.data.items || [])
-    
-  }
-  
-   
+  const mostrarCarrito = async () => {
+    const response = await axiosInstance.get("/shoppingCart");
+    setUserCarrito(response.data.items);
+  };
 
   useEffect(() => {
-    mostrarCarrito()
-  }, [])
-
-
-
+    mostrarCarrito();
+  }, []);
 
   //---------------------------------------------------------------------------
+    //implementando Mercado Pago
+      const realizarPago = async () =>{
+      const response = await axiosInstance.post("/checkout")
+      console.log(response)
+      }
+  //---------------------------------------------------------------------------
   function getSteps() {
-    return [  'Productos', 'Finalizar Compra'];
+    return ["Productos", "Finalizar Compra"];
   }
-  
+
   function getStepContent(stepIndex) {
     switch (stepIndex) {
       case 0:
         // return  <FormCarrito onFormChange={(isValid) =>{setIsDisabled(!isValid)}} />;
         //agregar esto al boton para deshabilitar disabled={isDisabled}
-        return <AddProduct items={userCarrito} mostrarCarrito={mostrarCarrito} />;
-        case 1:
-          return <Review />;
-          case 2:
-            return ;
+        return (
+          <AddProduct items={userCarrito} mostrarCarrito={mostrarCarrito} />
+        );
+      case 1:
+        return <Review />;
+      case 2:
+        return;
       default:
     }
   }
@@ -97,12 +95,16 @@ const mostrarCarrito = async () => {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>Su Compra fue Exitosa!!</Typography>
+            <Typography className={classes.instructions}>
+              Su Compra fue Exitosa!!
+            </Typography>
             <Button onClick={handleReset}>Reset</Button>
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
+            <Typography className={classes.instructions}>
+              {getStepContent(activeStep)}
+            </Typography>
             <div className="button-position">
               <Button
                 disabled={activeStep === 0}
@@ -111,10 +113,25 @@ const mostrarCarrito = async () => {
               >
                 Back
               </Button>
-              <Button variant="contained" className="my-5 mx-3"  color="primary" onClick={handleNext}  > 
-                {activeStep === steps.length - 1 ? 'Finalizar Compra' : 'Next'}
-              </Button>
-              
+              {activeStep === steps.length - 1 ? (
+                <Button
+                  variant="contained"
+                  className="my-5 mx-3"
+                  color="primary"
+                  onClick={realizarPago}
+                >
+                  Pagar
+                </Button>
+              ) : (
+                <Button
+                  variant="contained"
+                  className="my-5 mx-3"
+                  color="primary"
+                  onClick={handleNext}
+                >
+                  Next
+                </Button>
+              )}
             </div>
           </div>
         )}

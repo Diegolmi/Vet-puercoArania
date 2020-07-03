@@ -43,7 +43,7 @@ export default function Review() {
 
   useEffect(() => {
     mostrarCarrito()
-  }, [userCarrito])
+  }, [])
 
 
   const products = userCarrito.map(carrito => ({
