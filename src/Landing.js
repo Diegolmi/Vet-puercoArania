@@ -13,6 +13,7 @@ import EcommerceHome from './components/EcommerceHome/EcommerceHome';
 import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
+import Whatsapp from './components/Whatsapp/Whatsapp';
 
 const Landing = () => {
   return (
@@ -26,6 +27,7 @@ const Landing = () => {
       {/* <Row className="rowServicios">
         <Col> */}
       <Servicios />
+      <Whatsapp />
       {/* </Col> 
       </Row> */}
       {/* </Container> */}

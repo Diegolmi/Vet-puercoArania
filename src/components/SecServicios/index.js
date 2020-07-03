@@ -3,7 +3,6 @@ import './secsvs.css';
 import {  MDBRow, MDBCol, MDBIcon,  MDBContainer } from "mdbreact";
 import catdog from'../../assets/img/svs/catdog.png';
 import { MDBBtn } from "mdbreact";
-import Nav from '../../components/Navbar/Nav';
 import FormPage from '../FormServicios'
 import ModalTurnos from './ModalTurnos';
 
@@ -15,7 +14,6 @@ const SecServicios = () => {
 return ( 
     <div>
     <div className="cont_ppal">
-        <Nav/>
         <div className="fotos">
         <section className="my-5">
         <h2 className="h1-responsive text-center font-weight my-4">
@@ -113,7 +111,6 @@ return (
       </section>
       <ModalTurnos show={show} setShow={setShow} />
     </div>    
-      <FormPage/>
 
 
 </div>
