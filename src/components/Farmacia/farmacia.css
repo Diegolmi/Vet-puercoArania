@@ -1,0 +1,39 @@
+.tituloFarm{
+  margin-top: 150px;
+}
+.contenedor_cards{
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.imgFarm{
+ object-fit: contain;
+}
+
+@media(max-width: 599px){
+.CardFarm{
+      width: 70% !important;
+      height: 30% !important;
+      
+  }
+  .imgFarm{
+      width: 100% !important;
+      height: 30% !important;
+  }
+}
+@media(min-width: 600px) and (max-width: 859px){
+.CardFarm{
+      width: 30% !important;
+      height: 30% !important;
+  }
+}
+
+@media (min-width: 860px){
+.CardFarm{
+      width: 20%;
+      height: 20%;
+  }
+  
+  
+}

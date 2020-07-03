@@ -1,210 +1,153 @@
-// import React from 'react';
-// import {
-//     MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBDropdown, MDBDropdownToggle,
-//     MDBDropdownMenu, MDBDropdownItem, MDBCol
-// } from 'mdbreact';
-// import { BrowserRouter as Router } from 'react-router-dom';
-// import logo from '../../assets/img/logo.png'
 
-// import './styleNav.css';
-
-
-// class FullPageIntroWithFixedTransparentNavbar extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.state = {
-//             collapse: false,
-//             isWideEnough: false,
-//         };
-//         this.onClick = this.onClick.bind(this);
-//     }
-
-//     onClick() {
-//         this.setState({
-//             collapse: !this.state.collapse,
-//         });
-//     }
-
-//     render() {
-//         return (
-//             <div>
-//                 <header>
-//                     {/* Comienzo del Navbar */}
-//                     <Router>
-//                         <MDBNavbar className="font-weight-bold justify-content-center" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
-//                             <MDBNavbarBrand href="/">
-
-//                                     <img src={logo} className="logo img-fluid" alt="" />
-
-
-
-//                             </MDBNavbarBrand>
-//                             {!this.state.isWideEnough && <MDBNavbarToggler onClick={this.onClick} />}
-//                             <MDBCollapse isOpen={this.state.collapse} navbar>
-//                                 <MDBNavbarNav center>
-//                                     <MDBNavItem active>
-//                                         <MDBNavLink className="letras " to="#">Turnos</MDBNavLink>
-//                                     </MDBNavItem>
-//                                     <MDBNavItem active>
-//                                         <MDBNavLink className="letras" to="#">Consultas</MDBNavLink>
-//                                     </MDBNavItem>
-//                                     <MDBNavItem active>
-//                                         <MDBDropdown>
-//                                             <MDBDropdownToggle nav caret active>
-//                                                 <div className="letras d-none d-md-inline">Tienda</div>
-//                                             </MDBDropdownToggle>
-//                                             <MDBDropdownMenu className="dropdown-default">
-//                                                 <MDBDropdownItem href="#!">Alimento</MDBDropdownItem>
-//                                                 <MDBDropdownItem href="#!">Acessorios</MDBDropdownItem>
-//                                                 <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-//                                                 <MDBDropdownItem href="#!">Something else here</MDBDropdownItem>
-//                                             </MDBDropdownMenu>
-//                                         </MDBDropdown>
-//                                     </MDBNavItem>
-//                                     <MDBNavItem active>
-//                                         <MDBNavLink className="letras" to="#">Quienes somos</MDBNavLink>
-//                                     </MDBNavItem>
-//                                     <MDBNavItem active>
-//                                         <MDBDropdown>
-//                                             <MDBDropdownToggle nav caret active>
-//                                                 <div className="letras d-none d-md-inline">Login</div>
-//                                             </MDBDropdownToggle>
-//                                             <MDBDropdownMenu className="dropdown-default">
-//                                                 <MDBDropdownItem href="#!">Ingresar</MDBDropdownItem>
-//                                                 <MDBDropdownItem href="#!">Registro</MDBDropdownItem>
-
-//                                             </MDBDropdownMenu>
-//                                         </MDBDropdown>
-//                                     </MDBNavItem>
-
-//                                 </MDBNavbarNav>
-//                             </MDBCollapse>
-//                         </MDBNavbar>
-//                     </Router>
-
-
-//                 </header>
-
-
-//             </div>
-//         );
-//     }
-// }
-
-// export default FullPageIntroWithFixedTransparentNavbar;
-
-import React, { Component } from "react";
-// import { Navbar, Nav, NavDropdown } from 'react-bootstrap'
-// import Image from 'react-bootstrap/Image'
-import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse, MDBDropdown,
-MDBDropdownToggle, MDBDropdownMenu, MDBDropdownItem} from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
-import logo from '../../assets/img/logo.png'
 import './styleNav.css';
+import React, { useState, useEffect, useRef } from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Nav from 'react-bootstrap/Nav';
+import logo from '../../assets/img/logo.png';
+import { MDBBadge } from "mdbreact";
+import { Link } from 'react-router-dom';
+import { FaCartArrowDown } from 'react-icons/fa';
 
-class NavbarPage extends Component {
-state = {
-  isOpen: false
-};
+import CarritoDesplegable from '../carritoDesplegable/CarritoDesplegable';
+import clsx from 'clsx';
+import { makeStyles } from '@material-ui/core/styles';
+import Drawer from '@material-ui/core/Drawer';
+// import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import Divider from '@material-ui/core/Divider';
+import { MDBBtn } from "mdbreact";
 
-toggleCollapse = () => {
-  this.setState({ isOpen: !this.state.isOpen });
-}
 
-render() {
+
+
+
+
+
+const useStyles = makeStyles({
+  list: {
+    width: 250,
+  },
+  fullList: {
+    width: 'auto',
+  },
+});
+
+const NavbarPage = () => {
+
+    //STATE PARA EL NAVBAR ASI CAMBIA DE COLOR CUANDO SE HACE SCROLL
+  const [navBackground, setNavBackground] = useState(false)
+  const navRef = useRef()
+  navRef.current = navBackground
+  useEffect(() => {
+    const handleScroll = () => {
+      const show = window.scrollY > 50
+      if (navRef.current !== show) {
+        setNavBackground(show)
+      }
+    }
+    document.addEventListener('scroll', handleScroll)
+    return () => {
+      document.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
+
+
+  //-------------------------------------------------------------
+          //SIDEBAR PARA CARRITO DESDE EL NAVBAR
+
+  const classes = useStyles();
+  const [state, setState] = useState(false);
+
+  const toggleDrawer = (anchor, open) => (event) => {
+    if (event.type === 'keydown' && (event.key === 'Tab' || event.key === 'Shift')) {
+      return;
+    }
+
+    setState({ ...state, [anchor]: open });
+  };
+
+  const list = (anchor) => (
+    <div
+      className={clsx(classes.list, {
+        [classes.fullList]: anchor === 'top' || anchor === 'bottom',
+      })}
+      role="presentation"
+      onClick={toggleDrawer(anchor, false)}
+      onKeyDown={toggleDrawer(anchor, false)}
+    >
+      <List className="contenedor-carrito-sidebar">
+
+      <CarritoDesplegable />
+        {/* {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))} */}
+        <MDBBtn id="btn_turno" outline color="secondary my-4"> ir al Carrito</MDBBtn>
+
+      </List>
+      <Divider />
+      <List>
+        {/* {['All mail', 'Trash', 'Spam'].map((text, index) => (
+          <ListItem button key={text}>
+            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+            <ListItemText primary={text} />
+          </ListItem>
+        ))} */}
+      </List>
+    </div>
+  );
+
+  //------------------------------------------------------------------
+
   return (
-    <Router>
-      <MDBNavbar className="font-weight-bold" color="bg-primary" fixed="top" white expand="md" scrolling transparent>
-        <MDBNavbarBrand>
-             <img src={logo} className="logo" alt="" />
 
-          {/* <strong className="black-text">Navbar</strong> */}
-        </MDBNavbarBrand>
-        <MDBNavbarToggler   onClick={this.toggleCollapse} />
-        <MDBCollapse  id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-          <MDBNavbarNav left>
-            <MDBNavItem  active>
-              <MDBNavLink className="letras " to="#!">Inicio</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="letras" to="#!">Consultorio</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="letras" to="#!">Quienes Somos</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle nav caret>
-                  <div className="letras  d-md-inline">Tienda</div>
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Accesorios</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Alimentos</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Medicamentos</MDBDropdownItem>
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-          <MDBNavbarNav right>
- 
-            <MDBNavItem>
-              <MDBDropdown>
-                <MDBDropdownToggle caret>
-                  Login
-                </MDBDropdownToggle>
-                <MDBDropdownMenu className="dropdown-default">
-                  <MDBDropdownItem className="letras" href="#!">Registros</MDBDropdownItem>
-                  <MDBDropdownItem className="letras" href="#!">Login</MDBDropdownItem>
-                  
-                </MDBDropdownMenu>
-              </MDBDropdown>
-            </MDBNavItem>
-          </MDBNavbarNav>
-        </MDBCollapse>
-      </MDBNavbar>
-    </Router>
-    );
-  }
+    <>
+      <Navbar collapseOnSelect expand="lg" className={navBackground ? "navbar-body" : ''} fixed="top">
+        <Navbar.Brand href="#home"><img src={logo} className="logo" alt="" /></Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" className="toggle-admin" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ml-lg-auto">
+            <Link to="/" className="mr-3 link-admin">INICIO</Link>
+            <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
+            <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
+            <Link to="/galeria" className="mr-3 link-admin">Galeria</Link>
+            <Link to="/" className="mr-3 link-admin">TIENDA</Link>
+
+          </Nav>
+          <hr />
+          <Nav>
+
+            {['right'].map((anchor) => (
+        <React.Fragment key={anchor}>
+          <button className="link-admin link-admin-boton"
+              onClick={toggleDrawer(anchor, true)}
+            >
+              <FaCartArrowDown className="carro"/>
+
+              <MDBBadge color="danger" className="ml-2">4</MDBBadge>
+              </button>
+          <Drawer anchor={anchor} open={state[anchor]} onClose={toggleDrawer(anchor, false)}>
+            {list(anchor)}
+          </Drawer>
+        </React.Fragment>
+      ))}
+            
+
+
+            <Link id="log_nb" className="mr-3 link-admin" to="/login">Login</Link>
+
+          </Nav>
+        </Navbar.Collapse>
+      </Navbar>
+
+      <div>
+     
+    </div>
+    </>
+  );
 }
+
 
 export default NavbarPage;
-
-// class NavbarPage extends Component {
-
-//     render() {
-//         return (
-//             <Navbar collapseOnSelect expand="lg"  fixed='top' variant="dark" scrolling trasparent > 
-//                 <Navbar.Brand href="#home">
-//                 <Image src={logo} className="logo" fluid alt="" /> 
-
-
-//                     </Navbar.Brand>
-//                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-//                 <Navbar.Collapse id="responsive-navbar-nav">
-//                     <Nav className="mr-auto">
-//                         <Nav.Link href="#features">Inicio</Nav.Link>
-//                         <Nav.Link href="#pricing">Pricing</Nav.Link>
-//                         <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
-//                             <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-//                             <NavDropdown.Item href="#action/3.2">Another action</NavDropdown.Item>
-//                             <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-//                             <NavDropdown.Divider />
-//                             <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
-//                         </NavDropdown>
-//                     </Nav>
-//                     <Nav>
-//                         <Nav.Link href="#deets">More deets</Nav.Link>
-//                         <Nav.Link eventKey={2} href="#memes">
-//                             Dank memes
-//       </Nav.Link>
-//                     </Nav>
-//                 </Navbar.Collapse>
-//             </Navbar>
-//         )
-//     }
-
-
-
-
-// }
-// export default NavbarPage;

@@ -1,5 +1,4 @@
 import React from 'react';
-import img1 from '../../assets/img/paraTienda.jpg'
 import './CardEcommerce.css';
 import { MDBIcon } from 'mdbreact';
 import Rating from './Rating'
@@ -8,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
+import moment from 'moment';
 
 
 
@@ -19,28 +19,45 @@ import Container from 'react-bootstrap/Container';
 
 
 
-const CardEcommerce1 = () => {
+const CardEcommerce1 = ({ productos }) => {
 
-  const array = [1, 2, 3];
+  
+
+
+  let contador = 0
+  const accesoriosArray = productos.filter(producto => {
+
+    const isAccesorios = producto.category === 'Accesorios'
+    if( contador < 4 && isAccesorios ){
+      contador++
+      console.log(contador);
+      return  isAccesorios
+    }
+    
+  })
 
   return (
     <>
 
       <Container fluid>
+        <div className="title-container">
+          {/* <h1>Alimentos</h1> */}
+        </div>
+
         <Row>
 
-          {array.map(arr => (
-            <Col lg={4} md={6}>
-              <Card>
-                <Card.Img variant="top" src={img1} />
+          {accesoriosArray.map(producto => (
+            <Col lg={3} md={6}>
+              <Card className="card-container">
+                <Card.Img variant="top" src={producto.urlImage} className="img-fluid" />
                 <Card.Body>
-                  <Card.Title>Nombre del producto</Card.Title>
-                  <Card.Text>$249,80</Card.Text>
-                  <Card.Text><small className="text-muted">Last updated 3 mins ago</small></Card.Text>
+                  <Card.Title>{producto.name}</Card.Title>
+                  <Card.Text>${producto.price}</Card.Text>
+                  <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
                   <Card.Text className="rating"><Rating /></Card.Text>
                 </Card.Body>
                 <Card.Footer>
-                  <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="shopping-bag" /></Button>
+                  <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="info" /></Button>
                   <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
                 </Card.Footer>
               </Card>
@@ -50,7 +67,7 @@ const CardEcommerce1 = () => {
         </Row>
       </Container>
 
-      
+
 
 
 

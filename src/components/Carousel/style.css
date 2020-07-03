@@ -10,8 +10,13 @@ a>div>.carousel-control-prev-icon {
     border-radius: 75%;
 } */
 .contenedorCarousel {
-    padding: 0!important;
     
-    
-    
+    width: 100vw;
+    height: 800px;    
+    /* width: 100%;  */
+}
+
+.image-carousel{
+    -webkit-filter: brightness(50%);
+    filter: brightness(50%);
 }
