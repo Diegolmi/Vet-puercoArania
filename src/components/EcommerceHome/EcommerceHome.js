@@ -38,18 +38,19 @@ const EcommerceHome = ({userCarrito, mostrarCarrito}) => {
 
 
     //crear y agregar al carrito
-    const addToCart = async (e, id) => {
+    const addToCart = async (id) => {
         const response = await axiosInstance.post('/shoppingCart', {product: id, quantity: cantidad})
-        setCarrito(response.data.items)  
-        setCantidad('')
-        Swal.fire({
-            position: 'center',
-            icon: 'success',
-            title: 'Tu Producto fue agregado Exitosamente al Carrito',
-            showConfirmButton: false,
-            timer: 1500
-          })
-          mostrarCarrito()
+        
+            setCarrito(response.data.items)  
+            setCantidad(response.data.quantity)
+            Swal.fire({
+                position: 'center',
+                icon: 'success',
+                title: 'Tu Producto fue agregado Exitosamente al Carrito',
+                showConfirmButton: false,
+                timer: 1500
+              })
+              mostrarCarrito()
       }
       
       //agregar cantidad los productos al carrito

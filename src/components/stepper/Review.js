@@ -45,6 +45,9 @@ export default function Review() {
     mostrarCarrito()
   }, [])
 
+  const total =+ userCarrito.reduce((acc, item) => {
+    return acc + item.product.price * item.quantity
+}, 0)
 
   const products = userCarrito.map(carrito => ({
     
@@ -61,9 +64,8 @@ export default function Review() {
      
     ];
   const payments = [
-    { name: 'Precio', detail: '2500' },
     { name: 'Envio', detail: 'free' },
-    { name: 'Total a Pagar', detail: '$2500' },
+    { name: 'Total a Pagar', detail: total },
   ];
 
   return (
@@ -81,7 +83,7 @@ export default function Review() {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            $34.06
+            $ {total}
           </Typography>
         </ListItem>
       </List>

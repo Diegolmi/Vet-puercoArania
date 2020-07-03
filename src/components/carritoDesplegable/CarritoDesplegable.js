@@ -32,7 +32,7 @@ const CarritoDesplegable = (props) => {
             </div>
             <div class="botones-footer-sidebar">
               <button onClick={borrarProducto(carrito.product._id)} className="button-delete-itemcart"><FaTrashAlt className="icon-delete-itemcart" /></button>
-              <Link to="/privado/carrito">ir Carrito</Link>
+              <Link to="/carrito">ir Carrito</Link>
             </div>
           </div>
         </div>

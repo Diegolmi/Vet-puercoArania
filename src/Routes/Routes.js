@@ -30,9 +30,9 @@ function Routes() {
         <Route exact path="/registro" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/tienda" component={Contenedor} />
-        <PrivateRoute path="/carrito" component={Carrito} />
         <PrivateRoute path="/admin" component={Admin} />
         <PrivateRoute path="/usuario" component={AdminUser} />
+        <PrivateRoute path="/carrito" component={Carrito} />
         <PrivateRoute path="/payment-success" component={Success} />
         <PrivateRoute path="/payment-pending" component={Pending} />
         <PrivateRoute path="/payment-failure" component={Failure} />

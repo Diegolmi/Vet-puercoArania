@@ -5,6 +5,7 @@ const SelectIpunt = ({agregarCantidad}) => {
         <div>
             <h6>Cantidad:</h6>
         <select onChange={agregarCantidad} className="browser-default custom-select">
+            <option value=""></option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
