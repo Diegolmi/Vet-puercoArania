@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Tabs, Tab, Card, ListGroup, Button } from 'react-bootstrap';
+import { Tabs, Tab, Card, Row } from 'react-bootstrap';
 import FormTurnos from './FormTurnos';
 import Turno from './Turno';
 import axiosInstance from '../../../util/axiosInstance';
+import './styleTurno.css';
 
 
 
@@ -24,23 +25,24 @@ const Turnos = () => {
 
 
 
-    const titulo = turnos.length === 0 ? 'Todavia no sacaste turno' : "Administra los turnos";
+    const titulo = turnos.length === 0 ? <button className="btn btn-primary">Saca tu turno</button>  : "";
 
     return (
         <div>
             <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
-                <Tab eventKey="datos" title="Administrador de turnos">
-                    <p><span>{titulo}</span></p>
+                <Tab eventKey="datos" title="Administra tus turnos">
+                    <p className="tituloTurno"><span>{titulo}</span></p>
+                    <Row>
                     {turnos.map(turno => (
 
 
                         <Turno
                             listarTurnos={listarTurnos}
-                            key={turno.id}
                             turno={turno}
                         />
 
                     ))}
+                    </Row>
 
                 </Tab>
                 <Tab eventKey="modificar" title="Solicitar Turno">
