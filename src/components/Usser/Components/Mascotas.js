@@ -18,8 +18,6 @@ const TablePage = () => {
 
 
 
-  //const ActualizaNombre = () => {  
-  //}
 
 
   const mascotas = {
@@ -67,40 +65,7 @@ const TablePage = () => {
       </Button>,
         'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
       },
-      {
-        'id': '2',
-        'nombre': 'Anna',
-        'Raza': 'Wintour',
-        'Control': '15/06/20',
-
-        'Años': '36',
-        'editar': <Button variant="primary" onClick={handleShow}>
-          Editar
-      </Button>,
-        'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        'id': '3',
-        'nombre': 'Tom',
-        'Raza': 'Bond',
-        'Control': 'Spain',
-        'Años': '25',
-        'editar': <Button variant="primary" onClick={handleShow}>
-          Editar
-      </Button>,
-        'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
-      {
-        'id': '4',
-        'nombre': 'Jerry',
-        'Raza': 'Horwitz',
-        'Control': 'Italy',
-        'Años': '41',
-        'editar': <Button variant="primary" onClick={handleShow}>
-          Editar
-                  </Button>,
-        'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
-      },
+      
 
     ]
   };

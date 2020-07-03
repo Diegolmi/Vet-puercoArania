@@ -23,6 +23,7 @@ const FormTurnos = ({listarTurnos}) => {
 
       ...solicitarTurno,
       [e.target.name]: e.target.value
+
     })
   }
   const handleDate = e => {
