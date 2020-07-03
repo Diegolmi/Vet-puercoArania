@@ -4,6 +4,7 @@ import Card from 'react-bootstrap/Card';
 import { Container, Row, Col } from 'react-bootstrap';
 import axiosInstance from '../../../util/axiosInstance';
 import './styleTurno.css';
+import Swal from 'sweetalert2';
 
 const Turno = ({ turno, listarTurnos }) => {
 
@@ -11,6 +12,23 @@ const Turno = ({ turno, listarTurnos }) => {
     const eliminarTurno = async (id) => {
 
         const result = await axiosInstance.delete(`/turnos/${id}`);
+        Swal.fire({
+            title: 'Eliminar turno!',
+            text: "Seguro quiere eliminar este turno?",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Si, Eliminarlo'
+          }).then((result) => {
+            if (result.value) {
+              Swal.fire(
+                'Eliminado!',
+                'Que tengas un lindo dia.',
+                'success'
+              )
+            }
+          })
         console.log(result);
         listarTurnos();
 

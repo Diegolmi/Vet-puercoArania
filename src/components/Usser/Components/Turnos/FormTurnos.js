@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { MDBInput, MDBCol, MDBDatePickerV5, MDBTimePicker } from 'mdbreact';
 import Button from 'react-bootstrap/Button';
 import axiosInstance from '../../../util/axiosInstance';
+import Swal from 'sweetalert2';
 
 const FormTurnos = ({listarTurnos}) => {
 
@@ -34,6 +35,13 @@ const FormTurnos = ({listarTurnos}) => {
   const handleSubmit = async e => {
     e.preventDefault();
     const result = await axiosInstance.post('/turnos', solicitarTurno)
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Listo, ya tenes tu turno!!',
+      showConfirmButton: false,
+      timer: 2500
+    })
     console.log(result)
     listarTurnos()
   }
