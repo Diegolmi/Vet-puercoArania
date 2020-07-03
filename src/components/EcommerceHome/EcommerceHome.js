@@ -12,6 +12,7 @@ import {Animated} from "react-animated-css";
 import Swal from 'sweetalert2';
 import './CardEcommerce.css';
 import axiosInstance from '../util/axiosInstance';
+import { Link } from 'react-router-dom';
 
 
 
@@ -99,7 +100,7 @@ const EcommerceHome = ({userCarrito, mostrarCarrito}) => {
                 <Col md={12} sm={12}><CardEcommerce   agregarCantidad={agregarCantidad} productos={productos} addToCart={addToCart} /></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button  className="btn">IR A LA TIENDA</button>
+                        <Link to="/tienda"  className="btn">IR A LA TIENDA</Link>
                     </div>
                 </Col>
 
@@ -109,7 +110,7 @@ const EcommerceHome = ({userCarrito, mostrarCarrito}) => {
                 <Col md={12} sm={12}><CardEcommerce1  agregarCantidad={agregarCantidad} productos={productos} addToCart={addToCart} /></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button  className="btn">IR A LA TIENDA</button>
+                        <Link to="/tienda"  className="btn">IR A LA TIENDA</Link>
                     </div>
                 </Col>
             </Row> : null}
@@ -118,7 +119,7 @@ const EcommerceHome = ({userCarrito, mostrarCarrito}) => {
                 <Col md={12} sm={12}><CardEcommerce2  agregarCantidad={agregarCantidad} productos={productos} addToCart={addToCart}/></Col>
                 <Col md={12} sm={12}>
                     <div className="contenedor-boton-tienda">
-                        <button  className="btn">IR A LA TIENDA</button>
+                        <Link to="/tienda"  className="btn">IR A LA TIENDA</Link>
                     </div>
                 </Col>
             </Row> : null}

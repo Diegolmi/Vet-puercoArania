@@ -35,10 +35,8 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 </Nav>
                 <hr />
                 <Nav>
-                    {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
-                    <Link className="mr-3 link-admin"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin">Perfil</Link>
-                    <Link className="mr-3 link-admin" onClick={logout}>Log Out</Link>
+                    <Link to="/usuario" className="mr-3 link-admin">Perfil</Link>
+                    <Link to="" className="mr-3 link-admin" onClick={logout}>Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

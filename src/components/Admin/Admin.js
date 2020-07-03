@@ -60,12 +60,12 @@ const Admin = () => {
                         <Col xs={6} md={2} className="columna-sidebar"><SidebarIcons /></Col>
                         <Col xs={6} md={8} className="container-links-sidebar mr-1">
                             <Switch>
-                                <Route exact path="/privado/admin" component={InicioAdmin} />
-                                <Route exact path="/privado/admin/user" component={EditUser} />
-                                <Route exact path="/privado/admin/producto" component={AddProduct} />
-                                <Route exact path="/privado/admin/turnos" component={EditarTurnos} />
-                                <Route exact path="/privado/admin/consultas" component={AdminConsultas} />
-                                <Route exact path="/privado/admin/datosAdmin" component={DatosAdmin} />
+                                <Route exact path="/admin" component={InicioAdmin} />
+                                <Route exact path="/admin/user" component={EditUser} />
+                                <Route exact path="/admin/producto" component={AddProduct} />
+                                <Route exact path="/admin/turnos" component={EditarTurnos} />
+                                <Route exact path="/admin/consultas" component={AdminConsultas} />
+                                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
                             </Switch>
                         </Col>
                     </Row>
@@ -80,12 +80,12 @@ const Admin = () => {
                         <Col sm={3} className="columna-sidebar"><SidebarAdmin /></Col>
                         <Col sm={9} className="container-links-sidebar">
                             <Switch>
-                                <Route exact path="/privado/admin" component={InicioAdmin} />
-                                <Route exact path="/privado/admin/user" component={EditUser} />
-                                <Route exact path="/privado/admin/producto" component={AddProduct} />
-                                <Route exact path="/privado/admin/turnos" component={EditarTurnos} />
-                                <Route exact path="/privado/admin/consultas" component={AdminConsultas} />
-                                <Route exact path="/privado/admin/datosAdmin" component={DatosAdmin} />
+                                <Route exact path="/admin" component={InicioAdmin} />
+                                <Route exact path="/admin/user" component={EditUser} />
+                                <Route exact path="/admin/producto" component={AddProduct} />
+                                <Route exact path="/admin/turnos" component={EditarTurnos} />
+                                <Route exact path="/admin/consultas" component={AdminConsultas} />
+                                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
                             </Switch>
                         </Col>
                     </Row>
