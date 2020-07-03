@@ -11,7 +11,7 @@ const Turno = ({ turno, listarTurnos }) => {
 
     const eliminarTurno = async (id) => {
 
-        const result = await axiosInstance.delete(`/turnos/${id}`);
+        //const result = await axiosInstance.delete(`/turnos/${id}`);
         Swal.fire({
             title: 'Eliminar turno!',
             text: "Seguro quiere eliminar este turno?",
@@ -20,17 +20,21 @@ const Turno = ({ turno, listarTurnos }) => {
             confirmButtonColor: '#3085d6',
             cancelButtonColor: '#d33',
             confirmButtonText: 'Si, Eliminarlo'
-          }).then((result) => {
+          }).then( async (result) => {
             if (result.value) {
+                await axiosInstance.delete(`/turnos/${id}`);
+                
               Swal.fire(
                 'Eliminado!',
                 'Que tengas un lindo dia.',
                 'success'
-              )
+              ); listarTurnos();
             }
+            
           })
-        console.log(result);
-        listarTurnos();
+          
+        //console.log(result);
+        
 
     }
 
