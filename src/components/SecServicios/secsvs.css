@@ -1,24 +1,23 @@
 
 .cont_ppal{
-    margin: auto 70px
-}
-.h1-responsive{
-    border-bottom: 2px solid #fc5185;
-    padding-bottom: 10px;
-    margin-top: 200px !important;
+    margin: auto 70px;
+    
 }
 .lead{
-    margin-top: 50px !important;
+    margin-top: 150px !important;
 }
-
+#holi{
+    color: #544e4e !important;
+}
 #btn_turno{
-    padding: 7px;
-    padding-top: 7px !important;
-    padding-bottom: 7px !important;
-    border-radius: 25px;
+    padding: 10px 30px;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 15px;
     color: #fc5185 !important;
     border: 1px solid #fc5185 !important;
-    margin-top: 50px !important;
+    margin-left: 40%;    
+
     }
     #btn_turno:hover{
         background-color: #fc5185 !important;

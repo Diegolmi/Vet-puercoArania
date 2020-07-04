@@ -5,6 +5,8 @@ import catdog from'../../assets/img/svs/catdog.png';
 import { MDBBtn } from "mdbreact";
 import FormPage from '../FormServicios'
 import ModalTurnos from './ModalTurnos';
+import Carturnos from '../CarTurnos/Carturnos';
+import NavbarPage from '../Navbar2/Nav2';
 
 
 
@@ -13,17 +15,13 @@ const SecServicios = () => {
   const handleShow = () => setShow(true);
 return ( 
     <div>
+              <NavbarPage />
+              <Carturnos/>    
+
     <div className="cont_ppal">
         <div className="fotos">
         <section className="my-5">
-        <h2 className="h1-responsive text-center font-weight my-4">
-         Servicios
-        </h2>
-        <p className="lead grey-text w-responsive text-center mx-auto mb-5">
-        Tenemos todo lo que tu mascota necesita. En nuestra veterinaria le ofrecemos una asistencia completa y de calidad. Nuestro principal objetivo es mantener la salud y el bienestar de nuestros animales y ayudarlos a restablecerse cuando están enfermos. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas. <br/>
         <MDBBtn id="btn_turno" onClick={handleShow} outline color="secondary my-4"> solicitar turno</MDBBtn>
-        </p>
-
         <MDBRow>
           <MDBCol md="4">
             <MDBRow className="mb-3">
@@ -36,7 +34,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Clínica</h5>
-                <p className="grey-text">
+                <p className="grey-text"id="holi">
                 Le ofrecemos una asistencia completa y de calidad a tu mascota. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas.
                 </p>
               </MDBCol>
@@ -47,7 +45,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Análisis clínicos</h5>
-                <p className="grey-text">
+                <p className="grey-text"id="holi">
                 Contamos con equipamiento para hacer analíticas in situ. De esta manera se aceleran los procedimientos y podemos emitir un diagnóstico e implementar el tratamiento adecuado de manera rápida y efectiva.
                 </p>
               </MDBCol>
@@ -58,7 +56,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Cirugía</h5>
-                <p className="grey-text">
+                <p className="grey-text" id="holi">
                 Hacemos cirugías electivas de esterilización dentro de los planes de prevención de salud reproductiva, cirugía gastrointestinal, de hígado y sistema biliar, de vejiga, uréteres y riñones, adrenales, bazo y páncreas.
                 </p>
               </MDBCol>
@@ -78,7 +76,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Estética y spa</h5>
-                <p className="grey-text">
+                <p className="grey-text"id="holi">
                 Les cortamos el pelo con tijera, se cortan las uñas, limpian los oídos y vacían los sacos anales.
                 Ambientamos con música a 432 hz para procurar que tu mascota se relaje y sienta a gusto.
                 </p>
@@ -90,7 +88,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Hotel</h5>
-                <p className="grey-text">
+                <p className="grey-text"id="holi">
                 Entre nuestras instalaciones contamos con guarderías para perros y gatos. Para acoger a tus mascotas, es imprescindible que estén vacunados al día y que sean desparasitados antes de su estancia. 
                 </p>
               </MDBCol>
@@ -101,7 +99,7 @@ return (
               </MDBCol>
               <MDBCol size="10">
                 <h5 className="font-weight-bold mb-3">Radiología digital</h5>
-                <p className="grey-text">
+                <p className="grey-text"id="holi">
                 La radiología ofrece información sobre el estado tanto de tejidos blandos como de huesos y articulaciones, por lo que es una herramienta de inestimable utilidad. La técnica digital permite obtener una imagen mucho más clara que la clásica sobre película, lo que optimiza aún más este recurso.
                 </p>
               </MDBCol>

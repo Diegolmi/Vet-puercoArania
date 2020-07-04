@@ -41,11 +41,11 @@ const Footer = () => {
             <div className="redes">
             <div className="redessociales">
               <div className="facebook">
-                  <a href="#!"><img  src="https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png" className="iconos" alt="logo" />Puerco Araña </a>
+                  <a href="https://www.facebook.com/puerco.arana.10236" target="_blank"><img  src="https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png" className="iconos" alt="logo" />Puerco Araña </a>
                 </div>
              <div className="instagram">
-               <a href="#!">
-              <img src="https://es.logodownload.org/wp-content/uploads/2018/10/instagram-logo1.png" className="iconos" alt="logo" />@puercoarania.tuc        </a>
+               <a href="https://instagram.com/veterinaria_puerco_arania?igshid=vd3blyz6hyq3" target="_blank">
+              <img src="https://es.logodownload.org/wp-content/uploads/2018/10/instagram-logo1.png" className="iconos" alt="logo" />@puercoarania.tuc  </a>
               </div>
              </div>
              </div>

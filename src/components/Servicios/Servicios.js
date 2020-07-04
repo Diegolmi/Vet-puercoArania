@@ -5,10 +5,8 @@ import estetica from '../../assets/img/svs/foto1.jpg';
 import hotel from '../../assets/img/svs/foto2.jpg';
 
 
-
 const Servicios = () => {
     return ( 
-            
         <div className= "section">
             <div className="servicios">
                 <div className="title"><h2><strong> Cuidamos a tu mascota como si fuera la nuestra.</strong></h2></div>
