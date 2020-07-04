@@ -30,7 +30,6 @@ const FormPage = () => {
       if(result.data.token){
         localStorage.setItem('jwt', result.data.token);
         localStorage.setItem('role', result.data.role);
-        localStorage.setItem('id', result.data.id)
         
         history.push('/privado/usuario')
       }

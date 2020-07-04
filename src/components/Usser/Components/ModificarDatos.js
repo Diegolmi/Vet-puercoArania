@@ -15,7 +15,7 @@ const ModificarDatos = () => {
     const handleSubmit = async event => {
         const form = event.target
         if (form.checkValidity()) {
-            await axiosInstance.put(`/private/user`, editarDatos);
+            await axiosInstance.put(`/private/user`, editarDatos)
         }
     }
 
