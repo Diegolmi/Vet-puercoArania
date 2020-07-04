@@ -11,7 +11,6 @@ const Turno = ({ turno, listarTurnos }) => {
 
     const eliminarTurno = async (id) => {
 
-        //const result = await axiosInstance.delete(`/turnos/${id}`);
         Swal.fire({
             title: 'Eliminar turno!',
             text: "Seguro quiere eliminar este turno?",

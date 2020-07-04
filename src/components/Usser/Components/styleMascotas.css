@@ -123,3 +123,7 @@
     justify-content: center;
     text-align: center;
 }
+.CardMascota {
+    height: 650px;
+    width: auto;
+}
