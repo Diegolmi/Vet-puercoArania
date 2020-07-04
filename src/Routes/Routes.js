@@ -18,7 +18,7 @@ import Success from "../components/Checkout/Success";
 import Pending from "../components/Checkout/Pending";
 import Failure from "../components/Checkout/Failure";
 
-// import AdminRoute from './AdminRoute';
+import AdminRoute from './AdminRoute';
 
 function Routes() {
   return (

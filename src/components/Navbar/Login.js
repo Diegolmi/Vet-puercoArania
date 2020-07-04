@@ -31,7 +31,7 @@ const FormPage = () => {
         localStorage.setItem('jwt', result.data.token);
         localStorage.setItem('role', result.data.role);
         
-        history.push('/privado/usuario')
+        history.push('/usuario')
       }
   } catch (error) {
       console.log(error);

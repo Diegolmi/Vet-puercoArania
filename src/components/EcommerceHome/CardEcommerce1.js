@@ -54,12 +54,11 @@ const CardEcommerce1 = ({ productos, addToCart, agregarCantidad }) => {
                   <Card.Title>{producto.name}</Card.Title>
                   <Card.Text>${producto.price}</Card.Text>
                   <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
-                  <Card.Text><SelectInput agregarCantidad={agregarCantidad}/></Card.Text>
-                  <Card.Text className="rating"><Rating /></Card.Text>
+                  <Card.Text><SelectInput agregarCantidad={agregarCantidad} stock={producto.stock}/></Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="info" /></Button>
-                  <Button size="sm" onClick={(e)=>addToCart(e, producto._id)} className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                  <Button size="sm" onClick={()=>addToCart(producto._id)} className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
                 </Card.Footer>
               </Card>
             </Col>

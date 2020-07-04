@@ -227,7 +227,36 @@
     height: 100vh;
 }
 
+
+
+/*IMAGENES TABLA DE PRODUCTOS*/
+
 .img-table-product{
-    width: 100px;
     height: 100px;
+    width: 100px;
+}
+
+/*MEDIA QUERYS*/
+
+@media (max-width: 549px){
+  
+    .sidebaricons-container{
+        width: 46px !important;
+    }    
+    .container-links-sidebar{
+        margin: auto auto !important;
+    }
+    .container-consultas-admin{
+        margin: auto auto !important;
+
+    }
+    .ocultarSidebar{
+        display: none;
+    }
+}
+
+@media (min-width: 550px) and (max-width: 766px){
+    .container-usuario-admin, .container-links-sidebar{
+        margin-left: 60px;
+    }
 }

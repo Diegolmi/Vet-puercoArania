@@ -63,7 +63,8 @@
     color: white;
   }
   .contenedor-carrito-sidebar{
-    /* height: 100vh; */
+    /* height: 400px !important; */
+    max-height: 800px !important;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -76,8 +76,8 @@
 }
 .card-container {
   /* width: 15rem; */
-  margin: 10px;
-  height: 590px !important;
+  margin: 30px;
+  height: 460px !important;
 }
 
 .card-body {
@@ -94,10 +94,10 @@
   border: none;
 }
 
-.rating-container {
+/* .rating-container {
   display: flex;
   justify-content: center;
-}
+} */
 
 .card-footer {
   display: flex;
@@ -118,9 +118,13 @@
 }
 /* FIN CARD */
 
+.img-food-cards{
+  width: 200px;
+  height: 150px;
+  margin: 0 auto;
+}
 
 @media only screen and (min-width: 600px) {
-  
   .card-homePage .store-title{
     font-size: 50px;
   }
@@ -139,7 +143,7 @@
     height: 150px;
     display: flex;
     justify-content: space-around;
-    margin: auto auto;
+    margin: 0 auto;
     margin-bottom: 50px;
     background-color: #f0f0f0;
   
@@ -171,9 +175,6 @@
     height: 80px;
     margin-right: 15px;
   }
-  /* .card-container {
-    width: 250px !important;
-  } */
 
 } 
 /* 
@@ -188,11 +189,14 @@
 } */
 
 
+.img_prod{
+  width: 10%;
+  height: 10%;
+  margin-right: 15px;
+} 
+
+
 @media only screen and (max-width: 600px) {
-  .contenedor-card-landing{
-    flex-wrap: wrap !important;
-    flex-direction: column !important;
-  }
   .store-title{
     max-width: 300px;
     display: flex;
@@ -227,12 +231,9 @@
     margin-top: 2.5rem;
   } 
   #img_prod{
-    width: 60px;
-    height: 60px;
+    width: 75px !important;
+    height: 75px !important;
   }
-  /* .card-container {
-    width: 300px !important;
-  } */
 }
 
 /* .button-group {
@@ -271,3 +272,4 @@
   height: 80px;
   margin-right: 15px;
 }
+

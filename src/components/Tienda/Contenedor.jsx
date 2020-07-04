@@ -22,7 +22,7 @@ const estilos = makeStyles((theme) => ({
 const Contenedor = () => {
   const [productos, setProductos] = useState([]);
   const [userCarrito, setUserCarrito] = useState([]);
-  const [cantidad, setCantidad] = useState("");
+  const [cantidad, setCantidad] = useState(1);
 
   const classes = estilos();
   const [abrir, setAbrir] = useState(false);
@@ -43,7 +43,9 @@ const Contenedor = () => {
 
   const mostrarCarrito = async () => {
       const response = await axiosInstance.get('/shoppingCart')
-      setUserCarrito(response.data.items || [])
+      if(response.data){
+        setUserCarrito(response.data.items || [])
+      }
 
     }
 
@@ -52,11 +54,15 @@ const Contenedor = () => {
     }, [])
 
   //-----------------------------------------------------
+
+
+  
   //crear y agregar al carrito
 
   const addToCart = async ( id) => {
       const response = await axiosInstance.post('/shoppingCart', {product: id, quantity: cantidad})
       setUserCarrito(response.data.items)
+      
       Swal.fire({
           position: 'center',
           icon: 'success',
@@ -65,11 +71,12 @@ const Contenedor = () => {
           timer: 1500
         })
         mostrarCarrito()
+        setCantidad(1)
     }
 
-  const agregarCantidad = (e) => {
-    setCantidad(...cantidad, e.target.value);
-  };
+    const agregarCantidad = (e) => {
+      setCantidad(...cantidad, e.target.value);
+    };
 
   return (
     <>

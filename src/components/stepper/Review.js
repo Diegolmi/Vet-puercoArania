@@ -34,8 +34,10 @@ export default function Review() {
   //traer carrito para mostrar informacion de los productos para comprar
   const mostrarCarrito = async () => {
     const response = await axiosInstance.get('/shoppingCart')
-    setUserCarrito(response.data.items || [])
-    setUsuarios(response.data.customer)
+    if(response.data){
+      setUserCarrito(response.data.items || [])
+      setUsuarios(response.data.customer)
+    }
     
   }
   // console.log(userCarrito);

@@ -20,7 +20,7 @@ const CarritoDesplegable = (props) => {
   return (
     <>
       {items.map(carrito => (
-        <div className="card card-carrito" key={carrito._id}>
+        <div className="card pb-2 mb-1" key={carrito._id}>
           <div className="contenedor-producto-sidebar">
             <div className="card-body body-sidebar-cart">
               <img className="carrito-sidebar-img" src={carrito.product.urlImage} alt="" />

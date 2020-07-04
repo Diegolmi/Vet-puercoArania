@@ -48,9 +48,9 @@ import Col from 'react-bootstrap/Col';
                         <Col sm={1} className="columna-sidebar"><SideNavicons /></Col>
                         <Col sm={11} className="container-links-sidebar">
                             <Switch>
-                                <Route exact path="/privado/usuario" component={IndexUsser} />
-                                <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
-                                <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
+                                <Route exact path="/usuario" component={IndexUsser} />
+                                <Route exact path="/usuario/mascotas" component={Mascotas} />
+                                <Route exact path="/usuario/datos" component={DatosUsuario} />
 
                             </Switch>
                         </Col>
@@ -66,9 +66,9 @@ import Col from 'react-bootstrap/Col';
                         <Col md={3} className="columna-sidebar"><Sidenav /></Col>
                         <Col md={9} className="container-links-sidebar">
                             <Switch>
-                                <Route exact path="/privado/usuario" component={IndexUsser} />
-                                <Route exact path="/privado/usuario/mascotas" component={Mascotas} />
-                                <Route exact path="/privado/usuario/datos" component={DatosUsuario} />
+                                <Route exact path="/usuario" component={IndexUsser} />
+                                <Route exact path="/usuario/mascotas" component={Mascotas} />
+                                <Route exact path="/usuario/datos" component={DatosUsuario} />
                             </Switch>
                         </Col>
                     </Row>

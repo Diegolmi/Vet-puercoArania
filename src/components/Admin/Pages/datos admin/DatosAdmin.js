@@ -14,7 +14,7 @@ const DatosAdmin = () => {
     return ( 
         <div className="container-datos-admin">
         <div className="row">
-            <div className="col-8 my-3">
+            <div className="col-10 my-3">
             <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
                 <Tab eventKey="datos" title="Datos Admin">
                     <MostrarDatosAdmin />

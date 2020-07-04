@@ -14,22 +14,24 @@ import './App.css';
 import 'mdbreact/dist/css/mdb.css';
 import Servicios from './components/Servicios/Servicios';
 import axiosInstance from './components/util/axiosInstance';
-// import GaleriaImagenes from './components/galeria/GaleriaImagenes';
-
+import Whatsapp from './components/Whatsapp/Whatsapp';
 
 const Landing = () => {
   const [userCarrito, setUserCarrito] = useState([]);
-
+  
 
   const mostrarCarrito = async () => {
-    const response = await axiosInstance.get('/shoppingCart')
-    setUserCarrito(response.data.items || [])
+    const response = await axiosInstance.get('/shoppingCart');
+    if(response.data){
+      setUserCarrito(response.data.items || []);
+    }
     
   }
    
 
+
   useEffect(() => {
-    mostrarCarrito()
+    mostrarCarrito();
   }, [])
 
   return (
@@ -56,6 +58,7 @@ const Landing = () => {
       {/* <Row className="rowServicios">
         <Col> */}
       <Servicios />
+      <Whatsapp />
       {/* </Col> 
       </Row> */}
       {/* </Container> */}

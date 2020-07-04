@@ -24,7 +24,7 @@ const Accesorios = ({ productos, addToCart, agregarCantidad }) => {
           <Card.Body>
             <Card.Title>{producto.name}</Card.Title>
             <Card.Text>${producto.price}</Card.Text>
-            <Card.Text><SelectInput agregarCantidad={agregarCantidad} /></Card.Text>
+            <Card.Text><SelectInput agregarCantidad={agregarCantidad} stock={producto.stock} /></Card.Text>
           </Card.Body>
           <Card.Footer>
             <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="info" /></Button>

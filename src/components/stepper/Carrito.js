@@ -36,7 +36,9 @@ export default function Carrito() {
 
   const mostrarCarrito = async () => {
     const response = await axiosInstance.get("/shoppingCart");
-    setUserCarrito(response.data.items);
+    if(response.data){
+      setUserCarrito(response.data.items || []);
+    }
   };
 
   useEffect(() => {
@@ -46,8 +48,15 @@ export default function Carrito() {
   //---------------------------------------------------------------------------
     //implementando Mercado Pago
       const realizarPago = async () =>{
-      const response = await axiosInstance.post("/checkout")
-      console.log(response)
+        try {
+          const response = await axiosInstance.post("/checkout")
+      // console.log(response.data.payment)
+      const link = response.data.redirectUrl
+      window.location.href = link
+        } catch (error) {
+          console.error(error)
+        }
+      
       }
   //---------------------------------------------------------------------------
   function getSteps() {

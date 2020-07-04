@@ -11,9 +11,9 @@ const Servicios = () => {
             
         <div className= "section">
             <div className="servicios">
-                <div className="title"><h2><strong> Nuestros Servicios</strong></h2></div>
-                    <div className="lorem"><p>Porque nos importa tanto como a vos, queremos acompañarte en los cuidados de tu mascota.<br/>Contamos con un equipo de profesionales en cada categoría para atender a sus necesidades.</p></div>
-                        <button id="boton">Ver todos</button>
+                <div className="title"><h2><strong> Cuidamos a tu mascota como si fuera la nuestra.</strong></h2></div>
+                    <div className="lorem"><p>Queremos acompañarte en los cuidados de tu mascota.<br/>Pedí tu turno online y conocé todos nuestros servicios.</p></div>
+                        <button id="boton">VER MÁS </button>
                 </div>       
          <div>
     </div>
