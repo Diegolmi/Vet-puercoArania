@@ -9,7 +9,6 @@ import {
   MDBContainer,
   MDBCard,
   MDBCardBody,
-  MDBBtn,
   MDBCol,
 } from "mdbreact";
 import "./Tienda.css";
@@ -71,8 +70,8 @@ const carouseltienda = () => {
       </MDBCarousel>
       <MDBCol >
       <MDBCard className="imgperro">
-        <MDBCardBody >
-          <MDBBtn className="boton" href="#">Whatsapp</MDBBtn>
+        <MDBCardBody className="perro" >
+          <h5 className="veterinaria">Veterinaria Puerco Araña</h5>
           </MDBCardBody>
       </MDBCard>
       </MDBCol>
