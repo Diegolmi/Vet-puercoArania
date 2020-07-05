@@ -1,13 +1,15 @@
 import React from 'react';
 import { makeStyles, Hidden } from '@material-ui/core';
 import Nav from '../Navbar/Nav';
-import NavbarE from '../Breadcrumbs/NavbarE';
 import "../Breadcrumbs/style.css";
 import { Cajon } from './Cajon';
 import Accesorios from '../AccesoriosEC/Accesorios';
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from '../Breadcrumbs/temaConfig';
-import Farmacia from '../Farmacia/farmacia';
+import Carousel from './CarouselTienda';
+import './Tienda.css';
+import Card from './Card';
+
 
 const estilos = makeStyles((theme) => ({
     root: {
@@ -27,13 +29,11 @@ const Contenedor = () => {
 
     return (
         <>
-           <Nav/>
+            <Nav />
+
             <ThemeProvider theme={theme}>
                 <div className={classes.root}>
-                   <NavbarE accionAbrir={accionAbrir} />
-                    <div className="navBread">
-                        <div className={classes.toolbar}></div>
-                    </div>
+
                     <Hidden xsDown>
                         <Cajon
                             variant="permanent"
@@ -52,9 +52,13 @@ const Contenedor = () => {
                         </div>
                     </div>
                     <div className="productos">
+                        <Carousel />
                         <Accesorios />
-                        <Farmacia />
+                        <Card />
                     </div>
+
+
+
                 </div>
             </ThemeProvider>
         </>

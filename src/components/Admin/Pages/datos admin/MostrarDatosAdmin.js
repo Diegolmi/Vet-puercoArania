@@ -10,7 +10,11 @@ const MostrarDatosAdmin = () => {
                 <MDBListGroupItem>Apellido: Jerez</MDBListGroupItem>
                 <MDBListGroupItem>E-mail: martincho111986@gmail.com</MDBListGroupItem>
                 <MDBListGroupItem>Domicilio: lkajsdlkjads</MDBListGroupItem>
-                <MDBListGroupItem>Ocupacion: Admin</MDBListGroupItem>
+                <MDBListGroupItem>Rol: Admin</MDBListGroupItem>
+                <MDBListGroupItem>Pais: Argentina</MDBListGroupItem>
+                <MDBListGroupItem>Provincia: Tucuman</MDBListGroupItem>
+                <MDBListGroupItem>Telefono: 3816285778</MDBListGroupItem>
+                
                 
             </MDBListGroup>
         </MDBContainer>

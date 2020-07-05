@@ -1,23 +1,23 @@
 .sidenav-filters {
-    padding-top: 20px;
-    padding-right:14px;
-    padding-left: 10px;
-    border-right:  #fc5185 solid;
-    background-color: #f0f0f0; 
-    border-width:1px;
-    min-width: 130px;
+  padding-top: 10px;
+  padding-right: 14px;
+  padding-left: 10px;
+  border-right: #fc5185 solid;
+  background-color: rgba(202, 216, 241, 0.863);
+  border-width: 1px;
+
+  min-width: 130px;
 }
 
-legend{
-    color:  #fc5185!important;
+legend {
+  color: #fc5185 !important;
 }
 
-.grupo{
-    margin-left:1em;
-    color:  #364f6b;
-   
+.grupo {
+  margin-left: 1em;
+  color: #364f6b;
 }
-.MuiDrawer-paper{
-    background-color: #f0f0f0 !important;
-    margin-top: 115px;
+.MuiDrawer-paper {
+  background-color: #f0f0f0 !important;
+  margin-top: 115px;
 }

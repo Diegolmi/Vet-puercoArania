@@ -7,6 +7,8 @@ import '../../Admin.css';
 
 import FormDatosAdmin from './FormDatosAdmin';
 import MostrarDatosAdmin from './MostrarDatosAdmin';
+import FormCreateAdmin from './FormCreateAdmin';
+
 
 const DatosAdmin = () => {
     return ( 
@@ -21,8 +23,9 @@ const DatosAdmin = () => {
                     <h2>Cambiar Datos de cuenta</h2>
                     <FormDatosAdmin />
                 </Tab>
-                {/* <Tab eventKey="contact" title="Contact" disabled>
-                </Tab> */}
+                <Tab eventKey="crear" title="Crear Cuenta Admin">
+                    <FormCreateAdmin />
+                </Tab>
             </Tabs>
             </div>
         </div>

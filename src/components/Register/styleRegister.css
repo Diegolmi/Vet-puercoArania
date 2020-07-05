@@ -1,6 +1,37 @@
+body {
+    background-color: whitesmoke;
+    
+}
 .logoRegister {
     width: 300px;
     height: 180px;
+    margin: 50px;
+    
+}
+.containerRegistro{
+    padding: 120px;
+    background-color: whitesmoke !important;
+    
+}
+
+.container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .container-registro {
@@ -14,4 +45,11 @@
 }
 .ButtonRegistro {
     background-color: #fc5185 !important;
+    color: white;
+}
+.containerForm1 {
+    box-shadow: 5px 5px 5px 0px #fc5185;
+    height: auto;
+    padding: 50px;
+    
 }

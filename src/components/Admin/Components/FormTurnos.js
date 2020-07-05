@@ -1,30 +1,51 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { MDBInput, MDBCol, MDBDatePickerV5, MDBTimePicker  } from 'mdbreact';
 import Button from 'react-bootstrap/Button';
+import axiosInstance from '../../util/axiosInstance';
 
 const FormTurnos = ({ handleClose }) => {
-    const getPickerValue = value => {
-        console.log(value);
-    }
+  const [editarTurno, setEditarTurno] = useState({
+    pet: '',
+    user: '',
+    date: '',
+    time: '',
+    description: '',
+    service: ''
+  })
+
+  const handleChange = e => {
+    setEditarTurno({
+      ...editarTurno,
+        [e.target.name] : e.target.value
+    })
+  }
+
+const handleSubmit = id => async e => {
+  e.preventDefault();
+  const result = await axiosInstance.put(`/turnos/${id}`, editarTurno)
+}
+
+
+    
     return ( 
-        <form>
+        <form onSubmit={handleSubmit}>
             <MDBCol md='12'>
-            <MDBInput label="Nombre Mascota" required  />   
+            <MDBInput onChange={handleChange} name="pet" label="Nombre Mascota" required  />   
             </MDBCol>
             <MDBCol md='12'>
-            <MDBInput label="Nombre Dueño" required/>   
+            <MDBInput onChange={handleChange} name="user" label="Nombre Dueño" required/>   
             </MDBCol>
             <MDBCol md='12'>
-            <MDBDatePickerV5 disablePast getValue={(e)=> console.log(e)} />  
+            <MDBDatePickerV5 onChange={handleChange} name="date" disablePast  />  
             </MDBCol>
             <MDBCol md='12'>
-            <MDBTimePicker id="timePicker" label="12hrs format"  getValue={getPickerValue} />   
+            <MDBTimePicker onChange={handleChange} name="time" id="timePicker" label="12hrs format"  />   
             </MDBCol>
             <MDBCol md='12'>
-            <MDBInput type="textarea" label="Consulta" rows="5" />  
+            <MDBInput onChange={handleChange} name="description" type="textarea" label="Consulta" rows="5" />  
             </MDBCol>
             <MDBCol md='12'>
-            <select className="browser-default custom-select mb-4">
+            <select onChange={handleChange} name="service" className="browser-default custom-select mb-4">
                         <option>Servicios</option>
                         <option value="1">....</option>
                         <option value="2">....</option>

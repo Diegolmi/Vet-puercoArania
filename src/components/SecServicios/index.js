@@ -1,12 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './secsvs.css';
 import {  MDBRow, MDBCol, MDBIcon,  MDBContainer } from "mdbreact";
 import catdog from'../../assets/img/svs/catdog.png';
 import { MDBBtn } from "mdbreact";
 import Nav from '../../components/Navbar/Nav';
+// import FormTurnos from '../FormServicios'
+import ModalTurnos from './ModalTurnos';
+
 
 
 const SecServicios = () => {
+  const [show, setShow] = useState(false);
+  const handleShow = () => setShow(true);
 return ( 
     <div>
     <div className="cont_ppal">
@@ -18,7 +23,7 @@ return (
         </h2>
         <p className="lead grey-text w-responsive text-center mx-auto mb-5">
         Tenemos todo lo que tu mascota necesita. En nuestra veterinaria le ofrecemos una asistencia completa y de calidad. Nuestro principal objetivo es mantener la salud y el bienestar de nuestros animales y ayudarlos a restablecerse cuando están enfermos. Para ello, contamos con un personal altamente cualificado e instalaciones modernas y bien equipadas. <br/>
-        <MDBBtn id="btn_turno" outline color="secondary my-4"> solicitar turno</MDBBtn>
+        <MDBBtn id="btn_turno" onClick={handleShow} outline color="secondary my-4"> solicitar turno</MDBBtn>
         </p>
 
         <MDBRow>
@@ -63,7 +68,7 @@ return (
           </MDBCol>
           <MDBCol md="4" className="text-name">
             <img
-              className="img-fluid"
+              className="img-fluid img-sec-servicios"
               src={catdog}
               alt=""
             />
@@ -106,6 +111,7 @@ return (
           </MDBCol>
         </MDBRow>
       </section>
+      <ModalTurnos show={show} setShow={setShow} />
     </div>    
 
 

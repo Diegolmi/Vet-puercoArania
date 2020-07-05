@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import img1 from '../../assets/img/paraTienda.jpg'
 import './CardEcommerce.css';
 import { MDBIcon } from 'mdbreact';
 import Rating from './Rating'
@@ -11,17 +10,54 @@ import Container from 'react-bootstrap/Container';
 import moment from 'moment';
 // import axios from 'axios';
 import Modal from 'react-bootstrap/Modal';
+import axiosInstance from '../util/axiosInstance';
 // import db from '../../db.json';
 
 
-const CardEcommerce = () => {
-  const array = [1, 2, 3, 4];
 
+const CardEcommerce = ({ productos }) => {
+  
+  const [carrito, setCarrito] = useState([])
+  const {crearCarrito, setCrearCarrito} = useState(false)
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
+
+  let contador = 0
+  const alimentosArray = productos.filter(producto => {
+
+    const isAlimento = producto.category === 'Alimentos'
+    if( contador < 4 && isAlimento ){
+      contador++
+      return  isAlimento
+    }
+    
+  })
+
+  //crear  carrito
+
+  const createCart = async () => {
+    const response = await axiosInstance.post('/shoppingCart', carrito)
+    setCarrito(response.data)
+    console.log(response.data)
+    
+    
+  }
+
+ console.log(carrito._id)
+
   
+  
+  // agregar al carrito
+  const addToCart =  async () => {
+    const id = carrito._id;
+    const res = await axiosInstance.post(`/shoppingCart/${id}/items`, carrito)
+      setCarrito(res)
+      console.log(res)
+  }
+
+
   return (
     <>
       <Container fluid>
@@ -31,19 +67,26 @@ const CardEcommerce = () => {
         </div>
         <Row>
 
-          {array.map(arr => (
-            <Col lg={3} md={6} key={arr}>
+          {alimentosArray.map((producto) => (
+            <Col lg={3} md={6} key={producto._id}>
               <Card className="card-container">
-                <Card.Img variant="top" src={img1} className="img-fluid" />
+                <Card.Img src={producto.urlImage} className="img-fluid" />
                 <Card.Body>
-                  <Card.Title>Nombre de Alimentos</Card.Title>
-                  <Card.Text>$249,80</Card.Text>
+                  <Card.Title>{producto.name}</Card.Title>
+                  <Card.Text>${producto.price}</Card.Text>
                   <Card.Text><small className="text-muted">{moment().startOf().fromNow()}</small></Card.Text>
                   <Card.Text className="rating"><Rating /></Card.Text>
                 </Card.Body>
                 <Card.Footer>
                   <Button size="sm" className="btn button-card" onClick={handleShow}><MDBIcon className="icon-card" icon="info" /></Button>
-                  <Button size="sm" className="btn button-card"><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                  
+                  {crearCarrito ? <Button size="sm" className="btn button-card" onClick={addToCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                  
+                :
+<Button size="sm" className="btn button-card" onClick={createCart}><MDBIcon className="icon-card" icon="shopping-cart" /></Button>
+                }
+                  
+                  
                 </Card.Footer>
               </Card>
             </Col>
