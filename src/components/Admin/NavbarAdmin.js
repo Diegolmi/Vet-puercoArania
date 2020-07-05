@@ -46,7 +46,7 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
             <Link to="/consultas" className="mr-3 link-admin">
               Consultas
             </Link>
-            <Link to="/" className="mr-3 link-admin">
+            <Link to="/tienda" className="mr-3 link-admin">
               Tienda
             </Link>
           </Nav>
