@@ -17,7 +17,7 @@ import PrivateRoute from "./PrivateRoute";
 import Success from "../components/Checkout/Success";
 import Pending from "../components/Checkout/Pending";
 import Failure from "../components/Checkout/Failure";
-
+import RecuperarCuenta from "../components/RecuperarCuenta/recuperarCuenta";
 import AdminRoute from './AdminRoute';
 
 function Routes() {
@@ -36,6 +36,7 @@ function Routes() {
         <PrivateRoute path="/payment-success" component={Success} />
         <PrivateRoute path="/payment-pending" component={Pending} />
         <PrivateRoute path="/payment-failure" component={Failure} />
+        <Route exact path="/recuperarCuenta" component={RecuperarCuenta} />
         <Route path="*" component={Error404} />
       </Switch>
     </Router>

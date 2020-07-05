@@ -29,7 +29,7 @@ render() {
             <Link to="/" className="mr-3 link-admin">INICIO</Link>
             <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
             <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
-            <Link to="/" className="mr-3 link-admin">TIENDA</Link>
+            <Link to="/tienda" className="mr-3 link-admin">TIENDA</Link>
           </Nav>
           
             </MDBNavbarNav>

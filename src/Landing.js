@@ -7,7 +7,7 @@ import CarouselPage from './components/Carousel/index';
 import Nav from './components/Navbar/Nav'
 import Footer from './components/Footer/Footer';
 // import About from './components/About/about';
-import EcommerceHome from './components/EcommerceHome/EcommerceHome';
+import EcommerceHome from "./components/EcommerceHome/EcommerceHome";
 // import logo from '../src/assets/img/logo.png'
 // import Registro from './components/registro'
 import './App.css';
@@ -43,7 +43,6 @@ const Landing = () => {
 
       />
 
-
       <CarouselPage />
 
       <div className="rowEcommerce">
@@ -66,6 +65,6 @@ const Landing = () => {
       <Footer />
     </>
   );
-}
+};
 
 export default Landing;

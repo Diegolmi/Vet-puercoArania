@@ -12,13 +12,6 @@ import SelectInput from '../SelectInput';
 
 
 
-// import Swiper from 'react-id-swiper';
-
-// import 'react-id-swiper/lib/styles/css/swiper.css';
-
-// import 'swiper/css/swiper.css';
-
-
 
 const CardEcommerce1 = ({ productos, addToCart, agregarCantidad }) => {
 

@@ -15,6 +15,9 @@ const SecServicios = () => {
   const handleShow = () => setShow(true);
 
   return (
+    <>
+    <NavbarPage />
+              <Carturnos/>    
     <div className="cont_ppal">
       <div className="fotos">
         <section className="my-5">
@@ -148,6 +151,7 @@ const SecServicios = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
