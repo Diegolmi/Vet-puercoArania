@@ -14,9 +14,7 @@ const SidebarIcons = () => {
             <ul className="secciones-sidebar">
                 <li className="listado-sidebar"> <Link to="/privado/usuario"  className="link-sidebar"><MdDashboard className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"> <Link to="/privado/usuario/mascotas"  className="link-sidebar"><FaUser className="icon-sidebar-admin"/></Link></li>
-                <li className="listado-sidebar"><Link to="/privado/admin/producto" className="link-sidebar"><FaShippingFast className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"><Link to="/privado/usuario/turnos" className="link-sidebar"><MdDateRange className="icon-sidebar-admin"/></Link></li>
-                <li className="listado-sidebar"><Link to="/privado/admin/consultas" className="link-sidebar"><MdQueryBuilder className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"><Link to="/privado/usuario/datos" className="link-sidebar"><RiAdminLine className="icon-sidebar-admin"/></Link></li>
 
             </ul>

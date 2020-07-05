@@ -26,7 +26,7 @@ const Turnos = () => {
 
 
 
-    const titulo = turnos.length === 0 ? <button className="btn btn-primary">Saca tu turno</button>  : "";
+    const titulo = turnos.length === 0 ? <button className="btn btn-primary" onClick={() => { alert('clicked') }}>Saca tu turno</button>  : "";
 
     return (
         <div>

@@ -5,6 +5,8 @@ import ModalEdit from './ModalEdit';
 import ModalAgregarMascota from './ModalAgregarMascota';
 import './styleMascotas.css';
 import axiosInstance from '../../util/axiosInstance';
+import Swal from 'sweetalert2';
+
 
 
 const TablePage = () => {
@@ -17,8 +19,8 @@ const TablePage = () => {
 
   const listarMascotas = async () => {
     const response = await axiosInstance.get('/mascota/');
-    console.log(response);
     setTraerMascota(response.data);
+    console.log(response.data);
   }
 
   useEffect(() => {
@@ -26,6 +28,36 @@ const TablePage = () => {
     listarMascotas();
 
   }, [])
+  const eliminarMascota = async (id) => {
+   
+
+
+    Swal.fire({
+        title: 'Eliminar datos!',
+        text: "Seguro quiere eliminar ?",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#d33',
+        confirmButtonText: 'Si, Eliminarlo'
+    }).then( async (result) => {
+        if (result.value ) {
+          await axiosInstance.delete(`/mascota/${id}`);
+            
+        Swal.fire(
+            'Eliminado!',
+            'Que tengas un lindo dia.',
+            'success'
+        ); listarMascotas();
+        }
+        
+    })
+  
+//console.log(result);
+
+
+}
+
 
 
 
@@ -60,19 +92,16 @@ const TablePage = () => {
     ],
     rows: traerMascota.map(mascota => {
       
-      const {name, race, size, species, weigth } = mascota
+      const {name, race, size, species, weigth, _id } = mascota
       
       return { 
-        
+         
          name,
          race,
          size,
         species,
         weigth,
-        'editar': <Button variant="primary" onClick={handleShow}>
-          Editar
-      </Button>,
-        'eliminar': <MDBBtn color="red" size="sm">Eliminar</MDBBtn>
+        'eliminar': <MDBBtn color="red" size="sm" onClick={() => eliminarMascota(_id)}>Eliminar</MDBBtn>
       }
     })
 

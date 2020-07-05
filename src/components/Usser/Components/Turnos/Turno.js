@@ -9,28 +9,28 @@ import Swal from 'sweetalert2';
 const Turno = ({ turno, listarTurnos }) => {
 
 
-    const eliminarTurno = async (id) => {
+        const eliminarTurno = async (id) => {
 
-        Swal.fire({
-            title: 'Eliminar turno!',
-            text: "Seguro quiere eliminar este turno?",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#3085d6',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'Si, Eliminarlo'
-          }).then( async (result) => {
-            if (result.value) {
-                await axiosInstance.delete(`/turnos/${id}`);
+            Swal.fire({
+                title: 'Eliminar turno!',
+                text: "Seguro quiere eliminar este turno?",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, Eliminarlo'
+            }).then( async (result) => {
+                if (result.value) {
+                    await axiosInstance.delete(`/turnos/${id}`);
+                    
+                Swal.fire(
+                    'Eliminado!',
+                    'Que tengas un lindo dia.',
+                    'success'
+                ); listarTurnos();
+                }
                 
-              Swal.fire(
-                'Eliminado!',
-                'Que tengas un lindo dia.',
-                'success'
-              ); listarTurnos();
-            }
-            
-          })
+            })
           
         //console.log(result);
         
