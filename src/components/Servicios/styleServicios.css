@@ -2,10 +2,10 @@
   background-color: #f0f0f0;
 }
 
-.title {
+.title_s {
   color: #fc5185;
-  font-size: 26px;
   text-transform: uppercase;
+  font-size: 26px;
 }
 .lorem {
   margin-top: 20px;
@@ -78,7 +78,7 @@ figcaption {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -111,7 +111,7 @@ figcaption {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -133,7 +133,7 @@ figcaption {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -186,4 +186,8 @@ figcaption {
     height: 200px;
     width: 150px;
   }
+  
+.title_s {
+  font-size: 32px !important;
+}
 }

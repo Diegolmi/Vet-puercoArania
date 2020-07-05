@@ -216,7 +216,6 @@
     display: block;
   }
   .button-group {
-    max-width:300px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -226,13 +225,14 @@
   }
   .botones-productos {
     font-size: 10px !important;
+    width: 100%;
   }
   .card.cascading-admin-card {
     margin-top: 2.5rem;
   } 
   #img_prod{
-    width: 75px !important;
-    height: 75px !important;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
 

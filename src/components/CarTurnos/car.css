@@ -1,0 +1,9 @@
+.d-block{
+    height: 360px !important;
+}
+
+@media (max-width: 500px){
+    .d-block{
+        height: 160px !important;
+    }
+}
