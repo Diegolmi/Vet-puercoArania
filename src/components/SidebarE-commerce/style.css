@@ -5,6 +5,7 @@
     border-right:  #fc5185 solid;
    background-color: rgba(202, 216, 241, 0.863);
    border-width:1px;
+
     min-width: 130px;
 }
 
@@ -18,7 +19,7 @@ legend{
    
 }
 .MuiDrawer-paper{
-    margin-top: 50px;
-    background-image: url("https://st.depositphotos.com/1730367/2001/i/450/depositphotos_20013269-stock-photo-pet-footprints.jpg");
 
+    background-color: #f0f0f0 !important;
+    margin-top: 115px;
 }

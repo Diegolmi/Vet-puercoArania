@@ -2,6 +2,11 @@ import React from "react";
 import { MDBContainer, MDBRow, MDBCol, MDBCardUp, MDBAvatar, MDBCardBody ,MDBTypography } from "mdbreact";
 import './style.css';
 import NavbarPage from '../Navbar/Nav';
+<<<<<<< HEAD
+=======
+import Image from "react-bootstrap/Image";
+
+>>>>>>> ae1220a88fc2835f8cac59b7cb944174648b372d
 
 
 

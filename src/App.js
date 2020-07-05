@@ -4,12 +4,15 @@ import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 import './App.css';
+
 //importar react router 
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+
+
 import About from './components/About/about';
 import Error404 from './components/Errors/Error404';
 import Landing from './Landing';
@@ -21,14 +24,16 @@ import SecServicios from './components/SecServicios/index';
 import Accesorios from './components/AccesoriosEC/Accesorios';
 import Alimentos from './components/Alimentos/alimentos';
 import Contenedor from './components/Tienda/Contenedor';
+import Carrito from './components/stepper/Carrito';
+import AdminUser from './components/Usser/AdminUser';
+import Galeria from './components/Galeria/Galeria';
 
 
 function App() {
   return (
     <Router>
-      {/* <Nav /> */}
       <Switch>
-        <Route exact path="/" component={Landing} />
+        <Route exact path="/"><Landing /></Route>
         <Route exact path="/about" component={About} />
         <Route exact path="/servicios" component={SecServicios} />
         <Route exact path="/registro" component={Register} />
@@ -50,6 +55,10 @@ function App() {
          
         <Route exact path="/tienda/farmacia" component={Farmacia} /> */}
         
+        <Route exact path="/privado/carrito" component={Carrito} />
+        <Route path="/privado/usuario" component={AdminUser} />
+        <Route path="/galeria" component={Galeria} />
+        <Route path="*" component={Error404} />
       </Switch>
     </Router>
   );
