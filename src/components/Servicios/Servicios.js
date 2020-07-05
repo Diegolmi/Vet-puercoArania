@@ -9,7 +9,7 @@ const Servicios = () => {
     return ( 
         <div className= "section">
             <div className="servicios">
-                <div className="title"><h2><strong> Cuidamos a tu mascota como si fuera la nuestra.</strong></h2></div>
+                <div className="title_s"><h2><strong> Cuidamos a tu mascota como si fuera la nuestra.</strong></h2></div>
                     <div className="lorem"><p>Queremos acompañarte en los cuidados de tu mascota.<br/>Pedí tu turno online y conocé todos nuestros servicios.</p></div>
                         <button id="boton">VER MÁS </button>
                 </div>       

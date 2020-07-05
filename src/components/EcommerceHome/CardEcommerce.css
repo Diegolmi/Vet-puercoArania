@@ -181,7 +181,7 @@
 } */
 
 
-@media only screen and (min-widht: 300px)and(max-width: 600px) {
+@media only screen and (max-width: 600px) {
   .store-title{
     max-width: 300px;
     display: flex;
@@ -201,7 +201,6 @@
     display: block;
   }
   .button-group {
-    max-width:300px ;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -211,13 +210,14 @@
   }
   .botones-productos {
     font-size: 10px !important;
+    width: 100%;
   }
   .card.cascading-admin-card {
     margin-top: 2.5rem;
   } 
   #img_prod{
-    width: 60px;
-    height: 60px;
+    width: 60px !important;
+    height: 60px !important;
   }
 }
 
