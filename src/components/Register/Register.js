@@ -5,6 +5,7 @@ import "./styleRegister.css";
 import { Link } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
+import NavbarPage from '../Navbar2/Nav2';
 
 const FormsPage = () => {
   const [createUser, setCreateUser] = useState({
@@ -42,115 +43,109 @@ const FormsPage = () => {
   return (
     <>
       <div className="container-fluid containerRegistro">
-        <MDBRow>
-          <div className="col-4">
-            <MDBRow>
-              <MDBView hover zoom>
-                <img
-                  src={logo}
-                  className="rounded float-left logoRegister"
-                  alt="aligment"
-                />
-              </MDBView>
-            </MDBRow>
-          </div>
-          <div className="col-8 containerForm1" md="8">
-            <h1 center>Registrate</h1>
-            <MDBRow>
-              <MDBCol md="8">
-                <form onSubmit={crearUsuario}>
-                  <div className="grey-text">
-                    <MDBInput
-                      onChange={inputChange}
-                      name="username"
-                      label="Nombre de Usuario"
-                      icon="user"
-                      group
-                      type="text"
-                      validate
-                      error="wrong"
-                      success="right"
-                      className="form-control"
-                      required
-                    />
+              
+        <div className=" containerForm1">
+          <h1 center>Registrate</h1>
+          <form onSubmit={crearUsuario} className="formulario-registro">
+            <div className="grey-text">
+              <MDBInput
+                onChange={inputChange}
+                name="username"
+                label="Nombre de Usuario"
+                icon="user"
+                group
+                type="text"
+                validate
+                error="wrong"
+                success="right"
+                className="form-control"
+                required
+              />
 
-                    <MDBInput
-                      onChange={inputChange}
-                      name="name"
-                      label="Nombre"
-                      icon="user"
-                      group
-                      type="text"
-                      validate
-                      error="wrong"
-                      success="right"
-                      className="form-control"
-                      required
-                    />
-                    <MDBInput
-                      onChange={inputChange}
-                      name="lastname"
-                      label="Apellido"
-                      icon="user"
-                      group
-                      type="text"
-                      validate
-                      error="wrong"
-                      success="right"
-                      className="form-control"
-                      required
-                    />
-                    <MDBInput
-                      onChange={inputChange}
-                      name="email"
-                      label="Email"
-                      icon="envelope"
-                      group
-                      type="email"
-                      validate
-                      error="wrong"
-                      success="right"
-                      className="form-control"
-                      required
-                    />
-                    <MDBInput
-                      onChange={inputChange}
-                      name="password"
-                      label="Contraseña"
-                      icon="lock"
-                      group
-                      type="password"
-                      validate
-                      className="form-control"
-                      required
-                    />
-                    <MDBInput
-                      onChange={inputChange}
-                      name="repassword"
-                      label="Confirmar Contraseña"
-                      icon="lock"
-                      group
-                      type="password"
-                      validate
-                      className="form-control"
-                      required
-                    />
-                  </div>
-                  <div className="text-center">
-                    <MDBBtn className="ButtonRegistro" type="submit">
-                      Registrate
-                      <MDBIcon far icon="paper-plane" className="ml-1" />
-                    </MDBBtn>
-                  </div>
-                </form>
-              </MDBCol>
-            </MDBRow>
-            Ya tenes una cuenta?.
-            <Link to={"/Login"} className="enlace-cuenta">
-              Inicia Sesión.
-            </Link>
-          </div>
-        </MDBRow>
+              <MDBInput
+                onChange={inputChange}
+                name="name"
+                label="Nombre"
+                icon="user"
+                group
+                type="text"
+                validate
+                error="wrong"
+                success="right"
+                className="form-control"
+                required
+              />
+              <MDBInput
+                onChange={inputChange}
+                name="lastname"
+                label="Apellido"
+                icon="user"
+                group
+                type="text"
+                validate
+                error="wrong"
+                success="right"
+                className="form-control"
+                required
+              />
+              <MDBInput
+                onChange={inputChange}
+                name="email"
+                label="Email"
+                icon="envelope"
+                group
+                type="email"
+                validate
+                error="wrong"
+                success="right"
+                className="form-control"
+                required
+              />
+              <MDBInput
+                onChange={inputChange}
+                name="password"
+                label="Contraseña"
+                icon="lock"
+                group
+                type="password"
+                validate
+                className="form-control"
+                required
+              />
+              <MDBInput
+                onChange={inputChange}
+                name="repassword"
+                label="Confirmar Contraseña"
+                icon="lock"
+                group
+                type="password"
+                validate
+                className="form-control"
+                required
+              />
+            </div>
+            <div className="text-center">
+              <MDBBtn className="ButtonRegistro" type="submit">
+                Registrate
+                <MDBIcon far icon="paper-plane" className="ml-1" />
+              </MDBBtn>
+            </div>
+          </form>
+          Ya tenes una cuenta?.
+          <Link to={"/Login"} className="enlace-cuenta">
+            Inicia Sesión.
+          </Link>
+        </div>
+        <div className="container-img-registro">
+                <MDBView hover zoom>
+                  <img
+                    src={logo}
+                    className="rounded float-left logoRegister"
+                    alt="aligment"
+                  />
+                </MDBView>
+                <h2>Bienvenido</h2>
+              </div>
       </div>
     </>
   );

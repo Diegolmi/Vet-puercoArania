@@ -48,8 +48,8 @@ const carouseltienda = () => {
               <MDBMask  />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
+            <h3 className="h3-responsive">Tienda Online</h3>
+              <p>Mira nuestras mejores promos</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
@@ -62,8 +62,8 @@ const carouseltienda = () => {
               <MDBMask/>
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
+            <h3 className="h3-responsive">Tienda Online</h3>
+              <p>Mira nuestras mejores promos</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>

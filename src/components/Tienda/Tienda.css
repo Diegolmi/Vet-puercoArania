@@ -4,6 +4,9 @@
   background-repeat: no-repeat;
   background-size:1250px 1500px;
   margin-top: 70px;
+  display: flex;
+  width: 100vw;
+  
 
 }
 .perro{
@@ -49,4 +52,19 @@
 }
 #hola{
     width: 1250px;
+}
+.container-footer-tienda{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.footer-copyright{
+    width: 100% !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+    }
 }

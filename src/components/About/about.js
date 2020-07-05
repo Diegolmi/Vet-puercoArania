@@ -4,16 +4,14 @@ import './style.css';
 // import NavbarPage from '../Navbar/Nav';
 // import Image from "react-bootstrap/Image";
 // import { Link } from 'react-router-dom';
-
+import NavbarPage from '../Navbar2/Nav2';
 
 
 
 const TestimonialsPage = () => {
   return (
     <div className="about">
-      {/* <div className="contenedor-boton-volver">
-      <Link to="/" className="boton-volver">Inicio</Link>
-      </div> */}
+      <NavbarPage />
     <MDBContainer >
       <div className="imagabout">
         <h1 className="titulo_about" >Acerca De La Veterinaria Puerco Araña</h1>

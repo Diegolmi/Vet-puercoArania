@@ -18,20 +18,20 @@ h1{
     font-size: 30px;
   }
 .about{
-    background: #304352; /* fallback for old browsers */
+    /* background: #304352; 
     background: -webkit-linear-gradient(
       to right,
       #d7d2cc,
       #304352
-    ); /* Chrome 10-25, Safari 5.1-6 */
+    ); 
     background: linear-gradient(
       to right,
       #d7d2cc,
       #304352
-    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    ); 
     background-position: center;
     background-color: rgb(255, 255, 255);
-    height: auto;
+    height: auto; */
 }
 
 .imagabout {
@@ -119,7 +119,7 @@ height: 400px;
     width: 900px;
 }
 .footer-copyright{
-    width: 500px;
+    width: 100%;
     background-color: #364f6b;
     color: #0c0b0b;
 }

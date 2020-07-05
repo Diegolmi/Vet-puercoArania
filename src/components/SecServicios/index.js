@@ -143,14 +143,16 @@ const SecServicios = () => {
         </section>
         <ModalTurnos show={show} setShow={setShow} />
 
-        <div id="hola" className="footer-copyright text-center py-4 mt-5">
+        
+      </div>
+      
+    </div>
+    <div id="hola" className="footer-copyright text-center py-4 mt-5">
           <MDBContainer fluid>
             &copy; {new Date().getFullYear()} Copyright:{" "}
             <a href="https://www.mdbootstrap.com"> PuercoAraña.com </a>
           </MDBContainer>
         </div>
-      </div>
-    </div>
     </>
   );
 };

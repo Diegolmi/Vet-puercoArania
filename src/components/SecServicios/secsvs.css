@@ -42,6 +42,9 @@ i.fa{
     color: whitesmoke !important;
     border-color: #fc5185 !important;
 }
+.footer-copyright{
+    width: 100% !important;
+}
 
 @media (min-width:766px){
     .img-sec-servicios{

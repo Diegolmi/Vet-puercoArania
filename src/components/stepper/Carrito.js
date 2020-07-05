@@ -92,7 +92,6 @@ export default function Carrito() {
 
   return (
     <div className={classes.root}>
-      <NavbarAdmin />
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>

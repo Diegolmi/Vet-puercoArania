@@ -79,7 +79,7 @@ const Contenedor = () => {
     };
 
   return (
-    <>
+    <div className="container-footer-tienda">
       <Nav userCarrito={userCarrito} mostrarCarrito={mostrarCarrito} />
       <div className="productos">
         <Carousel />
@@ -90,7 +90,7 @@ const Contenedor = () => {
         />
         <Card />
       </div>
-    </>
+    </div>
   );
 };
 export default Contenedor;

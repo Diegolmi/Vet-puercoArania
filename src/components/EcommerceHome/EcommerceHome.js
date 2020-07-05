@@ -21,7 +21,7 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
   const [productos, setProductos] = useState([]);
   const [carrito, setCarrito] = useState([]);
   const [cantidad, setCantidad] = useState(1);
-  const history = useHistory();
+  // const history = useHistory();
 
   useEffect(() => {
     listarProductosHome();
@@ -52,7 +52,7 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
       timer: 1500,
     });
     mostrarCarrito();
-    history.push('/carrito')
+    // history.push('/carrito')
   };
 
   //agregar cantidad los productos al carrito
