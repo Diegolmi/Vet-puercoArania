@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBCard, MDBCardBody, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
+import '../Admin.css'
 
 const AdminCardSection = () => {
   return (

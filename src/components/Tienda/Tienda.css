@@ -1,9 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
 .productos{
     background-image: url("https://www.publicdomainpictures.net/pictures/120000/velka/animal-footsteps-silhouette.jpg");
   background-repeat: no-repeat;
   background-size:1250px 1500px;
   margin-top: 70px;
-  
+
+}
+.perro{
+    background-image: url("https://nutribonmascotas.com.ar/images/img-afiche.jpg");
+    background-repeat: no-repeat;
+    background-size: 300px 350px;
+}
+.veterinaria{
+    text-align: center;
+    text-shadow: 2px 0 0 #000;
+    color: #fc5185 !important;
+    width: 100px;
+    font-size: 10px;
 }
 .carrouseltienda{
     width:  800px;
@@ -27,12 +40,12 @@
     height: 350px;
 }
 .propaganda{
-    width: 100vw;
+    width: 1000px;
     height: 250px;
-    margin: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    margin-bottom: 50px;
+    margin-left: 60px;
+    margin-top: 50px;
+    margin-bottom: 0px;
 }
 #hola{
     width: 1250px;

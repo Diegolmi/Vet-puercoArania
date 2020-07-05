@@ -77,12 +77,6 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
           </Col>
         </Row>
       </Container>
-
-      {/* MODAL */}
-      {/* <Button variant="primary" >
-        Launch demo modal
-      </Button> */}
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>informacion producto</Modal.Title>

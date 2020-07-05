@@ -95,15 +95,15 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
 
       <div className="button-group">
         <button className="botones-productos" onClick={onClickAccesorios}>
-          <img id="img_prod" src={acces} />
+          <img id="img_prod" src={acces} alt="Accesorios"/>
           ACCESORIOS
         </button>
         <button className="botones-productos" onClick={onClickAlimentos}>
-          <img id="img_prod" src={alime} />
+          <img id="img_prod" src={alime} alt="Alimentos"/>
           ALIMENTOS
         </button>
         <button className="botones-productos" onClick={onClickFarmacia}>
-          <img id="img_prod" src={pills} />
+          <img id="img_prod" src={pills} alt="Farmacia"/>
           FARMACIA
         </button>
       </div>

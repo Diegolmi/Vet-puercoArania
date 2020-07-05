@@ -25,7 +25,6 @@ const FormCarrito = ({ onFormChange }) => {
     const response = await axiosInstance.get('/shoppingCart')
     setCartUser(response.data.customer || [])
   }
-  console.log(cartUser)
 
   useEffect(() => {
     userForm();

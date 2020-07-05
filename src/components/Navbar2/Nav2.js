@@ -1,7 +1,6 @@
 import React, { Component } from "react";
-import { MDBNavbar, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,  } from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
-import { Link } from 'react-router-dom';
+import { MDBNavbar, MDBNavbarNav, MDBNavbarToggler, MDBCollapse,  } from "mdbreact";
+import { BrowserRouter as Router, Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 
 import './style.css';
@@ -28,9 +27,13 @@ render() {
           <Nav className="ml-lg-auto">
             <Link to="/" className="mr-3 link-admin">INICIO</Link>
             <Link to="/about" className="mr-3 link-admin">NOSOTROS</Link>
-            <Link to="/servicios" className="mr-3 link-admin">TURNOS</Link>
+            <Link to="/servicios" className="mr-3 link-admin">SERVICIOS</Link>
             <Link to="/tienda" className="mr-3 link-admin">TIENDA</Link>
           </Nav>
+          {/* <Nav className="ml-lg-auto">
+            <Link to="/about" className="mr-3 link-admin">LOGIN</Link>
+            
+          </Nav> */}
           
             </MDBNavbarNav>
           </MDBCollapse>

@@ -11,7 +11,6 @@ const EditUser = () => {
 
   const listarUsuarios = async () => {
     const response = await axiosInstance.get('/private/user');
-    console.log(response.data)
     setUsuarios(response.data.users)
   }
 

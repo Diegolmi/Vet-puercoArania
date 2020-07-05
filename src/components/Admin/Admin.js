@@ -13,15 +13,22 @@ import DatosAdmin from "./Pages/datos admin/DatosAdmin";
 import InicioAdmin from "./Pages/inicio/InicioAdmin";
 import { Switch, Route } from "react-router-dom";
 
+
 // IMPORT COMPONENT LIBRERIAS Y CSS
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import "./Admin.css";
+import Unauthorized from "../../Unauthorized/Unauthorized";
 
-const Admin = () => {
+const Admin = ({user}) => {
   const [sidebar, setSidebar] = useState(false);
   const [cambiarBoton, setCambiarBoton] = useState(false);
+  const [users, setUsers] = useState([])
+
+  if(user.role !== 'admin'){
+    return (<Unauthorized />)
+  }
 
   const hideSidebar = () => {
     setSidebar(false);
@@ -29,7 +36,7 @@ const Admin = () => {
   };
 
   const showSidebar = () => {
-    setSidebar(false);
+    setSidebar(true);
     setCambiarBoton(false);
   };
 
@@ -52,7 +59,7 @@ const Admin = () => {
             <Col sm={3} className="columna-sidebar">
               <SidebarAdmin />
             </Col>
-            <Col sm={9} className="container-links-sidebar">
+            <Col sm={12} className="container-links-sidebar">
               <Switch>
                 <Route exact path="/admin" component={InicioAdmin} />
                 <Route exact path="/admin/user" component={EditUser} />

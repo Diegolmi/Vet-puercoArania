@@ -50,7 +50,6 @@ export default function Carrito() {
       const realizarPago = async () =>{
         try {
           const response = await axiosInstance.post("/checkout")
-      // console.log(response.data.payment)
       const link = response.data.redirectUrl
       window.location.href = link
         } catch (error) {

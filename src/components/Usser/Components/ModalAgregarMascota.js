@@ -8,7 +8,6 @@ const ModalAgregarMascota = ({ show, setShow }) => {
     const { register, errors, handleSubmit } = useForm();
 
     const onSubmit = (data, e) => {
-        console.log(data)
         e.target.reset()
 
     }

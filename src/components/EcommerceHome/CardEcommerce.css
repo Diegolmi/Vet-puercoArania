@@ -4,18 +4,12 @@
   width: 100%;
   padding-bottom: 50px;
   background-color: white;
-  /* display: flex; */
-  /* justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap; */
+  
     
 }
 
 
-/* .title-container {
-  display: flex;
-  flex-wrap: wrap;
-} */
+
 
 .card-homePage .store-title {
   text-align: center;
@@ -30,17 +24,6 @@
 
 }
 
-/* @keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
-} */
 .store-subtitle{
   text-align: center;
   padding-bottom: 50px;
@@ -72,10 +55,11 @@
 .contenedor-card-landing{
   display: flex;
   height: 100%;
-  /* flex-wrap: wrap !important; */
+  width: 100%;
+  flex-wrap: wrap !important;
 }
 .card-container {
-  /* width: 15rem; */
+  width: 15rem !important;
   margin: 30px;
   height: 460px !important;
 }
@@ -94,10 +78,6 @@
   border: none;
 }
 
-/* .rating-container {
-  display: flex;
-  justify-content: center;
-} */
 
 .card-footer {
   display: flex;
@@ -111,7 +91,7 @@
 }
 
 .icon-card {
-  font-size: 20px;
+  font-size: 20px !important;
 }
 .img-cardE{
   margin: auto !important;
@@ -177,16 +157,7 @@
   }
 
 } 
-/* 
-.botones-productos:hover {
-  color: #fc5185;
-  transition: .3s;
-}
-.img_prod{
-  width: 10%;
-  height: 10%;
-  margin-right: 15px;
-} */
+
 
 
 .img_prod{
@@ -231,8 +202,17 @@
     margin-top: 2.5rem;
   } 
   #img_prod{
-    width: 60px !important;
-    height: 60px !important;
+    width: 80px !important;
+    height: 80px !important;
+  }
+  .img-food-cards{
+    width: 200px !important;
+    height: 150px !important;
+    margin: 0 auto;
+  }
+  .contenedor-card-landing{
+   
+    flex-wrap: wrap !important;
   }
 }
 

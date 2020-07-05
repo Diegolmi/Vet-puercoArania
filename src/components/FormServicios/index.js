@@ -34,7 +34,6 @@ const handleSubmit = async e =>{
     time: '',
     description: ''}
   )
-  console.log(result)
 }
 
 return (

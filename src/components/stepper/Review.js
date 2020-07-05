@@ -40,8 +40,7 @@ export default function Review() {
     }
     
   }
-  // console.log(userCarrito);
-  // console.log(usuarios);
+  
 
   useEffect(() => {
     mostrarCarrito()

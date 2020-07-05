@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./styleLogin.css";
 import { MDBView, MDBCol, MDBInput, MDBBtn, MDBRow } from "mdbreact";
-import Imglogin from "../../assets/img/gatovet.jpg";
+import Imglogin from "../../assets/img/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 
@@ -23,27 +23,34 @@ const FormPage = () => {
     e.preventDefault();
     try {
       const result = await axiosInstance.post("/login", loguearUsuario);
-      console.log(result);
-      if (result.data.token) {
+      if (result.data.role !== 'admin') {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
 
-        history.push("/privado/usuario");
+        history.push("/usuario");
+      }else{
+        localStorage.setItem("jwt", result.data.token);
+        localStorage.setItem("role", result.data.role);
+
+        history.push("/admin");
       }
     } catch (error) {
-      console.log(error);
+      console.error(error);
     }
   };
 
+
   return (
-    <div className="">
-      <MDBRow>
-        <MDBView hover zoom>
-          <img src={Imglogin} className="gato rounded-circle" alt="" />
+    <div className="container-login">
+      <div className="contenedor-imagen-login">
+      <MDBView hover zoom>
+          <img src={Imglogin} className="gato" alt="" />
+          <p>Inicia Sesión</p>
         </MDBView>
+      </div>
+        
 
         <div className="formstyle" md="8">
-          <MDBCol>
             <form onSubmit={loginUser}>
               <p className="h3 text-center mb-4">Ingresá</p>
               <div className="grey-text">
@@ -83,9 +90,8 @@ const FormPage = () => {
                 Registrate
               </Link>
             </form>
-          </MDBCol>
         </div>
-      </MDBRow>
+      
     </div>
   );
 };

@@ -21,7 +21,6 @@ const Pending = () => {
       
       setPaymentData(response.data);
       setLoading(false)
-      console.log(response);
     } catch (error) {
       console.error(error);
       setLoading(false)

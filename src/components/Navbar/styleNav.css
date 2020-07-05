@@ -1,4 +1,13 @@
+.navPrincipal{
 
+  z-index: 10000;
+}
+  .letras {
+    color: black !important;
+  }
+  .letras:hover {
+    background-color: #68829c;
+  }
   .navbar:hover {
     background-color: #68829c;
     transition: .3s;

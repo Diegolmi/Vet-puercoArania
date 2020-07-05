@@ -39,7 +39,9 @@
     justify-content: center;
     text-align: center;
 }
-
+.classic-admin-card{
+    margin: 0 !important;
+}
 /* SIDEBAR */
 
 .sidebar-container{

@@ -10,6 +10,7 @@
   min-width: 360px;
 
 }
+
 .first-title {
   color: #fc5185 !important;
 }
@@ -81,4 +82,8 @@
 
 .static-contain .paragraph {
     color: black;
+}
+
+.footer-copyright{
+  width: 100% !important;
 }

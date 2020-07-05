@@ -8,7 +8,6 @@ const ProductsTable = ({ productos, listaProductos }) => {
 
     const eliminarProductos = id => async () => {
         const res = await axiosInstance.delete(`/product/${id}`);
-        console.log(res);
         listaProductos()
     }
 
