@@ -10,8 +10,23 @@ a>div>.carousel-control-prev-icon {
     border-radius: 75%;
 } */
 .contenedorCarousel {
-    padding: 0!important;
-    
-    
-    
+    width: 100vw !important;
+    height: 670px;    
+    /* width: 100%;  */
+    background-color: white;
+}
+.d-block{
+    /* margin-top: 135px; */
+    width: 100vw !important;
+    height: 670px;
+    -webkit-filter: brightness(70%);
+    filter: brightness(70%);
+}
+@media (min-width: 301px) and (max-width: 800px) {
+    .contenedorCarousel {
+        height: 350px;
+    }
+    .d-block{
+        height: 350px;
+    }
 }

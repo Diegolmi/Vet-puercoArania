@@ -1,88 +1,134 @@
+.navPrincipal{
 
+  z-index: 10000;
+}
   .letras {
     color: black !important;
   }
+  .letras:hover {
+    background-color: #68829c;
+  }
+  .navbar:hover {
+    background-color: #68829c;
+    transition: .3s;
+  }
+  .dropdown-default {
+    background-color: #68829c;
 
-  .bg-primary {
-    background-color:#68829c !important;
+  }
+  .navbar-body {
+    background-color: #68829c !important;
+    transition: 500ms ease;
+  }
+  a.link-admin {
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    margin: auto auto;
+    padding-right: 40px;
+    font-weight: bold;
+}
+
+  .link-admin-boton{
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 30px;
+    font-size: 20px;
+  }
+  .carro{
+    color: white;
+    height: 40px;
+    width: 40px;
+  }
+  #log_nb{
+    background-color: #fc5185;
+    padding: 3px 20px;
+    color: white;
+  }
+  .contenedor-carrito-sidebar{
+    /* height: 400px !important; */
+    max-height: 800px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: auto;
   }
 
+  .navbar-body {
+    background-color: #68829c !important;
+    transition: 500ms ease;
+  }
+
+  .link-admin-boton{
+    background: none;
+    outline: none;
+    border: none;
+    margin-right: 30px;
+  }
+
+  .logo{
+    width: 200px;
+    height: 100px;
+  }
  
 
-  @media (min-width:300px) and (max-width:549px) {
-    .navbar  scrolling {
-      background-color: #68829c !important;
-      
-    }
+@media (min-width: 300px) and (max-width: 549px) {
+  .navbar scrolling {
+    background-color: #68829c !important;
   }
-  @media (min-width:550px) and (max-width:700px) {
-    .navbar scrolling {
-      background-color: #68829c !important;
-      
-    }
+}
+@media (min-width: 550px) and (max-width: 700px) {
+  .navbar scrolling {
+    background-color: #68829c !important;
   }
-  @media (min-width:701px) and (max-width:1199px) {
-    .navbar scrolling {
-      background-color: #68829c !important;
-      
-    }
+}
+@media (min-width: 701px) and (max-width: 1199px) {
+  .navbar scrolling {
+    background-color: #68829c !important;
   }
+}
 
-  @media (min-width:550px) and (max-width:700px) {
-    .navbar-toggler-icon  {
-      background-color: #2b37d9 !important;
-      
-      
-    }
+@media (min-width: 550px) and (max-width: 700px) {
+  .navbar-toggler-icon {
+    background-image: url("https://mdbootstrap.com/img/svg/hamburger1.svg?color=6a1b9a");
   }
+}
 
-  @media (min-width:300px) and (max-width:549px) {
-    .navbar-toggler-icon  {
-      background-color: #2b37d9 !important;
-      
-      
-    }
+@media (min-width: 300px) and (max-width: 549px) {
+  .navbar-toggler-icon {
+    background-image: url("https://mdbootstrap.com/img/svg/hamburger1.svg?color=6a1b9a");
   }
-    
+}
 
-  @media (min-width:300px) and (max-width:549px) {
-    .navbar-collapse  {
-      background-color: #68829c !important;
-      
-      
-    }
+@media (min-width: 300px) and (max-width: 549px) {
+  .navbar-collapse {
+    background-color: #68829c !important;
   }
-  @media (min-width:550px) and (max-width:700px) {
-    .navbar-collapse  {
-      background-color: #68829c !important;
-      
-      
-    }
+}
+@media (min-width: 550px) and (max-width: 700px) {
+  .navbar-collapse {
+    background-color: #68829c !important;
   }
-  
-  @media (min-width:300px) and (max-width:549px) {
-    .logo  {
-      height: 50px !important;
-      width: 80px !important;
-    }
-  }
-  @media(min-width: 550px) and (max-width:700px) {
-    .logo {
-      height: 60px;
-    width: 90px;
+}
 
-    }
-  }
-  @media(min-width: 701px) and (max-width:1199px) {
-    .logo {
-      height: 80px !important;
-      width: 130px !important;
-      margin: 0;
-    }
-  }
+@media (min-width: 300px) and (max-width: 549px) {
   .logo {
-    height: 80px ;
-    width: 130px ;
-    margin: 0;
+    height: 50px !important;
+    width: 80px !important;
   }
- 
+}
+@media (min-width: 550px) and (max-width: 700px) {
+  .logo {
+    height: 60px;
+    width: 90px;
+  }
+}
+@media (min-width: 701px) and (max-width: 1199px) {
+  .logo {
+    height: 60px ;
+    width: 90px ;
+    
+  }
+}

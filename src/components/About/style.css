@@ -1,0 +1,311 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap");
+.doctor{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.rounded-circle {
+    width: 80px;
+}
+h1{
+    margin-left: 100px;
+    padding-right: 50px;
+}
+.contenedor-boton-volver{
+    width: 100%;
+  }
+  .boton-volver{
+    margin: 25px;
+    font-size: 30px;
+  }
+.about{
+    /* background: #304352; 
+    background: -webkit-linear-gradient(
+      to right,
+      #d7d2cc,
+      #304352
+    ); 
+    background: linear-gradient(
+      to right,
+      #d7d2cc,
+      #304352
+    ); 
+    background-position: center;
+    background-color: rgb(255, 255, 255);
+    height: auto; */
+}
+
+.imagabout {
+        background-image: url("https://cdn.tn.com.ar/sites/default/files/styles/embed_image/public/2019/11/21/5dd6833e80420_gato_siames_adulto.jpg") ;
+        height: 560px;
+        width: 1150px;
+        position: relative;
+        background-size: 1100px 500px;
+        background-position: 0 140px !important;
+        padding-top: 150px;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding-left: 150px;   
+        text-align: center;
+        text-shadow: 2px 0 0 #000;
+        color: #fc5185 !important;
+        }
+      
+.profesionales{
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 0 0 rgb(0, 0, 0);
+    color: #fc5185 !important;
+}
+.card1{
+    height: 600px;
+}
+.third-title{
+    text-align: center;
+    text-shadow: 3px 0 0 rgb(0, 0, 0);
+    color: #fc5185 !important
+}
+.texto1{
+    text-align: center;
+}
+.titulos{
+    text-align: center;
+    text-shadow: 2px 0 0 rgb(0, 0, 0);
+    color: #fc5185 !important;
+    margin-bottom: 30px;
+}
+.contenido1{
+    background-color: #d7d2cc;
+}
+.texto2{
+    margin-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    margin-right: 40px;
+    width: 600px;
+    height: 455px;
+   background-size: 500px;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg");
+}
+.img-fluid{
+width: 900px;
+height: 400px;
+ 
+}
+.contenido2{
+    margin-top: 15px;
+}
+.claves{
+    background-size: 700px;
+    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg");
+   margin-left: 20px;
+   padding-left: 30px;
+   padding-right: 50px;
+   text-align: center;
+   margin-bottom: 20px;
+   padding-bottom: 20px;
+}
+.five-title{
+    text-align: center;
+    text-shadow: 2px 0 0 rgb(0, 0, 0);
+    color: #fc5185 !important;
+    margin-bottom: 30px;
+    padding-top: 30px;
+
+}
+.imagenfondo3{
+    height: 550px;
+    width: 900px;
+}
+.footer-copyright{
+    width: 100%;
+    background-color: #364f6b;
+    color: #0c0b0b;
+}
+@media  (max-width:500px){
+.imagabout{
+    background-image: url(https://cdn.tn.com.ar/sites/default/files/styles/embed_image/public/2019/11/21/5dd6833e80420_gato_siames_adulto.jpg);
+    background-size: 304px 262px;
+    height: 370px;
+    width: 294px;
+    margin: auto;
+    padding-right: 10px;
+    margin-right: 59px;
+    padding-top: 42px;
+    background-position: center;
+    padding-left: 10px;
+    text-shadow: 2px 0 0 #000;
+    color: #fc5185 !important;
+}
+.rounded-circle {
+    width: 97px!important;
+    height: 112px!important;
+}
+
+
+.profesionales{
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-align: center;
+    text-shadow: 3px 0 0 rgb(0, 0, 0);
+    color: #fc5185 !important;
+    padding-top: 64px;
+    margin-left: 31px;
+    font-size: 29px;
+}
+.contenido2{
+    margin-top: 15px;
+    flex-direction: column;
+}
+.texto2{
+    height: 1011px;
+    margin-bottom: 50px;
+    width: 254px;
+    margin-bottom: 80px!important;
+    justify-content: center;
+    margin: auto auto;
+}
+.img-fluid{
+    display: block;
+    margin-bottom: 50px;
+    justify-content: center;
+    margin-left: 20px;
+    width: 209px!important;
+    height: 200px!important;
+    margin: auto;
+}
+.imagenfondo3{
+    display: none;
+}
+.titulo_about{
+    margin-top: 108px!important;
+    margin-left: 129px !important;
+    font-size: 17px;
+    display: block;
+    height: 266px;
+    justify-content: center;
+    display: flex;
+}
+.claves{
+    background-size: 700px;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg);
+    margin-left: 20px;
+    padding-left: 30px;
+    padding-right: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    width: 250px;
+    margin: auto auto;
+margin-top: 30px!important;
+}
+}
+@media(min-width: 500px) and (max-width:700px){
+.imagabout{
+    background-size: 480px 347px;
+}
+    .titulo_about{
+        margin-top: 50px;
+    margin-left: 80px!important;
+    display: flex;
+    width: 100px;
+    font-size: 36px;
+}
+.profesionales{
+    margin-top: 0px;
+    font-size: 32px;
+}
+.rounded-circle {
+    width: 207px !important;
+    height: 227px !important;
+}
+.contenido2{
+    flex-direction: column;
+}
+.texto2{
+    width: 452px;
+    height: 428px;
+    margin-bottom: 50px;
+}
+.imagenfondo3{
+height: 300px;
+width: 300px;
+}
+    
+.claves{
+    margin-top: 50px;
+}
+.img-fluid{
+    display: block;
+    margin: auto;
+}
+.contenido3{
+    flex-direction: column-reverse;
+}
+}
+@media(min-width: 701px) and (max-width:900px){
+    .imagabout{
+       display: block;
+    justify-content: center!important;
+    align-content: center;
+        background-size: 543px 364px;
+    }
+    .titulo_about{
+        width: 100px;
+        display: flex;
+        font-size: 34px;
+        margin-left: 188px;
+    }
+    .texto2{
+        margin-top: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 30px;
+    margin-right: 40px;
+    width: 659px;
+    height: 1228px;
+    margin-bottom: 50px;
+    background-size: 500px;
+    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg);
+
+    }
+    .img-fluid{
+        margin-top: 100px;
+        width: 877px;
+        height: 261px;
+    }
+}
+@media(min-width: 900px) and (max-width:1000px){
+.imagabout{
+    background-size: 735px 419px;
+    display: block;
+    justify-content: center!important;
+    align-content: center;
+}
+.titulo_about{
+    width: 100px;
+    display: flex;
+    padding-left: 211px;
+}
+.texto2{
+    height: 844px;
+    margin-bottom: 50px;
+}
+}
+@media(min-width: 1000px) and (max-width:200px){
+.imagabout{
+    background-size: 942px 492px;
+    display: block;
+    justify-content: center!important;
+    align-content: center;
+}
+.titulo_about{ 
+       width: 100px;
+    display: flex;
+    padding-left: 340px;}
+    .texto2{
+        height: 583px;
+        margin-bottom: 50px;
+    }
+}

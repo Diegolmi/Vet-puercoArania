@@ -1,52 +1,170 @@
-import React from 'react'
-import CardEcommerce from './CardEcommerce';
-import CardEcommerce1 from './CardEcommerce1'
+import React, { useState, useEffect } from "react";
+import CardEcommerce from "./CardEcommerce";
+import CardEcommerce1 from "./CardEcommerce1";
+import CardEcommerce2 from "./CardEcommerce2";
 // import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
-import Overlay from './Overlay';
-import './CardEcommerce.css';
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
+import acces from "../../assets/img/ecommerceLanding/collar.png";
+import pills from "../../assets/img/ecommerceLanding/pills.png";
+import alime from "../../assets/img/ecommerceLanding/dog-food.png";
+import { Animated } from "react-animated-css";
+import Swal from "sweetalert2";
+import "./CardEcommerce.css";
+import axiosInstance from "../util/axiosInstance";
+import { Link, useHistory } from "react-router-dom";
 
+const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
+  const [alimentos, setAlimentos] = useState(true);
+  const [accesorios, setAccesorios] = useState(false);
+  const [farmacia, setFarmacia] = useState(false);
+  const [productos, setProductos] = useState([]);
+  const [carrito, setCarrito] = useState([]);
+  const [cantidad, setCantidad] = useState(1);
+  // const history = useHistory();
 
-const EcommerceHome = () => {
-    return (
-        // <div className="contenedor-cards">
-        //     <div className="title-products-section">
-        //         <h1>Conoce Nuestros Productos</h1>
-        //     </div>
+  useEffect(() => {
+    listarProductosHome();
+  }, []);
 
-        //     <div>
-        //         {/* <h1>Conoce nuestros Productos</h1> */}
-        //         <CardEcommerce />
-        //     </div>
+  const listarProductosHome = async () => {
+    const response = await axiosInstance.get("/product");
 
-        //     <br />
+    setProductos(response.data);
+  };
 
+  //crear y agregar al carrito
+  const addToCart = async (id) => {
+    const response = await axiosInstance.post("/shoppingCart", {
+      product: id,
+      quantity: cantidad,
+    });
 
-        //     <div>
-        //         {/* <h1>Conoce nuestros Productos</h1> */}
-        //         <CardEcommerce1 />
-        //     </div>
+    setCarrito(response.data.items);
+    setCantidad(1);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Tu Producto fue agregado Exitosamente al Carrito",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    mostrarCarrito();
+    // history.push('/carrito')
+  };
 
-        //    
+  //agregar cantidad los productos al carrito
+  const agregarCantidad = (e) => {
+    setCantidad(e.target.value);
+  };
 
-        // </div>
+  const onClickAlimentos = () => {
+    setAlimentos(true);
+    setAccesorios(false);
+    setFarmacia(false);
+  };
 
-        <div className="card-homePage">
-            <h1>Conoce Nuestros Productos</h1>
-            <Row>
-                <Col lg={4} xs={12}><Overlay /></Col>
-                <Col lg={8} xs={12}><CardEcommerce /></Col> 
-            </Row>
+  const onClickAccesorios = () => {
+    setAlimentos(false);
+    setAccesorios(true);
+    setFarmacia(false);
+  };
 
-            <Row>
-                <Col md={12} sm={12}><CardEcommerce1 /></Col>
-            </Row>
+  const onClickFarmacia = () => {
+    setFarmacia(true);
+    setAccesorios(false);
+    setAlimentos(false);
+  };
+
+  return (
+    <div className="card-homePage">
+      <Animated
+        animationIn="bounceInLeft"
+        animationInDuration={6000}
+        animationOut="fadeOut"
+        isVisible={true}
+      >
+        <h2 className="store-title"> COMPRÁ DESDE CASA</h2>
+        <h6 className="store-subtitle">
+          Recibí todos nuestros productos en tu hogar. <br /> Comprá en nuestra
+          web o realiza tu pedido por nuestras redes o whatsapp.
+        </h6>
+      </Animated>
+
+      <div className="button-group">
+        <button className="botones-productos" onClick={onClickAccesorios}>
+          <img id="img_prod" src={acces} alt="Accesorios" />
+          ACCESORIOS
+        </button>
+        <button className="botones-productos" onClick={onClickAlimentos}>
+          <img id="img_prod" src={alime} alt="Alimentos" />
+          ALIMENTOS
+        </button>
+        <button className="botones-productos" onClick={onClickFarmacia}>
+          <img id="img_prod" src={pills} alt="Farmacia" />
+          FARMACIA
+        </button>
+      </div>
+      {alimentos ? (
+        <Row>
+          <Col md={12} sm={12}>
+            <CardEcommerce
+              agregarCantidad={agregarCantidad}
+              productos={productos}
+              addToCart={addToCart}
+            />
+          </Col>
+          <Col md={12} sm={12}>
             <div className="contenedor-boton-tienda">
-             <button className="btn">Ingresa a Nuestra Tienda</button>
+              <Link to="/tienda" className="btn">
+                IR A LA TIENDA
+              </Link>
             </div>
-        </div>
-    );
-}
+          </Col>
+        </Row>
+      ) : null}
+
+      {accesorios ? (
+        <Row>
+          <Col md={12} sm={12}>
+            <CardEcommerce1
+              agregarCantidad={agregarCantidad}
+              productos={productos}
+              addToCart={addToCart}
+            />
+          </Col>
+          <Col md={12} sm={12}>
+            <div className="contenedor-boton-tienda">
+              <Link to="/tienda" className="btn">
+                IR A LA TIENDA
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      ) : null}
+
+      {farmacia ? (
+        <Row>
+          <Col md={12} sm={12}>
+            <CardEcommerce2
+              agregarCantidad={agregarCantidad}
+              productos={productos}
+              addToCart={addToCart}
+            />
+          </Col>
+          <Col md={12} sm={12}>
+            <div className="contenedor-boton-tienda">
+              <Link to="/tienda" className="btn">
+                IR A LA TIENDA
+              </Link>
+            </div>
+          </Col>
+        </Row>
+      ) : null}
+
+      <div className="line"></div>
+    </div>
+  );
+};
 
 export default EcommerceHome;
