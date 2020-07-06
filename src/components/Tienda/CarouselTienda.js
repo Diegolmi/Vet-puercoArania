@@ -21,6 +21,7 @@ const carouseltienda = () => {
         length={3}
         // showControls={true}
         // showIndicators={true}
+
         className="carrouseltienda"
       >
         <MDBCarouselInner >
@@ -33,7 +34,7 @@ const carouseltienda = () => {
               />
               <MDBMask  />
             </MDBView>
-            
+
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
@@ -44,7 +45,7 @@ const carouseltienda = () => {
               />
               <MDBMask  />
             </MDBView>
-            
+
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
@@ -55,7 +56,7 @@ const carouseltienda = () => {
               />
               <MDBMask/>
             </MDBView>
-            
+
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>

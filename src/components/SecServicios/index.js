@@ -10,6 +10,7 @@ import NavbarPage from "../Navbar2/Nav2";
 const SecServicios = () => {
   
 
+
   return (
     <>
       <NavbarPage />
@@ -19,6 +20,7 @@ const SecServicios = () => {
           <section className="my-5">
             <MDBBtn
               id="btn_turno"
+
               outline
               color="secondary my-4"
             >
@@ -150,6 +152,7 @@ const SecServicios = () => {
               </MDBCol>
             </MDBRow>
           </section>
+
         </div>
       </div>
       <div id="hola" className="footer-copyright text-center py-4 mt-5">
