@@ -1,16 +1,13 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Modal from 'react-bootstrap/Modal';
-import FormTurnos from './FormTurnos';
-
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Modal from "react-bootstrap/Modal";
+import FormTurnos from "./FormTurnos";
 
 const ModalTurnos = ({ setShow, show }) => {
-    
-
   const handleClose = () => setShow(false);
-  
-    return (
-        <>
+
+  return (
+    <>
       {/* <Button variant="primary" >
         Launch demo modal
       </Button> */}
@@ -20,7 +17,7 @@ const ModalTurnos = ({ setShow, show }) => {
           <Modal.Title>Modificar Turnos</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-            <FormTurnos handleClose={handleClose}/>
+          <FormTurnos handleClose={handleClose} />
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={handleClose}>
@@ -32,7 +29,7 @@ const ModalTurnos = ({ setShow, show }) => {
         </Modal.Footer>
       </Modal>
     </>
-    );
-}
+  );
+};
 
 export default ModalTurnos;

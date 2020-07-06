@@ -36,7 +36,7 @@ export default function Carrito() {
 
   const mostrarCarrito = async () => {
     const response = await axiosInstance.get("/shoppingCart");
-    if(response.data){
+    if (response.data) {
       setUserCarrito(response.data.items || []);
     }
   };
@@ -46,17 +46,16 @@ export default function Carrito() {
   }, []);
 
   //---------------------------------------------------------------------------
-    //implementando Mercado Pago
-      const realizarPago = async () =>{
-        try {
-          const response = await axiosInstance.post("/checkout")
-      const link = response.data.redirectUrl
-      window.location.href = link
-        } catch (error) {
-          console.error(error)
-        }
-      
-      }
+  //implementando Mercado Pago
+  const realizarPago = async () => {
+    try {
+      const response = await axiosInstance.post("/checkout");
+      const link = response.data.redirectUrl;
+      window.location.href = link;
+    } catch (error) {
+      console.error(error);
+    }
+  };
   //---------------------------------------------------------------------------
   function getSteps() {
     return ["Productos", "Finalizar Compra"];

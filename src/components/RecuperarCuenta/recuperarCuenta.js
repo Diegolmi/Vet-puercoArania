@@ -20,16 +20,13 @@ const RecuperaUsuario = () => {
     e.preventDefault();
     try {
       const result = await axiosInstance.post("/email", recuperarUsuario);
-      history.push('/login')
-      setRecuperarUsuario(result)
-      
-    
+      history.push("/login");
+      setRecuperarUsuario(result);
     } catch (error) {
       console.error(error);
     }
-    
   };
-  
+
   return (
     <div className="">
       <MDBRow>

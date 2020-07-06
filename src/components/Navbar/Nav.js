@@ -131,7 +131,10 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
           <Nav>
             {isLogin ? (
               <>
-                <Link className="link-admin link-admin-boton" to="/usuario/carrito">
+                <Link
+                  className="link-admin link-admin-boton"
+                  to="/usuario/carrito"
+                >
                   <FaCartArrowDown className="carro" />
                   <MDBBadge color="danger" className="ml-2">
                     {userCarrito.length}

@@ -4,7 +4,7 @@ import isAuthenticate from "../components/util/isAuthenticate";
 
 const PrivateRoute = ({ component: Component, ...rest }) => {
   const decoded = isAuthenticate();
-  if (!decoded) 
+  if (!decoded)
     return <Route {...rest} render={(props) => <Redirect to="/login" />} />;
 
   return (

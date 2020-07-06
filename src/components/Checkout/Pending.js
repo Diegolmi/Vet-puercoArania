@@ -9,32 +9,32 @@ const Pending = () => {
   const history = useHistory();
 
   const [paymentData, setPaymentData] = useState();
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(true);
 
   const verifyPayment = async () => {
     try {
       const querystring = window.location.search;
       const params = new URLSearchParams(querystring);
       const response = await axiosInstance.post("/checkout/confirm", {
-        collection_id: params.get('collection_id')
+        collection_id: params.get("collection_id"),
       });
-      
+
       setPaymentData(response.data);
-      setLoading(false)
+      setLoading(false);
     } catch (error) {
       console.error(error);
-      setLoading(false)
+      setLoading(false);
     }
   };
 
   useEffect(() => {
-    verifyPayment()
-  }, [])
+    verifyPayment();
+  }, []);
 
-  if(loading) return "loading...."
-if(paymentData.status !== 'pending'){
-return "ERROR: la informacion de pago no es correcta.";
-}
+  if (loading) return "loading....";
+  if (paymentData.status !== "pending") {
+    return "ERROR: la informacion de pago no es correcta.";
+  }
 
   return (
     <div className="container-pending">

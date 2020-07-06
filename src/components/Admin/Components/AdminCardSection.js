@@ -1,6 +1,6 @@
-import React from 'react';
-import { MDBCard, MDBCardBody, MDBIcon, MDBRow, MDBCol } from 'mdbreact';
-import '../Admin.css'
+import React from "react";
+import { MDBCard, MDBCardBody, MDBIcon, MDBRow, MDBCol } from "mdbreact";
+import "../Admin.css";
 
 const AdminCardSection = () => {
   return (
@@ -12,10 +12,19 @@ const AdminCardSection = () => {
               <MDBIcon far icon="money-bill-alt" />
             </div>
             <p className="white-text">VENTAS</p>
-            <h4><strong>$2000</strong></h4>
+            <h4>
+              <strong>$2000</strong>
+            </h4>
           </MDBCardBody>
           <div className="progress">
-            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" className="progress-bar bg grey darken-3" role="progressbar" style={{ width: "25%" }}></div>
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="25"
+              className="progress-bar bg grey darken-3"
+              role="progressbar"
+              style={{ width: "25%" }}
+            ></div>
           </div>
           <MDBCardBody>
             <p>Better than last week (25%)</p>
@@ -29,10 +38,19 @@ const AdminCardSection = () => {
               <MDBIcon icon="chart-line" />
             </div>
             <p className="white-text">REGISTROS</p>
-            <h4><strong>200</strong></h4>
+            <h4>
+              <strong>200</strong>
+            </h4>
           </MDBCardBody>
           <div className="progress">
-            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" className="progress-bar bg grey darken-3" role="progressbar" style={{ width: "25%" }}></div>
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="25"
+              className="progress-bar bg grey darken-3"
+              role="progressbar"
+              style={{ width: "25%" }}
+            ></div>
           </div>
           <MDBCardBody>
             <p>Worse than last week (25%)</p>
@@ -46,10 +64,19 @@ const AdminCardSection = () => {
               <MDBIcon icon="chart-pie" />
             </div>
             <p className="white-text">TURNOS</p>
-            <h4><strong>20000</strong></h4>
+            <h4>
+              <strong>20000</strong>
+            </h4>
           </MDBCardBody>
           <div className="progress">
-            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="75" className="progress-bar bg grey darken-3" role="progressbar" style={{ width: "75%" }}></div>
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="75"
+              className="progress-bar bg grey darken-3"
+              role="progressbar"
+              style={{ width: "75%" }}
+            ></div>
           </div>
           <MDBCardBody>
             <p>Better than last week (75%)</p>
@@ -63,10 +90,19 @@ const AdminCardSection = () => {
               <MDBIcon icon="chart-bar" />
             </div>
             <p className="white-text">CONSULTAS</p>
-            <h4><strong>2000</strong></h4>
+            <h4>
+              <strong>2000</strong>
+            </h4>
           </MDBCardBody>
           <div className="progress">
-            <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="25" className="progress-bar bg grey darken-3" role="progressbar" style={{ width: "25%" }}></div>
+            <div
+              aria-valuemax="100"
+              aria-valuemin="0"
+              aria-valuenow="25"
+              className="progress-bar bg grey darken-3"
+              role="progressbar"
+              style={{ width: "25%" }}
+            ></div>
           </div>
           <MDBCardBody>
             <p>Better than last week (75%)</p>
@@ -74,7 +110,7 @@ const AdminCardSection = () => {
         </MDBCard>
       </MDBCol>
     </MDBRow>
-  )
-}
+  );
+};
 
 export default AdminCardSection;

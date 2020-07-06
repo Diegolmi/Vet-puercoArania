@@ -48,9 +48,9 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                     </small>
                   </Card.Text>
                   <Card.Text>
-                    <SelectInput 
+                    <SelectInput
                       agregarCantidad={agregarCantidad}
-                      stock={producto.stock} 
+                      stock={producto.stock}
                     />
                   </Card.Text>
 

@@ -5,7 +5,7 @@ import "./styleRegister.css";
 import { Link } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
-import NavbarPage from '../Navbar2/Nav2';
+import NavbarPage from "../Navbar2/Nav2";
 
 const FormsPage = () => {
   const [createUser, setCreateUser] = useState({
@@ -43,7 +43,6 @@ const FormsPage = () => {
   return (
     <>
       <div className="container-fluid containerRegistro">
-              
         <div className=" containerForm1">
           <h1 center>Registrate</h1>
           <form onSubmit={crearUsuario} className="formulario-registro">
@@ -137,15 +136,15 @@ const FormsPage = () => {
           </Link>
         </div>
         <div className="container-img-registro">
-                <MDBView hover zoom>
-                  <img
-                    src={logo}
-                    className="rounded float-left logoRegister"
-                    alt="aligment"
-                  />
-                </MDBView>
-                <h2>Bienvenido</h2>
-              </div>
+          <MDBView hover zoom>
+            <img
+              src={logo}
+              className="rounded float-left logoRegister"
+              alt="aligment"
+            />
+          </MDBView>
+          <h2>Bienvenido</h2>
+        </div>
       </div>
     </>
   );
