@@ -29,7 +29,7 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-lg-auto">
                     <Link to="/" className="mr-3 link-admin">Inicio</Link>
-                    <Link to="/consultas" className="mr-3 link-admin">Consultas</Link>
+                    <Link to="/servicios" className="mr-3 link-admin">Consultas</Link>
                     <Link to="/about" className="mr-3 link-admin">Quienes Somos</Link>
                     <Link to="/tienda" className="mr-3 link-admin">Tienda</Link>
                 </Nav>
