@@ -29,16 +29,14 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
             <Navbar.Collapse id="responsive-navbar-nav">
                 <Nav className="ml-lg-auto">
                     <Link to="/" className="mr-3 link-admin">Inicio</Link>
-                    <Link to="/consultas" className="mr-3 link-admin">Consultas</Link>
+                    <Link to="/servicios" className="mr-3 link-admin">Consultas</Link>
                     <Link to="/about" className="mr-3 link-admin">Quienes Somos</Link>
-                    <Link to="/" className="mr-3 link-admin">Tienda</Link>
+                    <Link to="/tienda" className="mr-3 link-admin">Tienda</Link>
                 </Nav>
                 <hr />
                 <Nav>
-                    {/* <Link className="mr-3 link-admin"><AiOutlineMail /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link> */}
-                    <Link className="mr-3 link-admin"><FaRegBell /><MDBBadge color="danger" className="ml-2">4</MDBBadge></Link>
-                    <Link className="mr-3 link-admin">Perfil</Link>
-                    <Link className="mr-3 link-admin" onClick={logout}>Log Out</Link>
+                    <Link to="/usuario" className="mr-3 link-admin">Perfil</Link>
+                    <Link to="" className="mr-3 link-admin" onClick={logout}>Log Out</Link>
                 </Nav>
             </Navbar.Collapse>
         </Navbar>

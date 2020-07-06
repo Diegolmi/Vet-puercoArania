@@ -9,14 +9,13 @@
     min-width: 130px;
 }
 
-legend{
-    color:  #fc5185!important;
+legend {
+  color: #fc5185 !important;
 }
 
-.grupo{
-    margin-left:1em;
-    color:  #364f6b;
-   
+.grupo {
+  margin-left: 1em;
+  color: #364f6b;
 }
 .MuiDrawer-paper{
 

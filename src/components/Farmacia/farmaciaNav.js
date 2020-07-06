@@ -4,14 +4,17 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import NavDropdown from "react-bootstrap/NavDropdown";
 
-
 const FarmaciaNav = () => {
   return (
     <Navbar collapseOnSelect expand="lg" bg="#fc5185" variant="#fc5185">
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="mr-auto">
-          <NavDropdown title="Especie" id="collasible-nav-dropdown"color="#f0f0f0">
+          <NavDropdown
+            title="Especie"
+            id="collasible-nav-dropdown"
+            color="#f0f0f0"
+          >
             <NavDropdown.Item href="#action/3.1">Gato</NavDropdown.Item>
             <NavDropdown.Item href="#action/3.2">Perro</NavDropdown.Item>
           </NavDropdown>

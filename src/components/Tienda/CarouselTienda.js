@@ -9,7 +9,6 @@ import {
   MDBContainer,
   MDBCard,
   MDBCardBody,
-  MDBBtn,
   MDBCol,
 } from "mdbreact";
 import "./Tienda.css";
@@ -49,8 +48,8 @@ const carouseltienda = () => {
               <MDBMask  />
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Strong mask</h3>
-              <p>Second text</p>
+            <h3 className="h3-responsive">Tienda Online</h3>
+              <p>Mira nuestras mejores promos</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
@@ -63,16 +62,16 @@ const carouseltienda = () => {
               <MDBMask/>
             </MDBView>
             <MDBCarouselCaption>
-              <h3 className="h3-responsive">Slight Mast</h3>
-              <p>Third text</p>
+            <h3 className="h3-responsive">Tienda Online</h3>
+              <p>Mira nuestras mejores promos</p>
             </MDBCarouselCaption>
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>
       <MDBCol >
       <MDBCard className="imgperro">
-        <MDBCardBody >
-          <MDBBtn className="boton" href="#">Whatsapp</MDBBtn>
+        <MDBCardBody className="perro" >
+          <h5 className="veterinaria">Veterinaria Puerco Araña</h5>
           </MDBCardBody>
       </MDBCard>
       </MDBCol>

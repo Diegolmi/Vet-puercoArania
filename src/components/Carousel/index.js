@@ -1,16 +1,16 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselInner, MDBCarouselItem, MDBView } from "mdbreact";
+import {
+  MDBCarousel,
+  MDBCarouselInner,
+  MDBCarouselItem,
+  MDBView,
+} from "mdbreact";
 
 //styles
-import './style.css'
+import "./style.css";
 
 //Images
-import {
-  img1,
-  img2,
-  img3,
-  banner,
-} from "../../assets/img/index";
+import { img1, img2, img3, banner } from "../../assets/img/index";
 
 const CarouselPage = () => {
   return (
@@ -63,7 +63,7 @@ const CarouselPage = () => {
       </MDBCarousel>
     </div>
   );
-}
+};
 
 
 export default CarouselPage;

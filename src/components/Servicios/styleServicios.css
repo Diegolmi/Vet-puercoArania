@@ -2,8 +2,9 @@
   background-color: #f0f0f0;
 }
 
-.title {
-  color: black;
+.title_s {
+  color: #fc5185;
+  text-transform: uppercase;
   font-size: 26px;
 }
 .lorem {
@@ -43,15 +44,11 @@
   width: 150px;
   border-radius: 16px;
   box-shadow: 5px 5px 7px darkgray;
-  cursor: pointer;
   object-fit: cover;
   padding: 0;
   transition: all 0.3s ease;
 }
 
-.imge:hover {
-  box-shadow: 5px 5px 7px rgba(248, 121, 160, 0.7);
-}
 
 figure {
   margin: 25px 20px;
@@ -77,11 +74,11 @@ figcaption {
 
 /*MEDIA QUERYS*/
 
-@media (min-width: 300px) and (max-width: 549px) {
+@media (max-width: 549px) {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -114,7 +111,7 @@ figcaption {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -136,7 +133,7 @@ figcaption {
   .servicios {
     padding-top: 15px;
   }
-  .title {
+  .title_s {
     text-align: center;
   }
   .lorem {
@@ -178,7 +175,6 @@ figcaption {
     width: 150px;
     border-radius: 16px;
     box-shadow: 5px 5px 7px darkgray;
-    cursor: pointer;
     object-fit: cover;
     padding: 0;
     position: absolute;
@@ -190,4 +186,8 @@ figcaption {
     height: 200px;
     width: 150px;
   }
+  
+.title_s {
+  font-size: 32px !important;
+}
 }
