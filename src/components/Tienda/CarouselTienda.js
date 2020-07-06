@@ -19,8 +19,8 @@ const carouseltienda = () => {
       <MDBCarousel
         activeItem={1}
         length={3}
-        showControls={true}
-        showIndicators={true}
+        // showControls={true}
+        // showIndicators={true}
         className="carrouseltienda"
       >
         <MDBCarouselInner >
@@ -33,10 +33,7 @@ const carouseltienda = () => {
               />
               <MDBMask  />
             </MDBView>
-            <MDBCarouselCaption>
-              <h3 className="h3-responsive">Tienda Online</h3>
-              <p>Mira nuestras mejores promos</p>
-            </MDBCarouselCaption>
+            
           </MDBCarouselItem>
           <MDBCarouselItem itemId="2">
             <MDBView>
@@ -47,10 +44,7 @@ const carouseltienda = () => {
               />
               <MDBMask  />
             </MDBView>
-            <MDBCarouselCaption>
-            <h3 className="h3-responsive">Tienda Online</h3>
-              <p>Mira nuestras mejores promos</p>
-            </MDBCarouselCaption>
+            
           </MDBCarouselItem>
           <MDBCarouselItem itemId="3">
             <MDBView>
@@ -61,10 +55,7 @@ const carouseltienda = () => {
               />
               <MDBMask/>
             </MDBView>
-            <MDBCarouselCaption>
-            <h3 className="h3-responsive">Tienda Online</h3>
-              <p>Mira nuestras mejores promos</p>
-            </MDBCarouselCaption>
+            
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>

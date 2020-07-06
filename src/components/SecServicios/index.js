@@ -3,16 +3,12 @@ import "./secsvs.css";
 import { MDBRow, MDBCol, MDBIcon, MDBContainer, MDBTooltip } from "mdbreact";
 import catdog from "../../assets/img/svs/catdog.png";
 import { MDBBtn } from "mdbreact";
-import FormPage from "../FormServicios";
-import ModalTurnos from "./ModalTurnos";
 import Carturnos from "../CarTurnos/Carturnos";
 import NavbarPage from "../Navbar2/Nav2";
 
-//onClick={handleShow} evento para disparar modal
 
 const SecServicios = () => {
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  
 
   return (
     <>
@@ -23,7 +19,6 @@ const SecServicios = () => {
           <section className="my-5">
             <MDBBtn
               id="btn_turno"
-              onClick={handleShow}
               outline
               color="secondary my-4"
             >
@@ -155,7 +150,6 @@ const SecServicios = () => {
               </MDBCol>
             </MDBRow>
           </section>
-          <ModalTurnos show={show} setShow={setShow} />
         </div>
       </div>
       <div id="hola" className="footer-copyright text-center py-4 mt-5">
