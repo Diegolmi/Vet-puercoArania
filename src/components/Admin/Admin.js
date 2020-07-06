@@ -59,7 +59,7 @@ const Admin = ({user}) => {
             <Col sm={3} className="columna-sidebar">
               <SidebarAdmin />
             </Col>
-            <Col sm={12} className="container-links-sidebar">
+            <Col sm={8} className="container-links-sidebar">
               <Switch>
                 <Route exact path="/admin" component={InicioAdmin} />
                 <Route exact path="/admin/user" component={EditUser} />

@@ -14,6 +14,7 @@ import {
     Route,
 
 } from "react-router-dom";
+import './Components/styleMascotas.css';
 
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
