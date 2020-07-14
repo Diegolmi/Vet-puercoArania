@@ -20,9 +20,7 @@ const SidebarAdmin = () => {
             <Link to="/"><img src={logo} alt="Logo veterinaria" className="logo" /></Link>
             </div>
             <ul className="secciones-sidebar">
-                <li className="listado-sidebar"><MdDashboard className="icon-sidebar-admin"/> <Link to="/privado/usuario"  className="link-sidebar">Inicio</Link></li>
-                <li className="listado-sidebar"><FaUser className="icon-sidebar-admin"/> <Link to="/privado/usuario/mascotas"  className="link-sidebar">Mascotas</Link></li>
-                <li className="listado-sidebar"><RiAdminLine className="icon-sidebar-admin"/><Link to="/privado/usuario/datos" className="link-sidebar">Administracion</Link></li>
+               
                 <li className="listado-sidebar"><MdDashboard className="icon-sidebar-admin"/> <Link to="/usuario"  className="link-sidebar">Inicio</Link></li>
                 <li className="listado-sidebar"><FaUser className="icon-sidebar-admin"/> <Link to="/usuario/mascotas"  className="link-sidebar">Mascotas</Link></li>
                 <li className="listado-sidebar"><RiAdminLine className="icon-sidebar-admin"/><Link to="/usuario/datos" className="link-sidebar">Usuarios</Link></li>
