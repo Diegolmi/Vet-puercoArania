@@ -7,14 +7,10 @@ import ChartSection1 from "../../Components/ChartSection1";
 const InicioAdmin = () => {
   return (
     <div className="container-inicio-admin">
-      <div className="saludo-inicio">
         <SaludoAlert />
-      </div>
 
-      <div className="admin-pages">
         <AdminCardSection />
         <ChartSection1 />
-      </div>
     </div>
   );
 };

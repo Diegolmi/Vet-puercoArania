@@ -15,7 +15,6 @@ const SidebarIcons = () => {
                 <li className="listado-sidebar"> <Link to="/usuario"  className="link-sidebar"><MdDashboard className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"> <Link to="/usuario/mascota"  className="link-sidebar"><FaUser className="icon-sidebar-admin"/></Link></li>
                 <li className="listado-sidebar"><Link to="/usuario/datos" className="link-sidebar"><RiAdminLine className="icon-sidebar-admin"/></Link></li>
-                <li className="listado-sidebar"><Link to="/usuario/carrito" className="link-sidebar"><FaCartArrowDown className="icon-sidebar-admin"/></Link></li>
 
             </ul>
 

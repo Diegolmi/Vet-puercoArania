@@ -6,10 +6,13 @@ const FormDatosAdmin = () => {
     <form>
       <MDBInput label="Nombre" />
       <MDBInput label="Apellido" />
+      <MDBInput label="Nombre de Usuario" />
       <MDBInput label="Email" />
       <MDBInput label="Domicilio" />
+      <MDBInput label="Pais" />
+      <MDBInput label="Provincia" />
+      <MDBInput label="Telefono" />
       <MDBInput label="Contraseña" type="password" />
-      <MDBInput label="Confirmar Contraseña" type="password" />
       <MDBBtn color="indigo">Modificar</MDBBtn>
     </form>
   );

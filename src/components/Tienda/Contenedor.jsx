@@ -62,7 +62,7 @@ const Contenedor = () => {
   const addToCart = async ( id) => {
       const response = await axiosInstance.post('/shoppingCart', {product: id, quantity: cantidad})
       setUserCarrito(response.data.items)
-      
+      setCantidad(1)
       Swal.fire({
           position: 'center',
           icon: 'success',
@@ -71,11 +71,11 @@ const Contenedor = () => {
           timer: 1500
         })
         mostrarCarrito()
-        setCantidad(1)
+        
     }
 
     const agregarCantidad = (e) => {
-      setCantidad(...cantidad, e.target.value);
+      setCantidad(e.target.value);
     };
 
   return (
@@ -84,6 +84,7 @@ const Contenedor = () => {
       <div className="productos">
         <Carousel />
         <Accesorios
+        
           agregarCantidad={agregarCantidad}
           productos={productos}
           addToCart={addToCart}

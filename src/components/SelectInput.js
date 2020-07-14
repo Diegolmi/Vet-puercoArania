@@ -1,6 +1,7 @@
 import React from "react";
 
 const SelectIpunt = ({ agregarCantidad, stock }) => {
+  
   const options = (amount) => {
     let array = [];
     for (let i = 1; i <= amount; i++) {

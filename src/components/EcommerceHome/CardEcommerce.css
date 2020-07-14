@@ -4,12 +4,7 @@
   width: 100%;
   padding-bottom: 50px;
   background-color: white;
-  
-    
 }
-
-
-
 
 .card-homePage .store-title {
   text-align: center;
@@ -21,10 +16,9 @@
   animation-name: slidein;
   animation-duration: 4s;
   animation-direction: alternate;
-
 }
 
-.store-subtitle{
+.store-subtitle {
   text-align: center;
   padding-bottom: 50px;
 }
@@ -46,13 +40,12 @@
 .contenedor-boton-tienda .btn:hover {
   background-color: white;
   color: #364f6b;
-  
 }
 
 /* FIN CONTAINER CARD */
 
 /* CARD */
-.contenedor-card-landing{
+.contenedor-card-landing {
   display: flex;
   height: 100%;
   width: 100%;
@@ -78,7 +71,6 @@
   border: none;
 }
 
-
 .card-footer {
   display: flex;
   justify-content: space-evenly;
@@ -93,22 +85,22 @@
 .icon-card {
   font-size: 20px !important;
 }
-.img-cardE{
+.img-cardE {
   margin: auto !important;
 }
 /* FIN CARD */
 
-.img-food-cards{
-  width: 200px;
+.img-food-cards {
+  /* width: 200px; */
   height: 150px;
   margin: 0 auto;
 }
 
 @media only screen and (min-width: 600px) {
-  .card-homePage .store-title{
+  .card-homePage .store-title {
     font-size: 50px;
   }
-  .store-subtitle{
+  .store-subtitle {
     font-size: 22px;
     line-height: 30px;
   }
@@ -126,9 +118,8 @@
     margin: 0 auto;
     margin-bottom: 50px;
     background-color: #f0f0f0;
-  
   }
-  
+
   .botones-productos {
     color: black;
     font-size: 25px;
@@ -138,49 +129,42 @@
     /* background: #364f6b; */
     /* border-radius: 20px; */
   }
-  
+
   .botones-productos:hover {
     color: #fc5185;
-    transition: .3s;
+    transition: 0.3s;
   }
-  
-  
-  .rating-container{
+
+  .rating-container {
     height: 0;
     padding: 0;
     margin: 0;
   }
-  #img_prod{
+  #img_prod {
     width: 80px;
     height: 80px;
     margin-right: 15px;
   }
+}
 
-} 
-
-
-
-.img_prod{
+.img_prod {
   width: 10%;
   height: 10%;
   margin-right: 15px;
-} 
-
+}
 
 @media only screen and (max-width: 600px) {
-  .store-title{
+  .store-title {
     max-width: 300px;
     display: flex;
     flex-direction: column;
     font-size: 2rem;
     text-align: center;
   }
-  .store-subtitle{  
+  .store-subtitle {
     font-size: 18px;
     line-height: 20px;
-
   }
-  
   .card-homePage {
     justify-content: center !important;
     align-items: center !important;
@@ -192,7 +176,6 @@
     align-items: center;
     text-align: center;
     flex-direction: column;
-
   }
   .botones-productos {
     font-size: 10px !important;
@@ -200,18 +183,17 @@
   }
   .card.cascading-admin-card {
     margin-top: 2.5rem;
-  } 
-  #img_prod{
+  }
+  #img_prod {
     width: 80px !important;
     height: 80px !important;
   }
-  .img-food-cards{
+  .img-food-cards {
     width: 200px !important;
     height: 150px !important;
     margin: 0 auto;
   }
-  .contenedor-card-landing{
-   
+  .contenedor-card-landing {
     flex-wrap: wrap !important;
   }
 }
@@ -238,18 +220,16 @@
 
 .botones-productos:hover {
   color: #fc5185;
-  transition: .3s;
+  transition: 0.3s;
 }
 
-
-.rating-container{
+.rating-container {
   height: 0;
   padding: 0;
   margin: 0;
 }
-#img_prod{
+#img_prod {
   width: 80px;
   height: 80px;
   margin-right: 15px;
 }
-

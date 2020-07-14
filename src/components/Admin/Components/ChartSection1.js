@@ -1,16 +1,15 @@
 import React, { Component } from "react";
 import {
-  MDBCol,
   MDBCard,
   MDBCardBody,
   MDBCardHeader,
-  MDBRow,
   MDBListGroup,
   MDBListGroupItem,
   MDBBadge,
   MDBIcon,
 } from "mdbreact";
 import { Bar, Pie } from "react-chartjs-2";
+import "../Admin.css";
 
 class ChartSection1 extends Component {
   render() {
@@ -90,61 +89,57 @@ class ChartSection1 extends Component {
       ],
     };
     return (
-      <MDBRow className="mb-4">
-        <MDBCol md="8" className="mb-4">
-          <MDBCard className="mb-4">
-            <MDBCardBody>
-              <Bar data={dataBar} height={500} options={barChartOptions} />
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-        <MDBCol md="4" className="mb-4">
-          <MDBCard className="mb-4">
-            <MDBCardHeader>Ingresos</MDBCardHeader>
-            <MDBCardBody>
-              <Pie data={dataPie} height={300} options={{ responsive: true }} />
-            </MDBCardBody>
-          </MDBCard>
-          <MDBCard className="mb-4">
-            <MDBCardBody>
-              <MDBListGroup className="list-group-flush">
-                <MDBListGroupItem>
-                  Ventas
-                  <MDBBadge color="success-color" pill className="float-right">
-                    22%
-                    <MDBIcon icon="arrow-up" className="ml-1" />
-                  </MDBBadge>
-                </MDBListGroupItem>
-                <MDBListGroupItem>
-                  Registros
-                  <MDBBadge color="success-color" pill className="float-right">
-                    5%
-                    <MDBIcon icon="arrow-up" className="ml-1" />
-                  </MDBBadge>
-                </MDBListGroupItem>
-                <MDBListGroupItem>
-                  Turnos
-                  <MDBBadge color="primary-color" pill className="float-right">
-                    14
-                  </MDBBadge>
-                </MDBListGroupItem>
-                <MDBListGroupItem>
-                  Consultas
-                  <MDBBadge color="primary-color" pill className="float-right">
-                    123
-                  </MDBBadge>
-                </MDBListGroupItem>
-                <MDBListGroupItem>
-                  Messages
-                  <MDBBadge color="primary-color" pill className="float-right">
-                    8
-                  </MDBBadge>
-                </MDBListGroupItem>
-              </MDBListGroup>
-            </MDBCardBody>
-          </MDBCard>
-        </MDBCol>
-      </MDBRow>
+      <div className="container-chart-section">
+        <MDBCard className="mx-3">
+          <MDBCardBody>
+            <Bar data={dataBar} height={500} options={barChartOptions} />
+          </MDBCardBody>
+        </MDBCard>
+        <MDBCard className="mx-3">
+          <MDBCardHeader>Ingresos</MDBCardHeader>
+          <MDBCardBody>
+            <Pie data={dataPie} height={300} options={{ responsive: true }} />
+          </MDBCardBody>
+        </MDBCard>
+        <MDBCard className="mx-3">
+          <MDBCardBody>
+            <MDBListGroup className="list-group-flush">
+              <MDBListGroupItem>
+                Ventas
+                <MDBBadge color="success-color" pill className="float-right">
+                  22%
+                  <MDBIcon icon="arrow-up" className="ml-1" />
+                </MDBBadge>
+              </MDBListGroupItem>
+              <MDBListGroupItem>
+                Registros
+                <MDBBadge color="success-color" pill className="float-right">
+                  5%
+                  <MDBIcon icon="arrow-up" className="ml-1" />
+                </MDBBadge>
+              </MDBListGroupItem>
+              <MDBListGroupItem>
+                Turnos
+                <MDBBadge color="primary-color" pill className="float-right">
+                  14
+                </MDBBadge>
+              </MDBListGroupItem>
+              <MDBListGroupItem>
+                Consultas
+                <MDBBadge color="primary-color" pill className="float-right">
+                  123
+                </MDBBadge>
+              </MDBListGroupItem>
+              <MDBListGroupItem>
+                Messages
+                <MDBBadge color="primary-color" pill className="float-right">
+                  8
+                </MDBBadge>
+              </MDBListGroupItem>
+            </MDBListGroup>
+          </MDBCardBody>
+        </MDBCard>
+      </div>
     );
   }
 }

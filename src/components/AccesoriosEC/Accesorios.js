@@ -8,8 +8,8 @@ import SelectInput from "../SelectInput";
 
 const Accesorios = ({ productos, addToCart, agregarCantidad }) => {
   return (
-    <div className="container-cards-store">
-      <h1>Tienda</h1>
+    <div className="container-cards-store mb-3">
+      <h1 className="store-title mt-5 mb-4">Tienda</h1>
       <div className="contenedor_cards">
         {productos.map((producto) => (
           <Card className="card body_card" key={producto._id}>

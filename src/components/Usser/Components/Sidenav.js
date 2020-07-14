@@ -23,7 +23,6 @@ const SidebarAdmin = () => {
                 <li className="listado-sidebar"><MdDashboard className="icon-sidebar-admin"/> <Link to="/usuario"  className="link-sidebar">Inicio</Link></li>
                 <li className="listado-sidebar"><FaUser className="icon-sidebar-admin"/> <Link to="/usuario/mascotas"  className="link-sidebar">Mascotas</Link></li>
                 <li className="listado-sidebar"><RiAdminLine className="icon-sidebar-admin"/><Link to="/usuario/datos" className="link-sidebar">Usuarios</Link></li>
-                <li className="listado-sidebar"><FaCartArrowDown className="icon-sidebar-admin"/><Link to="/usuario/carrito" className="link-sidebar">Carrito</Link></li>
 
             </ul>
             

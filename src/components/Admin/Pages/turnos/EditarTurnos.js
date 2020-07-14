@@ -4,6 +4,8 @@ import "../../Admin.css";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import axiosInstance from "../../../util/axiosInstance";
+import Swal from "sweetalert2";
+
 
 const EditarTurnos = () => {
   const [turnos, setTurnos] = useState([]);
@@ -11,11 +13,36 @@ const EditarTurnos = () => {
   const listarTurnos = async () => {
     const res = await axiosInstance.get("/turnos");
     setTurnos(res.data);
+    console.log(res.data)
   };
 
   useEffect(() => {
     listarTurnos();
   }, [setTurnos]);
+
+  const eliminarTurno = id => async () =>{
+    Swal.fire({
+      title: '¿estas seguro que deseas eliminar el turno?',
+      text: "no podras revertir el proceso",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Si, borrar!'
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire(
+          'Borrado!',
+          'El turno fue borrado con éxito',
+          'success'
+        )
+        axiosInstance.delete(`/turnos/${id}`)
+    listarTurnos()
+      }
+      
+    })
+     
+  }
 
   return (
     <div className="container-turnos-admin my-3">
@@ -25,22 +52,15 @@ const EditarTurnos = () => {
             defaultActiveKey="turnos"
             transition={false}
             id="noanim-tab-example"
+            className="container-tabs"
           >
             <Tab
               className="tabs-turnos"
               eventKey="turnos"
               title="Todos los Turnos"
             >
-              <h2 className="my-2">Turnos Disponibles</h2>
-              <CardTurnos turnos={turnos} listarTurnos={listarTurnos} />
-            </Tab>
-            <Tab className="tabs-turnos" eventKey="medicos" title="Medicos">
-              <h2 className="my-2">Turnos Para Medicos Disponibles</h2>
-              <CardTurnos />
-            </Tab>
-            <Tab className="tabs-turnos" eventKey="servicios" title="Servicios">
-              <h2 className="my-2">Turnos Para Servicios Disponibles</h2>
-              <CardTurnos />
+              <h2 className="m-3">Turnos Disponibles</h2>
+              <CardTurnos turnos={turnos} listarTurnos={listarTurnos} eliminarTurno={eliminarTurno} />
             </Tab>
           </Tabs>
         </div>

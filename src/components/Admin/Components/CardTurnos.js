@@ -4,10 +4,9 @@ import ModalTurnos from "../Components/ModalTurnos";
 
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
-import Col from "react-bootstrap/Col";
-import Image from "react-bootstrap/Image";
 
-const CardTurnos = ({ turnos }) => {
+
+const CardTurnos = ({ turnos, eliminarTurno }) => {
   const [show, setShow] = useState(false);
   const handleShow = () => setShow(true);
 
@@ -17,18 +16,16 @@ const CardTurnos = ({ turnos }) => {
       {turnos
         ? turnos.map((turno) => (
             <Card
-              className="m-2"
+              className="m-4"
               border="primary"
               key={turno._id}
               style={{ width: "18rem" }}
             >
               <Card.Header className="header_card">
-                <Col xs={6} md={4}>
-                  <Image src="imagen" roundedCircle />
-                </Col>
-                <Card.Title>Mascota: </Card.Title>
+                
+                <Card.Title>Mascota: {turno.pet} </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
-                  Dueño:{" "}
+                  Dueño: {turno.user}
                 </Card.Subtitle>
               </Card.Header>
               <Card.Body className="cardBody">
@@ -40,14 +37,7 @@ const CardTurnos = ({ turnos }) => {
               <Card.Footer>
                 <Button
                   className="btn-borrar"
-                  onClick={handleShow}
-                  variant="outline-primary"
-                >
-                  Modificar
-                </Button>
-                <Button
-                  className="btn-borrar"
-                  // onClick={()=>eliminarCita(cita.id)}
+                  onClick={eliminarTurno(turno._id)}
                   variant="outline-danger"
                 >
                   Borrar

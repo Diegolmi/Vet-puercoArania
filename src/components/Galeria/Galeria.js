@@ -10,6 +10,7 @@ import h1 from "../../assets/img/h1.png";
 import h2 from "../../assets/img/h2.png";
 
 class CarouselPage extends Component {
+  
   render() {
     return (
       <>
