@@ -40,7 +40,25 @@ body {
     margin: 10px;
 }
 
+/* .container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
 
+/* .container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
 .ButtonRegistro {
     background-color: #fc5185 !important;
     color: white;

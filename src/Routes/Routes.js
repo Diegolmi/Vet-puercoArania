@@ -18,6 +18,8 @@ import Success from "../components/Checkout/Success";
 import Pending from "../components/Checkout/Pending";
 import Failure from "../components/Checkout/Failure";
 import RecuperarCuenta from "../components/RecuperarCuenta/recuperarCuenta";
+import RestrictedRoute from "./RestrictedRoute";
+
 
 function Routes() {
   return (
@@ -26,8 +28,8 @@ function Routes() {
         <Route exact path="/" component={Landing} />
         <Route exact path="/about" component={About} />
         <Route exact path="/servicios" component={SecServicios} />
-        <Route exact path="/registro" component={Register} />
-        <Route exact path="/login" component={Login} />
+        <RestrictedRoute exact path="/registro" component={Register} />
+        <RestrictedRoute exact path="/login" component={Login} />
         <Route exact path="/tienda" component={Contenedor} />
         <PrivateRoute path="/admin" component={Admin} />
         <PrivateRoute path="/usuario" component={AdminUser} />

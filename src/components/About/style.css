@@ -17,8 +17,8 @@ h1{
     margin: 25px;
     font-size: 30px;
   }
-.about{
-    /* background: #304352; 
+/* .about{
+    background: #304352; 
     background: -webkit-linear-gradient(
       to right,
       #d7d2cc,
@@ -31,9 +31,12 @@ h1{
     ); 
     background-position: center;
     background-color: rgb(255, 255, 255);
-    height: auto; */
-}
-
+    height: auto;
+} */
+/* .titulo_about{
+    font-weight: 400;
+    font-size: 60px;
+} */
 .imagabout {
         background-image: url("https://cdn.tn.com.ar/sites/default/files/styles/embed_image/public/2019/11/21/5dd6833e80420_gato_siames_adulto.jpg") ;
         height: 560px;
@@ -46,7 +49,7 @@ h1{
         background-repeat: no-repeat;
         padding-left: 150px;   
         text-align: center;
-        text-shadow: 2px 0 0 #000;
+        /* text-shadow: 2px 0 0 #000; */
         color: #fc5185 !important;
         }
       
@@ -54,7 +57,7 @@ h1{
     margin-top: 50px;
     margin-bottom: 10px;
     text-align: center;
-    text-shadow: 3px 0 0 rgb(0, 0, 0);
+    /* text-shadow: 3px 0 0 rgb(0, 0, 0); */
     color: #fc5185 !important;
 }
 .card1{
@@ -62,7 +65,7 @@ h1{
 }
 .third-title{
     text-align: center;
-    text-shadow: 3px 0 0 rgb(0, 0, 0);
+    /* text-shadow: 3px 0 0 rgb(0, 0, 0); */
     color: #fc5185 !important
 }
 .texto1{
@@ -70,7 +73,7 @@ h1{
 }
 .titulos{
     text-align: center;
-    text-shadow: 2px 0 0 rgb(0, 0, 0);
+    /* text-shadow: 2px 0 0 rgb(0, 0, 0); */
     color: #fc5185 !important;
     margin-bottom: 30px;
 }
@@ -85,8 +88,6 @@ h1{
     margin-right: 40px;
     width: 600px;
     height: 455px;
-   background-size: 500px;
-    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg");
 }
 .img-fluid{
 width: 900px;
@@ -97,8 +98,6 @@ height: 400px;
     margin-top: 15px;
 }
 .claves{
-    background-size: 700px;
-    background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg");
    margin-left: 20px;
    padding-left: 30px;
    padding-right: 50px;
@@ -108,7 +107,7 @@ height: 400px;
 }
 .five-title{
     text-align: center;
-    text-shadow: 2px 0 0 rgb(0, 0, 0);
+    /* text-shadow: 2px 0 0 rgb(0, 0, 0); */
     color: #fc5185 !important;
     margin-bottom: 30px;
     padding-top: 30px;
@@ -188,8 +187,6 @@ height: 400px;
     display: flex;
 }
 .claves{
-    background-size: 700px;
-    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg);
     margin-left: 20px;
     padding-left: 30px;
     padding-right: 50px;
@@ -266,9 +263,6 @@ width: 300px;
     width: 659px;
     height: 1228px;
     margin-bottom: 50px;
-    background-size: 500px;
-    background-image: url(https://png.pngtree.com/thumb_back/fw800/background/20190223/ourmid/pngtree-minimalistic-dog-footprints-striped-background-material-bardog-footprintanimalsimplecolor-backgroundgeneral-image_67304.jpg);
-
     }
     .img-fluid{
         margin-top: 100px;

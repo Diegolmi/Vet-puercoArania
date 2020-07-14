@@ -4,7 +4,6 @@ import "mdbreact/dist/css/mdb.css";
 import puercoaraña from "./puercoaraña.png";
 import "./footer.css";
 
-
 const Footer = () => {
   return (
     <div className="footer">

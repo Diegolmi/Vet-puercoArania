@@ -6,14 +6,17 @@ import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 // import FormCarrito from './FormCarrito';
-import NavbarAdmin from "../Admin/NavbarAdmin";
 import Review from "./Review";
 import AddProduct from "./AddProduct";
 import axiosInstance from "../util/axiosInstance";
+import Navbar from '../Navbar/Nav';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
+    marginTop:150,
+    background: 'white',
+    height: "100vh"
   },
   backButton: {
     marginRight: theme.spacing(1),
@@ -90,7 +93,9 @@ export default function Carrito() {
   };
 
   return (
+      <>
     <div className={classes.root}>
+      <Navbar userCarrito={userCarrito} />
       <Stepper activeStep={activeStep} alternativeLabel>
         {steps.map((label) => (
           <Step key={label}>
@@ -143,5 +148,6 @@ export default function Carrito() {
         )}
       </div>
     </div>
+      </>
   );
 }

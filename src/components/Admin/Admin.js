@@ -30,84 +30,73 @@ const Admin = ({ user }) => {
   }
 
   const hideSidebar = () => {
-    setSidebar(false);
+    setSidebar(true);
     setCambiarBoton(true);
   };
 
   const showSidebar = () => {
-    setSidebar(true);
+    setSidebar(false);
     setCambiarBoton(false);
   };
 
   return (
-    <Container className="contenedor-admin" fluid>
-      <Row>
-        {/* <Col md={2}><div>Side</div></Col> */}
-        <Col md={12}>
-          <NavbarAdmin
-            hideSidebar={hideSidebar}
-            showSidebar={showSidebar}
-            cambiarBoton={cambiarBoton}
-          />
-        </Col>
-      </Row>
-
-      {sidebar ? (
-        <div className="ocultarSidebar">
-          <Row>
-            <Col sm={3} className="columna-sidebar">
-              <SidebarAdmin />
-            </Col>
-            <Col sm={8} className="container-links-sidebar">
-              <Switch>
-                <Route exact path="/admin" component={InicioAdmin} />
-                <Route exact path="/admin/user" component={EditUser} />
-                <Route exact path="/admin/producto" component={AddProduct} />
-                <Route exact path="/admin/turnos" component={EditarTurnos} />
-                <Route
-                  exact
-                  path="/admin/consultas"
-                  component={AdminConsultas}
-                />
-                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
-              </Switch>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm className="footer-admin">
-              <FooterAdmin />
-            </Col>
-          </Row>
-        </div>
-      ) : (
-        <div>
-          <Row>
-            <Col xs={1} md={2} className="columna-sidebar">
+    <>
+      <NavbarAdmin
+        hideSidebar={hideSidebar}
+        showSidebar={showSidebar}
+        cambiarBoton={cambiarBoton}
+      />
+      <div className="contenedor-admin" fluid>
+        {sidebar ? (
+          <>
+          <div className="columna-sidebar-icon">
               <SidebarIcons />
-            </Col>
-            <Col xs={8} md={8} className="container-links-sidebar mr-1">
+            </div>
+            <div className="container-sidebar">
+            <div className="container-links-sidebar">
               <Switch>
                 <Route exact path="/admin" component={InicioAdmin} />
                 <Route exact path="/admin/user" component={EditUser} />
                 <Route exact path="/admin/producto" component={AddProduct} />
                 <Route exact path="/admin/turnos" component={EditarTurnos} />
-                <Route
+                {/* <Route
                   exact
                   path="/admin/consultas"
                   component={AdminConsultas}
-                />
-                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
+                /> */}
+                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
               </Switch>
-            </Col>
-          </Row>
-          <Row>
-            <Col sm className="footer-admin">
-              <FooterAdmin />
-            </Col>
-          </Row>
-        </div>
-      )}
-    </Container>
+            </div>
+          </div>
+          </>
+        ) : (
+          <>
+          <div className="columna-sidebar">
+              <SidebarAdmin />
+            </div>
+            <div className="container-sidebar">
+            <div className="container-links-sidebar">
+              <Switch>
+                <Route exact path="/admin" component={InicioAdmin} />
+                <Route exact path="/admin/user" component={EditUser} />
+                <Route exact path="/admin/producto" component={AddProduct} />
+                <Route exact path="/admin/turnos" component={EditarTurnos} />
+                {/* <Route
+                  exact
+                  path="/admin/consultas"
+                  component={AdminConsultas}
+                /> */}
+                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
+              </Switch>
+            </div>
+          </div>
+          </>
+        )}
+      </div>
+      <div sm className="footer-admin">
+        <FooterAdmin />
+      </div>
+    </>
   );
 };
 

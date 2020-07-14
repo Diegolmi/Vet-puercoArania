@@ -1,35 +1,35 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./secsvs.css";
-import { MDBRow, MDBCol, MDBIcon, MDBContainer, MDBTooltip } from "mdbreact";
+import { MDBRow, MDBCol, MDBIcon, MDBContainer} from "mdbreact";
 import catdog from "../../assets/img/svs/catdog.png";
-import { MDBBtn } from "mdbreact";
-import FormPage from "../FormServicios";
-import ModalTurnos from "./ModalTurnos";
 import Carturnos from "../CarTurnos/Carturnos";
-import NavbarPage from "../Navbar2/Nav2";
+import NavbarPage from "../Navbar/Nav";
+import axiosInstance from "../util/axiosInstance";
 
-//onClick={handleShow} evento para disparar modal
+
 
 const SecServicios = () => {
-  const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
+  const [userCarrito, setUserCarrito] = useState([]);
+
+  const mostrarCarrito = async () => {
+    const response = await axiosInstance.get("/shoppingCart");
+    if (response.data) {
+      setUserCarrito(response.data.items || []);
+    }
+  };
+
+  useEffect(() => {
+    mostrarCarrito();
+  }, []);
+
 
   return (
     <>
-      <NavbarPage />
+      <NavbarPage userCarrito={userCarrito} />
       <Carturnos />
       <div className="cont_ppal">
         <div className="fotos">
           <section className="my-5">
-            <MDBBtn
-              id="btn_turno"
-              onClick={handleShow}
-              outline
-              color="secondary my-4"
-            >
-              {" "}
-              solicitar turno
-            </MDBBtn>
             <MDBRow>
               <MDBCol md="4">
                 <MDBRow className="mb-3">
@@ -155,7 +155,7 @@ const SecServicios = () => {
               </MDBCol>
             </MDBRow>
           </section>
-          <ModalTurnos show={show} setShow={setShow} />
+
         </div>
       </div>
       <div id="hola" className="footer-copyright text-center py-4 mt-5">

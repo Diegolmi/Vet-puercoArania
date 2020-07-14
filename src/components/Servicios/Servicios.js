@@ -3,6 +3,7 @@ import "./styleServicios.css";
 import clinica from "../../assets/img/svs/veter.jpg";
 import estetica from "../../assets/img/svs/foto1.jpg";
 import hotel from "../../assets/img/svs/foto2.jpg";
+import { Link } from "react-router-dom";
 
 const Servicios = () => {
   return (
@@ -20,7 +21,9 @@ const Servicios = () => {
             Pedí tu turno online y conocé todos nuestros servicios.
           </p>
         </div>
-        <button id="boton">VER MÁS </button>
+        <Link id="boton" to="/servicios">
+          VER MÁS{" "}
+        </Link>
       </div>
       <div></div>
       <div className="images">

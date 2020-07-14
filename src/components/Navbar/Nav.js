@@ -6,19 +6,9 @@ import logo from "../../assets/img/logo.png";
 import { MDBBadge } from "mdbreact";
 import { Link, useHistory } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-// import CarritoDesplegable from "../carritoDesplegable/CarritoDesplegable";
-import { makeStyles } from "@material-ui/core/styles";
 import isAuthenticate from "../util/isAuthenticate";
-// import Accordion from "../carritoDesplegable/Accordion";
 
-// const useStyles = makeStyles({
-//   list: {
-//     width: 400,
-//   },
-//   fullList: {
-//     width: "auto",
-//   },
-// });
+
 
 const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
   const [isLogin, setIsLogin] = useState(false);
@@ -99,7 +89,7 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={navBackground ? "navbar-body" : ""}
+        className={navBackground ? "navbar-body" : "navbar-body1"}
         fixed="top"
       >
         <Navbar.Brand href="#home">
@@ -120,9 +110,9 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
             <Link to="/servicios" className="mr-3 link-admin">
               SERVICIOS
             </Link>
-            <Link to="/galeria" className="mr-3 link-admin">
+            {/* <Link to="/galeria" className="mr-3 link-admin">
               GALERIA
-            </Link>
+            </Link> */}
             <Link to="/tienda" className="mr-3 link-admin">
               TIENDA
             </Link>
@@ -133,7 +123,7 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
               <>
                 <Link
                   className="link-admin link-admin-boton"
-                  to="/usuario/carrito"
+                  to="/carrito"
                 >
                   <FaCartArrowDown className="carro" />
                   <MDBBadge color="danger" className="ml-2">

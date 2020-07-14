@@ -1,12 +1,57 @@
-import React from "react";
-import { MDBDataTable, MDBBtn } from "mdbreact";
+import React, { useState } from "react";
+import { MDBDataTable} from "mdbreact";
 import "../Admin.css";
 import axiosInstance from "../../util/axiosInstance";
+import { FaTrashAlt, FaEdit } from "react-icons/fa";
+import Swal from "sweetalert2";
+import ModalProduct from "../Pages/productos/ModalProduct";
 
 const ProductsTable = ({ productos, listaProductos }) => {
+  const [show, setShow] = useState(false);
+  const [productById, setProductById] = useState({});
+
+
+  const traerProductoPorId = async (id) => {
+    const response = await axiosInstance.get(`/product/${id}`);
+    console.log(response.data);
+    setProductById(response.data);
+    setShow(true);
+  };
+
   const eliminarProductos = (id) => async () => {
-    const res = await axiosInstance.delete(`/product/${id}`);
-    listaProductos();
+    Swal.fire({
+      title: "¿Estas seguro de borrar este producto?",
+      text: "Esta acción no se puede revertir",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, Borrarlo!!",
+    }).then((result) => {
+      if (result.value) {
+        Swal.fire("Borrado Exitosamente!!", " ", "success");
+        axiosInstance.delete(`/product/${id}`);
+        listaProductos();
+      }
+    });
+  };
+
+  const handleChange = (e) => {
+    setProductById({ ...productById, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (id) => async (e) => {
+    e.preventDefault();
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Producto Editado Exitosamente',
+      showConfirmButton: false,
+      timer: 1000
+    })
+    const response = await axiosInstance.put(`/product/${id}`, productById);
+    listaProductos()
+    setShow(false)
   };
 
   const data = {
@@ -78,27 +123,50 @@ const ProductsTable = ({ productos, listaProductos }) => {
       tipo: producto.category,
       mascota: producto.brand,
       editar: (
-        <MDBBtn color="blue" size="sm">
-          Editar
-        </MDBBtn>
+        <button
+          className="boton-editar-user"
+          onClick={() => traerProductoPorId(producto._id)}
+        >
+          <FaEdit />
+        </button>
       ),
       borrar: (
-        <MDBBtn color="red" size="sm" onClick={eliminarProductos(producto._id)}>
-          Eliminar
-        </MDBBtn>
+        <button
+          className="boton-borrar-user"
+          onClick={eliminarProductos(producto._id)}
+        >
+          <FaTrashAlt />
+        </button>
       ),
     })),
   };
 
   return (
-    <MDBDataTable
-      scrollX
-      scrollY
-      maxHeight="500px"
-      striped
-      bordered
-      data={data}
-    />
+    <>
+      <MDBDataTable
+        scrollX
+        scrollY
+        maxHeight="650px"
+        striped
+        bordered
+        entriesLabel="Mostrar Entradas"
+        searchLabel="Buscar"
+        responsiveSm
+        responsiveMd
+        responsiveLg
+        infoLabel={["mostrar", "al", "de", "entradas"]}
+        paginationLabel={["anterior", "siguiente"]}
+        className="product-table"
+        data={data}
+      />
+      <ModalProduct
+        show={show}
+        setShow={setShow}
+        productById={productById}
+        handleChange={handleChange}
+        handleSubmit={handleSubmit}
+      />
+    </>
   );
 };
 

@@ -32,8 +32,8 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
     <>
       <Container fluid>
         <Row>
-          <Col lg={12} md={6} className="contenedor-card-landing">
-            {alimentosArray.map((producto) => (
+          {alimentosArray.map((producto) => (
+            <Col lg={3} md={6} className="contenedor-card-landing">
               <Card className="card-container" key={producto._id}>
                 <Card.Img
                   src={producto.urlImage}
@@ -73,8 +73,8 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                   </Button>
                 </Card.Footer>
               </Card>
-            ))}
-          </Col>
+            </Col>
+          ))}
         </Row>
       </Container>
       <Modal show={show} onHide={handleClose}>
