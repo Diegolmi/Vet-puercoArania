@@ -41,10 +41,10 @@ const Turno = ({ turno, listarTurnos }) => {
 
     return (
         <>
-            <Container>
+            <Container  fluid clasName="contenedor-card" >
                 <Row>
-                    <Col>
-                        <Card style={{ width: '18rem' }} className="cardTurno">
+                    <Col md="4">
+                        <Card border="danger" style={{ width: '18rem' }} className="cardTurno">
                             <p>Mascota: <span>{turno.pet}</span></p>
                             <p>Dueño: <span>{turno.user}</span></p>
                             <p>Fecha: <span>{turno.date}</span></p>
