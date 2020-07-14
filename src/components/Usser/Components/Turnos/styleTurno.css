@@ -4,13 +4,21 @@
     
 }
 
+.contenedor1-card {
+    text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap !important;
+}
+
 .cardTurno{
     box-shadow: 9px 10px 39px -6px rgba(0,0,0,0.54);
     padding: 20px;
     margin: 20px;
     height: auto;
     width: 200px;
-
 }
 
     

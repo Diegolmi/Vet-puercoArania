@@ -36,6 +36,7 @@ import Col from 'react-bootstrap/Col';
     }
 
     return (
+        <>
         <Container className="Contenedor-usuario" fluid>
             <Row>
                 <Col md={12}><NavbarUser
@@ -58,10 +59,9 @@ import Col from 'react-bootstrap/Col';
                             </Switch>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col sm className="footer-admin"><FooterAdmin /></Col>
-                    </Row>
+                    
                 </div>
+               
 
                 :
                 <div>
@@ -75,12 +75,15 @@ import Col from 'react-bootstrap/Col';
                             </Switch>
                         </Col>
                     </Row>
-                    <Row>
-                        <Col sm className="footer-admin"><FooterAdmin /></Col>
-                    </Row>
+                    
                 </div>
             }  
+             
         </Container>
+        <Row>
+        <Col sm className="footer-admin"><FooterAdmin /></Col>
+        </Row>
+        </>
     )
 }
 
