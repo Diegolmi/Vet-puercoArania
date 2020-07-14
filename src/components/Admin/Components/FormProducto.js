@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { MDBInput } from "mdbreact";
 import Button from "react-bootstrap/Button";
 import axiosInstance from "../../util/axiosInstance";
+import Swal from "sweetalert2";
 
-const FormProducto = () => {
+const FormProducto = ({ listaProductos }) => {
   const [agregarProducto, setAgregarProducto] = useState({
     name: "",
     urlImage: "",
@@ -14,10 +15,27 @@ const FormProducto = () => {
     brand: "",
   });
 
+
+  const handleChange = (e) => {
+    setAgregarProducto({
+      ...agregarProducto,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+
   const addProductSubmit = async (e) => {
     e.preventDefault();
-    const response = await axiosInstance.post("/product", agregarProducto);
 
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Your work has been saved",
+      showConfirmButton: false,
+      timer: 1500,
+    });
+    const response = await axiosInstance.post("/product", agregarProducto);
+    listaProductos()
     //limpiar formulario
     setAgregarProducto({
       name: "",
@@ -30,12 +48,7 @@ const FormProducto = () => {
     });
   };
 
-  const handleChange = (e) => {
-    setAgregarProducto({
-      ...agregarProducto,
-      [e.target.name]: e.target.value,
-    });
-  };
+ 
 
   return (
     <form onSubmit={addProductSubmit}>

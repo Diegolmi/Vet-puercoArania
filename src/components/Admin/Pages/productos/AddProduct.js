@@ -5,6 +5,7 @@ import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
 import FormProducto from "../../Components/FormProducto";
 import axiosInstance from "../../../util/axiosInstance";
+import '../../Admin.css'
 
 const AddProduct = () => {
   const [productos, setProductos] = useState([]);
@@ -29,7 +30,7 @@ const AddProduct = () => {
             id="noanim-tab-example"
           >
             <Tab eventKey="home" title="Agregar Producto">
-              <FormProducto />
+              <FormProducto listaProductos={listaProductos} />
             </Tab>
             <Tab eventKey="profile" title="Lista Productos">
               <ProductsTable

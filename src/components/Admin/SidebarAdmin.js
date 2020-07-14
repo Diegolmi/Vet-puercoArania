@@ -39,12 +39,6 @@ const SidebarAdmin = () => {
           </Link>
         </li>
         <li className="listado-sidebar">
-          <MdQueryBuilder className="icon-sidebar-admin" />
-          <Link to="/admin/consultas" className="link-sidebar">
-            Consultas
-          </Link>
-        </li>
-        <li className="listado-sidebar">
           <RiAdminLine className="icon-sidebar-admin" />
           <Link to="/admin/datosAdmin" className="link-sidebar">
             Admin

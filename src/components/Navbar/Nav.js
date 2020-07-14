@@ -11,14 +11,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import isAuthenticate from "../util/isAuthenticate";
 // import Accordion from "../carritoDesplegable/Accordion";
 
-// const useStyles = makeStyles({
-//   list: {
-//     width: 400,
-//   },
-//   fullList: {
-//     width: "auto",
-//   },
-// });
+
 
 const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
   const [isLogin, setIsLogin] = useState(false);
@@ -99,7 +92,7 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={navBackground ? "navbar-body" : ""}
+        className={navBackground ? "navbar-body" : "navbar-body1"}
         fixed="top"
       >
         <Navbar.Brand href="#home">
@@ -133,7 +126,7 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
               <>
                 <Link
                   className="link-admin link-admin-boton"
-                  to="/usuario/carrito"
+                  to="/carrito"
                 >
                   <FaCartArrowDown className="carro" />
                   <MDBBadge color="danger" className="ml-2">

@@ -16,6 +16,13 @@
     background-color: #68829c;
 
   }
+  .navbar-body1{
+    background: #68829c;
+    opacity: .5;
+  }
+  .navbar-body1:hover{
+    opacity: 1;
+  }
   .navbar-body {
     background-color: #68829c !important;
     transition: 500ms ease;

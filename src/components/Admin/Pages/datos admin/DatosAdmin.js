@@ -26,6 +26,7 @@ const DatosAdmin = () => {
         <div className="col-10 my-3">
           <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
             <Tab eventKey="datos" title="Datos Admin">
+              <h2>Datos del Admin</h2>
               <MostrarDatosAdmin usuario={usuario} />
             </Tab>
             <Tab eventKey="modificar" title="Modificar Datos">
@@ -33,6 +34,7 @@ const DatosAdmin = () => {
               <FormDatosAdmin />
             </Tab>
             <Tab eventKey="crear" title="Crear Cuenta Admin">
+            <h2>Crear Usuario Admin</h2>
               <FormCreateAdmin />
             </Tab>
           </Tabs>

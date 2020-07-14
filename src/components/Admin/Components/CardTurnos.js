@@ -23,9 +23,7 @@ const CardTurnos = ({ turnos }) => {
               style={{ width: "18rem" }}
             >
               <Card.Header className="header_card">
-                <Col xs={6} md={4}>
-                  <Image src="imagen" roundedCircle />
-                </Col>
+                
                 <Card.Title>Mascota: </Card.Title>
                 <Card.Subtitle className="mb-2 text-muted">
                   Dueño:{" "}

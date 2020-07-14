@@ -1,8 +1,10 @@
 .contenedor-admin {
     overflow-x: hidden;
-    height: 100vw;
+    height: auto;
+    width: 100vw;
     margin: 0 !important;
     padding: 0 !important;
+    display: flex;
 }
 
 .navbar-admin {
@@ -12,6 +14,13 @@
     width: 100vw;
    
 }
+/*boton para accionar sidebar*/
+.hideSidebar {
+    background: none;
+    border: none;
+    font-size: 25px;
+}
+
 
 .link-admin {
     color: black;
@@ -39,122 +48,122 @@
     justify-content: center;
     text-align: center;
 }
-.classic-admin-card{
-    margin: 0 !important;
-}
+
+
 /* SIDEBAR */
 
-.sidebar-container{
-    height: 100% !important;
-    width: 250px;
-    background: #68829c;
-    text-align: center;
-    /* position: fixed; */
-    top: 50px;
-}
-
-.sidebaricons-container {
-    height: 100% !important;
-    width: 70px;
-    background: #68829c;
-    text-align: center; 
-    /* position: fixed; */
-    
-}
-.datos-sidebar-icons {
-    height: 100px;
-}
-
-.columna-sidebar{
-    height: 100%;
-}
-.datos-sidebar {
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    border-bottom: 1px solid black;
-}
-
-
-
-.secciones-sidebar {
-    margin-top: 30px; 
-    padding-left: 0;
-}
-
-.listado-sidebar {
-    margin-top: 25px;
-    list-style: none;
-    margin-bottom: 50px;
-}
-.link-sidebar {
-    color: black;
-    font-weight: 600;
-    padding: 10px;
-    border-bottom: 1px solid black;   
-}
-.link-sidebar:hover{
-    text-decoration: none;
-    color: #fc5185;
-    border-bottom: 2px solid #fc5185;
-    transition: .3s;  
-}
-/* .listado-sidebar:hover {
-    color: #fc5185;
-    transition: .3s; 
-} */
-.icon-sidebar-admin {
-    margin-right: 15px;
-    font-size: 20px;
-    width: 50px;
-    margin: 0 auto;
+.container-links-sidebar{
+    height: 100vh;
+    width: 100%;
     display: flex;
     flex-direction: column;
-    
+    z-index: 0;
 }
+
+
+.container-sidebar{
+    width: 100%;
+    display: flex;
+}
+
+.contenedor-admin{
+    height: 100%;
+}
+
 
 /* FIN SIDEBAR */
 
+
+/*SECCION INCIO*/
+    .container-inicio-admin {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+    }
+.container-inicio-admin{
+margin-bottom: 15px;
+}
+
+.container-card-info{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-chart-section{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px !important;
+}
+/*FIN SECCION INICIO*/
+
+
+
 /* EDITAR USUARIO */
 .container-usuario-admin {
-    width: 100%;
-    margin: 0;
-    padding: 0;
+    width: 1100px;
+    margin: 25px;
     height: 100vh; 
+}
+.boton-agregar-user{
+    width: 88%;
+    display: flex;
+    justify-content: flex-end;
+}
+.button-add{
+    background: #68829c;
+    color: antiquewhite;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 600;
+}
+.icon-add{
+    margin-left: 5px;
+    font-size: 25px;
+}
+.button-add:hover{
+    color: #fc5185;
 }
 
 .table-user {
   padding-left: 0px !important;
+  max-width: 88%;
 }
+
+.boton-editar-user{
+    background:none;
+    border: none;
+    font-size: 20px;
+    align-items: center !important;
+    color: #68829c;
+   
+}
+
+
+.boton-borrar-user{
+    background: none !important;
+    border: none !important;
+    outline: none !important;
+    color: red;
+    font-size: 20px;
+}
+
 /* FIN EDITAR USUARIO */
 
-.hideSidebar {
-    background: none;
-    border: none;
-    font-size: 25px;
-}
 
-/*INICIO SECCION ADMIN*/
-.container-inicio-admin {
-    /* margin-top: 50px; */
-    margin-right: 30px;
-    background: none !important;
-}
-.saludo-inicio {
-    width: 400px;
-    
-}
-.container-saludo {
-    background: none !important;
-}
+
 
 /*PRODUCT SECTION*/
 .container-productos-admin{
     width: 100%;
-    margin: 0;
-    padding: 0;
+    margin: 50px;
     height: 100vh; 
 }
 .bnt-form-product {
@@ -165,6 +174,13 @@
 
 .bnt-form-product:hover {
     color: #fc5185;
+}
+.img-table-product{
+    height: 100px;
+    width: 100px;
+}
+.product-table{
+    max-width: 88%;
 }
 
 /*SECCION TURNOS*/
@@ -207,58 +223,122 @@
 }
 
 
-/*SECCION CONSULTAS*/
-.container-consultas-admin {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
-}
-
-.mensaje-consultas-btn {
-    display: flex;
-    flex-direction: column;
-    width: 300px;
-}
-
 
 /*SECCION DATOS ADMIN*/
 
 .container-datos-admin {
     width: 100%;
     height: 100vh;
+    margin-left: 100px;
+   
 }
 
 
 
 /*IMAGENES TABLA DE PRODUCTOS*/
 
-.img-table-product{
-    height: 100px;
-    width: 100px;
-}
+
 
 /*MEDIA QUERYS*/
 
-@media (max-width: 549px){
-  
-    .sidebaricons-container{
-        width: 46px !important;
-    }    
-    .container-links-sidebar{
-        margin: auto auto !important;
+@media only screen and (max-width: 600px){
+    .container-sidebar{
+        flex-wrap: wrap;
     }
-    .container-consultas-admin{
-        margin: auto auto !important;
+  .container-links-sidebar{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-card-info{
+        flex-direction: column;
+    }
+    .container-chart-section{
+        flex-direction: column;
+        margin-bottom: 20px !important;
+    }
+    .container-usuario-admin {
+        width: 400px; 
+        margin-right: 15px;
+    }
+    .container-productos-admin{
+        margin-left: 100px;
+    }
+    .img-table-product{
+        height: 100px !important;
+        width: 100px !important;
+    }
+    .container-datos-admin {
+        margin-left: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+   
+   
+ 
+}
 
+@media only screen and (min-width: 600px){
+
+    .container-links-sidebar{
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
     }
-    .ocultarSidebar{
-        display: none;
+    .container-card-info{
+        flex-direction: column;
+    }
+    .container-chart-section{
+        flex-direction: column;
+        margin-bottom: 20px !important;
+    }
+    .container-usuario-admin {
+        width: 100%; 
+        margin-right: 15px;
+    }
+    
+   
+}
+@media only screen and (min-width: 768px){
+    .container-links-sidebar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .container-card-info{
+        flex-wrap: wrap;
+        flex-direction: row;
+    }
+    .container-chart-section{
+        flex-wrap: wrap;
+        flex-direction: row;
+        margin-bottom: 20px !important;
+    }
+    .container-usuario-admin {
+        width: 800px; 
+        margin-right: 15px;
+    }
+   
+   
+}
+
+@media only screen and (min-width: 992px){
+    .container-usuario-admin {
+        width: 1100px; 
+        margin-right: 15px;
     }
 }
 
-@media (min-width: 550px) and (max-width: 766px){
-    .container-usuario-admin, .container-links-sidebar{
-        margin-left: 60px;
-    }
+@media only screen and (min-width: 1200px){
+    /* .container-links-sidebar{
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    } */
 }

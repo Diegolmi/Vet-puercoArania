@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import {
   MDBContainer,
   MDBRow,
@@ -9,15 +9,27 @@ import {
   MDBTypography,
 } from "mdbreact";
 import "./style.css";
-// import NavbarPage from '../Navbar/Nav';
-// import Image from "react-bootstrap/Image";
-// import { Link } from 'react-router-dom';
-import NavbarPage from "../Navbar2/Nav2";
+import NavbarPage from '../Navbar/Nav';
+import axiosInstance from "../util/axiosInstance";
+
+
 
 const TestimonialsPage = () => {
+  const [userCarrito, setUserCarrito] = useState([]);
+
+  const mostrarCarrito = async () => {
+    const response = await axiosInstance.get("/shoppingCart");
+    if (response.data) {
+      setUserCarrito(response.data.items || []);
+    }
+  };
+
+  useEffect(() => {
+    mostrarCarrito();
+  }, []);
   return (
     <div className="about">
-      <NavbarPage />
+      <NavbarPage userCarrito={userCarrito} />
       <MDBContainer>
         <div className="imagabout">
           <h1 className="titulo_about">
