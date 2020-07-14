@@ -23,6 +23,7 @@ const SecServicios = () => {
     mostrarCarrito();
   }, []);
 
+
   return (
     <>
       <NavbarPage userCarrito={userCarrito} />
@@ -155,6 +156,7 @@ const SecServicios = () => {
               </MDBCol>
             </MDBRow>
           </section>
+
         </div>
       </div>
       <div id="hola" className="footer-copyright text-center py-4 mt-5">
