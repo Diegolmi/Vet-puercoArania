@@ -64,7 +64,7 @@ const Admin = ({ user }) => {
                   path="/admin/consultas"
                   component={AdminConsultas}
                 /> */}
-                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
+                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
               </Switch>
             </div>
           </div>
@@ -86,7 +86,7 @@ const Admin = ({ user }) => {
                   path="/admin/consultas"
                   component={AdminConsultas}
                 /> */}
-                <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
+                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
               </Switch>
             </div>
           </div>

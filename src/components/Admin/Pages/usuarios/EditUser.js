@@ -81,12 +81,12 @@ const EditUser = () => {
         sort: "asc",
         width: 150,
       },
-      {
-        label: "Editar",
-        field: "editar",
-        sort: "asc",
-        width: 70,
-      },
+      // {
+      //   label: "Editar",
+      //   field: "editar",
+      //   sort: "asc",
+      //   width: 70,
+      // },
       {
         label: "Eliminar",
         field: "eliminar",
@@ -99,10 +99,10 @@ const EditUser = () => {
       apellido: usuario.lastname,
       usuario: usuario.username,
       email: usuario.email,
-      editar: (
-        <button className="boton-editar-user" onClick={() =>traerUsuariPorId(usuario._id)}><FaEdit /></button>
+      // editar: (
+      //   <button className="boton-editar-user" onClick={() =>traerUsuariPorId(usuario._id)}><FaEdit /></button>
         
-      ),
+      // ),
       eliminar: (
        <button className="boton-borrar-user" onClick={eliminarUser(usuario._id)}><FaTrashAlt /></button>
          

@@ -84,6 +84,7 @@ const Contenedor = () => {
       <div className="productos">
         <Carousel />
         <Accesorios
+        
           agregarCantidad={agregarCantidad}
           productos={productos}
           addToCart={addToCart}

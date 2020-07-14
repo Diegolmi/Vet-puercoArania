@@ -1,7 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap');
+
 h1{
     margin-top: 50px;
     margin-left: 100px;
 }
+
+.store-title{
+    font-family: 'Do Hyeon', sans-serif;
+    font-size: 80px;
+    font-weight: 600;
+    color: #0e3257;
+    letter-spacing: 10px;
+}
+
 .contenedor_cards{
     margin-left: 100px;
     display: flex;

@@ -9,15 +9,7 @@ import ModalProduct from "../Pages/productos/ModalProduct";
 const ProductsTable = ({ productos, listaProductos }) => {
   const [show, setShow] = useState(false);
   const [productById, setProductById] = useState({});
-  const [product, setProduct] = useState({
-    name: "",
-    urlImage: "",
-    price: "",
-    stock: "",
-    details: "",
-    category: "",
-    brand: "",
-  });
+
 
   const traerProductoPorId = async (id) => {
     const response = await axiosInstance.get(`/product/${id}`);
@@ -45,7 +37,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
   };
 
   const handleChange = (e) => {
-    setProduct({ ...product, [e.target.name]: e.target.value });
+    setProductById({ ...productById, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = (id) => async (e) => {
@@ -57,7 +49,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
       showConfirmButton: false,
       timer: 1000
     })
-    const response = await axiosInstance.put(`/product/${id}`, product);
+    const response = await axiosInstance.put(`/product/${id}`, productById);
     listaProductos()
     setShow(false)
   };

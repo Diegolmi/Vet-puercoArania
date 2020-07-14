@@ -31,14 +31,14 @@ const EditProductForm = ({ productById, handleChange, handleSubmit }) => {
       />
       <MDBInput
         onChange={handleChange}
-        // value={price}
+        value={price}
         name="price"
         label="Precio"
         type="number"
       />
       <MDBInput
         onChange={handleChange}
-        // value={stock}
+        value={stock}
         name="stock"
         label="Cantidad"
         type="number"

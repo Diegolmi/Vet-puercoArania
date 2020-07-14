@@ -6,10 +6,7 @@ import logo from "../../assets/img/logo.png";
 import { MDBBadge } from "mdbreact";
 import { Link, useHistory } from "react-router-dom";
 import { FaCartArrowDown } from "react-icons/fa";
-// import CarritoDesplegable from "../carritoDesplegable/CarritoDesplegable";
-import { makeStyles } from "@material-ui/core/styles";
 import isAuthenticate from "../util/isAuthenticate";
-// import Accordion from "../carritoDesplegable/Accordion";
 
 
 
@@ -113,9 +110,9 @@ const NavbarPage = ({ mostrarCarrito, userCarrito }) => {
             <Link to="/servicios" className="mr-3 link-admin">
               SERVICIOS
             </Link>
-            <Link to="/galeria" className="mr-3 link-admin">
+            {/* <Link to="/galeria" className="mr-3 link-admin">
               GALERIA
-            </Link>
+            </Link> */}
             <Link to="/tienda" className="mr-3 link-admin">
               TIENDA
             </Link>
