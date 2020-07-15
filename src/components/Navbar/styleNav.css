@@ -1,29 +1,13 @@
 .navPrincipal {
   z-index: 10000;
-  padding-right: 0px;
 }
 .letras {
-  color: white !important;
-  padding-right: 20px !important;
-  letter-spacing: 1px;
+  color: black !important;
 }
 .letras:hover {
   background-color: #68829c;
 }
-.letras_drop {
-  color: black !important;
-  letter-spacing: 1px;
-}
-.dropdown-toggle::after {
-  color: white !important;
-}
-.bg-primary {
-  background-color: #68829c !important;
-}
-.btn-secondary {
-  background-color: #fc5185 !important;
-}
-*/ .navbar:hover {
+.navbar:hover {
   background-color: #68829c;
   transition: 0.3s;
 }
@@ -58,12 +42,16 @@ a.link-admin {
 #log_nb {
   background-color: #fc5185;
   padding: 3px 20px;
+  color: white;
 }
 .contenedor-carrito-sidebar {
+  /* height: 400px !important; */
+  max-height: 800px !important;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .navbar-body {
@@ -76,6 +64,11 @@ a.link-admin {
   outline: none;
   border: none;
   margin-right: 30px;
+}
+
+.logo {
+  width: 200px;
+  height: 100px;
 }
 
 @media (min-width: 300px) and (max-width: 549px) {
@@ -131,12 +124,7 @@ a.link-admin {
 }
 @media (min-width: 701px) and (max-width: 1199px) {
   .logo {
-    height: 80px !important;
-    width: 130px !important;
-    margin: 0;
+    height: 60px;
+    width: 90px;
   }
-}
-.logo {
-  height: 100px;
-  width: 200px;
 }

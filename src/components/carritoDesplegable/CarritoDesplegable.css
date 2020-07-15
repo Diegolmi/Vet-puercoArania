@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 .contenedor-producto-sidebar{
     width: 100%;
     margin: 3px;
@@ -11,4 +12,38 @@
 .card-carrito {
     width: 100%;
     
+=======
+.card-carrito {
+    margin: 5px !important;
+    width: 300px !important;
+    height: 250px !important;
+    
+    
+}
+
+.carrito-sidebar-img{
+    height: 50px;
+    width: 50px;
+}
+
+.body-sidebar-cart{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.botones-footer-sidebar{
+    padding: 4px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.button-delete-itemcart{
+    background: none;
+    border: none;
+}
+
+.icon-delete-itemcart{
+    color: #fc5185;
+>>>>>>> 9702e523b21e5fecc2debfd609a1a143461ce8f8
 }

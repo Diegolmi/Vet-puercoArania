@@ -1,14 +1,12 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
-import Grid from '@material-ui/core/Grid';
-import './carrito.css';
-
-
-
+import React, { useState, useEffect } from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import List from "@material-ui/core/List";
+import ListItem from "@material-ui/core/ListItem";
+import ListItemText from "@material-ui/core/ListItemText";
+import Grid from "@material-ui/core/Grid";
+import "./carrito.css";
+import axiosInstance from "../util/axiosInstance";
 
 const useStyles = makeStyles((theme) => ({
   listItem: {
@@ -24,19 +22,40 @@ const useStyles = makeStyles((theme) => ({
 
 export default function Review() {
   const classes = useStyles();
+  const [userCarrito, setUserCarrito] = useState([]);
+  const [usuarios, setUsuarios] = useState({});
 
-  const products = [
-    { name: 'Product 1', desc: 'A nice thing', price: '$9.99' },
-    { name: 'Product 2', desc: 'Another thing', price: '$3.45' },
-    { name: 'Product 3', desc: 'Something else', price: '$6.51' },
-    { name: 'Product 4', desc: 'Best thing of all', price: '$14.11' },
-    { name: 'Shipping', desc: '', price: 'Free' },
+  //traer carrito para mostrar informacion de los productos para comprar
+  const mostrarCarrito = async () => {
+    const response = await axiosInstance.get("/shoppingCart");
+    if (response.data) {
+      setUserCarrito(response.data.items || []);
+      setUsuarios(response.data.customer);
+    }
+  };
+
+  useEffect(() => {
+    mostrarCarrito();
+  }, []);
+
+  const total = +userCarrito.reduce((acc, item) => {
+    return acc + item.product.price * item.quantity;
+  }, 0);
+
+  const products = userCarrito.map((carrito) => ({
+    name: carrito.product.name,
+    price: carrito.product.price * carrito.quantity,
+  }));
+
+  const addresses = [
+    usuarios.address,
+    usuarios.province,
+    usuarios.city,
+    usuarios.zip,
   ];
-  const addresses = ['1 Material-UI Drive', 'Reactville', 'Anytown', '99999', 'USA'];
   const payments = [
-    { name: 'Precio', detail: '2500' },
-    { name: 'Envio', detail: 'free' },
-    { name: 'Total a Pagar', detail: '$2500' },
+    { name: "Envio", detail: "free" },
+    { name: "Total a Pagar", detail: total },
   ];
 
   return (
@@ -54,7 +73,7 @@ export default function Review() {
         <ListItem className={classes.listItem}>
           <ListItemText primary="Total" />
           <Typography variant="subtitle1" className={classes.total}>
-            $34.06
+            $ {total}
           </Typography>
         </ListItem>
       </List>
@@ -63,8 +82,10 @@ export default function Review() {
           <Typography variant="h6" gutterBottom className={classes.title}>
             Datos de Envio
           </Typography>
-          <Typography gutterBottom>John Smith</Typography>
-          <Typography gutterBottom>{addresses.join(', ')}</Typography>
+          <Typography gutterBottom>
+            {usuarios.name} {usuarios.lastname}
+          </Typography>
+          <Typography gutterBottom>{addresses.join(", ")}</Typography>
         </Grid>
         <Grid item container direction="column" xs={12} sm={6}>
           <Typography variant="h6" gutterBottom className={classes.title}>

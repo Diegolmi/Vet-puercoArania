@@ -1,21 +1,8 @@
-/* .contenedor-principal-landing {
-  background: #f0f0f0 !important;
-} */
-
-/* .App {
-  text-align: center;
-
-.contenedor-principal-landing {
-  background: #f0f0f0;
-
+body{
+  overflow-x:hidden;
+  width: 100%;
+  /*NO BORREN ESTO PLIS*/
 }
-/* .rowNav {
-  height: 200px;
-} */
-/* .rowCarousel {
-  height: 90vh;
-  
-} */
 
 .rowFooter {
   position: relative;
@@ -25,3 +12,6 @@
 .App-link {
   color: #61dafb;
 }
+
+
+

@@ -1,0 +1,93 @@
+/*FAILURE*/
+
+.container-failure{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.failure{
+    text-align: center;
+    width: 100%;
+    /* background: red; */
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fail-icon{
+    text-align: center;
+    font-size: 100px;
+    color: red;
+    border: 1px solid red;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+/*SUCCESS*/
+
+.container-success{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container-icon-success{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+.succ-icon{
+    font-size: 100px;
+    color: green;
+    border: 1px solid green;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+.container-info-success{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+   
+}
+
+.container-link-success{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/*PENDING*/
+
+.container-pending{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.pending{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pending-icon{
+    font-size: 100px;
+    color: #E47D22;
+    
+}

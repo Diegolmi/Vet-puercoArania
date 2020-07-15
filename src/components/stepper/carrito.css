@@ -101,6 +101,18 @@
     padding: 0;
 }
 
+<<<<<<< HEAD
+=======
+.total-carrito{
+    /* border: 1px solid #fc5185; */
+    width: 100%;
+    padding-right: 180px;
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+>>>>>>> 9702e523b21e5fecc2debfd609a1a143461ce8f8
 @media only screen and (max-width: 600px) {
     .review{
         width: 300px;

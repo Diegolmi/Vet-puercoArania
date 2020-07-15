@@ -1,0 +1,16 @@
+.tituloTurno {
+    margin: 20px;
+    color: red;
+    
+}
+
+.cardTurno{
+    box-shadow: 9px 10px 39px -6px rgba(0,0,0,0.54);
+    padding: 20px;
+    margin: 20px;
+    height: auto;
+    width: 200px;
+
+}
+
+    

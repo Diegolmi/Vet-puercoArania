@@ -1,0 +1,10 @@
+const handleSubmit = id => async e => {
+    e.preventDefault();
+    const result = await axiosInstance.put(`/turnos/${id}`, editarTurno)
+
+    if (pet.trim() === '' || user.trim() === '' || date.trim() === '' || time.trim() === '' ||
+      description.trim() === '' || service.trim() === '') {
+      actualizarError(true)
+      return;
+    }
+  }

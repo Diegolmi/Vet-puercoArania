@@ -1,55 +1,62 @@
 body {
-    background-color: whitesmoke;
-    
+  background-color: whitesmoke;
 }
 .logoRegister {
-    width: 300px;
-    height: 180px;
-    margin: 50px;
-    
+  width: 400px;
+  height: 250px;
+  /* margin: 50px; */
 }
-.containerRegistro{
-    padding: 120px;
-    background-color: whitesmoke !important;
-    
-}
-
-.container-registro {
-    overflow-y: hidden !important;
-    height: 94.5vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+.containerRegistro {
+  width: 100%;
+  background-color: whitesmoke !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
-.container-registro {
-    overflow-y: hidden !important;
-    height: 94.5vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.container-registro {
-    overflow-y: hidden !important;
-    height: 94.5vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-.ButtonRegistro {
-    background-color: #fc5185 !important;
-    color: white;
+.container-img-registro {
+  width: 50%;
+  height: 100%;
+  background: #68829c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 .containerForm1 {
-    box-shadow: 5px 5px 5px 0px #fc5185;
-    height: auto;
-    padding: 50px;
-    
+  box-shadow: 5px 5px 5px 0px #fc5185;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.formulario-registro {
+  margin: 10px;
+}
+
+/* .container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+
+/* .container-registro {
+    overflow-y: hidden !important;
+    height: 94.5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+} */
+.ButtonRegistro {
+  background-color: #fc5185 !important;
+  color: white;
 }

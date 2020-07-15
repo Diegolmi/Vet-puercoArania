@@ -6,7 +6,7 @@ import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 
 const RecuperaUsuario = () => {
-  // const history = useHistory();
+  const history = useHistory();
   const [recuperarUsuario, setRecuperarUsuario] = useState({
     email: "",
   });
@@ -20,17 +20,13 @@ const RecuperaUsuario = () => {
     e.preventDefault();
     try {
       const result = await axiosInstance.post("/email", recuperarUsuario);
-      console.log(result);
-      if (result.data.token) {
-        localStorage.setItem("jwt", result.data.token);
-        localStorage.setItem("role", result.data.role);
-        // history.push("/privado/usuario");
-      }
+      history.push("/login");
+      setRecuperarUsuario(result);
     } catch (error) {
-      console.log(error);
-      console.log("no estas registrado");
+      console.error(error);
     }
   };
+
   return (
     <div className="">
       <MDBRow>

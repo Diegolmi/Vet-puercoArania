@@ -1,24 +1,31 @@
-import React from 'react';
+import React from "react";
 import { MDBListGroup, MDBListGroupItem, MDBContainer } from "mdbreact";
 
+const MostrarDatosAdmin = ({ usuario }) => {
+  const {
+    name,
+    lastname,
+    role,
+    email,
+    address,
+    country,
+    province,
+    tel,
+  } = usuario;
+  return (
+    <MDBContainer>
+      <MDBListGroup style={{ width: "22rem" }}>
+        <MDBListGroupItem>Nombre: {name}</MDBListGroupItem>
+        <MDBListGroupItem>Apellido: {lastname}</MDBListGroupItem>
+        <MDBListGroupItem>E-mail: {email}</MDBListGroupItem>
+        <MDBListGroupItem>Domicilio: {address}</MDBListGroupItem>
+        <MDBListGroupItem>Rol: {role}</MDBListGroupItem>
+        <MDBListGroupItem>Pais: {country}</MDBListGroupItem>
+        <MDBListGroupItem>Provincia: {province}</MDBListGroupItem>
+        <MDBListGroupItem>Telefono: {tel}</MDBListGroupItem>
+      </MDBListGroup>
+    </MDBContainer>
+  );
+};
 
-const MostrarDatosAdmin = () => {
-    return ( 
-        <MDBContainer>
-            <MDBListGroup style={{ width: "22rem" }}>
-                <MDBListGroupItem>Nombre: Martin</MDBListGroupItem>
-                <MDBListGroupItem>Apellido: Jerez</MDBListGroupItem>
-                <MDBListGroupItem>E-mail: martincho111986@gmail.com</MDBListGroupItem>
-                <MDBListGroupItem>Domicilio: lkajsdlkjads</MDBListGroupItem>
-                <MDBListGroupItem>Rol: Admin</MDBListGroupItem>
-                <MDBListGroupItem>Pais: Argentina</MDBListGroupItem>
-                <MDBListGroupItem>Provincia: Tucuman</MDBListGroupItem>
-                <MDBListGroupItem>Telefono: 3816285778</MDBListGroupItem>
-                
-                
-            </MDBListGroup>
-        </MDBContainer>
-     );
-}
- 
 export default MostrarDatosAdmin;

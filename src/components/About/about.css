@@ -5,16 +5,20 @@
   padding-bottom: 80px;
   padding-right: 20px;
   padding-left: 20px;
-  background-color: #f0f0f0; 
+  background-color: #f0f0f0;
   color: black !important;
   min-width: 360px;
-
 }
+
 .first-title {
   color: #fc5185 !important;
 }
 
-.second-title, .five-title,.first-title,.third-title,.fourd-title{
+.second-title,
+.five-title,
+.first-title,
+.third-title,
+.fourd-title {
   margin-bottom: 1rem !important;
 }
 
@@ -29,49 +33,59 @@
   color: #fc5185 !important;
 }
 
-.third-title, .fourd-title {
+.third-title,
+.fourd-title {
   color: #364f6b !important;
+  display: flex;
+  justify-content: center;
 }
 
-.five-title{
+.five-title {
   color: #fc5185 !important;
+  margin-top: 80px !important;
+  margin-bottom: 50px !important;
 }
 
- .second-title, .third-title {
-    margin-top: 20px 20px;
-    margin-bottom: 10px;
+.second-title,
+.third-title {
+  margin-top: 35px !important;
+  margin-bottom: 40px !important;
 }
-
 
 .paragraph {
   text-align: justify;
   line-height: 1.5;
   color: black;
   font-size: 1em;
-  margin-bottom: 10px!important; 
+  margin-bottom: 25px !important;
+  display: flex;
+  justify-content: center;
 }
 
 .circular--square {
   border-radius: 50%;
 }
 
-
 .datosmedicos {
-   font-weight: bold;
+  font-weight: bold;
 }
 .datosmedicos1 {
-  margin-bottom: 20px!important;
+  margin-bottom: 20px !important;
 }
 
 .static-contain .paragraph {
   color: black;
 }
 
-.imedicos{
+.imedicos {
   max-width: 100px;
-   max-height: 100px;
+  max-height: 100px;
 }
 
 .static-contain .paragraph {
-    color: black;
+  color: black;
+}
+
+.footer-copyright {
+  width: 100% !important;
 }

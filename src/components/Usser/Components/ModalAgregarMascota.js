@@ -1,113 +1,135 @@
-import React from 'react';
-import { Modal, Button } from 'react-bootstrap';
+import React, { useState } from "react";
+import { Modal, Button } from "react-bootstrap";
 import { useForm } from "react-hook-form";
+import axiosInstance from "../../util/axiosInstance";
+import Swal from "sweetalert2";
 
-import './styleMascotas.css';
+import "./styleMascotas.css";
 
 const ModalAgregarMascota = ({ show, setShow }) => {
-    const { register, errors, handleSubmit } = useForm();
+  const [agregarMascota, setAgregarMascota] = useState({
+    name: "",
+    race: "",
+    species: "",
+    size: "",
+    weigth: "",
+  });
 
-    const onSubmit = (data, e) => {
-        console.log(data)
-        e.target.reset()
+  const { register, errors, handleSubmit } = useForm();
 
-    }
+  const onSubmit = async (e) => {
+    const result = await axiosInstance.post("/mascota", agregarMascota);
+    console.log(result);
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Agregaste tu mascota!!",
+      showConfirmButton: false,
+      timer: 2500,
+    });
+  };
 
-    const handleClose = () => setShow(false);
-    return (
+  const handleChange = (e) => {
+    console.log(e);
+    setAgregarMascota({
+      ...agregarMascota,
+      [e.target.name]: e.target.value,
+    });
+  };
 
-        <Modal show={show} onHide={handleClose}>
-            <Modal.Header closeButton>
-                <Modal.Title><h3 >Agregar Mascota</h3></Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <form onSubmit={handleSubmit(onSubmit)}>
-                   <label>Nombre</label>
-                    <input
-                        name="nombre"
-                        className="form-control my-2"
-                        ref={register({
-                            required: true,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i,
-                            placeholder: 'Ingrese un nombre'
-                        })} />
-                    <span className="">
+  const handleClose = () => setShow(false);
 
-                        {errors.nombre && "Ingrese un nombre valido"}
-                    </span>
-                    <br />
-                    <label>Raza</label>
-                    <input
-                        name="raza"
-                        className="form-control my-2"
-                        ref={register({
-                            required: true,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i,
-                            message: 'Campo Requerido'
-                        })} />
-                    <span className="">
+  return (
+    <Modal show={show} onHide={handleClose}>
+      <Modal.Header closeButton>
+        <Modal.Title>
+          <h3>Agregar Mascota</h3>
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <form onSubmit={handleSubmit(onSubmit)}>
+          <label>Nombre</label>
+          <input
+            name="name"
+            onChange={handleChange}
+            className="form-control my-2"
+            ref={register({
+              required: true,
+              maxLength: 20,
+              pattern: /^[A-Za-z]+$/i,
+              placeholder: "Ingrese un nombre",
+            })}
+          />
+          <span className="">
+            {errors.nombre && "Ingrese un nombre valido"}
+          </span>
+          <br />
+          <label>Raza</label>
+          <input
+            name="race"
+            onChange={handleChange}
+            className="form-control my-2"
+            ref={register({
+              required: true,
+              maxLength: 20,
+              pattern: /^[A-Za-z]+$/i,
+              message: "Campo Requerido",
+            })}
+          />
+          <span className="">{errors.raza && "Ingrese una raza"}</span>
+          <br />
+          <label>Especie</label>
+          <input
+            name="species"
+            onChange={handleChange}
+            className="form-control my-2"
+            ref={register({
+              required: true,
+              maxLength: 20,
+              pattern: /^[A-Za-z]+$/i,
+              type: "text",
+            })}
+          />
+          <br />
+          <label>Talla</label>
+          <input
+            name="size"
+            onChange={handleChange}
+            className="form-control my-2"
+            ref={register({
+              required: true,
+              maxLength: 20,
+              pattern: /^[A-Za-z]+$/i,
+              type: "text",
+              message: "Campo Requerido",
+            })}
+          />
+          <span className="">{errors.size && "Ingrese una talla"}</span>
+          <br />
+          <label>Peso</label>
+          <input
+            name="weigth"
+            onChange={handleChange}
+            className="form-control my-2"
+            ref={register({
+              required: false,
+              maxLength: 20,
+              //pattern: /^[A-Za-z]+$/i,
+              message: "Campo Requerido",
+            })}
+          />
+          <span className="">{errors.weigth && "Ingrese un peso"}</span>
 
-                        {errors.raza && "Ingrese una raza"}
-                    </span>
-                    <br />
-                    <label>Especie</label>
-                    <input
-                        name="especie"
-                        className="form-control my-2"
-                        ref={register({
-                            required: true,
-                            maxLength: 3,
-                            pattern: /^[A-Za-z]+$/i,
-                            type: "text"
+          <Button variant="secondary" type="submit">
+            Guardar Cambios
+          </Button>
+          <Button variant="secondary" onClick={handleClose}>
+            Cerrar
+          </Button>
+        </form>
+      </Modal.Body>
+    </Modal>
+  );
+};
 
-                        })} />
-                        <br />
-                    <label>Talla</label>
-                    <input
-                        name="talla"
-                        className="form-control my-2"
-                        ref={register({
-                            required: false,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i,
-                            message: 'Campo Requerido'
-                        })} />
-                    <span className="">
-
-                        {errors.raza && "Ingrese una talla"}
-                    </span>
-                    <br />
-                    <label>Peso</label>
-                    <input
-                        name="raza"
-                        className="form-control my-2"
-                        ref={register({
-                            required: false,
-                            maxLength: 20,
-                            pattern: /^[A-Za-z]+$/i,
-                            message: 'Campo Requerido'
-                        })} />
-                    <span className="">
-
-                        {errors.raza && "Ingrese un peso"}
-                    </span>
-                    
-                    <Button variant="secondary" type="submit">
-                        Guardar Cambios
-                    </Button>
-                    <Button variant="secondary" onClick={handleClose}>
-                        Cerrar
-                     </Button>
-
-                </form>
-            </Modal.Body>
-
-        </Modal>
-
-    );
-}
-
-export default ModalAgregarMascota
-
+export default ModalAgregarMascota;
