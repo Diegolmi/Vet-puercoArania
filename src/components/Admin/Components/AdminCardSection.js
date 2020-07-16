@@ -1,10 +1,10 @@
 import React from "react";
-import { MDBCard, MDBCardBody, MDBIcon, MDBRow, MDBCol } from "mdbreact";
+import { MDBCard, MDBCardBody, MDBIcon } from "mdbreact";
 import "../Admin.css";
 
 const AdminCardSection = () => {
   return (
-    <div className=" container-card-info">
+    <div className="container-card-info">
 
         <MDBCard color="primary-color" className="classic-admin-card">
           <MDBCardBody>

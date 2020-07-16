@@ -6,7 +6,7 @@
 }
 .Contenedor-usuario {
 
-        height: 100vh !important;
+        height: auto !important;
         margin: 0 !important;
         padding: 0 !important;
     
@@ -17,7 +17,7 @@
     margin: 0 !important;
     padding: 0 !important;
     height: 100vh !important;
-    width: 250px;
+    width: 150px;
     background: #68829c;
     text-align: center;
     top: 50px;
@@ -25,7 +25,7 @@
 }
 
 .sidebaricons-container {
-    height: 100% !important;
+    height: 100vh !important;
     width: 70px;
     background: #68829c;
     text-align: center; 
@@ -35,9 +35,14 @@
 .datos-sidebar-icons {
     height: 100px;
 }
+.col-md-3{
+    height: auto;
+    padding: 0px !important;
+}
 
 .columna-sidebar{
-    height: 100vh;
+    height: 0px;
+    padding: 0 !important;
 }
 .datos-sidebar {
     height: 100px;
@@ -47,7 +52,7 @@
     flex-wrap: wrap;
     border-bottom: 1px solid black;
 }
-.container-links-sidebar{
+.container-links-sidebar1{
     height: 100vh;
 }
 

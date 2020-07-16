@@ -1,24 +1,31 @@
 .tituloTurno {
     margin: 20px;
     color: red;
-    
+
 }
 
-.contenedor1-card {
+
+.tab-content {
     text-align: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap !important;
+    width: 300px;
+    height: 300px;
+    
+
+}
+.contenedor-card-turnos1{
+    margin: 100px;
+    margin-top: 10px;
 }
 
-.cardTurno{
-    box-shadow: 9px 10px 39px -6px rgba(0,0,0,0.54);
+.cardTurno {
+    box-shadow: 9px 10px 39px -6px rgba(0, 0, 0, 0.54);
     padding: 20px;
     margin: 20px;
-    height: auto;
-    width: 200px;
+    
 }
 
-    

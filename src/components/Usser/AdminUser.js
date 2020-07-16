@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import NavbarUser from './Components/NavbarUser';
 import FooterAdmin from '../Admin/FooterAdmin';
 import Sidenav from './Components/Sidenav';
@@ -9,7 +9,7 @@ import Mascotas from './Components/Mascotas';
 import DatosUsuario from './Components/DatosUsuario';
 import Turnos from './Components/Turnos/Turnos';
 import Carrito from '../stepper/Carrito';
-import { 
+import {
     Switch,
     Route,
 
@@ -20,7 +20,7 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
- const AdminUser = () => {
+const AdminUser = () => {
 
     const [sidebar, setSidebar] = useState(false)
     const [cambiarBoton, setCambiarBoton] = useState(false)
@@ -37,52 +37,55 @@ import Col from 'react-bootstrap/Col';
 
     return (
         <>
-        <Container className="Contenedor-usuario" fluid>
-            <Row>
-                <Col md={12}><NavbarUser
-                    hideSidebar={hideSidebar}
-                    showSidebar={showSidebar}
-                    cambiarBoton={cambiarBoton}
-                />
-                </Col>
-            </Row>
-          {sidebar ? 
+            <Container className="Contenedor-usuario" fluid>
+                <Row>
+                    <Col md={12}><NavbarUser
+                        hideSidebar={hideSidebar}
+                        showSidebar={showSidebar}
+                        cambiarBoton={cambiarBoton}
+                    />
+                    </Col>
+                </Row>
+                {sidebar ?
                     <div>
-                    <Row>
-                        <Col sm={1} className="columna-sidebar"><SideNavicons /></Col>
-                        <Col sm={11} className="container-links-sidebar">
+
+                        <div className="columna-sidebar" md="3">
+                            <SideNavicons />
+                        </div>
+                        <div className="container-links-sidebar1">
                             <Switch>
                                 <Route exact path="/usuario" component={IndexUsser} />
                                 <Route exact path="/usuario/mascotas" component={Mascotas} />
                                 <Route exact path="/usuario/datos" component={DatosUsuario} />
 
                             </Switch>
-                        </Col>
-                    </Row>
-                    
-                </div>
-               
+                        </div>
 
-                :
-                <div>
-                    <Row>
-                        <Col md={3} className="columna-sidebar"><Sidenav /></Col>
-                        <Col md={9} className="container-links-sidebar">
+
+                    </div>
+
+                    :
+                    <div>
+
+                        <div className="columna-sidebar">
+                            <Sidenav />
+                        </div>
+                        <div className="container-links-sidebar">
                             <Switch>
                                 <Route exact path="/usuario" component={IndexUsser} />
                                 <Route exact path="/usuario/mascotas" component={Mascotas} />
                                 <Route exact path="/usuario/datos" component={DatosUsuario} />
                             </Switch>
-                        </Col>
-                    </Row>
-                    
-                </div>
-            }  
-             
-        </Container>
-        <Row>
-        <Col sm className="footer-admin"><FooterAdmin /></Col>
-        </Row>
+                        </div>
+
+
+                    </div>
+                }
+
+            </Container>
+            <Row>
+                <Col sm className="footer-admin"><FooterAdmin /></Col>
+            </Row>
         </>
     )
 }
