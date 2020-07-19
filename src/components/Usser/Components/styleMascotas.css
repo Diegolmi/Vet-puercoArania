@@ -20,8 +20,8 @@
     width: 250px;
     background: #68829c;
     text-align: center;
-    /* position: fixed; */
     top: 50px;
+    /*position: fixed;*/
 }
 
 .sidebaricons-container {
@@ -93,8 +93,8 @@
 }
 .navbar-user {
     background: #68829c;
-    z-index: 1;
-    /* position: fixed; */
+    
+    /*position: fixed;*/ 
     width: 100%;
    
 }
@@ -118,15 +118,18 @@
 
 .footer-admin {
     bottom: 0;
-    position: relative;
+    /*position: fixed;*/
+
 }
 .footer-copyright {
     height: 50px;
     display: flex;
     justify-content: center;
     text-align: center;
+    width: 500px;
 }
 .CardMascota {
     height: 650px;
     width: auto;
+    margin: 
 }
