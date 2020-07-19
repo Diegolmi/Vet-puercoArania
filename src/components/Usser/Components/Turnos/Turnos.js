@@ -13,7 +13,6 @@ const Turnos = () => {
     console.log(result);
     setTurnos(result.data);
   };
-  console.log(turnos);
 
   useEffect(() => {
     listarTurnos();

@@ -18,7 +18,6 @@ const FormTurnos = ({listarTurnos}) => {
   const { pet, user, date, time, description, service } = solicitarTurno;
 
   const handleChange = e => {
-    console.log(e);
     setSolicitarTurno({
 
       ...solicitarTurno,
@@ -43,7 +42,6 @@ const FormTurnos = ({listarTurnos}) => {
       showConfirmButton: false,
       timer: 2500
     })
-    console.log(result)
     listarTurnos()
   }
 
@@ -58,19 +56,18 @@ const FormTurnos = ({listarTurnos}) => {
             value={pet}
             required />
         </MDBCol>
-        <MDBCol md='8'>
+        {/* <MDBCol md='8'>
           <MDBInput
             onChange={handleChange}
             name="user"
             label="Nombre Dueño"
             value={user}
             required />
-        </MDBCol>
+        </MDBCol> */}
         <MDBCol md='8'>
           <MDBDatePickerV5
             getValue={handleDate}
             name="date"
-
             disablePast />
         </MDBCol>
         <MDBCol md='8'>

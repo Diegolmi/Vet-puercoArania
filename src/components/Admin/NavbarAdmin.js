@@ -1,11 +1,10 @@
 import React from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
-import { MDBBadge } from "mdbreact";
 import "./Admin.css";
 
 import { Link, useHistory } from "react-router-dom";
-import { FaArrowLeft, FaArrowRight, FaRegBell } from "react-icons/fa";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 
 const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
   const history = useHistory();

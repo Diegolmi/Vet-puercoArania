@@ -2,7 +2,7 @@ import React, { useState } from "react";
 // import "./styleLogin.css";
 import { MDBView, MDBCol, MDBInput, MDBBtn, MDBRow } from "mdbreact";
 import Imglogin from "../../assets/img/gatovet.jpg";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 
 const RecuperaUsuario = () => {

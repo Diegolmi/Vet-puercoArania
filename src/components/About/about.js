@@ -11,6 +11,8 @@ import {
 import "./style.css";
 import NavbarPage from '../Navbar/Nav';
 import axiosInstance from "../util/axiosInstance";
+import Footer from "../Footer/Footer";
+
 
 
 
@@ -177,12 +179,7 @@ const TestimonialsPage = () => {
           </div>
         </MDBCol>
       </MDBContainer>
-      <div className="footer-copyright text-center p-4 mt-3">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://www.mdbootstrap.com"> PuercoAraña.com </a>
-        </MDBContainer>
-      </div>
+      <Footer />
     </div>
   );
 };

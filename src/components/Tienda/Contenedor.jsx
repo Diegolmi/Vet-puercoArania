@@ -1,16 +1,13 @@
 import React, { useState, useEffect } from "react";
-import { makeStyles, Hidden } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import Nav from "../Navbar/Nav";
 import Swal from "sweetalert2";
 import "../Breadcrumbs/style.css";
-import { Cajon } from "./Cajon";
 import Accesorios from "../AccesoriosEC/Accesorios";
-import { ThemeProvider } from "@material-ui/core/styles";
-import theme from "../Breadcrumbs/temaConfig";
 import Carousel from "./CarouselTienda";
 import "./Tienda.css";
-import Card from "./Card";
 import axiosInstance from "../util/axiosInstance";
+import Footer from '../Footer/Footer';
 
 const estilos = makeStyles((theme) => ({
   root: {
@@ -89,8 +86,8 @@ const Contenedor = () => {
           productos={productos}
           addToCart={addToCart}
         />
-        <Card />
       </div>
+        <Footer />
     </div>
   );
 };

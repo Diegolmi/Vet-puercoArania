@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from "react";
 import CardTurnos from "../../Components/CardTurnos";
 import "../../Admin.css";
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
 import axiosInstance from "../../../util/axiosInstance";
 import Swal from "sweetalert2";
 
@@ -18,7 +16,7 @@ const EditarTurnos = () => {
 
   useEffect(() => {
     listarTurnos();
-  }, [setTurnos]);
+  }, []);
 
   const eliminarTurno = id => async () =>{
     Swal.fire({
@@ -37,7 +35,7 @@ const EditarTurnos = () => {
           'success'
         )
         axiosInstance.delete(`/turnos/${id}`)
-    listarTurnos()
+        listarTurnos()
       }
       
     })
@@ -48,7 +46,9 @@ const EditarTurnos = () => {
     <div className="container-turnos-admin my-3">
       <div className="row">
         <div className="col-12">
-          <Tabs
+        <h2 className="m-3">Turnos Disponibles</h2>
+              <CardTurnos turnos={turnos} listarTurnos={listarTurnos} eliminarTurno={eliminarTurno} />
+          {/* <Tabs
             defaultActiveKey="turnos"
             transition={false}
             id="noanim-tab-example"
@@ -59,10 +59,9 @@ const EditarTurnos = () => {
               eventKey="turnos"
               title="Todos los Turnos"
             >
-              <h2 className="m-3">Turnos Disponibles</h2>
-              <CardTurnos turnos={turnos} listarTurnos={listarTurnos} eliminarTurno={eliminarTurno} />
+              
             </Tab>
-          </Tabs>
+          </Tabs> */}
         </div>
       </div>
     </div>

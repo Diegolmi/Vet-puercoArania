@@ -49,7 +49,7 @@ const FormsPage = () => {
     <>
       <div className="container-fluid containerRegistro">
         <div className=" containerForm1">
-          <h1 center>Registrate</h1>
+          <h1 center className="register-title">Registrate</h1>
           <form onSubmit={crearUsuario} className="formulario-registro">
             <div className="grey-text">
               <MDBInput
@@ -141,6 +141,8 @@ const FormsPage = () => {
           </Link>
         </div>
         <div className="container-img-registro">
+            <h2 className="text-welcome">Bienvenido</h2>
+            <p className="register-paragraph">con tu registro accedes a todos los beneficios en los productos de la tienda</p>
           <MDBView hover zoom>
             <img
               src={logo}
@@ -148,7 +150,6 @@ const FormsPage = () => {
               alt="aligment"
             />
           </MDBView>
-          <h2>Bienvenido</h2>
         </div>
       </div>
     </>

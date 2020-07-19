@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-import Rating from "./Rating";
+// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";

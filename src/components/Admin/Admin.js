@@ -49,47 +49,55 @@ const Admin = ({ user }) => {
       <div className="contenedor-admin" fluid>
         {sidebar ? (
           <>
-          <div className="columna-sidebar-icon">
+            <div className="columna-sidebar-icon">
               <SidebarIcons />
             </div>
             <div className="container-sidebar">
-            <div className="container-links-sidebar">
-              <Switch>
-                <Route exact path="/admin" component={InicioAdmin} />
-                <Route exact path="/admin/user" component={EditUser} />
-                <Route exact path="/admin/producto" component={AddProduct} />
-                <Route exact path="/admin/turnos" component={EditarTurnos} />
-                {/* <Route
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/admin" component={InicioAdmin} />
+                  <Route exact path="/admin/user" component={EditUser} />
+                  <Route exact path="/admin/producto" component={AddProduct} />
+                  <Route exact path="/admin/turnos" component={EditarTurnos} />
+                  {/* <Route
                   exact
                   path="/admin/consultas"
                   component={AdminConsultas}
                 /> */}
-                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
-              </Switch>
+                  <Route
+                    exact
+                    path="/admin/datosAdmin"
+                    component={DatosAdmin}
+                  />
+                </Switch>
+              </div>
             </div>
-          </div>
           </>
         ) : (
           <>
-          <div className="columna-sidebar">
+            <div className="columna-sidebar">
               <SidebarAdmin />
             </div>
             <div className="container-sidebar">
-            <div className="container-links-sidebar">
-              <Switch>
-                <Route exact path="/admin" component={InicioAdmin} />
-                <Route exact path="/admin/user" component={EditUser} />
-                <Route exact path="/admin/producto" component={AddProduct} />
-                <Route exact path="/admin/turnos" component={EditarTurnos} />
-                {/* <Route
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/admin" component={InicioAdmin} />
+                  <Route exact path="/admin/user" component={EditUser} />
+                  <Route exact path="/admin/producto" component={AddProduct} />
+                  <Route exact path="/admin/turnos" component={EditarTurnos} />
+                  {/* <Route
                   exact
                   path="/admin/consultas"
                   component={AdminConsultas}
                 /> */}
-                {/* <Route exact path="/admin/datosAdmin" component={DatosAdmin} /> */}
-              </Switch>
+                  <Route
+                    exact
+                    path="/admin/datosAdmin"
+                    component={DatosAdmin}
+                  />
+                </Switch>
+              </div>
             </div>
-          </div>
           </>
         )}
       </div>

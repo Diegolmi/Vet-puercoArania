@@ -1,19 +1,82 @@
-import React from "react";
+import React, { useState } from "react";
 import { MDBInput, MDBBtn } from "mdbreact";
-
-const FormDatosAdmin = () => {
+import "../../Admin.css";
+const FormDatosAdmin = ({ usuario, handleSubmit, handleChange }) => {
   return (
     <form>
-      <MDBInput label="Nombre" />
-      <MDBInput label="Apellido" />
-      <MDBInput label="Nombre de Usuario" />
-      <MDBInput label="Email" />
-      <MDBInput label="Domicilio" />
-      <MDBInput label="Pais" />
-      <MDBInput label="Provincia" />
-      <MDBInput label="Telefono" />
-      <MDBInput label="Contraseña" type="password" />
-      <MDBBtn color="indigo">Modificar</MDBBtn>
+      <MDBInput
+        name="name"
+        onChange={handleChange}
+        value={usuario.name}
+        label="Nombre"
+      />
+      <MDBInput
+        name="lastname"
+        onChange={handleChange}
+        value={usuario.lastname}
+        label="Apellido"
+      />
+      <MDBInput
+        name="username"
+        onChange={handleChange}
+        value={usuario.username}
+        label="Nombre de Usuario"
+      />
+      <MDBInput
+        name="email"
+        onChange={handleChange}
+        value={usuario.email}
+        label="Email"
+      />
+      <MDBInput
+        name="address"
+        onChange={handleChange}
+        value={usuario.address}
+        label="Domicilio"
+      />
+      <MDBInput
+        name="country"
+        onChange={handleChange}
+        value={usuario.country}
+        label="Pais"
+      />
+      <MDBInput
+        name="province"
+        onChange={handleChange}
+        value={usuario.province}
+        label="Provincia"
+      />
+      <MDBInput
+        name="tel"
+        onChange={handleChange}
+        value={usuario.tel}
+        label="Telefono"
+      />
+      <MDBInput
+        name="city"
+        onChange={handleChange}
+        value={usuario.city}
+        label="Ciudad"
+      />
+      <MDBInput
+        name="zip"
+        onChange={handleChange}
+        value={usuario.zip}
+        label="Codigo Postal"
+      />
+      <MDBInput
+        name="password"
+        onChange={handleChange}
+        label="Contraseña"
+        type="password"
+      />
+      <button
+        className="button-add mr-2"
+        type="submit"
+        onClick={handleSubmit(usuario)}
+      >
+        Modificar
+      </button>
     </form>
   );
 };

@@ -3,7 +3,6 @@ import { MDBIcon } from "mdbreact";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./style.css";
-import Navbar from "../Navbar/Nav";
 import SelectInput from "../SelectInput";
 
 const Accesorios = ({ productos, addToCart, agregarCantidad }) => {
