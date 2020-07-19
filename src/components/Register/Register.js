@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { MDBView, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from "mdbreact";
+import { MDBView, MDBBtn, MDBIcon, MDBInput } from "mdbreact";
 import logo from "../../assets/img/logo.png";
 import "./styleRegister.css";
 import { Link, useHistory } from "react-router-dom";
 
 import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
-import NavbarPage from "../Navbar2/Nav2";
 
 const FormsPage = () => {
   const history = useHistory();
@@ -30,7 +29,7 @@ const FormsPage = () => {
   const crearUsuario = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post("/register", createUser);
+       await axiosInstance.post("/register", createUser);
       Swal.fire({
         position: "center",
         icon: "success",

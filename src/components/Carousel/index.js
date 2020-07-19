@@ -11,7 +11,6 @@ import "./style.css";
 
 //Images
 import { img1, img2, img3, banner } from "../../assets/img/index";
-
 const CarouselPage = () => {
   return (
     <div>

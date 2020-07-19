@@ -34,7 +34,7 @@ const FormProducto = ({ listaProductos }) => {
       showConfirmButton: false,
       timer: 1500,
     });
-    const response = await axiosInstance.post("/product", agregarProducto);
+     await axiosInstance.post("/product", agregarProducto);
     listaProductos()
     //limpiar formulario
     setAgregarProducto({

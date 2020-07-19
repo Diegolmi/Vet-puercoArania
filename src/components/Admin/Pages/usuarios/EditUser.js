@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { MDBDataTable, MDBBtn } from "mdbreact";
-import FormUser from "../../Components/FormUser";
+import { MDBDataTable } from "mdbreact";
+// import FormUser from "../../Components/FormUser";
 import axiosInstance from "../../../util/axiosInstance";
 import '../../Admin.css';
-import { FaTrashAlt, FaEdit, FaUserPlus } from "react-icons/fa";
+import { FaTrashAlt, FaUserPlus } from "react-icons/fa";
 import ModalAdd from "./ModalAdd";
 import Swal from 'sweetalert2';
 

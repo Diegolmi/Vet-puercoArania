@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./styleLogin.css";
-import { MDBView, MDBCol, MDBInput, MDBBtn, MDBRow } from "mdbreact";
+import { MDBView, MDBInput, MDBBtn } from "mdbreact";
 import Imglogin from "../../assets/img/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";

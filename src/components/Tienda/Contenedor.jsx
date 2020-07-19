@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { makeStyles } from "@material-ui/core";
 import Nav from "../Navbar/Nav";
 import Swal from "sweetalert2";
 import "../Breadcrumbs/style.css";
@@ -9,23 +8,14 @@ import "./Tienda.css";
 import axiosInstance from "../util/axiosInstance";
 import Footer from '../Footer/Footer';
 
-const estilos = makeStyles((theme) => ({
-  root: {
-    display: "flex",
-  },
-  toolbar: theme.mixins.toolbar,
-}));
+
 
 const Contenedor = () => {
   const [productos, setProductos] = useState([]);
   const [userCarrito, setUserCarrito] = useState([]);
   const [cantidad, setCantidad] = useState(1);
 
-  const classes = estilos();
-  const [abrir, setAbrir] = useState(false);
-  const accionAbrir = () => {
-    setAbrir(!abrir);
-  };
+  
 
   // listar productos
   const listarProductos = async () => {

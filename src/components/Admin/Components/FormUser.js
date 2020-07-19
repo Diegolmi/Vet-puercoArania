@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBBtn, MDBInput } from "mdbreact";
+import { MDBInput } from "mdbreact";
 import axiosInstance from "../../util/axiosInstance";
 import '../Admin.css';
 import Swal from 'sweetalert2';

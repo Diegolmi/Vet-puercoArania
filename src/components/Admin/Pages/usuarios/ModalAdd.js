@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import React from 'react';
+import {Modal} from 'react-bootstrap';
 import FormUser from '../../Components/FormUser';
-import axiosInstance from '../../../util/axiosInstance';
 
 
 

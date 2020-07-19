@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { MDBDataTable, MDBBtn } from "mdbreact";
+import { MDBDataTable } from "mdbreact";
 import "../Admin.css";
 import axiosInstance from "../../util/axiosInstance";
 import { FaTrashAlt, FaEdit } from "react-icons/fa";
@@ -49,7 +49,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
       showConfirmButton: false,
       timer: 1000
     })
-    const response = await axiosInstance.put(`/product/${id}`, productById);
+     await axiosInstance.put(`/product/${id}`, productById);
     listaProductos()
     setShow(false)
   };

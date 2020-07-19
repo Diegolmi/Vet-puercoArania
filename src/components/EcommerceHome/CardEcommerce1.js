@@ -17,6 +17,8 @@ const CardEcommerce1 = ({ productos, addToCart, agregarCantidad }) => {
     if (contador < 4 && isAccesorios) {
       contador++;
       return isAccesorios;
+    }else{
+      return contador = 0;
     }
   });
 

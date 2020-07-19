@@ -10,7 +10,6 @@ import Container from "react-bootstrap/Container";
 import moment from "moment";
 // import axios from 'axios';
 import Modal from "react-bootstrap/Modal";
-import axiosInstance from "../util/axiosInstance";
 import SelectInput from "../SelectInput";
 
 const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
@@ -25,6 +24,8 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
     if (contador < 4 && isAlimento) {
       contador++;
       return isAlimento;
+    }else{
+      return contador = 0;
     }
   });
 

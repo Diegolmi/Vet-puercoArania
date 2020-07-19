@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Tabs, Tab, Card, Row } from "react-bootstrap";
+import { Tabs, Tab, Row } from "react-bootstrap";
 import FormTurnos from "./FormTurnos";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { MDBInput, MDBBtn } from "mdbreact";
+import React from "react";
+import { MDBInput } from "mdbreact";
 import "../../Admin.css";
 const FormDatosAdmin = ({ usuario, handleSubmit, handleChange }) => {
   return (

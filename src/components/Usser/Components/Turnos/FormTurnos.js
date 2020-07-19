@@ -15,7 +15,7 @@ const FormTurnos = ({listarTurnos}) => {
     description: ''
   })
 
-  const { pet, user, date, time, description, service } = solicitarTurno;
+  const { pet, description, service } = solicitarTurno;
 
   const handleChange = e => {
     setSolicitarTurno({
@@ -34,7 +34,7 @@ const FormTurnos = ({listarTurnos}) => {
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const result = await axiosInstance.post('/turnos', solicitarTurno)
+   await axiosInstance.post('/turnos', solicitarTurno)
     Swal.fire({
       position: 'center',
       icon: 'success',

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FaUser, FaCartArrowDown } from 'react-icons/fa';
+import { FaUser } from 'react-icons/fa';
 import { MdDashboard } from 'react-icons/md';
 import logo from '../../../assets/img/logo.png';
 import './styleMascotas.css';

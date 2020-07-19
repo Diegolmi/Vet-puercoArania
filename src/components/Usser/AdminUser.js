@@ -7,8 +7,8 @@ import SideNavicons from './Components/sideNavicons';
 import IndexUsser from './IndexUsser';
 import Mascotas from './Components/Mascotas';
 import DatosUsuario from './Components/DatosUsuario';
-import Turnos from './Components/Turnos/Turnos';
-import Carrito from '../stepper/Carrito';
+// import Turnos from './Components/Turnos/Turnos';
+// import Carrito from '../stepper/Carrito';
 import { 
     Switch,
     Route,
