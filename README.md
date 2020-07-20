@@ -6,7 +6,7 @@
 para instalar las dependencias
 ### `npm install`
 
-luego puede iniciar el proyecto con el comando en modo desarrollo
+luego puede iniciar el proyecto con el comando 
 
 ### `npm start`
 
