@@ -2,13 +2,13 @@
 Poryecto de una veterinaria, la cual el usuario tiene la posibilidad de realizar consultas online y sacar turnos para los distintos servicios que ofrece.
 Tambien cuenta con un ecommerce para poder realizar compras de medicamentos, alimentos y accesorios directamente desde tu domicilio, sin la necesidad de moverte del mismo.-
 
-##Comenzando
+## Comenzando
 
  Clonar proyecto desde el link (https://github.com/Diegolmi/Vet-puercoArania.git)
 
 
 
- ##Instalación
+ ## Instalación
  una vez clonado el repositorio desde la consola correr los siguientes comandos para instalar las dependencias
 ### `npm install`
 
