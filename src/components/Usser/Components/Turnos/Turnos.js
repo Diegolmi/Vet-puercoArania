@@ -15,7 +15,7 @@ const Turnos = () => {
     // console.log(result.content);
     setTurnos(result.data.userAppointments);
   };
-  console.log(turnos);
+  // console.log(turnos);
 
   useEffect(() => {
     listarTurnos();

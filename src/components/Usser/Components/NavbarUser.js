@@ -7,13 +7,14 @@ import { Link, useHistory } from "react-router-dom";
 import { FaArrowLeft, FaArrowRight, FaRegBell } from "react-icons/fa";
 //import { AiOutlineMail } from 'react-icons/ai';
 
-const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
+const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton, user }) => {
   const history = useHistory();
 
   const logout = () => {
     localStorage.removeItem("jwt");
     localStorage.removeItem("role");
     history.push("/");
+    // user = "";
   };
 
   return (
@@ -28,6 +29,7 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
             <FaArrowLeft />
           </button>
         )}
+        <p>{user}</p>
 
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"

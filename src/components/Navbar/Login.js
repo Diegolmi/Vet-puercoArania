@@ -5,7 +5,7 @@ import Imglogin from "../../assets/img/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 
-const FormPage = () => {
+const FormPage = ({ user, setUser }) => {
   const history = useHistory();
   const [loguearUsuario, setLoguearUsuario] = useState({
     username: "",
@@ -26,9 +26,12 @@ const FormPage = () => {
       if (result.data.role !== "admin") {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
+        const toggleDarkMode = () => {
+          setUser(loguearUsuario.username);
+        };
+        toggleDarkMode();
 
         history.push("/usuario");
-        console.log(result);
       } else {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);

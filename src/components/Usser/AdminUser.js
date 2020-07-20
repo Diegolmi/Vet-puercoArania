@@ -16,7 +16,7 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 
-const AdminUser = () => {
+const AdminUser = ({ user }) => {
   const [sidebar, setSidebar] = useState(false);
   const [cambiarBoton, setCambiarBoton] = useState(false);
 
@@ -32,6 +32,7 @@ const AdminUser = () => {
 
   return (
     <>
+      {/* <p>{user}</p> */}
       <Container className="Contenedor-usuario" fluid>
         <Row>
           <Col md={12}>
@@ -39,6 +40,7 @@ const AdminUser = () => {
               hideSidebar={hideSidebar}
               showSidebar={showSidebar}
               cambiarBoton={cambiarBoton}
+              user={user}
             />
           </Col>
         </Row>
