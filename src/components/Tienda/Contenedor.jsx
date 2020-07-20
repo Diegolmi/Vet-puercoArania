@@ -19,31 +19,31 @@ const Contenedor = () => {
 
   // listar productos
   const listarProductos = async () => {
-      const response = await axiosInstance.get('/product')
+    const response = await axiosInstance.get('/product')
 
-      setProductos(response.data)
+    setProductos(response.data)
   }
 
   useEffect(() => {
-      listarProductos()
+    listarProductos()
   }, [])
 
   const mostrarCarrito = async () => {
-      const response = await axiosInstance.get('/shoppingCart')
-      if(response.data){
-        setUserCarrito(response.data.items || [])
-      }
-
+    const response = await axiosInstance.get('/shoppingCart')
+    if (response.data) {
+      setUserCarrito(response.data.items || [])
     }
 
-    useEffect(() => {
-      mostrarCarrito()
-    }, [])
+  }
+
+  useEffect(() => {
+    mostrarCarrito()
+  }, [])
 
   //-----------------------------------------------------
 
 
-  
+
   //crear y agregar al carrito
 
   const addToCart = async ( id) => {

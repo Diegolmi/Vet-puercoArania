@@ -1,61 +1,60 @@
-
 .cont_ppal{
-    margin: auto 70px;
+  margin: auto 70px;
 }
 .h1-responsive{
-    border-bottom: 2px solid #fc5185;
-    padding-bottom: 10px;
-    margin-top: 200px !important;
+  border-bottom: 2px solid #fc5185;
+  padding-bottom: 10px;
+  margin-top: 200px !important;
 }
 .lead{
-    margin-top: 150px !important;
+  margin-top: 150px !important;
 }
 #holi{
-    color: #544e4e !important;
+  color: #544e4e !important;
 }
 #btn_turno{
-    padding: 10px 30px;
-    font-size: 20px;
-    font-weight: bolder;
-    border-radius: 15px;
-    color: #fc5185 !important;
-    border: 1px solid #fc5185 !important;
+  padding: 10px 30px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 15px;
+  color: #fc5185 !important;
+  border: 1px solid #fc5185 !important;
 
-    }
-    #btn_turno:hover{
-        background-color: #fc5185 !important;
-        color: whitesmoke !important;
-        border-color: #fc5185 !important;
-    }
-    
+  }
+  #btn_turno:hover{
+      background-color: #fc5185 !important;
+      color: whitesmoke !important;
+      border-color: #fc5185 !important;
+  }
+  
 i.fa{
-    color: #fc5185 !important;
+  color: #fc5185 !important;
 }
 
 #btn_turno_modal{
-    margin: 0;
-    color: #fc5185 !important;
-    border: 1px solid #fc5185 !important;
+  margin: 0;
+  color: #fc5185 !important;
+  border: 1px solid #fc5185 !important;
 }
 #btn_turno_modal:hover{
-    background-color: #fc5185 !important;
-    color: whitesmoke !important;
-    border-color: #fc5185 !important;
+  background-color: #fc5185 !important;
+  color: whitesmoke !important;
+  border-color: #fc5185 !important;
 }
 .footer-copyright{
-    width: 100% !important;
+  width: 100% !important;
 }
 
 @media (min-width:766px){
-    .img-sec-servicios{
-        margin:90px auto !important;
-    }
-    #btn_turno{
-        margin-left: 35%; 
-    }
+  .img-sec-servicios{
+      margin:90px auto !important;
+  }
+  #btn_turno{
+      margin-left: 35%; 
+  }
 }
 @media (min-width:1100px){
-    #btn_turno{
-        margin-left: 450px; 
-    }
+  #btn_turno{
+      margin-left: 450px; 
+  }
 }

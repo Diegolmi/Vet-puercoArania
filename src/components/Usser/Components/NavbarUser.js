@@ -39,7 +39,6 @@ const NavbarAdmin = ({ hideSidebar, showSidebar, cambiarBoton }) => {
                 </Nav>
             </Navbar.Collapse>
         </Navbar>
-        {/* <SidebarAdmin /> */}
         </>
     );
 }

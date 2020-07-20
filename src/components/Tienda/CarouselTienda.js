@@ -64,46 +64,7 @@ const carouseltienda = () => {
         </MDBCard>
       </MDBCol>
     </MDBContainer>
-    // <MDBContainer fluid>
-    //   <MDBCarousel
-    //     activeItem={1}
-    //     length={3}
-    //     showControls={false}
-    //     showIndicators={false}
-    //     className="z-depth-1 d-flex mt-5"
-    //     slide
-    //   >
-    //     <MDBCarouselInner>
-    //       <MDBCarouselItem itemId="1">
-    //         <MDBView>
-    //           <img
-    //             className="d-block w-100"
-    //             src="https://www.timberline.com.ar/themes/leo_bicmart/assets/img/modules/leoslideshow/promo-comederos_slide-web.png"
-    //             alt="First slide"
-    //           />
-    //         </MDBView>
-    //       </MDBCarouselItem>
-    //       <MDBCarouselItem itemId="2">
-    //         <MDBView>
-    //           <img
-    //             className="d-block w-100"
-    //             src="https://www.timberline.com.ar/themes/leo_bicmart/assets/img/modules/leoslideshow/promo-transportadoras_slide-web.png"
-    //             alt="Second slide"
-    //           />
-    //         </MDBView>
-    //       </MDBCarouselItem>
-    //       <MDBCarouselItem itemId="3">
-    //         <MDBView>
-    //           <img
-    //             className="d-block w-100"
-    //             src="https://www.timberline.com.ar/themes/leo_bicmart/assets/img/modules/leoslideshow/slide_vitalmas3-unik.png"
-    //             alt="Third slide"
-    //           />
-    //         </MDBView>
-    //       </MDBCarouselItem>
-    //     </MDBCarouselInner>
-    //   </MDBCarousel>
-    // </MDBContainer>
+    
   );
 };
 

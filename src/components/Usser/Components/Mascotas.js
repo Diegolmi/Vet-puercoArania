@@ -52,10 +52,6 @@ const TablePage = () => {
         }
         
     })
-  
-//console.log(result);
-
-
 }
 
 
@@ -143,5 +139,3 @@ const TablePage = () => {
 };
 
 export default TablePage;
-
-
