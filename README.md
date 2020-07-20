@@ -1,4 +1,4 @@
-## Clonar proyecto desde el link (https://github.com/Diegolmi/Vet-puercoArania.git)
+# Clonar proyecto desde el link (https://github.com/Diegolmi/Vet-puercoArania.git)
 
 
 ## una vez clonado el repositorio desde la consola correr los siguientes comandos
