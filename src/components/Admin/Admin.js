@@ -8,22 +8,18 @@ import SidebarIcons from "./SidebarIcons";
 import EditUser from "./Pages/usuarios/EditUser";
 import AddProduct from "./Pages/productos/AddProduct";
 import EditarTurnos from "./Pages/turnos/EditarTurnos";
-import AdminConsultas from "./Pages/consultas/AdminConsultas";
 import DatosAdmin from "./Pages/datos admin/DatosAdmin";
 import InicioAdmin from "./Pages/inicio/InicioAdmin";
 import { Switch, Route } from "react-router-dom";
 
 // IMPORT COMPONENT LIBRERIAS Y CSS
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import "./Admin.css";
 import Unauthorized from "../../Unauthorized/Unauthorized";
 
 const Admin = ({ user }) => {
   const [sidebar, setSidebar] = useState(false);
   const [cambiarBoton, setCambiarBoton] = useState(false);
-  const [users, setUsers] = useState([]);
+  // const [users, setUsers] = useState([]);
 
   if (user.role !== "admin") {
     return <Unauthorized />;
@@ -49,37 +45,55 @@ const Admin = ({ user }) => {
       <div className="contenedor-admin" fluid>
         {sidebar ? (
           <>
-          <div className="columna-sidebar-icon">
+            <div className="columna-sidebar-icon">
               <SidebarIcons />
             </div>
             <div className="container-sidebar">
-            <div className="container-links-sidebar">
-              <Switch>
-                <Route exact path="/admin" component={InicioAdmin} />
-                <Route exact path="/admin/user" component={EditUser} />
-                <Route exact path="/admin/producto" component={AddProduct} />
-                <Route exact path="/admin/turnos" component={EditarTurnos} />
-                
-              </Switch>
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/admin" component={InicioAdmin} />
+                  <Route exact path="/admin/user" component={EditUser} />
+                  <Route exact path="/admin/producto" component={AddProduct} />
+                  <Route exact path="/admin/turnos" component={EditarTurnos} />
+                  {/* <Route
+                  exact
+                  path="/admin/consultas"
+                  component={AdminConsultas}
+                /> */}
+                  <Route
+                    exact
+                    path="/admin/datosAdmin"
+                    component={DatosAdmin}
+                  />
+                </Switch>
+              </div>
             </div>
-          </div>
           </>
         ) : (
           <>
-          <div className="columna-sidebar">
+            <div className="columna-sidebar">
               <SidebarAdmin />
             </div>
             <div className="container-sidebar">
-            <div className="container-links-sidebar">
-              <Switch>
-                <Route exact path="/admin" component={InicioAdmin} />
-                <Route exact path="/admin/user" component={EditUser} />
-                <Route exact path="/admin/producto" component={AddProduct} />
-                <Route exact path="/admin/turnos" component={EditarTurnos} />
-                
-              </Switch>
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/admin" component={InicioAdmin} />
+                  <Route exact path="/admin/user" component={EditUser} />
+                  <Route exact path="/admin/producto" component={AddProduct} />
+                  <Route exact path="/admin/turnos" component={EditarTurnos} />
+                  {/* <Route
+                  exact
+                  path="/admin/consultas"
+                  component={AdminConsultas}
+                /> */}
+                  <Route
+                    exact
+                    path="/admin/datosAdmin"
+                    component={DatosAdmin}
+                  />
+                </Switch>
+              </div>
             </div>
-          </div>
           </>
         )}
       </div>

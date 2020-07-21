@@ -5,7 +5,7 @@ import axiosInstance from '../../util/axiosInstance';
 import Swal from 'sweetalert2';
 
 
-import './styleMascotas.css';
+import "./styleMascotas.css";
 
 const ModalAgregarMascota = ({ show, setShow }) => {
 

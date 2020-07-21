@@ -13,7 +13,7 @@ const AddProduct = (props, { setUserCarrito }) => {
   }, 0);
 
   const borrarProducto = (id) => async () => {
-    const result = await axiosInstance.delete(`/shoppingCart/${id}`);
+     await axiosInstance.delete(`/shoppingCart/${id}`);
     Swal.fire({
       position: "center",
       icon: "success",

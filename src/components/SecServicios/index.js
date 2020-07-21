@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from "react";
 import "./secsvs.css";
-import { MDBRow, MDBCol, MDBIcon, MDBContainer} from "mdbreact";
+import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import catdog from "../../assets/img/svs/catdog.png";
 import { MDBBtn } from "mdbreact";
 
 import Carturnos from "../CarTurnos/Carturnos";
 import NavbarPage from "../Navbar/Nav";
 import axiosInstance from "../util/axiosInstance";
+import Footer from "../Footer/Footer";
+
 
 
 
@@ -160,12 +162,7 @@ const SecServicios = () => {
 
         </div>
       </div>
-      <div id="hola" className="footer-copyright text-center py-4 mt-5">
-        <MDBContainer fluid>
-          &copy; {new Date().getFullYear()} Copyright:{" "}
-          <a href="https://www.mdbootstrap.com"> PuercoAraña.com </a>
-        </MDBContainer>
-      </div>
+      <Footer />
     </>
   );
 };

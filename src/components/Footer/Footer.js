@@ -48,7 +48,7 @@ const Footer = () => {
                       <div className="facebook">
                         <a
                           href="https://www.facebook.com/puerco.arana.10236"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           <img
                             src="https://images.vexels.com/media/users/3/137253/isolated/preview/90dd9f12fdd1eefb8c8976903944c026-icono-de-facebook-logo-by-vexels.png"
@@ -61,7 +61,7 @@ const Footer = () => {
                       <div className="instagram">
                         <a
                           href="https://instagram.com/veterinaria_puerco_arania?igshid=vd3blyz6hyq3"
-                          target="_blank"
+                          target="_blank" rel="noopener noreferrer"
                         >
                           <img
                             src="https://es.logodownload.org/wp-content/uploads/2018/10/instagram-logo1.png"

@@ -8,9 +8,7 @@ import Button from "react-bootstrap/Button";
 
 const CardTurnos = ({ turnos, eliminarTurno }) => {
   const [show, setShow] = useState(false);
-  const handleShow = () => setShow(true);
 
-  // const array = [1, 2, 3, 4, 5, 6, 7, 8, 9]
   return (
     <div className="card-turnos">
       {turnos

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-import Rating from "./Rating";
+// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -10,7 +10,6 @@ import Container from "react-bootstrap/Container";
 import moment from "moment";
 // import axios from 'axios';
 import Modal from "react-bootstrap/Modal";
-import axiosInstance from "../util/axiosInstance";
 import SelectInput from "../SelectInput";
 
 const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
@@ -25,6 +24,8 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
     if (contador < 4 && isAlimento) {
       contador++;
       return isAlimento;
+    }else{
+      return contador = 0;
     }
   });
 
@@ -64,13 +65,21 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                   >
                     <MDBIcon className="icon-card" icon="info" />
                   </Button>
-                  <Button
+                  {producto.stock === 0 ?<Button
+                    size="sm"
+                    className="btn button-card"
+                    onClick={() => addToCart(producto._id)}
+                    disabled
+                  >
+                    <MDBIcon className="icon-card" icon="shopping-cart" />
+                  </Button> : <Button
                     size="sm"
                     className="btn button-card"
                     onClick={() => addToCart(producto._id)}
                   >
                     <MDBIcon className="icon-card" icon="shopping-cart" />
-                  </Button>
+                  </Button>}
+                  
                 </Card.Footer>
               </Card>
             </Col>

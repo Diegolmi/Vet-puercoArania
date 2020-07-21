@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // importar react router
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
@@ -22,7 +22,11 @@ import RestrictedRoute from "./RestrictedRoute";
 
 
 function Routes() {
+  const [user, setUser] = useState("");
+
   return (
+    // <>
+    //   <p>{user}</p>
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
@@ -32,7 +36,9 @@ function Routes() {
         <RestrictedRoute exact path="/login" component={Login} />
         <Route exact path="/tienda" component={Contenedor} />
         <PrivateRoute path="/admin" component={Admin} />
-        <PrivateRoute path="/usuario" component={AdminUser} />
+        <PrivateRoute path="/usuario">
+          <AdminUser user={user} />
+        </PrivateRoute>
         <PrivateRoute path="/carrito" component={Carrito} />
         <PrivateRoute path="/payment-success" component={Success} />
         <PrivateRoute path="/payment-pending" component={Pending} />
@@ -41,6 +47,7 @@ function Routes() {
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
+    // </>
   );
 }
 

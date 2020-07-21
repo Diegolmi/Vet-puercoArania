@@ -5,7 +5,7 @@
   justify-content: center;
 }
 
-.contenedor-imagen-login{
+.contenedor-imagen-login {
   width: 50%;
   height: 100%;
   background: #fc5185;
@@ -13,20 +13,31 @@
   display: flex;
   justify-content: center;
   text-align: center;
+  flex-direction: column;
+}
+.login-paragraph{
+  font-size: 2.5rem;
+  color: #68829c;
+  font-weight: 800;
+  text-transform: uppercase;
 }
 
 .formstyle{
-    box-shadow: 10px 10px 5px 0px #fc5185;
-    height: 400px;
-    width: 500px;
-    margin: 150px;
+    /* box-shadow: 10px 10px 5px 0px #fc5185; */
+    height: 100%;
+    width: 50%;
+    /* margin-top: 150px; */
     background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
 
-    
-    
+  }
+  .form-login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
   }
   .gato {
     height: 300px;
@@ -39,4 +50,28 @@
    
    
   }
- 
+  @media only screen and (max-width: 600px){
+    .container-login{
+      flex-direction: column;
+      background: #fff;
+    }
+    .contenedor-imagen-login{
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+    }
+    .formstyle{
+      width: 100%;
+      /* margin-top: 50px; */
+      margin-bottom: 20px;
+      box-shadow:none;
+    }
+    .gato {
+      height: 250px !important;
+      width: 400px !important;
+     
+    }
+    .login-paragraph{
+      display: none;
+    }
+}

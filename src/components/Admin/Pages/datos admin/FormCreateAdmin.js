@@ -1,5 +1,6 @@
 import React from "react";
 import { MDBInput, MDBBtn } from "mdbreact";
+import '../../Admin.css';
 
 const FormCreateAdmin = () => {
   return (
@@ -18,7 +19,7 @@ const FormCreateAdmin = () => {
         <option>Rol</option>
         <option value="1">Administrador</option>
       </select>
-      <MDBBtn color="indigo">Crear</MDBBtn>
+      <button className="button-add mr-2">Crear</button>
     </form>
   );
 };

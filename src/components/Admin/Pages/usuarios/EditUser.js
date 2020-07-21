@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { MDBDataTable, MDBBtn } from "mdbreact";
-import FormUser from "../../Components/FormUser";
+import { MDBDataTable } from "mdbreact";
+// import FormUser from "../../Components/FormUser";
 import axiosInstance from "../../../util/axiosInstance";
 import '../../Admin.css';
-import { FaTrashAlt, FaEdit, FaUserPlus } from "react-icons/fa";
+import { FaTrashAlt, FaUserPlus } from "react-icons/fa";
 import ModalAdd from "./ModalAdd";
 import Swal from 'sweetalert2';
 
@@ -13,7 +13,7 @@ const EditUser = () => {
   const [usuarios, setUsuarios] = useState([]);
   const [userById, setUserById] = useState({})
 
-  
+  const handleShow = () => setShow(true)
 
   const listarUsuarios = async () => {
     const response = await axiosInstance.get("/private/user");
@@ -24,12 +24,12 @@ const EditUser = () => {
     listarUsuarios();
   }, []);
 
-  const traerUsuariPorId = async (id) =>{
-    const response = await axiosInstance.get(`/private/user/${id}`)
-    console.log(response)
-    setUserById(response.data)
-    setShow(true);
-  }
+  // const traerUsuariPorId = async (id) =>{
+  //   const response = await axiosInstance.get(`/private/user/${id}`)
+  //   console.log(response)
+  //   setUserById(response.data)
+    
+  // }
 
   const eliminarUser = id => async () => {
     Swal.fire({
@@ -49,7 +49,7 @@ const EditUser = () => {
           'success'
         )
         axiosInstance.delete(`/private/user/${id}`);
-      listarUsuarios()
+        listarUsuarios()
       }
     })
     
@@ -81,12 +81,12 @@ const EditUser = () => {
         sort: "asc",
         width: 150,
       },
-      // {
-      //   label: "Editar",
-      //   field: "editar",
-      //   sort: "asc",
-      //   width: 70,
-      // },
+      {
+        label: "rol",
+        field: "rol",
+        sort: "asc",
+        width: 70,
+      },
       {
         label: "Eliminar",
         field: "eliminar",
@@ -99,6 +99,7 @@ const EditUser = () => {
       apellido: usuario.lastname,
       usuario: usuario.username,
       email: usuario.email,
+      rol: usuario.role,
       // editar: (
       //   <button className="boton-editar-user" onClick={() =>traerUsuariPorId(usuario._id)}><FaEdit /></button>
         
@@ -112,9 +113,9 @@ const EditUser = () => {
 
   return (
     <div className="container-usuario-admin">
-        <h2 className="my-5">Editar Usuarios</h2>
+        <h2 className="my-5">Lista de Usuarios</h2>
         <div className="boton-agregar-user">
-          <button className="button-add"> Agregar Usuario <FaUserPlus className="icon-add" /> </button>
+          <button className="button-add mr-2" onClick={handleShow}> Agregar Usuario <FaUserPlus className="icon-add" /> </button>
         </div>
         <MDBDataTable
           scrollX
@@ -126,7 +127,7 @@ const EditUser = () => {
           searchLabel="Buscar"
           infoLabel={["mostrar", "al", "de", "entradas"]}
           data={data}
-          className="table-user"
+          className="table-user mt-5"
           responsiveSm
           responsiveMd
           responsiveLg

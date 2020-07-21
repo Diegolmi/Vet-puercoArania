@@ -1,5 +1,5 @@
 import React from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import {Modal} from 'react-bootstrap';
 import EditProductForm from './EditProductForm';
 
 
@@ -13,12 +13,6 @@ const ModalProduct = ({ setShow, show, productById, handleSubmit, handleChange }
         </Modal.Header>
         <Modal.Body><EditProductForm productById={productById} handleSubmit={handleSubmit} handleChange={handleChange} /></Modal.Body>
         <Modal.Footer>
-          {/* <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button> */}
         </Modal.Footer>
       </Modal>
      );

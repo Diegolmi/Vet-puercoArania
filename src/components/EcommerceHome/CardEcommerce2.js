@@ -1,7 +1,7 @@
 import React from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-import Rating from "./Rating";
+// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -23,6 +23,8 @@ const CardEcommerce2 = ({ productos, addToCart, agregarCantidad }) => {
     if (contador < 4 && isFarmacia) {
       contador++;
       return isFarmacia;
+    }else {
+      return contador = 0;
     }
   });
 
@@ -65,13 +67,21 @@ const CardEcommerce2 = ({ productos, addToCart, agregarCantidad }) => {
                   <Button size="sm" className="btn button-card">
                     <MDBIcon className="icon-card" icon="info" />
                   </Button>
-                  <Button
+                  {producto.stock === 0 ? <Button
+                    size="sm"
+                    onClick={() => addToCart(producto._id)}
+                    className="btn button-card"
+                    disabled
+                  >
+                    <MDBIcon className="icon-card" icon="shopping-cart" />
+                  </Button> : <Button
                     size="sm"
                     onClick={() => addToCart(producto._id)}
                     className="btn button-card"
                   >
                     <MDBIcon className="icon-card" icon="shopping-cart" />
-                  </Button>
+                  </Button> }
+                  
                 </Card.Footer>
               </Card>
             </Col>

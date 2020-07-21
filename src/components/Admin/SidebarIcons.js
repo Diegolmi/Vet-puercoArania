@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaShippingFast } from "react-icons/fa";
-import { MdDateRange, MdQueryBuilder, MdDashboard } from "react-icons/md";
+import { MdDateRange, MdDashboard } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import "./Admin.css";
 
@@ -32,11 +32,11 @@ const SidebarIcons = () => {
             <MdDateRange className="icon-sidebar-admin" />
           </Link>
         </li>
-        {/* <li className="listado-sidebar">
+        <li className="listado-sidebar">
           <Link to="/admin/datosAdmin" className="link-sidebar">
             <RiAdminLine className="icon-sidebar-admin" />
           </Link>
-        </li> */}
+        </li>
       </ul>
     </div>
   );

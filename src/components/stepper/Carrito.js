@@ -10,13 +10,14 @@ import Review from "./Review";
 import AddProduct from "./AddProduct";
 import axiosInstance from "../util/axiosInstance";
 import Navbar from '../Navbar/Nav';
+import Footer from '../Footer/Footer';
 
 const useStyles = makeStyles((theme) => ({
   root: {
     width: "100%",
     marginTop:150,
     background: 'white',
-    height: "100vh"
+    height: "100%"
   },
   backButton: {
     marginRight: theme.spacing(1),
@@ -148,6 +149,7 @@ export default function Carrito() {
         )}
       </div>
     </div>
+    <Footer />
       </>
   );
 }

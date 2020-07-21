@@ -1,6 +1,5 @@
 body {
-    background-color: whitesmoke;
-    
+  background-color: whitesmoke;
 }
 .logoRegister {
     width: 400px;
@@ -17,7 +16,25 @@ body {
     height: 100vh;
     
 }
-
+.register-title{
+    padding: 15px;
+    font-size: 3rem;
+    color: #68829c;
+    border-bottom: 2px solid #fc5185;
+}
+.text-welcome{
+    font-size: 3rem;
+    color: #fc5185;
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.register-paragraph{
+    width: 100%;
+    font-size: 1.6rem;
+    text-align: center;
+    color: #fc5185;
+    font-weight: 600;
+}
 .container-img-registro{
     width: 50%;
     height: 100%;
@@ -28,7 +45,6 @@ body {
     flex-direction: column;
 }
 .containerForm1{
-    box-shadow: 5px 5px 5px 0px #fc5185;
     width: 50%;
     display: flex;
     justify-content: center;
@@ -39,27 +55,52 @@ body {
 .formulario-registro{
     margin: 10px;
 }
-
-/* .container-registro {
-    overflow-y: hidden !important;
-    height: 94.5vh;
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
-
-/* .container-registro {
-    overflow-y: hidden !important;
-    height: 94.5vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-} */
 .ButtonRegistro {
     background-color: #fc5185 !important;
     color: white;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.ButtonRegistro:hover{
+    color: #fc5185;
+    background: #68829c !important;
+    transition: .3s;
+    box-shadow: none;
+}
+
+@media only screen and (max-width: 600px){
+    .containerRegistro{
+        /* padding: 0 !important; */
+        flex-direction: column-reverse;
+        margin-bottom: 20px;
+        text-align: start;
+    }
+    .register-title{
+        width: 100%;
+        text-align: center !important;
+        padding: 10px;
+        font-size: 2.5rem;
+        justify-content: flex-start !important;
+        
+    }
+    .containerForm1{
+        width: 100%;
+        justify-content: center !important;
+    }
+    .container-img-registro{
+        /* display: none; */
+        background: none;
+    }
+    .logoRegister{
+        margin-top: 60px;
+        width: 350px !important;
+        height: 220px !important;
+    }
+    .text-welcome{
+        display: none;
+    }
+    .register-paragraph{
+       display: none;
+    }
 }

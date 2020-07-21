@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import {Modal, Button} from 'react-bootstrap';
+import React from 'react';
+import {Modal} from 'react-bootstrap';
 import FormUser from '../../Components/FormUser';
-import axiosInstance from '../../../util/axiosInstance';
 
 
 
@@ -24,9 +23,9 @@ const ModalAdd = ({setShow, show, listarUsuarios, userById}) => {
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
-          <Modal.Title>Editar Usuario</Modal.Title>
+          <Modal.Title>Agregar Usuario</Modal.Title>
         </Modal.Header>
-        <Modal.Body><FormUser userById={userById} listarUsuarios={listarUsuarios} /></Modal.Body>
+        <Modal.Body><FormUser userById={userById} listarUsuarios={listarUsuarios} handleClose={handleClose} /></Modal.Body>
         <Modal.Footer>
           {/* <Button variant="secondary" onClick={handleClose}>
             Close

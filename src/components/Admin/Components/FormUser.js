@@ -1,8 +1,10 @@
 import React, { useState } from "react";
-import { MDBBtn, MDBInput } from "mdbreact";
+import { MDBInput } from "mdbreact";
 import axiosInstance from "../../util/axiosInstance";
+import '../Admin.css';
+import Swal from 'sweetalert2';
 
-const FormUser = ({ userById, listarUsuarios }) => {
+const FormUser = ({ listarUsuarios, handleClose }) => {
   const [user, setUser] = useState({
     name: "",
     lastname: "",
@@ -27,8 +29,16 @@ const FormUser = ({ userById, listarUsuarios }) => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const result = await axiosInstance.put(`/private/user/any`, user);
+    Swal.fire({
+      position: 'center',
+      icon: 'success',
+      title: 'Your work has been saved',
+      showConfirmButton: false,
+      timer: 1500
+    })
+    await axiosInstance.post('/private/user', user);
     listarUsuarios();
+    handleClose()
   };
 
   return (
@@ -38,61 +48,51 @@ const FormUser = ({ userById, listarUsuarios }) => {
           onChange={handleChange}
           name="name"
           label="Nombre"
-          value={userById.name}
         />
         <MDBInput
           onChange={handleChange}
           name="lastname"
           label="Apellido"
-          value={userById.lastname}
         />
         <MDBInput
           onChange={handleChange}
           name="username"
           label="Nombre de usuario"
-          value={userById.username}
         />
         <MDBInput
           onChange={handleChange}
           name="email"
           label="Email"
-          value={userById.email}
         />
         <MDBInput
           onChange={handleChange}
           name="address"
           label="Domicilio"
-          value={userById.address}
         />
         <MDBInput
           onChange={handleChange}
           name="country"
           label="Pais"
-          value={userById.country}
         />
         <MDBInput
           onChange={handleChange}
           name="province"
           label="Provincia"
-          value={userById.province}
         />
         <MDBInput
           onChange={handleChange}
           name="city"
           label="Ciudad"
-          value={userById.city}
         />
         <MDBInput
           onChange={handleChange}
           name="zip"
           label="Codigo Postal"
-          value={userById.zip}
         />
         <MDBInput
           onChange={handleChange}
           name="tel"
           label="Telefono"
-          value={userById.tel}
         />
         <MDBInput
           onChange={handleChange}
@@ -100,7 +100,7 @@ const FormUser = ({ userById, listarUsuarios }) => {
           label="Contraseña"
           type="password"
         />
-        <select
+        {/* <select
           onChange={handleChange}
           name="role"
           className="browser-default custom-select mb-4"
@@ -108,10 +108,10 @@ const FormUser = ({ userById, listarUsuarios }) => {
           <option>Rol</option>
           <option value="admin">Administrador</option>
           <option value="user">Usuario</option>
-        </select>
-        <MDBBtn type="submit" color="indigo">
-          Modificar
-        </MDBBtn>
+        </select> */}
+        <button type="submit" className="button-add">
+          Crear Usuario
+        </button>
       </form>
     </div>
   );

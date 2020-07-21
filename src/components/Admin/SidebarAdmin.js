@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaUser, FaShippingFast } from "react-icons/fa";
-import { MdDateRange, MdQueryBuilder, MdDashboard } from "react-icons/md";
+import { MdDateRange, MdDashboard } from "react-icons/md";
 import { RiAdminLine } from "react-icons/ri";
 import logo from "../../assets/img/logo.png";
 
@@ -38,12 +38,12 @@ const SidebarAdmin = () => {
             Turnos
           </Link>
         </li>
-        {/* <li className="listado-sidebar">
+        <li className="listado-sidebar">
           <RiAdminLine className="icon-sidebar-admin" />
           <Link to="/admin/datosAdmin" className="link-sidebar">
             Admin
           </Link>
-        </li> */}
+        </li>
       </ul>
     </div>
   );

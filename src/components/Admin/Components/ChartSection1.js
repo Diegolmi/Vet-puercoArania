@@ -89,7 +89,7 @@ class ChartSection1 extends Component {
       ],
     };
     return (
-      <div className="container-chart-section">
+      <div className="container-chart-section mb-5">
         <MDBCard className="mx-3">
           <MDBCardBody>
             <Bar data={dataBar} height={500} options={barChartOptions} />

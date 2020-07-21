@@ -13,7 +13,7 @@ const TablePage = () => {
   const [show, setShow] = useState(false);
   const [showA, setShowA] = useState(false);
   const handleShowA = () => setShowA(true);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   const [traerMascota, setTraerMascota] = useState([])
 
@@ -52,10 +52,6 @@ const TablePage = () => {
         }
         
     })
-  
-//console.log(result);
-
-
 }
 
 
@@ -143,5 +139,3 @@ const TablePage = () => {
 };
 
 export default TablePage;
-
-

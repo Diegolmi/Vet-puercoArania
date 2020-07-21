@@ -22,7 +22,7 @@ const FormTurnos = ({ handleClose }) => {
 
   const handleSubmit = (id) => async (e) => {
     e.preventDefault();
-    const result = await axiosInstance.put(`/turnos/${id}`, editarTurno);
+   await axiosInstance.put(`/turnos/${id}`, editarTurno);
   };
 
   return (

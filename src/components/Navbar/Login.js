@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import "./styleLogin.css";
-import { MDBView, MDBCol, MDBInput, MDBBtn, MDBRow } from "mdbreact";
+import { MDBView, MDBInput, MDBBtn } from "mdbreact";
 import Imglogin from "../../assets/img/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
 
-const FormPage = () => {
+const FormPage = ({ user, setUser }) => {
   const history = useHistory();
   const [loguearUsuario, setLoguearUsuario] = useState({
     username: "",
@@ -26,6 +26,10 @@ const FormPage = () => {
       if (result.data.role !== "admin") {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
+        const toggleDarkMode = () => {
+          setUser(loguearUsuario.username);
+        };
+        toggleDarkMode();
 
         history.push("/usuario");
       } else {
@@ -42,14 +46,14 @@ const FormPage = () => {
   return (
     <div className="container-login">
       <div className="contenedor-imagen-login">
+          <p className="login-paragraph">Inicia Sesión</p>
         <MDBView hover zoom>
           <img src={Imglogin} className="gato" alt="" />
-          <p>Inicia Sesión</p>
         </MDBView>
       </div>
 
       <div className="formstyle" md="8">
-        <form onSubmit={loginUser}>
+        <form className="form-login" onSubmit={loginUser}>
           <p className="h3 text-center mb-4">Ingresá</p>
           <div className="grey-text">
             <MDBInput

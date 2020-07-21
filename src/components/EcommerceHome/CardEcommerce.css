@@ -50,6 +50,7 @@
   height: 100%;
   width: 100%;
   flex-wrap: wrap !important;
+  justify-content: center;
 }
 .card-container {
   width: 15rem !important;

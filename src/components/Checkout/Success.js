@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axiosInstance from "../util/axiosInstance";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaCheck } from "react-icons/fa";
 import "./payment.css";
 
 const Success = () => {
   //cuando sea exitoso el pago, actualizar stock
-  const history = useHistory();
   const [paymentData, setPaymentData] = useState();
   const [loading, setLoading] = useState(true);
 

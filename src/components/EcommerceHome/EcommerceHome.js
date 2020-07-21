@@ -12,7 +12,7 @@ import { Animated } from "react-animated-css";
 import Swal from "sweetalert2";
 import "./CardEcommerce.css";
 import axiosInstance from "../util/axiosInstance";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
   const [alimentos, setAlimentos] = useState(true);

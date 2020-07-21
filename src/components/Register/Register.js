@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import { MDBView, MDBRow, MDBCol, MDBBtn, MDBIcon, MDBInput } from "mdbreact";
+import { MDBView, MDBBtn, MDBIcon, MDBInput } from "mdbreact";
 import logo from "../../assets/img/logo.png";
 import "./styleRegister.css";
 import { Link, useHistory } from "react-router-dom";
 
 import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
-import NavbarPage from "../Navbar2/Nav2";
 
 const FormsPage = () => {
   const history = useHistory();
@@ -30,7 +29,7 @@ const FormsPage = () => {
   const crearUsuario = async (e) => {
     e.preventDefault();
     try {
-      const response = await axiosInstance.post("/register", createUser);
+       await axiosInstance.post("/register", createUser);
       Swal.fire({
         position: "center",
         icon: "success",
@@ -49,7 +48,7 @@ const FormsPage = () => {
     <>
       <div className="container-fluid containerRegistro">
         <div className=" containerForm1">
-          <h1 center>Registrate</h1>
+          <h1 center className="register-title">Registrate</h1>
           <form onSubmit={crearUsuario} className="formulario-registro">
             <div className="grey-text">
               <MDBInput
@@ -141,6 +140,8 @@ const FormsPage = () => {
           </Link>
         </div>
         <div className="container-img-registro">
+            <h2 className="text-welcome">Bienvenido</h2>
+            <p className="register-paragraph">con tu registro accedes a todos los beneficios en los productos de la tienda</p>
           <MDBView hover zoom>
             <img
               src={logo}
@@ -148,7 +149,6 @@ const FormsPage = () => {
               alt="aligment"
             />
           </MDBView>
-          <h2>Bienvenido</h2>
         </div>
       </div>
     </>

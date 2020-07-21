@@ -1,9 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import { MDBIcon } from "mdbreact";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import "./style.css";
-import Navbar from "../Navbar/Nav";
 import SelectInput from "../SelectInput";
 
 const Accesorios = ({ productos, addToCart, agregarCantidad }) => {
@@ -32,13 +31,21 @@ const Accesorios = ({ productos, addToCart, agregarCantidad }) => {
               <Button size="sm" className="btn button-card">
                 <MDBIcon className="icon-card" icon="info" />
               </Button>
-              <Button
+              {producto.stock === 0 ? <Button
+                size="sm"
+                onClick={() => addToCart(producto._id)}
+                className="btn button-card"
+                disabled
+              >
+                <MDBIcon className="icon-card" icon="shopping-cart" />
+              </Button> : <Button
                 size="sm"
                 onClick={() => addToCart(producto._id)}
                 className="btn button-card"
               >
                 <MDBIcon className="icon-card" icon="shopping-cart" />
-              </Button>
+              </Button> }
+              
             </Card.Footer>
           </Card>
         ))}

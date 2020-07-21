@@ -5,7 +5,7 @@ import "../../Admin.css";
 
 import FormDatosAdmin from "./FormDatosAdmin";
 import MostrarDatosAdmin from "./MostrarDatosAdmin";
-import FormCreateAdmin from "./FormCreateAdmin";
+// import FormCreateAdmin from "./FormCreateAdmin";
 import axiosInstance from "../../../util/axiosInstance";
 
 const DatosAdmin = () => {
@@ -20,23 +20,35 @@ const DatosAdmin = () => {
     traerUsuarios();
   }, []);
 
+  const handleChange = (e) => {
+    setUsuario({
+      ...usuario,
+        [e.target.name] : e.target.value
+    })
+  }
+
+  const handleSubmit = async () => {
+    // e.preventDefault()
+     await axiosInstance.put('/private/user', usuario)
+  }
+
   return (
     <div className="container-datos-admin">
       <div className="row">
         <div className="col-10 my-3">
           <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
             <Tab eventKey="datos" title="Datos Admin">
-              <h2>Datos del Admin</h2>
+              <h2 className="my-4">Datos del Admin</h2>
               <MostrarDatosAdmin usuario={usuario} />
             </Tab>
             <Tab eventKey="modificar" title="Modificar Datos">
-              <h2>Cambiar Datos de cuenta</h2>
-              <FormDatosAdmin />
+              <h2 className="my-4">Cambiar Datos de cuenta</h2>
+              <FormDatosAdmin usuario={usuario} handleChange={handleChange} handleSubmit={handleSubmit}/>
             </Tab>
-            <Tab eventKey="crear" title="Crear Cuenta Admin">
-            <h2>Crear Usuario Admin</h2>
+            {/* <Tab eventKey="crear" title="Crear Cuenta Admin">
+            <h2 className="my-4">Crear Usuario Admin</h2>
               <FormCreateAdmin />
-            </Tab>
+            </Tab> */}
           </Tabs>
         </div>
       </div>

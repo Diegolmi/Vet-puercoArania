@@ -1,41 +1,33 @@
-import React from 'react';
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import { Container, Row, Col } from 'react-bootstrap';
-import axiosInstance from '../../../util/axiosInstance';
-import './styleTurno.css';
-import Swal from 'sweetalert2';
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+import { Container, Row, Col } from "react-bootstrap";
+import axiosInstance from "../../../util/axiosInstance";
+import "./styleTurno.css";
+import Swal from "sweetalert2";
 
 const Turno = ({ turno, listarTurnos }) => {
+  const eliminarTurno = async (id) => {
+    Swal.fire({
+      title: "Eliminar turno!",
+      text: "Seguro quiere eliminar este turno?",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonColor: "#3085d6",
+      cancelButtonColor: "#d33",
+      confirmButtonText: "Si, Eliminarlo",
+    }).then(async (result) => {
+      if (result.value) {
+        await axiosInstance.delete(`/turnos/${id}`);
 
+        Swal.fire("Eliminado!", "Que tengas un lindo dia.", "success");
+        listarTurnos();
+      }
+    });
 
-        const eliminarTurno = async (id) => {
+  };
 
-            Swal.fire({
-                title: 'Eliminar turno!',
-                text: "Seguro quiere eliminar este turno?",
-                icon: 'warning',
-                showCancelButton: true,
-                confirmButtonColor: '#3085d6',
-                cancelButtonColor: '#d33',
-                confirmButtonText: 'Si, Eliminarlo'
-            }).then( async (result) => {
-                if (result.value) {
-                    await axiosInstance.delete(`/turnos/${id}`);
-                    
-                Swal.fire(
-                    'Eliminado!',
-                    'Que tengas un lindo dia.',
-                    'success'
-                ); listarTurnos();
-                }
-                
-            })
-          
-        //console.log(result);
-        
-
-    }
+ 
 
 
 
@@ -66,4 +58,3 @@ const Turno = ({ turno, listarTurnos }) => {
     )
 };
 export default Turno;
-

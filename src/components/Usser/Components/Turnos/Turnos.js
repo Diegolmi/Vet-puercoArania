@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Tabs, Tab, Card, Row } from "react-bootstrap";
+import { Tabs, Tab, Row } from "react-bootstrap";
 import FormTurnos from "./FormTurnos";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
+import FooterAdmin from "../../../../components/Admin/FooterAdmin";
 import "./styleTurno.css";
 
 const Turnos = () => {
@@ -10,10 +11,9 @@ const Turnos = () => {
 
   const listarTurnos = async () => {
     const result = await axiosInstance.get("/turnos/user");
-    console.log(result);
-    setTurnos(result.data);
+    
+    setTurnos(result.data.userAppointments || []);
   };
-  console.log(turnos);
 
   useEffect(() => {
     listarTurnos();
@@ -50,6 +50,7 @@ const Turnos = () => {
           <FormTurnos listarTurnos={listarTurnos} />
         </Tab>
       </Tabs>
+      <FooterAdmin />
     </div>
   );
 };
