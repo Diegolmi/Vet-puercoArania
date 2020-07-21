@@ -34,7 +34,7 @@ const Turnos = () => {
     );
 
   return (
-    <div className="contenedor-card-turnos mx-2">
+    <div className="contenedor-card-turnos1">
       <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
         <Tab eventKey="datos" title="Administra tus turnos">
           <p className="tituloTurno">

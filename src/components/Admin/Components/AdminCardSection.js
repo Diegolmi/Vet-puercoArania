@@ -4,7 +4,7 @@ import "../Admin.css";
 
 const AdminCardSection = () => {
   return (
-    <div className=" container-card-info">
+    <div className="container-card-info">
 
         <MDBCard color="primary-color" className="classic-admin-card">
           <MDBCardBody>
