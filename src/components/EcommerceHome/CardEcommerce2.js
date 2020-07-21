@@ -67,13 +67,21 @@ const CardEcommerce2 = ({ productos, addToCart, agregarCantidad }) => {
                   <Button size="sm" className="btn button-card">
                     <MDBIcon className="icon-card" icon="info" />
                   </Button>
-                  <Button
+                  {producto.stock === 0 ? <Button
+                    size="sm"
+                    onClick={() => addToCart(producto._id)}
+                    className="btn button-card"
+                    disabled
+                  >
+                    <MDBIcon className="icon-card" icon="shopping-cart" />
+                  </Button> : <Button
                     size="sm"
                     onClick={() => addToCart(producto._id)}
                     className="btn button-card"
                   >
                     <MDBIcon className="icon-card" icon="shopping-cart" />
-                  </Button>
+                  </Button> }
+                  
                 </Card.Footer>
               </Card>
             </Col>
