@@ -36,7 +36,9 @@ const ModificarDatos = () => {
         labelId="username"
         name="username"
         label="Nombre de usuario"
-        required
+
+        value={editarDatos.username}
+
         error="Invalid input"
         success="Success!"
         validate
@@ -48,7 +50,10 @@ const ModificarDatos = () => {
         name="name"
         label="Nombre"
         type="text"
-        required
+
+        value={editarDatos.name}
+        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -60,7 +65,10 @@ const ModificarDatos = () => {
         name="lastname"
         label="Apellido"
         type="text"
-        required
+
+        value={editarDatos.lastname}
+        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -72,7 +80,10 @@ const ModificarDatos = () => {
         name="email"
         label="Email"
         type="email"
-        required
+
+        value={editarDatos.email}
+        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -84,7 +95,10 @@ const ModificarDatos = () => {
         name="tel"
         label="Numero de telefono"
         type="number"
-        required
+
+        value={editarDatos.tel}
+        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -95,7 +109,10 @@ const ModificarDatos = () => {
         labelId="address"
         name="address"
         label="Domicilio"
-        required
+
+        value={editarDatos.address}
+        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -106,7 +123,9 @@ const ModificarDatos = () => {
         labelId="province"
         name="province"
         label="Provincia"
-        required
+
+        value={editarDatos.province}
+
         error="Invalid input"
         success="Success!"
         validate
@@ -118,17 +137,9 @@ const ModificarDatos = () => {
         name="password"
         label="Contraseña"
         type="password"
-        required
-        validate
-        group
-      />
-      <MDBInput
-        onChange={handleChange}
-        labelId="repassword"
-        name="repassword"
-        label="Confirmar Contraseña"
-        type="password"
-        required
+
+        value={editarDatos.password}
+
         validate
         group
       />

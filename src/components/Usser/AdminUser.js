@@ -17,9 +17,6 @@ import {
 } from "react-router-dom";
 import './Components/styleMascotas.css';
 
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
 const AdminUser = () => {
 
@@ -38,56 +35,50 @@ const AdminUser = () => {
 
     return (
         <>
-            <Container className="Contenedor-usuario" fluid>
-                <Row>
-                    <Col md={12}><NavbarUser
-                        hideSidebar={hideSidebar}
-                        showSidebar={showSidebar}
-                        cambiarBoton={cambiarBoton}
-                    />
-                    </Col>
-                </Row>
-                {sidebar ?
-                    <div>
-
-                        <div className="columna-sidebar" md="3">
-                            <SideNavicons />
-                        </div>
-                        <div className="container-links-sidebar1">
-                            <Switch>
-                                <Route exact path="/usuario" component={IndexUsser} />
-                                <Route exact path="/usuario/mascotas" component={Mascotas} />
-                                <Route exact path="/usuario/datos" component={DatosUsuario} />
-
-                            </Switch>
-                        </div>
-
-
-                    </div>
-
-                    :
-                    <div>
-
-                        <div className="columna-sidebar">
-                            <Sidenav />
-                        </div>
-                        <div className="container-links-sidebar">
-                            <Switch>
-                                <Route exact path="/usuario" component={IndexUsser} />
-                                <Route exact path="/usuario/mascotas" component={Mascotas} />
-                                <Route exact path="/usuario/datos" component={DatosUsuario} />
-                            </Switch>
-                        </div>
-
-
-                    </div>
-                }
-
-            </Container>
-            <Row>
-                <Col sm className="footer-admin"><FooterAdmin /></Col>
-            </Row>
-        </>
+        <NavbarUser
+                    hideSidebar={hideSidebar}
+                    showSidebar={showSidebar}
+                    cambiarBoton={cambiarBoton}
+                />
+        <div className="contenedor-admin" fluid>
+        {sidebar ? (
+          <>
+            <div className="columna-sidebar-icon">
+              <SideNavicons />
+            </div>
+            <div className="container-sidebar">
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/usuario" component={IndexUsser} />
+                  <Route exact path="/usuario/mascotas" component={Mascotas} />
+                  <Route exact path="/usuario/datos" component={DatosUsuario} />
+                
+                </Switch>
+              </div>
+            </div>
+          </>
+        ) : (
+          <>
+            <div className="columna-sidebar">
+              <Sidenav />
+            </div>
+            <div className="container-sidebar">
+              <div className="container-links-sidebar">
+                <Switch>
+                  <Route exact path="/usuario" component={IndexUsser} />
+                  <Route exact path="/usuario/mascotas" component={Mascotas} />
+                  <Route exact path="/usuario/datos" component={DatosUsuario} />
+                </Switch>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
+      <div sm className="footer-admin">
+        <FooterAdmin />
+      </div>
+    </>
+        
     )
 }
 

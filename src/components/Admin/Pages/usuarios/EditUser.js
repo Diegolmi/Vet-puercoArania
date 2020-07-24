@@ -24,12 +24,6 @@ const EditUser = () => {
     listarUsuarios();
   }, []);
 
-  // const traerUsuariPorId = async (id) =>{
-  //   const response = await axiosInstance.get(`/private/user/${id}`)
-  //   console.log(response)
-  //   setUserById(response.data)
-    
-  // }
 
   const eliminarUser = id => async () => {
     Swal.fire({

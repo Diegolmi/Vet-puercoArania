@@ -94,8 +94,8 @@ const TablePage = () => {
          
          name,
          race,
+         species,
          size,
-        species,
         weigth,
         'eliminar': <MDBBtn color="red" size="sm" onClick={() => eliminarMascota(_id)}>Eliminar</MDBBtn>
       }
