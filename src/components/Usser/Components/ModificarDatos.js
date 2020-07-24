@@ -36,8 +36,9 @@ const ModificarDatos = () => {
         labelId="username"
         name="username"
         label="Nombre de usuario"
+
         value={editarDatos.username}
-        
+
         error="Invalid input"
         success="Success!"
         validate
@@ -49,8 +50,10 @@ const ModificarDatos = () => {
         name="name"
         label="Nombre"
         type="text"
+
         value={editarDatos.name}
         
+
         error="Invalid input"
         success="Success!"
         validate
@@ -62,8 +65,10 @@ const ModificarDatos = () => {
         name="lastname"
         label="Apellido"
         type="text"
+
         value={editarDatos.lastname}
         
+
         error="Invalid input"
         success="Success!"
         validate
@@ -75,8 +80,10 @@ const ModificarDatos = () => {
         name="email"
         label="Email"
         type="email"
+
         value={editarDatos.email}
         
+
         error="Invalid input"
         success="Success!"
         validate
@@ -88,8 +95,10 @@ const ModificarDatos = () => {
         name="tel"
         label="Numero de telefono"
         type="number"
+
         value={editarDatos.tel}
         
+
         error="Invalid input"
         success="Success!"
         validate
@@ -100,8 +109,10 @@ const ModificarDatos = () => {
         labelId="address"
         name="address"
         label="Domicilio"
+
         value={editarDatos.address}
         
+
         error="Invalid input"
         success="Success!"
         validate
@@ -112,7 +123,9 @@ const ModificarDatos = () => {
         labelId="province"
         name="province"
         label="Provincia"
+
         value={editarDatos.province}
+
         error="Invalid input"
         success="Success!"
         validate
@@ -124,7 +137,9 @@ const ModificarDatos = () => {
         name="password"
         label="Contraseña"
         type="password"
+
         value={editarDatos.password}
+
         validate
         group
       />

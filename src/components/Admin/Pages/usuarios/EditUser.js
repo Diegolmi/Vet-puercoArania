@@ -24,6 +24,7 @@ const EditUser = () => {
     listarUsuarios();
   }, []);
 
+
   const eliminarUser = id => async () => {
     Swal.fire({
       title: '¿estas seguro de borrar este usuario?',
