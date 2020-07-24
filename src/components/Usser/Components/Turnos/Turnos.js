@@ -4,6 +4,7 @@ import FormTurnos from "./FormTurnos";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 // import FooterAdmin from "../../../../components/Admin/FooterAdmin";
+
 import "./styleTurno.css";
 
 const Turnos = () => {
@@ -13,7 +14,7 @@ const Turnos = () => {
     const result = await axiosInstance.get("/turnos/user");
     
     setTurnos(result.data.userAppointments || []);
-    console.log(result.data);
+ 
   };
 
   useEffect(() => {
@@ -51,7 +52,9 @@ const Turnos = () => {
           <FormTurnos listarTurnos={listarTurnos} />
         </Tab>
       </Tabs>
-      {/* <FooterAdmin /> */}
+
+     
+
     </div>
   );
 };
