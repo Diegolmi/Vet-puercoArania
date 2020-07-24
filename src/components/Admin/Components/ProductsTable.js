@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+
 import { MDBDataTable } from "mdbreact";
+
 import "../Admin.css";
 import axiosInstance from "../../util/axiosInstance";
 import { FaTrashAlt, FaEdit } from "react-icons/fa";

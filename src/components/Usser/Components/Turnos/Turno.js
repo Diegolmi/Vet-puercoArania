@@ -34,11 +34,11 @@ const Turno = ({ turno, listarTurnos }) => {
     return (
         <>
             <Container  fluid clasName="contenedor1-card" >
-                <Row>
-                    <Col>
-                        <Card border="danger" style={{ width: '18rem', order:"4" }} className="cardTurno">
+                <div className="row">
+                    <div className="col">
+                        <Card border="danger"  className="cardTurno ">
                             <p>Mascota: <span>{turno.pet}</span></p>
-                            <p>Dueño: <span>{turno.user.name}</span></p>
+                            <p>Dueño: <span>{turno.user}</span></p>
                             <p>Fecha: <span>{turno.date}</span></p>
                             <p>Hora: <span>{turno.time}</span></p>
                             <p>Descripcion: <span>{turno.description}</span></p>
@@ -48,8 +48,8 @@ const Turno = ({ turno, listarTurnos }) => {
                                 onClick={() => eliminarTurno(turno._id)} >Cancelar Turno</Button>
                         </Card >
                        
-                    </Col>
-                </Row>
+                    </div>
+                </div>
             </Container>
         </>
 

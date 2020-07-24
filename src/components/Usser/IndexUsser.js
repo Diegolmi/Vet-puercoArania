@@ -10,13 +10,9 @@ const IndexUsser = () => {
     return (
         <Container-fluid >
             <Row>
-                
              <Turnos />
-            <Col md={4}> 
+            </Row>    
            
-           </Col>
-           </Row>    
-           {/*<FooterAdmin />*/}
         </Container-fluid>
     )
 }
