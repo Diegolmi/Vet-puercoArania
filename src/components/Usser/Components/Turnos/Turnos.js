@@ -13,7 +13,6 @@ const Turnos = () => {
 
     setTurnos(result.data || []);
     console.log(result.data);
-
   };
 
   useEffect(() => {
@@ -31,28 +30,15 @@ const Turnos = () => {
         Saca tu turno
       </button>
     ) : (
-        ""
-      );
+      ""
+    );
 
   return (
-    <Container>
-      <Row>
-        <Col md="12">
-          <p className="tituloTurno">
-            <span>{titulo}</span>
-          </p>
-          
-            {turnos.map((turno) => (
-              <Turno listarTurnos={listarTurnos} turno={turno} />
-            ))}
-          
-        </Col>
-      </Row>
-
-    </Container>
-
-
-
+    <>
+      {turnos.map((turno) => (
+        <Turno listarTurnos={listarTurnos} turno={turno} />
+      ))}
+    </>
   );
 };
 

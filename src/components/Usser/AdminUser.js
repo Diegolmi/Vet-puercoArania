@@ -38,11 +38,11 @@ const AdminUser = () => {
             <div className="columna-sidebar-icon">
               <SideNavicons />
             </div>
-            <div className="container-sidebar">
-              <div className="container-links-sidebar">
+            <div className="container-sidebar1">
+              <div className="container-links-sidebar1">
                 <Switch>
                   <Route exact path="/usuario" component={IndexUsser} />
-                  <Route exact path="/usuario/mascotas" component={Mascotas} />
+                  <Route exact path="/usuario/turnos" component={Turnos} />
                   <Route exact path="/usuario/datos" component={DatosUsuario} />
                 </Switch>
               </div>
@@ -53,11 +53,11 @@ const AdminUser = () => {
             <div className="columna-sidebar">
               <Sidenav />
             </div>
-            <div className="container-sidebar">
-              <div className="container-links-sidebar">
+            <div className="container-sidebar1">
+              <div className="container-links-sidebar1">
                 <Switch>
                   <Route exact path="/usuario" component={IndexUsser} />
-                  <Route exact path="/usuario/mascotas" component={Mascotas} />
+                  <Route exact path="/usuario/turnos" component={Turnos} />
                   <Route exact path="/usuario/datos" component={DatosUsuario} />
                 </Switch>
               </div>
