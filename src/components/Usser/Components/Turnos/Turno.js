@@ -1,7 +1,6 @@
 import React from "react";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import { Container, Row, Col } from "react-bootstrap";
 import axiosInstance from "../../../util/axiosInstance";
 import "./styleTurno.css";
 import Swal from "sweetalert2";
