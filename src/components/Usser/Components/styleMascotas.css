@@ -12,6 +12,12 @@
     
 }
 /* SIDEBAR */
+.container-links-sidebar1{
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
 
 .sidebar-container{
     margin: 0 !important;

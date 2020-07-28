@@ -82,12 +82,12 @@ const ProductsTable = ({ productos, listaProductos }) => {
         sort: "asc",
         width: 100,
       },
-      {
-        label: "Descripcion",
-        field: "descripcion",
-        sort: "asc",
-        width: 270,
-      },
+      // {
+      //   label: "Descripcion",
+      //   field: "descripcion",
+      //   sort: "asc",
+      //   width: 270,
+      // },
       {
         label: "Tipo",
         field: "tipo",
@@ -121,7 +121,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
       ),
       precio: producto.price,
       cantidad: producto.stock,
-      descripcion: producto.details,
+      // descripcion: producto.details,
       tipo: producto.category,
       mascota: producto.brand,
       editar: (

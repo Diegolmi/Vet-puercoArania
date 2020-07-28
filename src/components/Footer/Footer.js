@@ -25,7 +25,7 @@ const Footer = () => {
                       className="iconos"
                       alt="logo"
                     />
-                    <p className="m-2 p-1">puercoaraña@gmail.com</p>
+                    <p className="m-2 p-1">vet.puerco.arania@gmail.com</p>
                   </div>
                   <div id="celular" className="d-flex">
                     <img

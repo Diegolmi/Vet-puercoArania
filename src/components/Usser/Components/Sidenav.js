@@ -13,7 +13,6 @@ import './styleMascotas.css';
 const SidebarAdmin = () => {
     return ( 
         
-        
         <div className="sidebar-container">
       <div className="datos-sidebar">
         <Link to="/">
@@ -30,7 +29,7 @@ const SidebarAdmin = () => {
         <li className="listado-sidebar">
           <FaUser className="icon-sidebar-admin" />{" "}
           <Link to="/usuario/turnos" className="link-sidebar">
-            Mis turnos
+            Mis Turnos
           </Link>
         </li>
         <li className="listado-sidebar">

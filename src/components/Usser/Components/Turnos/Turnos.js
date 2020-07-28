@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 
-
 import "./styleTurno.css";
 
 const Turnos = () => {
@@ -12,9 +11,7 @@ const Turnos = () => {
     const result = await axiosInstance.get("/turnos/user");
 
     setTurnos(result.data || []);
-
     console.log(result.data);
-
   };
 
   useEffect(() => {
@@ -22,16 +19,12 @@ const Turnos = () => {
   }, []);
 
 
-
   return (
     <>
       {turnos.map((turno) => (
         <Turno listarTurnos={listarTurnos} turno={turno} />
       ))}
-
     </>
-
-
   );
 };
 
