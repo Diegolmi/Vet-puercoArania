@@ -18,8 +18,9 @@
 
 }
 .contenedor-card-turnos1{
-    margin: 100px;
-    margin-top: 10px;
+    
+    
+    padding-left: -700px;
 }
 
 .cardTurno {
@@ -27,5 +28,9 @@
     padding: 20px;
     margin: 20px;
     
+}
+.formTurnos {
+width: 500px;
+padding: 50px;
 }
 

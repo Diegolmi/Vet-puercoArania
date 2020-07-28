@@ -52,9 +52,7 @@
     flex-wrap: wrap;
     border-bottom: 1px solid black;
 }
-.container-links-sidebar1{
-    height: 100vh;
-}
+
 
 
 .secciones-sidebar {
@@ -90,8 +88,7 @@
 }
 
 .listMascotas {
-  margin: 20px;
-  padding: 20px;
+  width: 200px;
 }
 .navbar-user {
     background: #68829c;

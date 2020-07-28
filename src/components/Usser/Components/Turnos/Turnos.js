@@ -3,7 +3,9 @@ import { Tabs, Tab, Row } from "react-bootstrap";
 import FormTurnos from "./FormTurnos";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
-import FooterAdmin from "../../../../components/Admin/FooterAdmin";
+
+// import FooterAdmin from "../../../../components/Admin/FooterAdmin";
+
 import "./styleTurno.css";
 
 const Turnos = () => {
@@ -12,7 +14,10 @@ const Turnos = () => {
   const listarTurnos = async () => {
     const result = await axiosInstance.get("/turnos/user");
     
-    setTurnos(result.data.userAppointments || []);
+    setTurnos(result.data || []);
+
+    console.log(result.data);
+
   };
 
   useEffect(() => {
@@ -24,7 +29,7 @@ const Turnos = () => {
       <button
         className="btn btn-primary"
         onClick={() => {
-          alert("clicked");
+          alert("Solicita tu turno");
         }}
       >
         Saca tu turno
@@ -40,17 +45,17 @@ const Turnos = () => {
           <p className="tituloTurno">
             <span>{titulo}</span>
           </p>
-          <Row>
+          <div>
             {turnos.map((turno) => (
               <Turno listarTurnos={listarTurnos} turno={turno} />
             ))}
-          </Row>
+          </div>
         </Tab>
-        <Tab eventKey="modificar" title="Solicitar Turno">
+        {/*<Tab eventKey="modificar" title="Solicitar Turno">
           <FormTurnos listarTurnos={listarTurnos} />
-        </Tab>
+            </Tab>*/}
       </Tabs>
-      <FooterAdmin />
+
     </div>
   );
 };

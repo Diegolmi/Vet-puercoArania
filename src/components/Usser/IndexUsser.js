@@ -1,19 +1,23 @@
 import React from "react";
 //import FooterAdmin from '../Admin/FooterAdmin';
-//import Mascotas from './Components/Mascotas';
+import Mascotas from './Components/Mascotas';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 //import DatosUsuario from './Components/DatosUsuario';
-import Turnos from './Components/Turnos/Turnos';
+import FormTurnos from './Components/Turnos/FormTurnos';
 
 const IndexUsser = () => {
     return (
-        <Container-fluid >
+
+        <Container>
             <Row>
-             <Turnos />
-            </Row>    
-           
-        </Container-fluid>
+                <Col><FormTurnos /></Col>
+                <Col><Mascotas /></Col>
+            </Row>
+
+        </Container >
+
     )
 }
 
