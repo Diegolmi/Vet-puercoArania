@@ -61,7 +61,9 @@ const FormDatosAdmin = ({ usuario, handleSubmit, handleChange }) => {
       <MDBInput
         name="zip"
         onChange={handleChange}
-        // value={usuario.zip}
+
+   // value={usuario.zip}
+
         label="Codigo Postal"
       />
       <MDBInput
