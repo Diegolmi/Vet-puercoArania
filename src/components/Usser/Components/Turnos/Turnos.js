@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Tabs, Tab, Row } from "react-bootstrap";
-import FormTurnos from "./FormTurnos";
+import { Container, Row, Col } from "react-bootstrap";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 
-// import FooterAdmin from "../../../../components/Admin/FooterAdmin";
 
 import "./styleTurno.css";
 
@@ -13,7 +11,7 @@ const Turnos = () => {
 
   const listarTurnos = async () => {
     const result = await axiosInstance.get("/turnos/user");
-    
+
     setTurnos(result.data || []);
 
     console.log(result.data);
@@ -35,28 +33,28 @@ const Turnos = () => {
         Saca tu turno
       </button>
     ) : (
-      ""
-    );
+        ""
+      );
 
   return (
-    <div className="contenedor-card-turnos1">
-      <Tabs defaultActiveKey="datos" id="uncontrolled-tab-example">
-        <Tab eventKey="datos" title="Administra tus turnos">
+    <Container>
+      <Row>
+        <Col md="12">
           <p className="tituloTurno">
             <span>{titulo}</span>
           </p>
-          <div>
+          
             {turnos.map((turno) => (
               <Turno listarTurnos={listarTurnos} turno={turno} />
             ))}
-          </div>
-        </Tab>
-        {/*<Tab eventKey="modificar" title="Solicitar Turno">
-          <FormTurnos listarTurnos={listarTurnos} />
-            </Tab>*/}
-      </Tabs>
+          
+        </Col>
+      </Row>
 
-    </div>
+    </Container>
+
+
+
   );
 };
 

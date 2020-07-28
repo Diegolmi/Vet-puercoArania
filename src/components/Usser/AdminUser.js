@@ -46,7 +46,7 @@ const AdminUser = () => {
             <div className="columna-sidebar-icon">
               <SideNavicons />
             </div>
-            <div className="container-sidebar">
+            <div className="container-sidebar1">
               <div className="container-links-sidebar1">
                 <Switch>
                   <Route exact path="/usuario" component={IndexUsser} />

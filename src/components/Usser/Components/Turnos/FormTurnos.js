@@ -45,7 +45,7 @@ const FormTurnos = ({ listarTurnos }) => {
       showConfirmButton: false,
       timer: 2500
     })
-    listarTurnos()
+    //listarTurnos()
   }
 
   return (

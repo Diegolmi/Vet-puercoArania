@@ -52,7 +52,9 @@
     flex-wrap: wrap;
     border-bottom: 1px solid black;
 }
-
+.container-sidebar1 {
+  width: 100%;
+}
 
 
 .secciones-sidebar {
@@ -128,5 +130,5 @@
 .CardMascota {
     height: 650px;
     width: auto;
-    margin: 
+     
 }
