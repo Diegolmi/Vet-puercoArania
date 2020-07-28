@@ -26,35 +26,30 @@ const Turno = ({ turno, listarTurnos }) => {
 
   };
 
- 
 
 
 
-    return (
-        <>
-        
-            <div  fluid clasName="contenedor1-card" >
-                <div>
-                    <div>
-                        <Card border="danger"  className="cardTurno ">
-                            <p>Mascota: <span>{turno.pet}</span></p>
-                            <p>Dueño: <span>{turno.user}</span></p>
-                            <p>Fecha: <span>{turno.date}</span></p>
-                            <p>Hora: <span>{turno.time}</span></p>
-                            <p>Descripcion: <span>{turno.description}</span></p>
-                            <p>Sector: <span>{turno.service}</span></p>
 
-                            <Button className="btn btn-danger"
-                                onClick={() => eliminarTurno(turno._id)} >Cancelar Turno</Button>
-                        </Card >
-                       
-                    </div>
-                </div>
-            </div>
-        </>
+  return (
+    <>
+
+      
+        <div border="danger" className="cardTurno ">
+          <p>Mascota: <span>{turno.pet}</span></p>
+          <p>Dueño: <span>{turno.user}</span></p>
+          <p>Fecha: <span>{turno.date}</span></p>
+          <p>Hora: <span>{turno.time}</span></p>
+          <p>Descripcion: <span>{turno.description}</span></p>
+          <p>Sector: <span>{turno.service}</span></p>
+
+          <Button className="btn btn-danger"
+            onClick={() => eliminarTurno(turno._id)} >Cancelar Turno</Button>
+        </div >
+      
+    </>
 
 
 
-    )
+  )
 };
 export default Turno;

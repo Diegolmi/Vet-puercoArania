@@ -17,17 +17,25 @@
     
 
 }
+.contenedor1-card {
+    width: 100%;
+}
 .contenedor-card-turnos1{
     
-    
-    padding-left: -700px;
+    display: flex;
+    width: 100%;
 }
 
 .cardTurno {
     box-shadow: 9px 10px 39px -6px rgba(0, 0, 0, 0.54);
     padding: 20px;
-    margin: 20px;
+    margin: 0 !important;
+    border: 2px solid red;
+    width: 300px;
     
+}
+.card {
+    margin: 0 !important;
 }
 .formTurnos {
 width: 500px;
