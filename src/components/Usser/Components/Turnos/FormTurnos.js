@@ -4,7 +4,6 @@ import Button from "react-bootstrap/Button";
 import axiosInstance from "../../../util/axiosInstance";
 import Swal from "sweetalert2";
 import './styleTurno.css';
-import Turnos from './Turnos'
 const FormTurnos = ({ listarTurnos }) => {
   const [solicitarTurno, setSolicitarTurno] = useState({
     user: "",
@@ -46,7 +45,7 @@ const FormTurnos = ({ listarTurnos }) => {
       showConfirmButton: false,
       timer: 2500
     })
-    //listarTurnos()
+    listarTurnos()
   }
 
   return (
