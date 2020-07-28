@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 
@@ -22,37 +21,15 @@ const Turnos = () => {
     listarTurnos();
   }, []);
 
-  const titulo =
-    turnos.length === 0 ? (
-      <button
-        className="btn btn-primary"
-        onClick={() => {
-          alert("Solicita tu turno");
-        }}
-      >
-        Saca tu turno
-      </button>
-    ) : (
-        ""
-      );
+
 
   return (
-    <Container>
-      <Row>
-        <Col md="12">
-          <p className="tituloTurno">
-            <span>{titulo}</span>
-          </p>
-          
-            {turnos.map((turno) => (
-              <Turno listarTurnos={listarTurnos} turno={turno} />
-            ))}
-          
-        </Col>
-      </Row>
+    <>
+      {turnos.map((turno) => (
+        <Turno listarTurnos={listarTurnos} turno={turno} />
+      ))}
 
-    </Container>
-
+    </>
 
 
   );
