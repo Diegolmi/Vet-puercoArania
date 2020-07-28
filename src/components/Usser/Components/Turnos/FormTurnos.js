@@ -3,7 +3,8 @@ import { MDBInput, MDBCol, MDBDatePickerV5, MDBTimePicker } from "mdbreact";
 import Button from "react-bootstrap/Button";
 import axiosInstance from "../../../util/axiosInstance";
 import Swal from "sweetalert2";
-
+import './styleTurno.css';
+import Turnos from './Turnos'
 const FormTurnos = ({ listarTurnos }) => {
   const [solicitarTurno, setSolicitarTurno] = useState({
     user: "",
@@ -45,11 +46,14 @@ const FormTurnos = ({ listarTurnos }) => {
       showConfirmButton: false,
       timer: 2500
     })
-    listarTurnos()
+    //listarTurnos()
   }
 
   return (
     <>
+    
+    <div className="formTurnos">
+    <h2>Solicita tu turno</h2>  
       <form onSubmit={handleSubmit}>
         <MDBCol md="8">
           <MDBInput
@@ -60,14 +64,13 @@ const FormTurnos = ({ listarTurnos }) => {
             required
           />
         </MDBCol>
-        {/* <MDBCol md='8'>
+        <MDBCol md='8'>
           <MDBInput
             onChange={handleChange}
             name="user"
             label="Nombre Dueño"
-            value={user}
             required />
-        </MDBCol> */}
+        </MDBCol>
         <MDBCol md='8'>
           <MDBDatePickerV5
             getValue={handleDate}
@@ -110,6 +113,7 @@ const FormTurnos = ({ listarTurnos }) => {
           Solicitar
         </Button>
       </form>
+    </div>
     </>
   );
 };

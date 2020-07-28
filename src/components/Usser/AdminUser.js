@@ -1,46 +1,38 @@
-import React, { useState } from 'react'
-import NavbarUser from './Components/NavbarUser';
-import FooterAdmin from '../Admin/FooterAdmin';
-import Sidenav from './Components/Sidenav';
-import SideNavicons from './Components/sideNavicons';
+import React, { useState } from "react";
+import NavbarUser from "./Components/NavbarUser";
+import FooterAdmin from "../Admin/FooterAdmin";
+import Sidenav from "./Components/Sidenav";
+import SideNavicons from "./Components/sideNavicons";
 
-import IndexUsser from './IndexUsser';
-import Mascotas from './Components/Mascotas';
-import DatosUsuario from './Components/DatosUsuario';
-// import Turnos from './Components/Turnos/Turnos';
-// import Carrito from '../stepper/Carrito';
-import { 
-
-    Switch,
-    Route,
-
-} from "react-router-dom";
-import './Components/styleMascotas.css';
-
+import IndexUsser from "./IndexUsser";
+import Turnos from "./Components/Turnos/Turnos";
+import DatosUsuario from "./Components/DatosUsuario";
+import Mascotas from "./Components/Mascotas";
+import { Switch, Route } from "react-router-dom";
+import "./Components/styleMascotas.css";
 
 const AdminUser = () => {
+  const [sidebar, setSidebar] = useState(false);
+  const [cambiarBoton, setCambiarBoton] = useState(false);
 
-    const [sidebar, setSidebar] = useState(false)
-    const [cambiarBoton, setCambiarBoton] = useState(false)
+  const hideSidebar = () => {
+    setSidebar(true);
+    setCambiarBoton(true);
+  };
 
-    const hideSidebar = () => {
-        setSidebar(true);
-        setCambiarBoton(true)
-    }
+  const showSidebar = () => {
+    setSidebar(false);
+    setCambiarBoton(false);
+  };
 
-    const showSidebar = () => {
-        setSidebar(false);
-        setCambiarBoton(false);
-    }
-
-    return (
-        <>
-        <NavbarUser
-                    hideSidebar={hideSidebar}
-                    showSidebar={showSidebar}
-                    cambiarBoton={cambiarBoton}
-                />
-        <div className="contenedor-admin" fluid>
+  return (
+    <>
+      <NavbarUser
+        hideSidebar={hideSidebar}
+        showSidebar={showSidebar}
+        cambiarBoton={cambiarBoton}
+      />
+      <div className="contenedor-admin" fluid>
         {sidebar ? (
           <>
             <div className="columna-sidebar-icon">
@@ -52,7 +44,6 @@ const AdminUser = () => {
                   <Route exact path="/usuario" component={IndexUsser} />
                   <Route exact path="/usuario/mascotas" component={Mascotas} />
                   <Route exact path="/usuario/datos" component={DatosUsuario} />
-                
                 </Switch>
               </div>
             </div>
@@ -78,8 +69,7 @@ const AdminUser = () => {
         <FooterAdmin />
       </div>
     </>
-        
-    )
-}
+  );
+};
 
 export default AdminUser;
