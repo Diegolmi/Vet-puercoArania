@@ -10,7 +10,7 @@ const FormTurnos = ({ listarTurnos }) => {
     pet: "",
     service: "",
     date: {},
-    time: "12:00",
+    time: "",
     description: "",
   });
 
@@ -26,6 +26,12 @@ const FormTurnos = ({ listarTurnos }) => {
     setSolicitarTurno({
       ...solicitarTurno,
       date: e,
+    });
+  };
+  const handleTime = (e) => {
+    setSolicitarTurno({
+      ...solicitarTurno,
+      time: e,
     });
   };
 
@@ -70,7 +76,7 @@ const FormTurnos = ({ listarTurnos }) => {
         </MDBCol>
         <MDBCol md='8'>
           <MDBTimePicker
-            getValue={handleDate}
+            getValue={handleTime}
             name="time"
             id="timePicker"
             label="Hora"

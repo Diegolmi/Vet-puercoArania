@@ -14,7 +14,7 @@ const MostrarDatosAdmin = ({ usuario }) => {
     tel,
   } = usuario;
   return (
-    <MDBContainer>
+    <MDBContainer className="container-datos-admin">
       <MDBListGroup style={{ width: "22rem" }}>
         <MDBListGroupItem>Usuario: {username}</MDBListGroupItem>
         <MDBListGroupItem>Nombre: {name}</MDBListGroupItem>

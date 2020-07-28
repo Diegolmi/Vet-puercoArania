@@ -3,12 +3,14 @@ import ProductsTable from "../../Components/ProductsTable";
 
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tab";
-import FormProducto from "../../Components/FormProducto";
+
 import axiosInstance from "../../../util/axiosInstance";
 import '../../Admin.css'
+import ModalAddProduct from "./ModalAddProduct";
 
 const AddProduct = () => {
   const [productos, setProductos] = useState([]);
+  const [show, setShow] = useState(false);
 
   const listaProductos = async () => {
     const response = await axiosInstance.get("/product");
@@ -20,25 +22,24 @@ const AddProduct = () => {
     listaProductos();
   }, [setProductos]);
 
+  const openModal = () => {
+    setShow(true)
+  }
+
   return (
     <div className="container-productos-admin my-3">
+      <h2>Productos</h2>
+      <div className="boton-agregar-producto">
+        <button className="button-add mr-2" onClick={openModal}>Agregar Productos</button>
+      </div>
       <div className="row">
         <div className="col-10">
-          <Tabs
-            defaultActiveKey="home"
-            transition={false}
-            id="noanim-tab-example"
-          >
-            <Tab eventKey="home" title="Agregar Producto">
-              <FormProducto listaProductos={listaProductos} />
-            </Tab>
-            <Tab eventKey="profile" title="Lista Productos">
-              <ProductsTable
+          {/* <FormProducto listaProductos={listaProductos} /> */}
+          <ProductsTable
                 productos={productos}
                 listaProductos={listaProductos}
               />
-            </Tab>
-          </Tabs>
+              <ModalAddProduct listaProductos={listaProductos} show={show} setShow={setShow} />
         </div>
       </div>
     </div>

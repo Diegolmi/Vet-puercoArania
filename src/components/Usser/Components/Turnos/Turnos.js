@@ -12,7 +12,7 @@ const Turnos = () => {
   const listarTurnos = async () => {
     const result = await axiosInstance.get("/turnos/user");
     
-    setTurnos(result.data.userAppointments || []);
+    setTurnos(result.data || []);
     console.log(result.data);
   };
 
@@ -42,7 +42,7 @@ const Turnos = () => {
             <span>{titulo}</span>
           </p>
           <Row>
-            {turnos.map((turno) => (
+            {turnos.map(turno => (
               <Turno listarTurnos={listarTurnos} turno={turno} />
             ))}
           </Row>
