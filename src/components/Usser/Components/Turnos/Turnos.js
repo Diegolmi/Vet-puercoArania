@@ -3,7 +3,6 @@ import { Container, Row, Col } from "react-bootstrap";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 
-
 import "./styleTurno.css";
 
 const Turnos = () => {
@@ -13,9 +12,7 @@ const Turnos = () => {
     const result = await axiosInstance.get("/turnos/user");
 
     setTurnos(result.data || []);
-
     console.log(result.data);
-
   };
 
   useEffect(() => {
@@ -33,28 +30,15 @@ const Turnos = () => {
         Saca tu turno
       </button>
     ) : (
-        ""
-      );
+      ""
+    );
 
   return (
-    <Container>
-      <Row>
-        <Col md="12">
-          <p className="tituloTurno">
-            <span>{titulo}</span>
-          </p>
-          
-            {turnos.map((turno) => (
-              <Turno listarTurnos={listarTurnos} turno={turno} />
-            ))}
-          
-        </Col>
-      </Row>
-
-    </Container>
-
-
-
+    <>
+      {turnos.map((turno) => (
+        <Turno listarTurnos={listarTurnos} turno={turno} />
+      ))}
+    </>
   );
 };
 

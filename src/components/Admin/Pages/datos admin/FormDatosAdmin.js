@@ -3,7 +3,7 @@ import { MDBInput } from "mdbreact";
 import "../../Admin.css";
 const FormDatosAdmin = ({ usuario, handleSubmit, handleChange }) => {
   return (
-    <form>
+    <form className="submit-admin-form">
       <MDBInput
         name="name"
         onChange={handleChange}
