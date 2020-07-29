@@ -1,5 +1,5 @@
 # Veterinaria Puerco Araña
-Poryecto de una veterinaria, la cual el usuario tiene la posibilidad de realizar consultas online y sacar turnos para los distintos servicios que ofrece.
+Proyecto de una veterinaria, la cual el usuario tiene la posibilidad de realizar consultas online y sacar turnos para los distintos servicios que ofrece.
 Tambien cuenta con un ecommerce para poder realizar compras de medicamentos, alimentos y accesorios directamente desde tu domicilio, sin la necesidad de moverte del mismo.-
 
 ## Comenzando 🚀
