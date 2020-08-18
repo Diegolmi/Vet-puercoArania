@@ -13,7 +13,7 @@ import "./style.css";
 import { img1, img2, img3, banner } from "../../assets/img/index";
 const CarouselPage = () => {
   return (
-    <div>
+    <>
       <MDBCarousel
         activeItem={4}
         length={4}
@@ -60,7 +60,7 @@ const CarouselPage = () => {
           </MDBCarouselItem>
         </MDBCarouselInner>
       </MDBCarousel>
-    </div>
+    </>
   );
 };
 

@@ -7,9 +7,6 @@ import NavbarPage from "../Navbar/Nav";
 import axiosInstance from "../util/axiosInstance";
 import Footer from "../Footer/Footer";
 
-
-
-
 const SecServicios = () => {
   const [userCarrito, setUserCarrito] = useState([]);
 

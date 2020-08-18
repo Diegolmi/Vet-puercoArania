@@ -34,7 +34,7 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
       <Container fluid>
         <Row>
           {alimentosArray.map((producto) => (
-            <Col lg={3} md={6} className="contenedor-card-landing">
+            <Col key={producto.urlImage} lg={3} md={6} className="contenedor-card-landing">
               <Card className="card-container" key={producto._id}>
                 <Card.Img
                   src={producto.urlImage}
