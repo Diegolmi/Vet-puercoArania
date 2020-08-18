@@ -11,7 +11,7 @@ import Swal from 'sweetalert2';
 const EditUser = () => {
   const [show, setShow] = useState(false);
   const [usuarios, setUsuarios] = useState([]);
-  const [userById, setUserById] = useState({})
+  const [userById] = useState({})
 
   const handleShow = () => setShow(true)
 

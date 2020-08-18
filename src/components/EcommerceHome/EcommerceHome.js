@@ -19,7 +19,7 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
   const [accesorios, setAccesorios] = useState(false);
   const [farmacia, setFarmacia] = useState(false);
   const [productos, setProductos] = useState([]);
-  const [carrito, setCarrito] = useState([]);
+  const [setCarrito] = useState([]);
   const [cantidad, setCantidad] = useState(1);
   // const history = useHistory();
 

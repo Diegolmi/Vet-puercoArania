@@ -7,7 +7,6 @@ import SideNavicons from "./Components/sideNavicons";
 import IndexUsser from "./IndexUsser";
 import Turnos from "./Components/Turnos/Turnos";
 import DatosUsuario from "./Components/DatosUsuario";
-import Mascotas from "./Components/Mascotas";
 import { Switch, Route } from "react-router-dom";
 import "./Components/styleMascotas.css";
 

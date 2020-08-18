@@ -1,9 +1,5 @@
 import React, { useState, useEffect } from "react";
 import ProductsTable from "../../Components/ProductsTable";
-
-import Tabs from "react-bootstrap/Tabs";
-import Tab from "react-bootstrap/Tab";
-
 import axiosInstance from "../../../util/axiosInstance";
 import '../../Admin.css'
 import ModalAddProduct from "./ModalAddProduct";

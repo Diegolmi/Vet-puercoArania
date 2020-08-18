@@ -22,7 +22,7 @@ import RestrictedRoute from "./RestrictedRoute";
 
 
 function Routes() {
-  const [user, setUser] = useState("");
+  const [user] = useState("");
 
   return (
     // <>
