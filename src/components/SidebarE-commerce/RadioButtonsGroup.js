@@ -9,7 +9,7 @@ import Radio from "@material-ui/core/Radio";
 import { Grid } from "@material-ui/core";
 
 //styles
-import "./style.css";
+import "./styleRadioButtonsGroup.css";
 
 export default function RadioButtonsGroup() {
   return (
