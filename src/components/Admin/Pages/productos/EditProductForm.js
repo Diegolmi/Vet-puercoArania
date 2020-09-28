@@ -15,7 +15,6 @@ const EditProductForm = ({ productById, handleChange, handleSubmit }) => {
   } = productById;
 
   return (
-      
     <form onSubmit={handleSubmit}>
       <MDBInput
         onChange={handleChange}

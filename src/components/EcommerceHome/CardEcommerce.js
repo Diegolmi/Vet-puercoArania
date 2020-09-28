@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import moment from "moment";
-// import axios from 'axios';
 import Modal from "react-bootstrap/Modal";
 import SelectInput from "../SelectInput";
 
@@ -55,7 +53,6 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                     />
                   </Card.Text>
 
-                  {/* <Card.Text><SelectInput agregarCantidad={agregarCantidad} productos={productos} /></Card.Text> */}
                 </Card.Body>
                 <Card.Footer>
                   <Button

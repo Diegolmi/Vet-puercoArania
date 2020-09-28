@@ -39,10 +39,7 @@ class NavbarPage extends Component {
                 TIENDA
               </Link>
             </Nav>
-            {/* <Nav className="ml-lg-auto">
-            <Link to="/about" className="mr-3 link-admin">LOGIN</Link>
             
-          </Nav> */}
           </MDBNavbarNav>
         </MDBCollapse>
       </MDBNavbar>

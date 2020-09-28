@@ -5,7 +5,6 @@ import Step from "@material-ui/core/Step";
 import StepLabel from "@material-ui/core/StepLabel";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-// import FormCarrito from './FormCarrito';
 import Review from "./Review";
 import AddProduct from "./AddProduct";
 import axiosInstance from "../util/axiosInstance";
@@ -31,7 +30,6 @@ const useStyles = makeStyles((theme) => ({
 export default function Carrito() {
   const classes = useStyles();
   const [activeStep, setActiveStep] = useState(0);
-  // const [isDisabled, setIsDisabled] = useState(true)
   const [userCarrito, setUserCarrito] = useState([]);
   const steps = getSteps();
 

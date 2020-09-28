@@ -8,10 +8,6 @@ const ModalTurnos = ({ setShow, show }) => {
 
   return (
     <>
-      {/* <Button variant="primary" >
-        Launch demo modal
-      </Button> */}
-
       <Modal show={show} onHide={handleClose}>
         <Modal.Header closeButton>
           <Modal.Title>Modificar Turnos</Modal.Title>
@@ -23,9 +19,6 @@ const ModalTurnos = ({ setShow, show }) => {
           <Button variant="secondary" onClick={handleClose}>
             Close
           </Button>
-          {/* <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button> */}
         </Modal.Footer>
       </Modal>
     </>

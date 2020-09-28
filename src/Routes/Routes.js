@@ -25,8 +25,7 @@ function Routes() {
   const [user] = useState("");
 
   return (
-    // <>
-    //   <p>{user}</p>
+   
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
@@ -47,7 +46,7 @@ function Routes() {
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
-    // </>
+    
   );
 }
 

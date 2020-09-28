@@ -1,14 +1,4 @@
 .sidenav-filters {
-<<<<<<< HEAD
-    padding-top: 10px;
-    padding-right:14px;
-    padding-left: 10px;
-    border-right:  #fc5185 solid;
-   background-color: rgba(202, 216, 241, 0.863);
-   border-width:1px;
-
-    min-width: 130px;
-=======
   padding-top: 10px;
   padding-right: 14px;
   padding-left: 10px;
@@ -17,7 +7,6 @@
   border-width: 1px;
 
   min-width: 130px;
->>>>>>> 4de8003f8c0e181d261780caa69c1fdb5a3b6084
 }
 
 legend {
@@ -28,14 +17,7 @@ legend {
   margin-left: 1em;
   color: #364f6b;
 }
-<<<<<<< HEAD
-.MuiDrawer-paper{
-
-    background-color: #f0f0f0 !important;
-    margin-top: 115px;
-=======
 .MuiDrawer-paper {
   background-color: #f0f0f0 !important;
   margin-top: 115px;
->>>>>>> 4de8003f8c0e181d261780caa69c1fdb5a3b6084
 }

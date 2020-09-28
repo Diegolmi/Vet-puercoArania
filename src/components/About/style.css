@@ -17,26 +17,7 @@ h1{
     margin: 25px;
     font-size: 30px;
   }
-/* .about{
-    background: #304352; 
-    background: -webkit-linear-gradient(
-      to right,
-      #d7d2cc,
-      #304352
-    ); 
-    background: linear-gradient(
-      to right,
-      #d7d2cc,
-      #304352
-    ); 
-    background-position: center;
-    background-color: rgb(255, 255, 255);
-    height: auto;
-} */
-/* .titulo_about{
-    font-weight: 400;
-    font-size: 60px;
-} */
+
 .imagabout {
         background-image: url("https://cdn.tn.com.ar/sites/default/files/styles/embed_image/public/2019/11/21/5dd6833e80420_gato_siames_adulto.jpg") ;
         height: 560px;

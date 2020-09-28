@@ -10,7 +10,6 @@
 .navbar-admin {
   background: #68829c;
   z-index: 1;
-  /* position: fixed; */
   width: 100vw;
 }
 /*boton para accionar sidebar*/
@@ -318,11 +317,4 @@
   }
 }
 
-@media only screen and (min-width: 1200px) {
-  /* .container-links-sidebar{
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-items: center;
-    } */
-}
+

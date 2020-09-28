@@ -48,20 +48,7 @@ const EditarTurnos = () => {
         <div className="col-12">
         <h2 className="m-3">Turnos Disponibles</h2>
               <CardTurnos turnos={turnos} listarTurnos={listarTurnos} eliminarTurno={eliminarTurno} />
-          {/* <Tabs
-            defaultActiveKey="turnos"
-            transition={false}
-            id="noanim-tab-example"
-            className="container-tabs"
-          >
-            <Tab
-              className="tabs-turnos"
-              eventKey="turnos"
-              title="Todos los Turnos"
-            >
-              
-            </Tab>
-          </Tabs> */}
+          
         </div>
       </div>
     </div>

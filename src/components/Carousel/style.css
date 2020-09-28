@@ -2,11 +2,9 @@
 .contenedorCarousel {
     width: 100vw !important;
     height: 670px;    
-    /* width: 100%;  */
     background-color: white;
 }
 .d-block{
-    /* margin-top: 135px; */
     width: 100vw !important;
     height: 670px;
     -webkit-filter: brightness(70%);

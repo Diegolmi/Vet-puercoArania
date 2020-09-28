@@ -1,10 +1,8 @@
 import React from "react";
-//import FooterAdmin from '../Admin/FooterAdmin';
 import Mascotas from './Components/Mascotas';
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
-//import DatosUsuario from './Components/DatosUsuario';
 import FormTurnos from './Components/Turnos/FormTurnos';
 
 const IndexUsser = () => {

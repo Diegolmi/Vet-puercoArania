@@ -18,9 +18,6 @@ const carouseltienda = () => {
       <MDBCarousel
         activeItem={1}
         length={3}
-        // showControls={true}
-        // showIndicators={true}
-
         className="carrouseltienda"
       >
         <MDBCarouselInner>

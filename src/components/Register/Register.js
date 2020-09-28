@@ -3,12 +3,14 @@ import { MDBView, MDBBtn, MDBIcon, MDBInput } from "mdbreact";
 import logo from "../../assets/img/logo.png";
 import "./styleRegister.css";
 import { Link, useHistory } from "react-router-dom";
+import { useForm } from "react-hook-form";
 
 import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
 
 const FormsPage = () => {
   const history = useHistory();
+  const { register, handleSubmit } = useForm();
 
   const [createUser, setCreateUser] = useState({
     username: "",
@@ -26,10 +28,11 @@ const FormsPage = () => {
     });
   };
 
-  const crearUsuario = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
+    console.log(data);
+
     try {
-       await axiosInstance.post("/register", createUser);
+      await axiosInstance.post("/register", createUser);
       Swal.fire({
         position: "center",
         icon: "success",
@@ -37,8 +40,7 @@ const FormsPage = () => {
         showConfirmButton: false,
         timer: 1500,
       });
-      history.push('/login');
-
+      history.push("/login");
     } catch (error) {
       console.error(error);
     }
@@ -48,8 +50,13 @@ const FormsPage = () => {
     <>
       <div className="container-fluid containerRegistro">
         <div className=" containerForm1">
-          <h1 center className="register-title">Registrate</h1>
-          <form onSubmit={crearUsuario} className="formulario-registro">
+          <h1 center className="register-title">
+            Registrate
+          </h1>
+          <form
+            onSubmit={handleSubmit(onSubmit)}
+            className="formulario-registro"
+          >
             <div className="grey-text">
               <MDBInput
                 onChange={inputChange}
@@ -58,13 +65,18 @@ const FormsPage = () => {
                 icon="user"
                 group
                 type="text"
-                validate
-                error="wrong"
-                success="right"
                 className="form-control"
-                required
+                inputRef={register({
+                  required: {
+                    value: true,
+                    message: "ingresa  del producto",
+                  },
+                  maxLength: {
+                    value: 5,
+                    message: "Maximo 5 caracteres",
+                  },
+                })}
               />
-
               <MDBInput
                 onChange={inputChange}
                 name="name"
@@ -76,6 +88,8 @@ const FormsPage = () => {
                 error="wrong"
                 success="right"
                 className="form-control"
+                maxLength="10"
+                pattern="/^[A-Za-z]+$/i"
                 required
               />
               <MDBInput
@@ -89,6 +103,8 @@ const FormsPage = () => {
                 error="wrong"
                 success="right"
                 className="form-control"
+                maxLength="10"
+                pattern="/^[A-Za-z]+$/i"
                 required
               />
               <MDBInput
@@ -102,6 +118,8 @@ const FormsPage = () => {
                 error="wrong"
                 success="right"
                 className="form-control"
+                maxLength="20 "
+                pattern="/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i"
                 required
               />
               <MDBInput
@@ -113,6 +131,8 @@ const FormsPage = () => {
                 type="password"
                 validate
                 className="form-control"
+                maxLength="10"
+                pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
                 required
               />
               <MDBInput
@@ -124,6 +144,8 @@ const FormsPage = () => {
                 type="password"
                 validate
                 className="form-control"
+                maxLength="10"
+                pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
                 required
               />
             </div>
@@ -140,8 +162,11 @@ const FormsPage = () => {
           </Link>
         </div>
         <div className="container-img-registro">
-            <h2 className="text-welcome">Bienvenido</h2>
-            <p className="register-paragraph">con tu registro accedes a todos los beneficios en los productos de la tienda</p>
+          <h2 className="text-welcome">Bienvenido</h2>
+          <p className="register-paragraph">
+            con tu registro accedes a todos los beneficios en los productos de
+            la tienda
+          </p>
           <MDBView hover zoom>
             <img
               src={logo}

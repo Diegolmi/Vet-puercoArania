@@ -14,16 +14,15 @@ h1{
 }
 
 .contenedor_cards{
-    /* margin-left: 100px; */
+  
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
 .img_acc{
-   /* object-fit: contain; */
+   
    width: 200px;
    margin:0 auto;
-   /* margin-top: 10px; */
 }
 .body_card{
     margin: 10px;

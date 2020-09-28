@@ -12,7 +12,6 @@ const ProductsTable = ({ productos, listaProductos }) => {
   const [show, setShow] = useState(false);
   const [productById, setProductById] = useState({});
 
-
   const traerProductoPorId = async (id) => {
     const response = await axiosInstance.get(`/product/${id}`);
     console.log(response.data);
@@ -45,15 +44,15 @@ const ProductsTable = ({ productos, listaProductos }) => {
   const handleSubmit = (id) => async (e) => {
     e.preventDefault();
     Swal.fire({
-      position: 'center',
-      icon: 'success',
-      title: 'Producto Editado Exitosamente',
+      position: "center",
+      icon: "success",
+      title: "Producto Editado Exitosamente",
       showConfirmButton: false,
-      timer: 1000
-    })
-     await axiosInstance.put(`/product/${id}`, productById);
-    listaProductos()
-    setShow(false)
+      timer: 1000,
+    });
+    await axiosInstance.put(`/product/${id}`, productById);
+    listaProductos();
+    setShow(false);
   };
 
   const data = {
@@ -82,12 +81,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
         sort: "asc",
         width: 100,
       },
-      // {
-      //   label: "Descripcion",
-      //   field: "descripcion",
-      //   sort: "asc",
-      //   width: 270,
-      // },
+
       {
         label: "Tipo",
         field: "tipo",
