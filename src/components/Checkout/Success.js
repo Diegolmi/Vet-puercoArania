@@ -44,7 +44,7 @@ const Success = () => {
       <div className="container-link-success">
         <Link to="/">Volver a la Pagina Principal</Link>
       </div>
-      {/* {paymentData && JSON.stringify(paymentData.status)} */}
+      
     </div>
   );
 };

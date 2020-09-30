@@ -64,7 +64,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* width: 100%; */
+  
 }
 
 .button-card {
@@ -127,8 +127,7 @@
     border-radius: 30px;
     border: none;
     width: 290px;
-    /* background: #364f6b; */
-    /* border-radius: 20px; */
+    
   }
 
   .botones-productos:hover {
@@ -199,16 +198,6 @@
     flex-wrap: wrap !important;
   }
 }
-
-/* .button-group {
-  width: 100vw;
-  height: 150px;
-  display: flex;
-  justify-content: space-around;
-  margin: auto auto;
-  margin-bottom: 50px;
-  background-color: #f0f0f0;
-} */
 
 .botones-productos {
   color: black;

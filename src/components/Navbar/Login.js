@@ -4,13 +4,19 @@ import { MDBView, MDBInput, MDBBtn } from "mdbreact";
 import Imglogin from "../../assets/img/logo.png";
 import { Link, useHistory } from "react-router-dom";
 import axiosInstance from "../util/axiosInstance";
+import { useForm } from "react-hook-form";
+import Swal from "sweetalert2";
 
 const FormPage = ({ user, setUser }) => {
+
   const history = useHistory();
+  const { register, errors, handleSubmit } = useForm();
+
   const [loguearUsuario, setLoguearUsuario] = useState({
     username: "",
     password: "",
   });
+  const [error, setError] = useState(false)
 
   const handleChange = (e) => {
     setLoguearUsuario({
@@ -19,8 +25,7 @@ const FormPage = ({ user, setUser }) => {
     });
   };
 
-  const loginUser = async (e) => {
-    e.preventDefault();
+  const onSubmit = async (data) => {
     try {
       const result = await axiosInstance.post("/login", loguearUsuario);
       if (result.data.role !== "admin") {
@@ -28,18 +33,32 @@ const FormPage = ({ user, setUser }) => {
         localStorage.setItem("role", result.data.role);
         const toggleDarkMode = () => {
           setUser(loguearUsuario.username);
+          
         };
         toggleDarkMode();
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Logueo Exitoso',
+          showConfirmButton: false,
+          timer: 1500
+        })
 
         history.push("/usuario");
       } else {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
-
+        Swal.fire({
+          position: 'center',
+          icon: 'success',
+          title: 'Logueo Exitoso',
+          showConfirmButton: false,
+          timer: 1500
+        })
         history.push("/admin");
       }
     } catch (error) {
-      console.error(error);
+      setError(error);
     }
   };
 
@@ -53,7 +72,7 @@ const FormPage = ({ user, setUser }) => {
       </div>
 
       <div className="formstyle" md="8">
-        <form className="form-login" onSubmit={loginUser}>
+        <form className="form-login" onSubmit={handleSubmit(onSubmit)}>
           <p className="h3 text-center mb-4">Ingresá</p>
           <div className="grey-text">
             <MDBInput
@@ -63,10 +82,21 @@ const FormPage = ({ user, setUser }) => {
               icon="user"
               group
               type="text"
-              validate
-              error="wrong"
-              success="right"
+              inputRef={register({
+                required: {
+                  value: true,
+                  message: "ingresa  un nombre de usuario",
+                },
+                maxLength: {
+                  value: 15,
+                  message: "Maximo 15 caracteres",
+                },
+              })}
+              
             />
+            {error ? (<span className="text-danger text-small">usuario y/o contraseña incorrecta</span>) : (<span className="text-danger text-small">{errors.username && errors.username.message}</span>) }
+              
+              
             <MDBInput
               onChange={handleChange}
               name="password"
@@ -74,8 +104,20 @@ const FormPage = ({ user, setUser }) => {
               icon="lock"
               group
               type="password"
-              validate
+              inputRef={register({
+                required: {
+                  value: true,
+                  message: "ingresa una contraseña correcta",
+                },
+                maxLength: {
+                  value: 20,
+                  message: "Maximo 20 caracteres",
+                },
+              })}
             />
+            <span className="text-danger text-small">
+                {errors.password && errors.password.message}
+              </span>
           </div>
           <div className="text-center">
             <MDBBtn type="submit">Entrar</MDBBtn>

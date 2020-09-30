@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
+
 .contenedor-producto-sidebar{
     width: 100%;
     margin: 3px;
@@ -11,11 +9,7 @@
     text-align: center;
 }
 
-.card-carrito {
-    width: 100%;
-    
-=======
->>>>>>> 4de8003f8c0e181d261780caa69c1fdb5a3b6084
+
 .card-carrito {
     margin: 5px !important;
     width: 300px !important;
@@ -48,8 +42,5 @@
 
 .icon-delete-itemcart{
     color: #fc5185;
-<<<<<<< HEAD
-=======
->>>>>>> 9702e523b21e5fecc2debfd609a1a143461ce8f8
->>>>>>> 4de8003f8c0e181d261780caa69c1fdb5a3b6084
+
 }

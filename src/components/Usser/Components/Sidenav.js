@@ -1,12 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import { FaUser, FaShippingFast } from 'react-icons/fa';
-import { MdDashboard, MdDateRange } from 'react-icons/md';
-
+import { FaUser } from 'react-icons/fa';
+import { MdDashboard } from 'react-icons/md';
+import { RiAdminLine } from 'react-icons/ri';
 import logo from '../../../assets/img/logo.png';
 import './styleMascotas.css';
-import { RiAdminLine } from 'react-icons/ri';
+
 
 
 

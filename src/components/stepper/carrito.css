@@ -33,7 +33,6 @@
 
 .listado-productos{
     height: 100%;
-    /* border-bottom: 1px solid black; */
     text-align: center;
 }
 
@@ -102,7 +101,6 @@
 }
 
 .total-carrito{
-    /* border: 1px solid #fc5185; */
     width: 100%;
     padding-right: 180px;
     display: flex;

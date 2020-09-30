@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { MDBDataTable } from "mdbreact";
-// import FormUser from "../../Components/FormUser";
 import axiosInstance from "../../../util/axiosInstance";
 import '../../Admin.css';
 import { FaTrashAlt, FaUserPlus } from "react-icons/fa";
@@ -11,7 +10,7 @@ import Swal from 'sweetalert2';
 const EditUser = () => {
   const [show, setShow] = useState(false);
   const [usuarios, setUsuarios] = useState([]);
-  const [userById, setUserById] = useState({})
+  const [userById] = useState({})
 
   const handleShow = () => setShow(true)
 
@@ -94,10 +93,7 @@ const EditUser = () => {
       usuario: usuario.username,
       email: usuario.email,
       rol: usuario.role,
-      // editar: (
-      //   <button className="boton-editar-user" onClick={() =>traerUsuariPorId(usuario._id)}><FaEdit /></button>
-        
-      // ),
+      
       eliminar: (
        <button className="boton-borrar-user" onClick={eliminarUser(usuario._id)}><FaTrashAlt /></button>
          

@@ -18,7 +18,6 @@ const ModalEdit = ({ show, setShow }) => {
           <form
             className='needs-validation'
             noValidate
-          //onSubmit={onSubmitForm}
           >
             <MDBRow>
               <MDBCol md='4'>

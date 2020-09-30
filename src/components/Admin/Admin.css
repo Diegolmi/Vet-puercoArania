@@ -94,6 +94,22 @@
   align-items: center;
   margin-bottom: 50px !important;
 }
+
+.container-card-info {
+  width: 100%;
+  /* height: 100%; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-chart-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px !important;
+}
 /*FIN SECCION INICIO*/
 
 /* EDITAR USUARIO */
@@ -228,6 +244,47 @@
 }
 
 /*IMAGENES TABLA DE PRODUCTOS*/
+
+/*MEDIA QUERYS*/
+
+@media only screen and (max-width: 600px) {
+  .container-sidebar {
+    flex-wrap: wrap;
+  }
+  .container-links-sidebar {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-card-info {
+    flex-direction: column;
+  }
+  .container-chart-section {
+    flex-direction: column;
+    margin-bottom: 60px !important;
+  }
+  .container-usuario-admin {
+    width: 400px;
+    margin-right: 15px;
+  }
+  .container-productos-admin {
+    margin-left: 100px;
+    margin-right: 50px;
+  }
+  .img-table-product {
+    height: 100px !important;
+    width: 100px !important;
+  }
+  .container-datos-admin {
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  
+  }
+}
 
 /*MEDIA QUERYS*/
 

@@ -1,7 +1,6 @@
 import React from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -25,7 +24,7 @@ const CardEcommerce1 = ({ productos, addToCart, agregarCantidad }) => {
   return (
     <>
       <Container fluid>
-        <div className="title-container">{/* <h1>Alimentos</h1> */}</div>
+        <div className="title-container"></div>
 
         <Row>
           {accesoriosArray.map((producto) => (

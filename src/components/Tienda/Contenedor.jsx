@@ -41,9 +41,6 @@ const Contenedor = () => {
   }, [])
 
   //-----------------------------------------------------
-
-
-
   //crear y agregar al carrito
 
   const addToCart = async ( id) => {

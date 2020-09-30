@@ -9,7 +9,7 @@ import Landing from "../Landing";
 import Register from "../components/Register/Register";
 import Login from "../components/Navbar/Login";
 import Admin from "../components/Admin/Admin";
-import SecServicios from "../components/SecServicios/index";
+import SecServicios from "../components/SecServicios/SecServicios";
 import Contenedor from "../components/Tienda/Contenedor";
 import Carrito from "../components/stepper/Carrito";
 import AdminUser from "../components/Usser/AdminUser";
@@ -22,11 +22,10 @@ import RestrictedRoute from "./RestrictedRoute";
 
 
 function Routes() {
-  const [user, setUser] = useState("");
+  const [user] = useState("");
 
   return (
-    // <>
-    //   <p>{user}</p>
+   
     <Router>
       <Switch>
         <Route exact path="/" component={Landing} />
@@ -47,7 +46,7 @@ function Routes() {
         <Route path="*" component={Error404} />
       </Switch>
     </Router>
-    // </>
+    
   );
 }
 

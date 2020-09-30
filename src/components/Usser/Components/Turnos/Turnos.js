@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col } from "react-bootstrap";
 import Turno from "./Turno";
 import axiosInstance from "../../../util/axiosInstance";
 
@@ -19,19 +18,6 @@ const Turnos = () => {
     listarTurnos();
   }, []);
 
-  const titulo =
-    turnos.length === 0 ? (
-      <button
-        className="btn btn-primary"
-        onClick={() => {
-          alert("Solicita tu turno");
-        }}
-      >
-        Saca tu turno
-      </button>
-    ) : (
-      ""
-    );
 
   return (
     <>

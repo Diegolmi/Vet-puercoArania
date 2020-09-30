@@ -1,7 +1,6 @@
 import React from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
@@ -9,12 +8,6 @@ import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import moment from "moment";
 import SelectInput from "../SelectInput";
-
-// import Swiper from 'react-id-swiper';
-
-// import 'react-id-swiper/lib/styles/css/swiper.css';
-
-// import 'swiper/css/swiper.css';
 
 const CardEcommerce2 = ({ productos, addToCart, agregarCantidad }) => {
   let contador = 0;

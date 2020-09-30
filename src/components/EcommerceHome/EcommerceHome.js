@@ -14,18 +14,17 @@ import "./CardEcommerce.css";
 import axiosInstance from "../util/axiosInstance";
 import { Link } from "react-router-dom";
 
-const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
+const EcommerceHome = ({ mostrarCarrito }) => {
   const [alimentos, setAlimentos] = useState(true);
   const [accesorios, setAccesorios] = useState(false);
   const [farmacia, setFarmacia] = useState(false);
   const [productos, setProductos] = useState([]);
   const [carrito, setCarrito] = useState([]);
   const [cantidad, setCantidad] = useState(1);
-  // const history = useHistory();
 
   useEffect(() => {
     listarProductosHome();
-  }, []);
+  }, [carrito]);
 
   const listarProductosHome = async () => {
     const response = await axiosInstance.get("/product");
@@ -39,7 +38,6 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
       product: id,
       quantity: cantidad,
     });
-
     setCarrito(response.data.items);
     setCantidad(1);
     Swal.fire({
@@ -50,7 +48,6 @@ const EcommerceHome = ({ userCarrito, mostrarCarrito }) => {
       timer: 1500,
     });
     mostrarCarrito();
-    // history.push('/carrito')
   };
 
   //agregar cantidad los productos al carrito

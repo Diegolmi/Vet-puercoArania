@@ -2,15 +2,10 @@ import React, { useState, useEffect } from "react";
 import "./secsvs.css";
 import { MDBRow, MDBCol, MDBIcon } from "mdbreact";
 import catdog from "../../assets/img/svs/catdog.png";
-import { MDBBtn } from "mdbreact";
-
 import Carturnos from "../CarTurnos/Carturnos";
 import NavbarPage from "../Navbar/Nav";
 import axiosInstance from "../util/axiosInstance";
 import Footer from "../Footer/Footer";
-
-
-
 
 const SecServicios = () => {
   const [userCarrito, setUserCarrito] = useState([]);

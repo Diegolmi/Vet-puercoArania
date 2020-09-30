@@ -19,7 +19,6 @@ import Unauthorized from "../../Unauthorized/Unauthorized";
 const Admin = ({ user }) => {
   const [sidebar, setSidebar] = useState(false);
   const [cambiarBoton, setCambiarBoton] = useState(false);
-  // const [users, setUsers] = useState([]);
 
   if (user.role !== "admin") {
     return <Unauthorized />;
@@ -55,16 +54,7 @@ const Admin = ({ user }) => {
                   <Route exact path="/admin/user" component={EditUser} />
                   <Route exact path="/admin/producto" component={AddProduct} />
                   <Route exact path="/admin/turnos" component={EditarTurnos} />
-                  {/* <Route
-                  exact
-                  path="/admin/consultas"
-                  component={AdminConsultas}
-                /> */}
-                  <Route
-                    exact
-                    path="/admin/datosAdmin"
-                    component={DatosAdmin}
-                  />
+                  <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
                 </Switch>
               </div>
             </div>
@@ -81,16 +71,7 @@ const Admin = ({ user }) => {
                   <Route exact path="/admin/user" component={EditUser} />
                   <Route exact path="/admin/producto" component={AddProduct} />
                   <Route exact path="/admin/turnos" component={EditarTurnos} />
-                  {/* <Route
-                  exact
-                  path="/admin/consultas"
-                  component={AdminConsultas}
-                /> */}
-                  <Route
-                    exact
-                    path="/admin/datosAdmin"
-                    component={DatosAdmin}
-                  />
+                  <Route exact path="/admin/datosAdmin" component={DatosAdmin} />
                 </Switch>
               </div>
             </div>

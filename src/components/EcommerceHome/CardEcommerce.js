@@ -1,21 +1,22 @@
 import React, { useState } from "react";
 import "./CardEcommerce.css";
 import { MDBIcon } from "mdbreact";
-// import Rating from "./Rating";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import Col from "react-bootstrap/Col";
 import Row from "react-bootstrap/Row";
 import Container from "react-bootstrap/Container";
 import moment from "moment";
-// import axios from 'axios';
-import Modal from "react-bootstrap/Modal";
 import SelectInput from "../SelectInput";
+import ModalProductos from "./ModalProductos";
+
+
 
 const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
+  
   const [show, setShow] = useState(false);
 
-  const handleClose = () => setShow(false);
+  
   const handleShow = () => setShow(true);
 
   let contador = 0;
@@ -28,14 +29,13 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
       return contador = 0;
     }
   });
-
   return (
     <>
       <Container fluid>
         <Row>
-          {alimentosArray.map((producto) => (
-            <Col lg={3} md={6} className="contenedor-card-landing">
-              <Card className="card-container" key={producto._id}>
+          {alimentosArray.map( producto => (
+            <Col key={producto._id} lg={3} md={6} className="contenedor-card-landing">
+              <Card className="card-container">
                 <Card.Img
                   src={producto.urlImage}
                   className="img-fluid img-food-cards"
@@ -55,7 +55,6 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                     />
                   </Card.Text>
 
-                  {/* <Card.Text><SelectInput agregarCantidad={agregarCantidad} productos={productos} /></Card.Text> */}
                 </Card.Body>
                 <Card.Footer>
                   <Button
@@ -65,7 +64,7 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                   >
                     <MDBIcon className="icon-card" icon="info" />
                   </Button>
-                  {producto.stock === 0 ?<Button
+                  {producto.stock === 0 ? <Button
                     size="sm"
                     className="btn button-card"
                     onClick={() => addToCart(producto._id)}
@@ -79,24 +78,15 @@ const CardEcommerce = ({ productos, addToCart, agregarCantidad }) => {
                   >
                     <MDBIcon className="icon-card" icon="shopping-cart" />
                   </Button>}
-                  
+                  <ModalProductos show={show} setShow={setShow} producto={producto} />
                 </Card.Footer>
               </Card>
+              
             </Col>
           ))}
         </Row>
       </Container>
-      <Modal show={show} onHide={handleClose}>
-        <Modal.Header closeButton>
-          <Modal.Title>informacion producto</Modal.Title>
-        </Modal.Header>
-        <Modal.Body>descripcion del producto</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-        </Modal.Footer>
-      </Modal>
+      
     </>
   );
 };

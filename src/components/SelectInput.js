@@ -15,7 +15,7 @@ const SelectIpunt = ({ agregarCantidad, stock }) => {
   };
   return (
     <>
-      <h6>Cantidad:</h6>
+      Cantidad:
 
       <select
         onChange={agregarCantidad}

@@ -139,3 +139,10 @@
     width: auto;
      
 }
+.container-link-sidebar1 {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+
+}
