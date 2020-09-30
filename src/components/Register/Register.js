@@ -10,7 +10,8 @@ import Swal from "sweetalert2";
 
 const FormsPage = () => {
   const history = useHistory();
-  const { register, handleSubmit } = useForm();
+
+  const { register, errors, handleSubmit } = useForm();
 
   const [createUser, setCreateUser] = useState({
     username: "",
@@ -69,14 +70,17 @@ const FormsPage = () => {
                 inputRef={register({
                   required: {
                     value: true,
-                    message: "ingresa  del producto",
+                    message: "ingresa  un nombre de usuario",
                   },
                   maxLength: {
-                    value: 5,
-                    message: "Maximo 5 caracteres",
+                    value: 15,
+                    message: "Maximo 15 caracteres",
                   },
                 })}
               />
+              <span className="text-danger text-small">
+                {errors.username && errors.username.message}
+              </span>
               <MDBInput
                 onChange={inputChange}
                 name="name"
@@ -84,14 +88,26 @@ const FormsPage = () => {
                 icon="user"
                 group
                 type="text"
-                validate
-                error="wrong"
-                success="right"
                 className="form-control"
-                maxLength="10"
-                pattern="/^[A-Za-z]+$/i"
-                required
+                 inputRef={register({
+                  required: {
+                    value: true,
+                    message: "ingresa  tu nombre",
+                  },
+                  pattern: {
+                    value: /^[A-Za-z]+$/i,
+                    message: "tu nombre no debe contener signos"
+                  },
+                  maxLength: {
+                    value: 15,
+                    message: "Maximo 15 caracteres",
+                  },
+                })}
               />
+              
+              <span className="text-danger text-small">
+                {errors.name && errors.name.message}
+              </span>
               <MDBInput
                 onChange={inputChange}
                 name="lastname"
@@ -99,14 +115,25 @@ const FormsPage = () => {
                 icon="user"
                 group
                 type="text"
-                validate
-                error="wrong"
-                success="right"
                 className="form-control"
-                maxLength="10"
-                pattern="/^[A-Za-z]+$/i"
-                required
+                inputRef={register({
+                  required: {
+                    value: true,
+                    message: "ingresa  un nombre de apellido",
+                  },
+                  pattern: {
+                    value: /^[A-Za-z]+$/i,
+                    message: "tu apellido no debe contener signos"
+                  },
+                  maxLength: {
+                    value: 15,
+                    message: "Maximo 15 caracteres",
+                  },
+                })}
               />
+              <span className="text-danger text-small">
+                {errors.lastname && errors.lastname.message}
+              </span>
               <MDBInput
                 onChange={inputChange}
                 name="email"
@@ -114,14 +141,26 @@ const FormsPage = () => {
                 icon="envelope"
                 group
                 type="email"
-                validate
-                error="wrong"
-                success="right"
                 className="form-control"
-                maxLength="20 "
-                pattern="/^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i"
-                required
+
+                inputRef={register({
+                  required: {
+                    value: true,
+                    message: "ingresa tu Email",
+                  },
+                  pattern: {
+                    value: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
+                    message: "ingresa un mail valido"
+                  },
+                  maxLength: {
+                    value: 25,
+                    message: "Maximo 25 caracteres",
+                  },
+                })}
               />
+              <span className="text-danger text-small">
+                {errors.email && errors.email.message}
+              </span>
               <MDBInput
                 onChange={inputChange}
                 name="password"
@@ -129,25 +168,23 @@ const FormsPage = () => {
                 icon="lock"
                 group
                 type="password"
-                validate
                 className="form-control"
-                maxLength="10"
-                pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
-                required
+                // maxLength="10"
+                // pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
+                inputRef={register({
+                  required: {
+                    value: true,
+                    message: "ingresa tu contraseña",
+                  },
+                  maxLength: {
+                    value: 20,
+                    message: "Maximo 20 caracteres",
+                  },
+                })}
               />
-              <MDBInput
-                onChange={inputChange}
-                name="repassword"
-                label="Confirmar Contraseña"
-                icon="lock"
-                group
-                type="password"
-                validate
-                className="form-control"
-                maxLength="10"
-                pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
-                required
-              />
+              <span className="text-danger text-small">
+                {errors.password && errors.password.message}
+              </span>
             </div>
             <div className="text-center">
               <MDBBtn className="ButtonRegistro" type="submit">

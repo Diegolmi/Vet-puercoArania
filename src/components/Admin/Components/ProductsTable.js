@@ -81,7 +81,6 @@ const ProductsTable = ({ productos, listaProductos }) => {
         sort: "asc",
         width: 100,
       },
-
       {
         label: "Tipo",
         field: "tipo",

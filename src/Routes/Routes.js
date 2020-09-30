@@ -9,7 +9,7 @@ import Landing from "../Landing";
 import Register from "../components/Register/Register";
 import Login from "../components/Navbar/Login";
 import Admin from "../components/Admin/Admin";
-import SecServicios from "../components/SecServicios/index";
+import SecServicios from "../components/SecServicios/SecServicios";
 import Contenedor from "../components/Tienda/Contenedor";
 import Carrito from "../components/stepper/Carrito";
 import AdminUser from "../components/Usser/AdminUser";
