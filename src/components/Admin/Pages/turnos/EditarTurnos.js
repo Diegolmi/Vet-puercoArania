@@ -11,7 +11,6 @@ const EditarTurnos = () => {
   const listarTurnos = async () => {
     const res = await axiosInstance.get("/turnos");
     setTurnos(res.data);
-    console.log(res.data)
   };
 
   useEffect(() => {
