@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./carrito.css";
 import Table from "react-bootstrap/Table";
 import { FaTrashAlt } from "react-icons/fa";
@@ -6,6 +6,7 @@ import axiosInstance from "../util/axiosInstance";
 import Swal from "sweetalert2";
 
 const AddProduct = (props, { setUserCarrito }) => {
+
   const items = props.items || [];
   const { mostrarCarrito } = props;
   const total = +items.reduce((acc, item) => {
@@ -24,9 +25,10 @@ const AddProduct = (props, { setUserCarrito }) => {
     mostrarCarrito();
   };
 
+
   return (
     <>
-      <Table className="table-productos-carrito" responsive>
+      <Table className="table-productos-carrito" responsive={true}>
         <thead className="head-add-productos">
           <tr>
             <th>Imagen</th>
@@ -40,8 +42,8 @@ const AddProduct = (props, { setUserCarrito }) => {
         </thead>
         <tbody className="listado-productos">
           {items.map((carrito) => (
-            <>
-              <tr key={carrito.product._id}>
+            <Fragment key={carrito.product._id}>
+              <tr>
                 <td>
                   <img
                     className="img-carrito-producto"
@@ -63,7 +65,7 @@ const AddProduct = (props, { setUserCarrito }) => {
                   </button>
                 </td>
               </tr>
-            </>
+            </Fragment>
           ))}
         </tbody>
       </Table>
