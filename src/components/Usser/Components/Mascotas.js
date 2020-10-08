@@ -19,7 +19,7 @@ const TablePage = () => {
   const listarMascotas = async () => {
     const response = await axiosInstance.get('/mascota/');
     setTraerMascota(response.data);
-    console.log(response.data);
+    //console.log(response.data);
   }
 
   useEffect(() => {

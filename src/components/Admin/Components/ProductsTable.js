@@ -14,7 +14,7 @@ const ProductsTable = ({ productos, listaProductos }) => {
 
   const traerProductoPorId = async (id) => {
     const response = await axiosInstance.get(`/product/${id}`);
-    console.log(response.data);
+    //console.log(response.data);
     setProductById(response.data);
     setShow(true);
   };
