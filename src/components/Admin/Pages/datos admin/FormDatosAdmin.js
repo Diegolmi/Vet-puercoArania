@@ -75,7 +75,7 @@ const FormDatosAdmin = ({ usuario, handleSubmit, handleChange }) => {
       <button
         className="button-add mr-2"
         type="submit"
-        onClick={handleSubmit(usuario)}
+        onClick={handleSubmit}
       >
         Modificar
       </button>

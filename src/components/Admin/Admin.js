@@ -41,7 +41,7 @@ const Admin = ({ user }) => {
         showSidebar={showSidebar}
         cambiarBoton={cambiarBoton}
       />
-      <div className="contenedor-admin" fluid>
+      <div className="contenedor-admin">
         {sidebar ? (
           <>
             <div className="columna-sidebar-icon">
@@ -78,7 +78,7 @@ const Admin = ({ user }) => {
           </>
         )}
       </div>
-      <div sm className="footer-admin">
+      <div className="footer-admin">
         <FooterAdmin />
       </div>
     </>

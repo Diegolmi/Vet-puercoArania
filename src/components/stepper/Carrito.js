@@ -105,14 +105,14 @@ export default function Carrito() {
       <div>
         {activeStep === steps.length ? (
           <div>
-            <Typography className={classes.instructions}>
+            <Typography component={'span'} className={classes.instructions}>
               Su Compra fue Exitosa!!
             </Typography>
             <Button onClick={handleReset}>Reset</Button>
           </div>
         ) : (
           <div>
-            <Typography className={classes.instructions}>
+            <Typography component={'span'} className={classes.instructions}>
               {getStepContent(activeStep)}
             </Typography>
             <div className="button-position">

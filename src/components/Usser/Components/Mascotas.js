@@ -26,7 +26,7 @@ const TablePage = () => {
 
     listarMascotas();
 
-  }, [])
+  }, [traerMascota])
   const eliminarMascota = async (id) => {
    
 
@@ -125,12 +125,12 @@ const TablePage = () => {
         </MDBTableBody>
 
         <ModalEdit show={show} setShow={setShow} />
-        <Button variant="primary" onClick={handleShowA}>
-          Agregar una mascota
-      </Button>
+        
         <ModalAgregarMascota show={showA} setShow={setShowA} />
       </MDBTable>
-
+      <Button variant="primary" onClick={handleShowA}>
+          Agregar una mascota
+      </Button>
 
     </div>
 

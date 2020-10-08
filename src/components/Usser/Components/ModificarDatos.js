@@ -32,7 +32,7 @@ const ModificarDatos = () => {
     <form onSubmit={handleSubmit}>
       <MDBInput
         onChange={handleChange}
-        maxlength="20"
+        maxLength="20"
         labelId="username"
         name="username"
         label="Nombre de usuario"
