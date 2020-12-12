@@ -20,7 +20,9 @@ const ModalAgregarMascota = ({ show, setShow }) => {
     const { register, errors, handleSubmit } = useForm();
 
     const onSubmit = async e =>  {
+
         await axiosInstance.post('/mascota', agregarMascota)
+
         Swal.fire({
             position: 'center',
             icon: 'success',
@@ -34,7 +36,7 @@ const ModalAgregarMascota = ({ show, setShow }) => {
     }
 
     const handleChange = e => {
-        console.log(e);
+        //console.log(e);
         setAgregarMascota({
 
             ...agregarMascota,

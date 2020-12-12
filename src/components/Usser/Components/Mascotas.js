@@ -26,7 +26,7 @@ const TablePage = () => {
     listarMascotas();
 
   }, [traerMascota])
-  
+
   const eliminarMascota = async (id) => {
     Swal.fire({
         title: 'Eliminar datos!',
@@ -111,18 +111,10 @@ const TablePage = () => {
 
 
       <MDBTable autoWidth striped>
-
-
-
-
         <MDBTableHead columns={mascotas.columns} />
         <MDBTableBody rows={mascotas.rows}>
-
-
         </MDBTableBody>
-
         <ModalEdit show={show} setShow={setShow} />
-        
         <ModalAgregarMascota show={showA} setShow={setShowA} />
       </MDBTable>
       <Button variant="primary" onClick={handleShowA}>

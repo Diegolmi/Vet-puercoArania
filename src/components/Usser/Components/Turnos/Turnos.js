@@ -11,7 +11,7 @@ const Turnos = () => {
     const result = await axiosInstance.get("/turnos/user");
 
     setTurnos(result.data || []);
-    console.log(result.data);
+    //console.log(result.data);
   };
 
   useEffect(() => {
