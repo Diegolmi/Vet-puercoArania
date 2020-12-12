@@ -26,10 +26,8 @@ const TablePage = () => {
     listarMascotas();
 
   }, [traerMascota])
+  
   const eliminarMascota = async (id) => {
-   
-
-
     Swal.fire({
         title: 'Eliminar datos!',
         text: "Seguro quiere eliminar ?",
