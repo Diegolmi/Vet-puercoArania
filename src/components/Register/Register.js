@@ -30,7 +30,6 @@ const FormsPage = () => {
   };
 
   const onSubmit = async (data) => {
-    //console.log(data);
 
     try {
       await axiosInstance.post("/register", createUser);
@@ -51,7 +50,7 @@ const FormsPage = () => {
     <>
       <div className="container-fluid containerRegistro">
         <div className=" containerForm1">
-          <h1 center className="register-title">
+          <h1 className="register-title">
             Registrate
           </h1>
           <form

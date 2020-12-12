@@ -19,7 +19,6 @@ const TablePage = () => {
   const listarMascotas = async () => {
     const response = await axiosInstance.get('/mascota/');
     setTraerMascota(response.data);
-    //console.log(response.data);
   }
 
   useEffect(() => {
@@ -27,10 +26,8 @@ const TablePage = () => {
     listarMascotas();
 
   }, [traerMascota])
+
   const eliminarMascota = async (id) => {
-   
-
-
     Swal.fire({
         title: 'Eliminar datos!',
         text: "Seguro quiere eliminar ?",
@@ -114,18 +111,10 @@ const TablePage = () => {
 
 
       <MDBTable autoWidth striped>
-
-
-
-
         <MDBTableHead columns={mascotas.columns} />
         <MDBTableBody rows={mascotas.rows}>
-
-
         </MDBTableBody>
-
         <ModalEdit show={show} setShow={setShow} />
-        
         <ModalAgregarMascota show={showA} setShow={setShowA} />
       </MDBTable>
       <Button variant="primary" onClick={handleShowA}>

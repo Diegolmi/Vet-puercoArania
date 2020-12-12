@@ -83,10 +83,10 @@ const TestimonialsPage = () => {
           </MDBRow>
         </section>
         <MDBCol className="texto1">
-          <MDBTypography variant="h2" className="titulos">
+          <MDBTypography variant="h2" tag="h2" className="titulos" abbr="false">
             Historia de la Empresa
           </MDBTypography>
-          <MDBTypography variant="body1" className="contenido1 paragraph">
+          <MDBTypography variant="body1" className="contenido1 paragraph" abbr="false">
             Puerco Araña es una empresa más de 20 años en el rubro veterinario.
             En sus comienzos se dedicó a la comercailización de alimentos para
             perros y gatos.
@@ -94,10 +94,10 @@ const TestimonialsPage = () => {
         </MDBCol>
         <MDBCol className="contenido2 d-flex">
           <div className="texto2">
-            <MDBTypography variant="h2" className="texto1 third-title">
+            <MDBTypography variant="h2" tag="h2" className="texto1 third-title" abbr="false">
               Un Poco de Historia
             </MDBTypography>
-            <MDBTypography>
+            <MDBTypography abbr="false">
               Ubicada en Calle Mendoza 331, en el centro de San Miguel de
               Tucumán, inspiraron su nombre en el dibujo animado de los Simpson,
               sugerido por Erika, hija de Carlos Lopez y Graciela Correa. Dos
@@ -129,48 +129,48 @@ const TestimonialsPage = () => {
             />
           </div>
           <div className="claves">
-            <MDBTypography variant="h3" className="five-title">
+            <MDBTypography variant="h3" tag="h3" className="five-title" abbr="false">
               <strong>Nuestra clave del éxito</strong> se apoya en 5 pilares
               fundamentales
             </MDBTypography>
-            <MDBTypography variant="h4" className="fourd-title">
+            <MDBTypography variant="h4" tag="h4" className="fourd-title" abbr="false">
               Compras centralizadas
             </MDBTypography>
-            <MDBTypography variant="body1" className="paragraph">
+            <MDBTypography variant="body1" className="paragraph" abbr="false">
               Las posibilidades de acceder a economías de escala nos permite
               acceder a condiciones comerciales muy favorables en relación a la
               competencia.
             </MDBTypography>
-            <MDBTypography variant="h4" className="fourd-title">
+            <MDBTypography variant="h4" tag="h4" className="fourd-title" abbr="false">
               Logística integrada
             </MDBTypography>
-            <MDBTypography variant="body1" className="paragraph">
+            <MDBTypography variant="body1" className="paragraph" abbr="false">
               Al contar con sistemas integrados y distribución propia nos
               permite contar con stock diferidos en múltiples puntos de venta y
               locales comerciales que flexibilizan las operaciones comerciales
               diarias.
             </MDBTypography>
-            <MDBTypography variant="h4" className="fourd-title">
+            <MDBTypography variant="h4" tag="h4" className="fourd-title" abbr="false">
               Tecnología
             </MDBTypography>
-            <MDBTypography variant="body1" className="paragraph">
+            <MDBTypography variant="body1" className="paragraph" abbr="false">
               Con una constante inversión en sistemas de información y bases de
               datos que aseguren el futuro crecimiento, estamos un paso delante
               de nuestra competencia.
             </MDBTypography>
-            <MDBTypography variant="h4" className="fourd-title">
+            <MDBTypography variant="h4" tag="h4" className="fourd-title" abbr="false">
               Experiencia
             </MDBTypography>
-            <MDBTypography variant="body1" className="paragraph">
+            <MDBTypography variant="body1" className="paragraph" abbr="false">
               Siendo una familia con más de 20 años en el mercado y habiendo
               importado y distribuido las marcas más importantes de accesorios
               podemos tener un conocimiento de hacia dónde va el mercado
               argentino.
             </MDBTypography>
-            <MDBTypography variant="h4" className="fourd-title">
+            <MDBTypography variant="h4" tag="h4" className="fourd-title" abbr="false">
               Productos Exclusivos
             </MDBTypography>
-            <MDBTypography variant="body1" className="paragraph">
+            <MDBTypography variant="body1" className="paragraph" abbr="false">
               Mediante la importación exclusiva de productos para nuestros
               asociados nos aseguramos mantener la diferenciación frente a la
               competencia. Packagings y marcas propias nos diferencian de
