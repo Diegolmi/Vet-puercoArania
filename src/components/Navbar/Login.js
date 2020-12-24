@@ -7,7 +7,7 @@ import axiosInstance from "../util/axiosInstance";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
-const FormPage = ({ user, setUser }) => {
+const Login = ({ user, setUser }) => {
 
   const history = useHistory();
   const { register, errors, handleSubmit } = useForm();
@@ -139,4 +139,4 @@ const FormPage = ({ user, setUser }) => {
   );
 };
 
-export default FormPage;
+export default Login;

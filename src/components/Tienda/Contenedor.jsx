@@ -43,10 +43,12 @@ const Contenedor = () => {
   //-----------------------------------------------------
   //crear y agregar al carrito
 
-  const addToCart = async ( id) => {
+  const addToCart = async ( id ) => {
+     try {
       const response = await axiosInstance.post('/shoppingCart', {product: id, quantity: cantidad})
       setUserCarrito(response.data.items)
       setCantidad(1)
+      console.log(response);
       Swal.fire({
           position: 'center',
           icon: 'success',
@@ -55,8 +57,12 @@ const Contenedor = () => {
           timer: 1500
         })
         mostrarCarrito()
+     } catch (error) {
+       console.log(error)
+     }
         
     }
+    
 
     const agregarCantidad = (e) => {
       setCantidad(e.target.value);

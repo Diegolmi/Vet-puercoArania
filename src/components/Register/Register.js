@@ -30,7 +30,6 @@ const FormsPage = () => {
   };
 
   const onSubmit = async (data) => {
-
     try {
       await axiosInstance.post("/register", createUser);
       Swal.fire({
@@ -50,9 +49,7 @@ const FormsPage = () => {
     <>
       <div className="container-fluid containerRegistro">
         <div className=" containerForm1">
-          <h1 className="register-title">
-            Registrate
-          </h1>
+          <h1 className="register-title">Registrate</h1>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="formulario-registro"
@@ -88,14 +85,10 @@ const FormsPage = () => {
                 group
                 type="text"
                 className="form-control"
-                 inputRef={register({
+                inputRef={register({
                   required: {
                     value: true,
                     message: "ingresa  tu nombre",
-                  },
-                  pattern: {
-                    value: /^[A-Za-z]+$/i,
-                    message: "tu nombre no debe contener signos"
                   },
                   maxLength: {
                     value: 15,
@@ -103,7 +96,7 @@ const FormsPage = () => {
                   },
                 })}
               />
-              
+
               <span className="text-danger text-small">
                 {errors.name && errors.name.message}
               </span>
@@ -119,10 +112,6 @@ const FormsPage = () => {
                   required: {
                     value: true,
                     message: "ingresa  un nombre de apellido",
-                  },
-                  pattern: {
-                    value: /^[A-Za-z]+$/i,
-                    message: "tu apellido no debe contener signos"
                   },
                   maxLength: {
                     value: 15,
@@ -141,7 +130,6 @@ const FormsPage = () => {
                 group
                 type="email"
                 className="form-control"
-
                 inputRef={register({
                   required: {
                     value: true,
@@ -149,7 +137,7 @@ const FormsPage = () => {
                   },
                   pattern: {
                     value: /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i,
-                    message: "ingresa un mail valido"
+                    message: "ingresa un mail valido",
                   },
                   maxLength: {
                     value: 25,
@@ -168,8 +156,6 @@ const FormsPage = () => {
                 group
                 type="password"
                 className="form-control"
-                // maxLength="10"
-                // pattern=" /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){4,15}$/"
                 inputRef={register({
                   required: {
                     value: true,

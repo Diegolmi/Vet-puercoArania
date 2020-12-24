@@ -34,21 +34,26 @@ const EcommerceHome = ({ mostrarCarrito }) => {
 
   //crear y agregar al carrito
   const addToCart = async (id) => {
-    const response = await axiosInstance.post("/shoppingCart", {
-      product: id,
-      quantity: cantidad,
-    });
-    setCarrito(response.data.items);
-    setCantidad(1);
-    Swal.fire({
-      position: "center",
-      icon: "success",
-      title: "Tu Producto fue agregado Exitosamente al Carrito",
-      showConfirmButton: false,
-      timer: 1500,
-    });
-    mostrarCarrito();
+    try {
+      const response = await axiosInstance.post("/shoppingCart", {
+        product: id,
+        quantity: cantidad,
+      });
+      setCarrito(response.data.items);
+      setCantidad(1);
+      Swal.fire({
+        position: "center",
+        icon: "success",
+        title: "Tu Producto fue agregado Exitosamente al Carrito",
+        showConfirmButton: false,
+        timer: 1500,
+      });
+      mostrarCarrito();
+    } catch (error) {
+      console.log(error)
+    }
   };
+  console.log(carrito)
 
   //agregar cantidad los productos al carrito
   const agregarCantidad = (e) => {
