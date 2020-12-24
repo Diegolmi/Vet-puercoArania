@@ -8,7 +8,6 @@ import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 
 const Login = ({ user, setUser }) => {
-
   const history = useHistory();
   const { register, errors, handleSubmit } = useForm();
 
@@ -16,7 +15,7 @@ const Login = ({ user, setUser }) => {
     username: "",
     password: "",
   });
-  const [error, setError] = useState(false)
+  //const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setLoguearUsuario({
@@ -33,39 +32,38 @@ const Login = ({ user, setUser }) => {
         localStorage.setItem("role", result.data.role);
         const toggleDarkMode = () => {
           setUser(loguearUsuario.username);
-          
         };
         toggleDarkMode();
         Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Logueo Exitoso',
+          position: "center",
+          icon: "success",
+          title: "Logueo Exitoso",
           showConfirmButton: false,
-          timer: 1500
-        })
+          timer: 1500,
+        });
 
         history.push("/usuario");
       } else {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
         Swal.fire({
-          position: 'center',
-          icon: 'success',
-          title: 'Logueo Exitoso',
+          position: "center",
+          icon: "success",
+          title: "Logueo Exitoso",
           showConfirmButton: false,
-          timer: 1500
-        })
+          timer: 1500,
+        });
         history.push("/admin");
       }
     } catch (error) {
-      setError(error);
+      console.log(error);
     }
   };
 
   return (
     <div className="container-login">
       <div className="contenedor-imagen-login">
-          <p className="login-paragraph">Inicia Sesión</p>
+        <p className="login-paragraph">Inicia Sesión</p>
         <MDBView hover zoom>
           <img src={Imglogin} className="gato" alt="" />
         </MDBView>
@@ -92,11 +90,10 @@ const Login = ({ user, setUser }) => {
                   message: "Maximo 15 caracteres",
                 },
               })}
-              
             />
-            {error ? (<span className="text-danger text-small">usuario y/o contraseña incorrecta</span>) : (<span className="text-danger text-small">{errors.username && errors.username.message}</span>) }
-              
-              
+            <span className="text-danger text-small">
+              {errors.username && errors.username.message}
+            </span>
             <MDBInput
               onChange={handleChange}
               name="password"
@@ -116,8 +113,8 @@ const Login = ({ user, setUser }) => {
               })}
             />
             <span className="text-danger text-small">
-                {errors.password && errors.password.message}
-              </span>
+              {errors.password && errors.password.message}
+            </span>
           </div>
           <div className="text-center">
             <MDBBtn type="submit">Entrar</MDBBtn>
