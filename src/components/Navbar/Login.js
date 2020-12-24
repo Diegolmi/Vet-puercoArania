@@ -15,7 +15,7 @@ const Login = ({ user, setUser }) => {
     username: "",
     password: "",
   });
-  //const [error, setError] = useState(false);
+  const [error, setError] = useState(false);
 
   const handleChange = (e) => {
     setLoguearUsuario({
@@ -33,6 +33,7 @@ const Login = ({ user, setUser }) => {
         const toggleDarkMode = () => {
           setUser(loguearUsuario.username);
         };
+        history.push("/usuario");
         toggleDarkMode();
         Swal.fire({
           position: "center",
@@ -42,7 +43,6 @@ const Login = ({ user, setUser }) => {
           timer: 1500,
         });
 
-        history.push("/usuario");
       } else {
         localStorage.setItem("jwt", result.data.token);
         localStorage.setItem("role", result.data.role);
@@ -56,7 +56,7 @@ const Login = ({ user, setUser }) => {
         history.push("/admin");
       }
     } catch (error) {
-      console.log(error);
+      setError(error);
     }
   };
 
